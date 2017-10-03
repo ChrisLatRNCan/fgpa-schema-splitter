@@ -1,0 +1,198 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "FGPV Config Schema",
+    "type": "object",
+    "version": 2.1,
+    "comments": "FIXME: when draft 05 is release redo schema inheritance with patching / merging if they are accepted",
+    "additionalProperties": false,
+
+    "definitions": {
+        "exportComponent": {
+            "type": "object",
+            "properties": {
+                "isSelected": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Indicates if the component is selected and included in the export graphic."
+                },
+                "isSelectable": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Indicates if the component can be included or excluded from the export graphic by the user."
+                },
+                "value": {
+                    "type": "string",
+                    "description": "Value to be passed to the generation function of this export component."
+                }
+            },
+            "description": "This is the initial configuration for an export component.",
+            "additionalProperties": false
+        },
+
+        "sideMenuNode": {
+            "type": "object",
+            "properties": {
+                "logo": { "type": "boolean", "default": true, "description": "Indicates if the logo should be shown in the left side menu." },
+                "items": { "type": "array", "items": { "$ref": "#/definitions/sideMenuButtons" }, "default": [["layers","basemap"],["fullscreen","export","share","touch","help","about"],["language"],["plugins"]] }
+            },
+            "additionalProperties": false,
+            "description": "Specifies which options are available in the left side menu."
+        },
+
+        "sideMenuButtons": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "enum": ["layers", "basemap", "about", "fullscreen", "export", "share", "touch", "help", "language", "plugins"]
+            }
+        },
+
+        "navBarNode": {
+            "type": "object",
+            "properties": {
+                "zoom": { "type": "string", "enum": ["all", "buttons", "slider"], "default": "buttons" },
+                "extra": { "$ref": "#/definitions/navBarButtons", "default": ["fullscreen", "geoLocator", "home", "help"] }
+            },
+            "required": [ "zoom" ],
+            "additionalProperties": false
+        },
+
+        "navBarButtons": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "enum": ["geoLocator", "marquee", "home", "history", "basemap", "help", "fullscreen"]
+            }
+        }
+    },
+
+    "properties": {
+        "version": { "type": "string", "enum": [ "2.0" ], "description": "The schema version used to validate the configuration file.  The schema should enumerate the list of versions accepted by this version of the viewer." },
+        "language": { "type": "string", "enum": [ "en", "fr", "es" ], "description": "ISO 639-1 code indicating the language of strings in the schema file" },
+
+        "ui": {
+            "description": "A set of service endpoints used by the viewer",
+            "type": "object",
+            "properties": {
+                "fullscreen": { "type": "boolean", "default": false, "description": "Indicates viewer takes up entire viewport" },
+                "theme": { "type": "string", "enum": [ "default" ], "default": "default", "description": "UI theme of the viewer" },
+                "logoUrl": { "type": "string", "description": "An optional image to be used in the place of the default viewer logo" },
+                "title": { "type": "string", "description": "An optional title to be used in the place of the default viewer title" },
+                "navBar": { "$ref": "#/definitions/navBarNode" },
+                "sideMenu": { "$ref": "#/definitions/sideMenuNode" },
+                "restrictNavigation": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Will restrict the user from panning beyond the maximum extent."
+                },
+                "about": {
+                    "description": "About properties from configuration file or Markdown folder",
+                    "oneOf": [
+                        { "type": "object", "properties": { "content": { "type": "string" } }, "required": ["content"], "additionalProperties": false },
+                        { "type": "object", "properties": { "folderName": { "type": "string" } }, "required": ["folderName"], "additionalProperties": false }
+                    ]
+                },
+                "help": {
+                    "type": "object",
+                    "description": "Help properties",
+                    "properties": {
+                        "folderName": { "type": "string", "description": "Help folder name who contain the help description and images" }
+                    },
+                    "required": [ "folderName" ],
+                    "additionalProperties": false
+                },
+                "legend": {
+                    "type": "object",
+                    "properties": {
+                        "reorderable": { "type": "boolean", "default": true, "description": "Specifies if the items in the legend can be reordered; structured legend ignores this property." },
+                        "allowImport": { "type": "boolean", "default": true, "description": "Specifies if the user-added layers are allowed." },
+                        "isOpen": {
+                            "type": "object",
+                            "description": "Specifies whether the legend is opened by default on initial loading of the map for small, medium, and large viewports",
+                            "properties": {
+                                "large": { "type": "boolean", "default": false, "description": "Whether the legend is opened by default on initial loading of the map for large viewports" },
+                                "medium": { "type": "boolean", "default": false, "description": "Whether the legend is opened by default on initial loading of the map for medium viewports" },
+                                "small": { "type": "boolean", "default": false, "description": "Whether the legend is opened by default on initial loading of the map for small viewports" }
+                            },
+                            "additionalProperties": false
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "tableIsOpen": {
+                    "type": "object",
+                    "description": "Specifies whether the table panel is opened by default on initial loading of the map for small, medium, and large viewports",
+                    "properties": {
+                        "id": { "type": "string", "description": "The id of the layer for referencing within the viewer" },
+                        "large": { "type": "boolean", "default": false, "description": "Whether the table panel is opened by default on initial loading of the map for large viewports" },
+                        "medium": { "type": "boolean", "default": false, "description": "Whether the table panel is opened by default on initial loading of the map for medium viewports" },
+                        "small": { "type": "boolean", "default": false, "description": "Whether the table panel is opened by default on initial loading of the map for small viewports" }
+                    },
+                    "additionalProperties": false,
+                    "required": ["id"]
+                },
+                "widgetsWidget": { "type": "object", "additionalProperties": true, "description": "FIXME" }
+            }
+        },
+
+        "services": {
+            "description": "A set of service endpoints used by the viewer",
+            "type": "object",
+            "properties": {
+                "proxyUrl": { "type": "string", "description": "An optional proxy to be used for dealing with same-origin issues.  URL must either be a relative path on the same server or an absolute path on a server which sets CORS headers." },
+                "exportMapUrl": { "type": "string", "description": "An ESRI service endpoint for generating map images.  Should point directly to an endpoint that can be consumed by ESRI PrintTask." },
+                "geometryUrl": { "type": "string", "description": "A URL to an ESRI ArcGIS geometry service REST endpoint." },
+                "googleAPIKey": { "type": "string", "description": "Google API key to enable geo location and share link shortening." },
+                "geolocation": { "type": "object", "additionalProperties": true, "description": "FIXME" },
+                "coordInfo": { "type": "object", "additionalProperties": true, "description": "FIXME" },
+                "print": { "type": "object", "additionalProperties": true, "description": "FIXME" },
+                "search": {
+                    "type": "object",
+                    "description": "Search properties including ability to disable certain types of searches (NTS, FSA, and/or LAT/LNG) and to set service endpoint urls",
+                    "properties": {
+                        "disabledSearches": {
+                            "type": "array",
+                            "items": { "type": "string", "enum": [ "NTS", "FSA", "LAT/LNG" ] },
+                            "minItems": 1,
+                            "uniqueItems": true,
+                            "description": "Disable specific types of searches including NTS, FSA, or LAT/LNG"
+                        },
+                        "serviceUrls": {
+                            "type": "object",
+                            "description": "Service endpoint urls",
+                            "properties": {
+                                "geoNames": { "type": "string", "description": "Endpoint url for geoNames service" },
+                                "geoLocation": { "type": "string", "description": "Endpoint url for geoLocation service" },
+                                "geoSuggest": { "type": "string", "description": "Endpoint url for geoSuggest service" },
+                                "provinces": { "type": "string", "description": "Endpoint url for provinces service" },
+                                "types": { "type": "string", "description": "Endpoint url for types service" }
+                            },
+                            "additionalProperties": false,
+                            "required": ["geoNames", "geoLocation", "geoSuggest", "provinces", "types"]
+                        }
+                    },
+                    "additionalProperties": false,
+                    "required": ["serviceUrls"]
+                },
+                "export": {
+                    "type": "object",
+                    "description": "Export properties",
+                    "properties": {
+                        "title": { "$ref": "#/definitions/exportComponent", "description": "Title of the export graphic." },
+                        "map": { "$ref": "#/definitions/exportComponent", "description": "Map component." },
+                        "mapElements": { "$ref": "#/definitions/exportComponent", "description": "North arrow and scalebar component." },
+                        "legend": { "$ref": "#/definitions/exportComponent", "description": "Legend component." },
+                        "footnote": { "$ref": "#/definitions/exportComponent", "description": "Foot notice to add to exported map" },
+                        "timestamp":  { "$ref": "#/definitions/exportComponent", "description": "Timestamp component." }
+                    },
+                    "additionalProperties": false
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+
+    "required": [ "version" ]
+}
