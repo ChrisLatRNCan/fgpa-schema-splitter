@@ -36,6 +36,7 @@ replaceCircularRef(viewerSchema);
 const parser = new $RefParser();
   parser.dereference(viewerSchema)
     .then( vSchema => {
+      addSchemaLabel(vSchema.properties);
       addTitleLabel(vSchema.properties);
       addDescriptionLabel(vSchema.properties);
       addEnumLabel(vSchema.properties);
@@ -77,6 +78,20 @@ const parser = new $RefParser();
     enumArray2.unshift({ "$ref": "#/definitions/circular" });
     $DotProp.set(schema, target2, enumArray2);
 
+  }
+
+  /**
+   * Add to all first level properties an attribute named `schema` which contains a label based
+   * on the name of the property.
+   * @function addSchemaLabel
+   * @private
+   * @param {Object} schema
+   */
+  function addSchemaLabel(schema) {
+        const propNames = Object.getOwnPropertyNames(schema);
+        propNames.forEach(prop => {
+            $DotProp.set(schema, `${prop}.schema`, prop);
+        });
   }
 
   /**
