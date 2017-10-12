@@ -4,10 +4,12 @@ let viewerSchema = require('./schemas/schema.json');
 // External libraries
 const $RefParser = require('json-schema-ref-parser');
 const $DotProp = require('dot-prop');
+const $PapaParse = require('papaparse');
 
 // nodejs library
 const $FS = require('fs');
 let csvString = '';
+
 
 /**
  *
@@ -42,67 +44,66 @@ const parser = new $RefParser();
       addEnumLabel(vSchema.properties);
       saveCSV(csvString);
       saveParseConfigSchema(vSchema);
+      loadCSV2JSON('./csv/vSchema.csv');
     })
     .catch(err => {
       console.error(err);
     });
 
 
-  // functions declarations
+// functions declarations
 
-  /**
-   * Replace circular references ($ref) in schema with a new
-   * non-obstructive definition.
-   * 
-   * @function replaceCircularRef
-   * @private
-   * @param {Object} schema
-   */
-  function replaceCircularRef(schema) {
+/**
+ * Replace circular references ($ref) in schema with a new
+ * non-obstructive definition.
+ * 
+ * @function replaceCircularRef
+ * @private
+ * @param {Object} schema
+ */
+function replaceCircularRef(schema) {
+  const target1 = `definitions.entryGroup.properties.children.items.oneOf`;
+  const target2 = `definitions.visibilitySet.properties.exclusiveVisibility.items.oneOf`;
+  let enumArray1 = $DotProp.get(schema, target1);
+  let enumArray2 = $DotProp.get(schema, target2);
+  const circularDef = enumArray1.shift();
 
-    const target1 = `definitions.entryGroup.properties.children.items.oneOf`;
-    const target2 = `definitions.visibilitySet.properties.exclusiveVisibility.items.oneOf`;
-    let enumArray1 = $DotProp.get(schema, target1);
-    let enumArray2 = $DotProp.get(schema, target2);
-    const circularDef = enumArray1.shift();
+  // Create new definition object to be used as a non circular reference
+  $DotProp.set(schema, `definitions.circular`, {"type": "object", "properties": {"circRef": "entryGroup"}});
 
-    // Create new definition object to be used as a non circular reference
-    $DotProp.set(schema, `definitions.circular`, {"type": "object", "properties": {"circRef": "entryGroup"}});
+  // Replace circular reference with non-circular one
+  enumArray1.unshift({ "$ref": "#/definitions/circular" });
+  $DotProp.set(schema, target1, enumArray1);
 
-    // Replace circular reference with non-circular one
-    enumArray1.unshift({ "$ref": "#/definitions/circular" });
-    $DotProp.set(schema, target1, enumArray1);
+  // Replace circular reference with non-circular one
+  enumArray2.shift();
+  enumArray2.unshift({ "$ref": "#/definitions/circular" });
+  $DotProp.set(schema, target2, enumArray2);
+}
 
-    // Replace circular reference with non-circular one
-    enumArray2.shift();
-    enumArray2.unshift({ "$ref": "#/definitions/circular" });
-    $DotProp.set(schema, target2, enumArray2);
+/**
+ * Add to all first level properties an attribute named `schema` which contains a label based
+ * on the name of the property.
+ * @function addSchemaLabel
+ * @private
+ * @param {Object} schema
+ */
+function addSchemaLabel(schema) {
+      const propNames = Object.getOwnPropertyNames(schema);
+      propNames.forEach(prop => {
+          $DotProp.set(schema, `${prop}.schema`, prop);
+      });
+}
 
-  }
-
-  /**
-   * Add to all first level properties an attribute named `schema` which contains a label based
-   * on the name of the property.
-   * @function addSchemaLabel
-   * @private
-   * @param {Object} schema
-   */
-  function addSchemaLabel(schema) {
-        const propNames = Object.getOwnPropertyNames(schema);
-        propNames.forEach(prop => {
-            $DotProp.set(schema, `${prop}.schema`, prop);
-        });
-  }
-
-  /**
-   * Add to all properties an attribute named `title` which contains a label based
-   * on the name of the property and is place in the hierarchy.
-   * @function addTitleLabel
-   * @private
-   * @param {Object} schema
-   * @param {String} parent [optional] use as a prefix to generate labels
-   */
-  function addTitleLabel(schema, parent = '') {
+/**
+ * Add to all properties an attribute named `title` which contains a label based
+ * on the name of the property and is place in the hierarchy.
+ * @function addTitleLabel
+ * @private
+ * @param {Object} schema
+ * @param {String} parent [optional] use as a prefix to generate labels
+ */
+function addTitleLabel(schema, parent = '') {
 
     const propNames = Object.getOwnPropertyNames(schema);
     let prefix = parent;
@@ -116,16 +117,16 @@ const parser = new $RefParser();
         addTitleLabel( $DotProp.get(schema, `${prop}.properties`), `${prefix}${prop}.`);
       }
     });
-  }
+}
 
-  /**
-   * Save existing `descriptions` property values in a csv like blob
-   * and replace those values with labels.
-   * @function addDescriptionLabel
-   * @private
-   * @param {Object} schema
-   * @param {String} parent [optional] use as a prefix to generate labels
-   */
+/**
+ * Save existing `descriptions` property values in a csv like blob
+ * and replace those values with labels.
+ * @function addDescriptionLabel
+ * @private
+ * @param {Object} schema
+ * @param {String} parent [optional] use as a prefix to generate labels
+ */
 function addDescriptionLabel(schema, parent = '') {
   const propNames = Object.getOwnPropertyNames(schema);
   let prefix = parent;
@@ -145,14 +146,14 @@ function addDescriptionLabel(schema, parent = '') {
   });
 }
 
-  /**
-   * Save existing `enum` array values in a csv like blob
-   * and replace those values with labels.
-   * @function addEnumLabel
-   * @private
-   * @param {Object} schema
-   * @param {String} parent [optional] use as a prefix to generate labels
-   */
+/**
+ * Save existing `enum` array values in a csv like blob
+ * and replace those values with labels.
+ * @function addEnumLabel
+ * @private
+ * @param {Object} schema
+ * @param {String} parent [optional] use as a prefix to generate labels
+ */
 function addEnumLabel(schema, parent = '') {
   const propNames = Object.getOwnPropertyNames(schema);
   let prefix = parent;
@@ -190,12 +191,12 @@ function addEnumLabel(schema, parent = '') {
   });
 }
 
-  /**
-   * Save csv info in a local file
-   * @function saveCSV
-   * @private
-   * @param {Object} csv contains commas-separeted blob
-   */
+/**
+ * Save csv info in a local file
+ * @function saveCSV
+ * @private
+ * @param {Object} csv contains commas-separeted blob
+ */
 function saveCSV(csv) {
   $FS.writeFile(`./csv/vSchema.csv`, csv, err => {
     if(err) {
@@ -205,13 +206,13 @@ function saveCSV(csv) {
   });
 }
 
-  /**
-   * Save $ref resolved main properties of the schema 
-   * in separated JSON files.
-   * @function saveParseConfigSchema
-   * @private
-   * @param {String} schema
-   */
+/**
+ * Save $ref resolved main properties of the schema 
+ * in separated JSON files.
+ * @function saveParseConfigSchema
+ * @private
+ * @param {Object} schema
+ */
 function saveParseConfigSchema(schema) {
 
   // Save header
@@ -261,4 +262,39 @@ function saveParseConfigSchema(schema) {
     }
     console.log(`circular.json was saved!`);
   });
+}
+
+/**UNDER DEV
+ * Replace labels by values corresponding to chosen language
+ * @function resolveLabel
+ * @private
+ * @param {Object} schema
+ * @param {Object} csv contains commas-separeted blob with labels and values
+ * @param {String} lang language to resolve
+ */
+function resolveLabel(schema, csv, lang) {
+
+}
+
+/**UNDER DEV
+ * Load csv file in JSON object
+ * @function loadCSV2JSON
+ * @private
+ * @param {String} csvFilename contains commas-separeted blob with labels and values
+ */
+function loadCSV2JSON(csvFilename) {
+
+  // config for papaParse
+  const configPasrse = {
+    delimiter: ","
+  };
+
+  $FS.readFile(csvFilename, 'utf8', (err, data) => {
+    if (err) throw err;
+
+    const csv2json = $PapaParse.parse(data, configPasrse);
+    console.log(csv2json);
+  });
+
+
 }
