@@ -37,15 +37,20 @@ let csvString = '';
 
 replaceCircularRef(viewerSchema);
 
+const labelling = function(schema) {
+  var promise = new Promise(resolve => {
+    addLabels(schema)
+    resolve(schema);
+  });
+};
+
 const parser = new $RefParser();
   parser.dereference(viewerSchema)
-    .then( vSchema => {
-      addSchemaLabel(vSchema.properties);
-      addTitleLabel(vSchema.properties);
-      addDescriptionLabel(vSchema.properties);
-      addEnumLabel(vSchema.properties);
-      saveCSV(csvString);
-      saveParseConfigSchema(vSchema);
+    .then(vSchema => {
+      labelling(vSchema).then( vSchema => {
+        saveCSV(csvString);
+      });
+      // saveParseConfigSchema(vSchema);
     })
     .catch(err => {
       console.error(err);
@@ -80,6 +85,19 @@ function replaceCircularRef(schema) {
   enumArray2.shift();
   enumArray2.unshift({ "$ref": "#/definitions/circular" });
   $DotProp.set(schema, target2, enumArray2);
+}
+
+/**
+ * Add labels
+ * @function addLabels
+ * @private
+ * @param {Object} schema
+ */
+function addLabels(schema) {
+  addSchemaLabel(schema.properties);
+  addTitleLabel(schema.properties);
+  addDescriptionLabel(schema.properties);
+  addEnumLabel(schema.properties);
 }
 
 /**
