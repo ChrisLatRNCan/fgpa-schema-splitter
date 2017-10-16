@@ -1,1 +1,0 @@
-{"type":"string","enum":["language.enum.en","language.enum.fr","language.enum.es"],"description":"language.desc","schema":"language","title":"language.title"}
