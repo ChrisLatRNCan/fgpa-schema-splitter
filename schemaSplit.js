@@ -117,6 +117,7 @@ function replaceCircularRef(schema) {
 function addLabels(schema) {
   addSchemaLabel(schema.properties);
   addTitleLabel(schema.properties);
+  addHelpLabel(schema.properties);
   addDescriptionLabel(schema.properties);
   addEnumLabel(schema.properties);
   return true;
@@ -159,6 +160,30 @@ function addTitleLabel(schema, parent = '') {
       }
     });
 }
+
+/**
+ * Add to all properties an attribute named `help` which contains a label based
+ * on the name of the property and is place in the hierarchy.
+ * @function addHelpLabel
+ * @private
+ * @param {Object} schema
+ * @param {String} parent [optional] use as a prefix to generate labels
+ */
+function addHelpLabel(schema, parent = '') {
+
+      const propNames = Object.getOwnPropertyNames(schema);
+      let prefix = parent;
+
+      propNames.forEach( prop => {
+        const label = `${prefix}${prop}.help`;
+        $DotProp.set(schema, `${prop}.help`, label);
+        csvString = `${csvString},${label},[en],0,[fr],0\n`;
+        // go deeper ???
+        if ($DotProp.has(schema, `${prop}.properties`)) {
+          addHelpLabel( $DotProp.get(schema, `${prop}.properties`), `${prefix}${prop}.`);
+        }
+      });
+  }
 
 /**
  * Save existing `descriptions` property values in a csv like blob
