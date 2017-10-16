@@ -10,6 +10,10 @@ const $PapaParse = require('papaparse');
 
 // nodejs library
 const $FS = require('fs');
+const $Promise = require('promise');
+
+
+const lang = ['en-CA', 'fr-CA'];
 let csvString = '';
 
 
@@ -23,6 +27,8 @@ let csvString = '';
  * by the fgpa authoring tool.
  * Provides six functions:
  *  - replaceCircularRef: manage circular references ($ref).
+ *  - addLabels: add all labels.
+ *  - addSchemaLabel: add schema attribute to main properties.
  *  - addTitleLabel: add title attribute to properties.
  *  - addDescriptionLabel: save existing descriptions in a csv like blob
  *                          and replace them with labels.
@@ -31,30 +37,47 @@ let csvString = '';
  *  - saveCSV: save csv like blob in a csv (comma-separated values) file
  *  - saveParseConfigSchema: save $ref resolved main properties of the schema
  *                            in separated JSON files.
+ *  - loadCSVinJSON: load CSV file into JSON object.
+ *  - resolveLabels: Replace labels by values corresponding to chosen language.
  */
 
  // main
 
 replaceCircularRef(viewerSchema);
 
-const labelling = function(schema) {
-  var promise = new Promise(resolve => {
-    addLabels(schema)
-    resolve(schema);
-  });
-};
-
 const parser = new $RefParser();
-  parser.dereference(viewerSchema)
-    .then(vSchema => {
-      labelling(vSchema).then( vSchema => {
-        saveCSV(csvString);
-      });
-      // saveParseConfigSchema(vSchema);
-    })
-    .catch(err => {
-      console.error(err);
-    });
+parser.dereference(viewerSchema)
+  .then(vSchema => {
+
+  // Promise
+  const labellingSchema = new $Promise(
+    (resolve, reject) => {
+        if (addLabels(vSchema)) {
+            resolve(vSchema);
+        } else {
+            const reason = new Error('labelling went wrong');
+            reject(reason);
+        }
+
+    }
+  );
+
+  // call our promise
+  const splitMe = function () {
+    labellingSchema
+        .then(() => {
+          saveCSV(csvString);
+          saveParseConfigSchema(vSchema);
+        })
+        .catch(error => console.log(error.message));
+  };
+
+  splitMe();
+
+  })
+  .catch(err => {
+    console.error(err);
+  });
 
 
 // functions declarations
@@ -98,6 +121,7 @@ function addLabels(schema) {
   addTitleLabel(schema.properties);
   addDescriptionLabel(schema.properties);
   addEnumLabel(schema.properties);
+  return true;
 }
 
 /**
@@ -217,17 +241,13 @@ function addEnumLabel(schema, parent = '') {
  * @param {Object} csv contains commas-separeted blob
  */
 function saveCSV(csv) {
-  $FS.writeFile(`./csv/vSchema.csv`, csv, err => {
-    if(err) {
-        return console.log(err);
-    }
-    console.log(`./csv/vSchema.csv was saved!`);
-  });
+  $FS.writeFileSync('./csv/vSchema.csv', csv);
 }
 
 /**
  * Save $ref resolved main properties of the schema
- * in separated JSON files.
+ * in separated JSON files. A JSON is created for each
+ * designated languages.
  * @function saveParseConfigSchema
  * @private
  * @param {Object} schema
@@ -248,13 +268,8 @@ function saveParseConfigSchema(schema) {
   });
 
   for (var i = 0; i < nbrLang; i++) {
-    const headerWr =  resolveLabels(header, csvJSON, i);
-    $FS.writeFile(`./pieces/header.${i}.json`, headerWr, err => {
-      if(err) {
-          return console.log(err);
-      }
-    });
-    console.log(`header.${i}.json` + " was saved!");
+    const headerWr  = resolveLabels(header, csvJSON, i);
+    $FS.writeFileSync(`./pieces/header.${lang[i]}.json`, headerWr);
   }
 
   //*********Save properties
@@ -266,12 +281,7 @@ function saveParseConfigSchema(schema) {
 
     for (var i = 0; i < nbrLang; i++) {
       const blobWr = resolveLabels(blob, csvJSON, i);
-      $FS.writeFile(`./pieces/${prop}.${i}.json`, blobWr, err => {
-        if(err) {
-            return console.log(err);
-        }
-      });
-      console.log(`${prop}.${i}.json was saved!`);
+      $FS.writeFileSync(`./pieces/${prop}.${lang[i]}.json`, blobWr);
     }
   });
 
@@ -287,16 +297,11 @@ function saveParseConfigSchema(schema) {
 
   for (var i = 0; i < nbrLang; i++) {
     const defRefWr = resolveLabels(defRef, csvJSON, i);
-    $FS.writeFile(`./pieces/circular.${i}.json`, defRefWr, err => {
-      if(err) {
-          return console.log(err);
-      }
-    });
-    console.log(`circular.${i}.json was saved`);
+    $FS.writeFileSync(`./pieces/circular.${lang[i]}.json`, defRefWr);
   }
 }
 
-/**UNDER DEV
+/**
  * Load CSV file into JSON object
  * @function loadCSVinJSON
  * @private
@@ -317,12 +322,13 @@ function loadCSVinJSON() {
   return csvJSON;
 }
 
-/**UNDER DEV
- * Replace labels by values corresponding to chosen language
+/**
+ * Replace labels by values corresponding to chosen language.
  * @function resolveLabels
  * @private
- * @param {Object}
- * @param {String} csvFilename
+ * @param {String} schemaString schema as a string
+ * @param {String} csvJSON cvs content as a JSON
+ * @param {String} langIdx language index
  */
 function resolveLabels(schemaString, csvJSON, langIdx) {
 
@@ -330,10 +336,12 @@ function resolveLabels(schemaString, csvJSON, langIdx) {
   const idx = 2+2*langIdx;
 
   csvJSON.data.forEach(record => {
-    const label = record[1];
-    const value = record[idx];
-    const regex = new RegExp(label);;
-    newString = newString.replace(regex, value);
+    if(record[1] !== undefined) {
+      const label = record[1];
+      const value = record[idx];
+      const regex = new RegExp(label);
+      newString = newString.replace(regex, value);
+    }
   });
   return newString;
 }
