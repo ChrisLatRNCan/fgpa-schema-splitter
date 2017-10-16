@@ -368,3 +368,12 @@ function resolveLabels(schemaString, csvJSON, langIdx) {
   });
   return newString;
 }
+
+/**
+ * Update CSV file.
+ * @function updateCSV
+ * @private
+ */
+function updateCSV() {
+
+}
