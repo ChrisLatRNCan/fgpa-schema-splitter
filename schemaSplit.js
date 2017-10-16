@@ -28,11 +28,14 @@ let csvString = '';
  *  - addLabels: add all labels.
  *  - addSchemaLabel: add schema attribute to main properties.
  *  - addTitleLabel: add title attribute to properties.
+ *  - addHelpLabel: add help attribute to properties.
+ *  - addDefaultLabel: add default attribute to properties.
  *  - addDescriptionLabel: save existing descriptions in a csv like blob
  *                          and replace them with labels.
  *  - addEnumLabel: save existing enum aray values in a csv like blob
  *                  and replace them with labels.
  *  - saveCSV: save csv like blob in a csv (comma-separated values) file
+ *  - saveSchema: save schema in local file.
  *  - saveParseConfigSchema: save $ref resolved main properties of the schema
  *                            in separated JSON files.
  *  - loadCSVinJSON: load CSV file into JSON object.
@@ -65,6 +68,7 @@ parser.dereference(viewerSchema)
     labellingSchema
         .then(() => {
           saveCSV(csvString);
+          saveSchema(vSchema);
           saveParseConfigSchema(vSchema);
         })
         .catch(error => console.log(error.message));
@@ -118,6 +122,7 @@ function addLabels(schema) {
   addSchemaLabel(schema.properties);
   addTitleLabel(schema.properties);
   addHelpLabel(schema.properties);
+  addDefaultLabel(schema.properties);
   addDescriptionLabel(schema.properties);
   addEnumLabel(schema.properties);
   return true;
@@ -171,19 +176,48 @@ function addTitleLabel(schema, parent = '') {
  */
 function addHelpLabel(schema, parent = '') {
 
-      const propNames = Object.getOwnPropertyNames(schema);
-      let prefix = parent;
+  const propNames = Object.getOwnPropertyNames(schema);
+  let prefix = parent;
 
-      propNames.forEach( prop => {
-        const label = `${prefix}${prop}.help`;
-        $DotProp.set(schema, `${prop}.help`, label);
-        csvString = `${csvString},${label},[en],0,[fr],0\n`;
-        // go deeper ???
-        if ($DotProp.has(schema, `${prop}.properties`)) {
-          addHelpLabel( $DotProp.get(schema, `${prop}.properties`), `${prefix}${prop}.`);
-        }
-      });
-  }
+  propNames.forEach( prop => {
+    const label = `${prefix}${prop}.help`;
+    $DotProp.set(schema, `${prop}.help`, label);
+    csvString = `${csvString},${label},[en],0,[fr],0\n`;
+    // go deeper ???
+    if ($DotProp.has(schema, `${prop}.properties`)) {
+      addHelpLabel( $DotProp.get(schema, `${prop}.properties`), `${prefix}${prop}.`);
+    }
+  });
+}
+
+/**
+ * Add to all properties an attribute named `default`, if it doesn't already exist,
+ * which contains a label based on the name of the property and is place in the hierarchy.
+ * Save existing default attribute value.
+ * @function addDefaultLabel
+ * @private
+ * @param {Object} schema
+ * @param {String} parent [optional] use as a prefix to generate labels
+ */
+function addDefaultLabel(schema, parent = '') {
+
+  const propNames = Object.getOwnPropertyNames(schema);
+  let prefix = parent;
+  let deflt = '';
+
+  propNames.forEach(prop => {
+    if ($DotProp.has(schema, `${prop}.default`)) {
+      const label = `${prefix}${prop}.default`;
+      deflt = $DotProp.get(schema, `${prop}.default`);
+      csvString = `${csvString},${label},"${deflt}",1,[fr],0\n`;
+      $DotProp.set(schema, `${prop}.default`, label);
+    }
+    // go deeper ???
+    if ($DotProp.has(schema, `${prop}.properties`)) {
+      addDefaultLabel( $DotProp.get(schema, `${prop}.properties`), `${prefix}${prop}.`);
+    }
+  });
+}
 
 /**
  * Save existing `descriptions` property values in a csv like blob
@@ -200,7 +234,7 @@ function addDescriptionLabel(schema, parent = '') {
 
   propNames.forEach(prop => {
     if ($DotProp.has(schema, `${prop}.description`)) {
-      const label = `${prefix}${prop}.desc`;
+      const label = `${prefix}${prop}.description`;
       description = $DotProp.get(schema, `${prop}.description`);
       csvString = `${csvString},${label},"${description}",1,[fr],0\n`;
       $DotProp.set(schema, `${prop}.description`, label);
@@ -268,6 +302,17 @@ function saveCSV(csv) {
 }
 
 /**
+ * Save schema in local file
+ * @function saveSchema
+ * @private
+ * @param {Object} schema
+ */
+function saveSchema(schema) {
+  schemaString = JSON.stringify(schema, null, 2);
+  $FS.writeFileSync('./schemas/schemaAuthor.json', schemaString);
+}
+
+/**
  * Save $ref resolved main properties of the schema
  * in separated JSON files. A JSON is created for each
  * designated languages.
@@ -286,7 +331,7 @@ function saveParseConfigSchema(schema) {
 
   genNames.forEach(prop => {
     if (prop !== `properties` && prop !== `definitions`) {
-        header = `${header}"${prop}": ${JSON.stringify($DotProp.get(schema, prop))}\n`;
+        header = `${header}"${prop}": ${JSON.stringify($DotProp.get(schema, prop), null, 2)}\n`;
     }
   });
 
@@ -300,7 +345,7 @@ function saveParseConfigSchema(schema) {
 
   propNames.forEach(prop => {
 
-    const blob = JSON.stringify($DotProp.get(schema, `properties.${prop}`));
+    const blob = JSON.stringify($DotProp.get(schema, `properties.${prop}`), null, 2);
 
     for (var i = 0; i < nbrLang; i++) {
       const blobWr = resolveLabels(blob, csvJSON, i);
@@ -313,10 +358,10 @@ function saveParseConfigSchema(schema) {
   const definitions = ['entryGroup', 'visibilitySet', 'infoSection', 'entry', 'symbologyStack', 'legendGroupControls'];
 
   definitions.forEach(prop => {
-    defRef = `${defRef}"${prop}": ${JSON.stringify($DotProp.get(schema, `definitions.${prop}`))},\n`;
+    defRef = `${defRef}"${prop}": ${JSON.stringify($DotProp.get(schema, `definitions.${prop}`), null, 2)},\n`;
   });
 
-  defRef = `${defRef}"circular": ${JSON.stringify($DotProp.get(schema, `definitions.circular`))}\n`;
+  defRef = `${defRef}"circular": ${JSON.stringify($DotProp.get(schema, `definitions.circular`), null, 2)}\n`;
 
   for (var i = 0; i < nbrLang; i++) {
     const defRefWr = resolveLabels(defRef, csvJSON, i);
@@ -367,4 +412,13 @@ function resolveLabels(schemaString, csvJSON, langIdx) {
     }
   });
   return newString;
+}
+
+/**
+ * Update CSV file.
+ * @function updateCSV
+ * @private
+ */
+function updateCSV() {
+
 }
