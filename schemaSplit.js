@@ -5,8 +5,6 @@ let viewerSchema = require('./schemas/schema.json');
 const $RefParser = require('json-schema-ref-parser');
 const $DotProp = require('dot-prop');
 const $PapaParse = require('papaparse');
-// const $TreeKit = require('tree-kit');
-// const $Lodash = require('lodash');
 
 // nodejs library
 const $FS = require('fs');
