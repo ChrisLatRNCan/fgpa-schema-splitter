@@ -1,0 +1,14 @@
+{
+    "name": "a2v2",
+    "private": true,
+    "version": "0.0.0",
+    "description": "FGP R2 schema splitter",
+    "repository": "https://github.com/ChrisLatRNCan/fgpa-schema-splitter",
+    "author": "Government of Canada",
+    "license": "MIT",
+    "dependencies": {
+      "json-schema-ref-parser": "^4.0.0",
+      "dot-prop": "^4.2.0",
+      "papaparse": "^4.3.6"
+    }
+}
