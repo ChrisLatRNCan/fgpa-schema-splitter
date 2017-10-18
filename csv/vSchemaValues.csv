@@ -1,0 +1,418 @@
+Language code (ISO 639-1),lang.code.code,en-CA,1,fr-CA,1
+Version title,version.title,Version,1,Version,1
+Language title,language.title,Language,1,Langue,1
+User interface title,ui.title,User Interface,1,Interface utilisateur,1
+,ui.fullscreen.title,Fullscreen,1,Plein écran,1
+,ui.theme.title,Theme,1,Thème,1
+,ui.logoUrl.title,Logo URL,1,URL du logo,1
+,ui.failureFeedback.title,Failure feedback,1,Rétroaction concernant la défaillance,1
+,ui.title.title,Title,1,Titre,1
+,ui.appBar.title,Applications bar,1,Barre d'applications,1
+,ui.appBar.sideMenu.title,Side menu,1,Menu latéral,1
+,ui.appBar.geoSearch.title,Geo search,1,Recherche géospatiale,1
+,ui.appBar.basemap.title,Basemap,1,Carte de base,1
+,ui.appBar.layers.title,Layers,1,Couches,1
+,ui.navBar.title,Navigation bar,1,Barre de navigation,1
+,ui.navBar.zoom.title,Zoom,1,Zoom,1
+,ui.navBar.extra.title,Extra,1,Suppléments,1
+,ui.sideMenu.title,Side menu,1,Menu latéral,1
+,ui.sideMenu.logo.title,Logo,1,logo,1
+,ui.sideMenu.items.title,Items,1,Éléments,1
+,ui.restrictNavigation.title,Restrict navigation,1,Restreindre la navigation,1
+,ui.about.title,About,1,À propos,1
+,ui.help.title,Help,1,Aide,1
+,ui.help.folderName.title,Folder name,1,Nom du dossier,1
+,ui.legend.title,Legend,1,Légende,1
+,ui.legend.reorderable.title,Reorderable,1,Réordonnable,1
+,ui.legend.allowImport.title,Allow import,1,Permettre l'importation,1
+,ui.legend.isOpen.title,Legend openning,1,Ouverture de la légende,1
+,ui.legend.isOpen.large.title,Large,1,Étendu,1
+,ui.legend.isOpen.medium.title,Medium,1,Moyen,1
+,ui.legend.isOpen.small.title,Small,1,Restreint,1
+,ui.tableIsOpen.title,Table openning,1,Ouverture de la table,1
+,ui.tableIsOpen.id.title,ID,1,ID,1
+,ui.tableIsOpen.large.title,Large,1,Étende,1
+,ui.tableIsOpen.medium.title,Medium,1,Moyenne,1
+,ui.tableIsOpen.small.title,Small,1,Restreinte,1
+,ui.widgetsWidget.title,Widget,1,Widget,1
+,services.title,Services,1,Services,1
+,services.proxyUrl.title,[en],0,[fr],0
+,services.exportMapUrl.title,[en],0,[fr],0
+,services.geometryUrl.title,[en],0,[fr],0
+,services.googleAPIKey.title,[en],0,[fr],0
+,services.geolocation.title,[en],0,[fr],0
+,services.coordInfo.title,[en],0,[fr],0
+,services.print.title,[en],0,[fr],0
+,services.search.title,[en],0,[fr],0
+,services.search.disabledSearches.title,[en],0,[fr],0
+,services.search.serviceUrls.title,[en],0,[fr],0
+,services.search.serviceUrls.geoNames.title,[en],0,[fr],0
+,services.search.serviceUrls.geoLocation.title,[en],0,[fr],0
+,services.search.serviceUrls.geoSuggest.title,[en],0,[fr],0
+,services.search.serviceUrls.provinces.title,[en],0,[fr],0
+,services.search.serviceUrls.types.title,[en],0,[fr],0
+,services.export.title,[en],0,[fr],0
+,services.export.title.title,[en],0,[fr],0
+,services.export.title.isSelected.title,[en],0,[fr],0
+,services.export.title.isSelectable.title,[en],0,[fr],0
+,services.export.title.value.title,[en],0,[fr],0
+,services.export.map.title,[en],0,[fr],0
+,services.export.map.isSelected.title,[en],0,[fr],0
+,services.export.map.isSelectable.title,[en],0,[fr],0
+,services.export.map.value.title,[en],0,[fr],0
+,services.export.mapElements.title,[en],0,[fr],0
+,services.export.mapElements.isSelected.title,[en],0,[fr],0
+,services.export.mapElements.isSelectable.title,[en],0,[fr],0
+,services.export.mapElements.value.title,[en],0,[fr],0
+,services.export.legend.title,[en],0,[fr],0
+,services.export.legend.isSelected.title,[en],0,[fr],0
+,services.export.legend.isSelectable.title,[en],0,[fr],0
+,services.export.legend.value.title,[en],0,[fr],0
+,services.export.legend.showInfoSymbology.title,[en],0,[fr],0
+,services.export.legend.showControlledSymbology.title,[en],0,[fr],0
+,services.export.footnote.title,[en],0,[fr],0
+,services.export.footnote.isSelected.title,[en],0,[fr],0
+,services.export.footnote.isSelectable.title,[en],0,[fr],0
+,services.export.footnote.value.title,[en],0,[fr],0
+,services.export.timestamp.title,[en],0,[fr],0
+,services.export.timestamp.isSelected.title,[en],0,[fr],0
+,services.export.timestamp.isSelectable.title,[en],0,[fr],0
+,services.export.timestamp.value.title,[en],0,[fr],0
+,map.title,[en],0,[fr],0
+,map.extentSets.title,[en],0,[fr],0
+,map.lodSets.title,[en],0,[fr],0
+,map.tileSchemas.title,[en],0,[fr],0
+,map.components.title,[en],0,[fr],0
+,map.components.geoSearch.title,[en],0,[fr],0
+,map.components.geoSearch.enabled.title,[en],0,[fr],0
+,map.components.geoSearch.showGraphic.title,[en],0,[fr],0
+,map.components.geoSearch.showInfo.title,[en],0,[fr],0
+,map.components.mouseInfo.title,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.title,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.wkid.title,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.vcsWkid.title,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.latestWkid.title,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.latestVcsWkid.title,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.wkt.title,[en],0,[fr],0
+,map.components.northArrow.title,[en],0,[fr],0
+,map.components.overviewMap.title,[en],0,[fr],0
+,map.components.overviewMap.enabled.title,[en],0,[fr],0
+,map.components.overviewMap.expandFactor.title,[en],0,[fr],0
+,map.components.scaleBar.title,[en],0,[fr],0
+,map.components.basemap.title,[en],0,[fr],0
+,map.initialBasemapId.title,[en],0,[fr],0
+,map.baseMaps.title,[en],0,[fr],0
+,map.layers.title,[en],0,[fr],0
+,map.legend.title,[en],0,[fr],0
+,version.help,[en],0,[fr],0
+,language.help,[en],0,[fr],0
+,ui.help,[en],0,[fr],0
+,ui.fullscreen.help,[en],0,[fr],0
+,ui.theme.help,[en],0,[fr],0
+,ui.logoUrl.help,[en],0,[fr],0
+,ui.failureFeedback.help,[en],0,[fr],0
+,ui.title.help,[en],0,[fr],0
+,ui.appBar.help,[en],0,[fr],0
+,ui.appBar.sideMenu.help,[en],0,[fr],0
+,ui.appBar.geoSearch.help,[en],0,[fr],0
+,ui.appBar.basemap.help,[en],0,[fr],0
+,ui.appBar.layers.help,[en],0,[fr],0
+,ui.navBar.help,[en],0,[fr],0
+,ui.navBar.zoom.help,[en],0,[fr],0
+,ui.navBar.extra.help,[en],0,[fr],0
+,ui.sideMenu.help,[en],0,[fr],0
+,ui.sideMenu.logo.help,[en],0,[fr],0
+,ui.sideMenu.items.help,[en],0,[fr],0
+,ui.restrictNavigation.help,[en],0,[fr],0
+,ui.about.help,[en],0,[fr],0
+,ui.help.help,[en],0,[fr],0
+,ui.help.folderName.help,[en],0,[fr],0
+,ui.legend.help,[en],0,[fr],0
+,ui.legend.reorderable.help,[en],0,[fr],0
+,ui.legend.allowImport.help,[en],0,[fr],0
+,ui.legend.isOpen.help,[en],0,[fr],0
+,ui.legend.isOpen.large.help,[en],0,[fr],0
+,ui.legend.isOpen.medium.help,[en],0,[fr],0
+,ui.legend.isOpen.small.help,[en],0,[fr],0
+,ui.tableIsOpen.help,[en],0,[fr],0
+,ui.tableIsOpen.id.help,[en],0,[fr],0
+,ui.tableIsOpen.large.help,[en],0,[fr],0
+,ui.tableIsOpen.medium.help,[en],0,[fr],0
+,ui.tableIsOpen.small.help,[en],0,[fr],0
+,ui.widgetsWidget.help,[en],0,[fr],0
+,services.help,[en],0,[fr],0
+,services.proxyUrl.help,[en],0,[fr],0
+,services.exportMapUrl.help,[en],0,[fr],0
+,services.geometryUrl.help,[en],0,[fr],0
+,services.googleAPIKey.help,[en],0,[fr],0
+,services.geolocation.help,[en],0,[fr],0
+,services.coordInfo.help,[en],0,[fr],0
+,services.print.help,[en],0,[fr],0
+,services.search.help,[en],0,[fr],0
+,services.search.disabledSearches.help,[en],0,[fr],0
+,services.search.serviceUrls.help,[en],0,[fr],0
+,services.search.serviceUrls.geoNames.help,[en],0,[fr],0
+,services.search.serviceUrls.geoLocation.help,[en],0,[fr],0
+,services.search.serviceUrls.geoSuggest.help,[en],0,[fr],0
+,services.search.serviceUrls.provinces.help,[en],0,[fr],0
+,services.search.serviceUrls.types.help,[en],0,[fr],0
+,services.export.help,[en],0,[fr],0
+,services.export.title.help,[en],0,[fr],0
+,services.export.title.isSelected.help,[en],0,[fr],0
+,services.export.title.isSelectable.help,[en],0,[fr],0
+,services.export.title.value.help,[en],0,[fr],0
+,services.export.map.help,[en],0,[fr],0
+,services.export.map.isSelected.help,[en],0,[fr],0
+,services.export.map.isSelectable.help,[en],0,[fr],0
+,services.export.map.value.help,[en],0,[fr],0
+,services.export.mapElements.help,[en],0,[fr],0
+,services.export.mapElements.isSelected.help,[en],0,[fr],0
+,services.export.mapElements.isSelectable.help,[en],0,[fr],0
+,services.export.mapElements.value.help,[en],0,[fr],0
+,services.export.legend.help,[en],0,[fr],0
+,services.export.legend.isSelected.help,[en],0,[fr],0
+,services.export.legend.isSelectable.help,[en],0,[fr],0
+,services.export.legend.value.help,[en],0,[fr],0
+,services.export.legend.showInfoSymbology.help,[en],0,[fr],0
+,services.export.legend.showControlledSymbology.help,[en],0,[fr],0
+,services.export.footnote.help,[en],0,[fr],0
+,services.export.footnote.isSelected.help,[en],0,[fr],0
+,services.export.footnote.isSelectable.help,[en],0,[fr],0
+,services.export.footnote.value.help,[en],0,[fr],0
+,services.export.timestamp.help,[en],0,[fr],0
+,services.export.timestamp.isSelected.help,[en],0,[fr],0
+,services.export.timestamp.isSelectable.help,[en],0,[fr],0
+,services.export.timestamp.value.help,[en],0,[fr],0
+,map.help,[en],0,[fr],0
+,map.extentSets.help,[en],0,[fr],0
+,map.lodSets.help,[en],0,[fr],0
+,map.tileSchemas.help,[en],0,[fr],0
+,map.components.help,[en],0,[fr],0
+,map.components.geoSearch.help,[en],0,[fr],0
+,map.components.geoSearch.enabled.help,[en],0,[fr],0
+,map.components.geoSearch.showGraphic.help,[en],0,[fr],0
+,map.components.geoSearch.showInfo.help,[en],0,[fr],0
+,map.components.mouseInfo.help,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.help,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.wkid.help,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.vcsWkid.help,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.latestWkid.help,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.latestVcsWkid.help,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.wkt.help,[en],0,[fr],0
+,map.components.northArrow.help,[en],0,[fr],0
+,map.components.overviewMap.help,[en],0,[fr],0
+,map.components.overviewMap.enabled.help,[en],0,[fr],0
+,map.components.overviewMap.expandFactor.help,[en],0,[fr],0
+,map.components.scaleBar.help,[en],0,[fr],0
+,map.components.basemap.help,[en],0,[fr],0
+,map.initialBasemapId.help,[en],0,[fr],0
+,map.baseMaps.help,[en],0,[fr],0
+,map.layers.help,[en],0,[fr],0
+,map.legend.help,[en],0,[fr],0
+,version.default,[en],0,[fr],0
+,language.default,[en],0,[fr],0
+,ui.default,[en],0,[fr],0
+,ui.fullscreen.default,"false",1,"faux",1
+,ui.theme.default,"default",1,[fr],0
+,ui.logoUrl.default,[en],0,[fr],0
+,ui.failureFeedback.default,[en],0,[fr],0
+,ui.title.default,[en],0,[fr],0
+FIXME,ui.appBar.default,"[object Object]",1,[fr],0
+,ui.appBar.sideMenu.default,"true",1,[fr],0
+,ui.appBar.geoSearch.default,"true",1,[fr],0
+,ui.appBar.basemap.default,"true",1,[fr],0
+,ui.appBar.layers.default,"true",1,[fr],0
+,ui.navBar.default,[en],0,[fr],0
+,ui.navBar.zoom.default,"buttons",1,[fr],0
+,ui.navBar.extra.default,"fullscreen,geoLocator,home,help",1,[fr],0
+,ui.sideMenu.default,[en],0,[fr],0
+,ui.sideMenu.logo.default,"true",1,[fr],0
+,ui.sideMenu.items.default,"layers,basemap,fullscreen,export,share,touch,help,about,language,plugins",1,[fr],0
+,ui.restrictNavigation.default,"false",1,[fr],0
+,ui.about.default,[en],0,[fr],0
+,ui.help.default,[en],0,[fr],0
+,ui.help.folderName.default,[en],0,[fr],0
+,ui.legend.default,[en],0,[fr],0
+,ui.legend.reorderable.default,"true",1,[fr],0
+,ui.legend.allowImport.default,"true",1,[fr],0
+,ui.legend.isOpen.default,[en],0,[fr],0
+,ui.legend.isOpen.large.default,"false",1,[fr],0
+,ui.legend.isOpen.medium.default,"false",1,[fr],0
+,ui.legend.isOpen.small.default,"false",1,[fr],0
+,ui.tableIsOpen.default,[en],0,[fr],0
+,ui.tableIsOpen.id.default,[en],0,[fr],0
+,ui.tableIsOpen.large.default,"false",1,[fr],0
+,ui.tableIsOpen.medium.default,"false",1,[fr],0
+,ui.tableIsOpen.small.default,"false",1,[fr],0
+,ui.widgetsWidget.default,[en],0,[fr],0
+,services.default,[en],0,[fr],0
+,services.proxyUrl.default,[en],0,[fr],0
+,services.exportMapUrl.default,[en],0,[fr],0
+,services.geometryUrl.default,[en],0,[fr],0
+,services.googleAPIKey.default,[en],0,[fr],0
+,services.geolocation.default,[en],0,[fr],0
+,services.coordInfo.default,[en],0,[fr],0
+,services.print.default,[en],0,[fr],0
+,services.search.default,[en],0,[fr],0
+,services.search.disabledSearches.default,[en],0,[fr],0
+,services.search.serviceUrls.default,[en],0,[fr],0
+,services.search.serviceUrls.geoNames.default,[en],0,[fr],0
+,services.search.serviceUrls.geoLocation.default,[en],0,[fr],0
+,services.search.serviceUrls.geoSuggest.default,[en],0,[fr],0
+,services.search.serviceUrls.provinces.default,[en],0,[fr],0
+,services.search.serviceUrls.types.default,[en],0,[fr],0
+,services.export.default,[en],0,[fr],0
+,services.export.title.default,[en],0,[fr],0
+,services.export.title.isSelected.default,"true",1,[fr],0
+,services.export.title.isSelectable.default,"true",1,[fr],0
+,services.export.title.value.default,[en],0,[fr],0
+,services.export.map.default,[en],0,[fr],0
+,services.export.map.isSelected.default,"services.export.title.isSelected.default",1,[fr],0
+,services.export.map.isSelectable.default,"services.export.title.isSelectable.default",1,[fr],0
+,services.export.map.value.default,"services.export.title.value.default",1,[fr],0
+,services.export.mapElements.default,[en],0,[fr],0
+,services.export.mapElements.isSelected.default,"services.export.map.isSelected.default",1,[fr],0
+,services.export.mapElements.isSelectable.default,"services.export.map.isSelectable.default",1,[fr],0
+,services.export.mapElements.value.default,"services.export.map.value.default",1,[fr],0
+,services.export.legend.default,[en],0,[fr],0
+,services.export.legend.isSelected.default,"true",1,[fr],0
+,services.export.legend.isSelectable.default,"true",1,[fr],0
+,services.export.legend.value.default,[en],0,[fr],0
+,services.export.legend.showInfoSymbology.default,"false",1,[fr],0
+,services.export.legend.showControlledSymbology.default,"false",1,[fr],0
+,services.export.footnote.default,[en],0,[fr],0
+,services.export.footnote.isSelected.default,"services.export.mapElements.isSelected.default",1,[fr],0
+,services.export.footnote.isSelectable.default,"services.export.mapElements.isSelectable.default",1,[fr],0
+,services.export.footnote.value.default,"services.export.mapElements.value.default",1,[fr],0
+,services.export.timestamp.default,[en],0,[fr],0
+,services.export.timestamp.isSelected.default,"services.export.footnote.isSelected.default",1,[fr],0
+,services.export.timestamp.isSelectable.default,"services.export.footnote.isSelectable.default",1,[fr],0
+,services.export.timestamp.value.default,"services.export.footnote.value.default",1,[fr],0
+,map.default,[en],0,[fr],0
+,map.extentSets.default,[en],0,[fr],0
+,map.lodSets.default,[en],0,[fr],0
+,map.tileSchemas.default,[en],0,[fr],0
+,map.components.default,[en],0,[fr],0
+,map.components.geoSearch.default,[en],0,[fr],0
+,map.components.geoSearch.enabled.default,[en],0,[fr],0
+,map.components.geoSearch.showGraphic.default,[en],0,[fr],0
+,map.components.geoSearch.showInfo.default,[en],0,[fr],0
+,map.components.mouseInfo.default,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.default,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.wkid.default,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.vcsWkid.default,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.latestWkid.default,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.latestVcsWkid.default,[en],0,[fr],0
+,map.components.mouseInfo.spatialReference.wkt.default,[en],0,[fr],0
+,map.components.northArrow.default,[en],0,[fr],0
+,map.components.overviewMap.default,[en],0,[fr],0
+,map.components.overviewMap.enabled.default,[en],0,[fr],0
+,map.components.overviewMap.expandFactor.default,"2",1,[fr],0
+,map.components.scaleBar.default,[en],0,[fr],0
+,map.components.basemap.default,[en],0,[fr],0
+,map.initialBasemapId.default,[en],0,[fr],0
+,map.baseMaps.default,[en],0,[fr],0
+,map.layers.default,[en],0,[fr],0
+,map.legend.default,[en],0,[fr],0
+,version.description,"The schema version used to validate the configuration file.  The schema should enumerate the list of versions accepted by this version of the viewer.",1,[fr],0
+,language.description,"ISO 639-1 code indicating the language of strings in the schema file",1,[fr],0
+,ui.description,"A set of service endpoints used by the viewer",1,[fr],0
+,ui.fullscreen.description,"Indicates viewer takes up entire viewport",1,[fr],0
+,ui.theme.description,"UI theme of the viewer",1,[fr],0
+,ui.logoUrl.description,"An optional image to be used in the place of the default viewer logo",1,[fr],0
+,ui.title.description,"An optional title to be used in the place of the default viewer title",1,[fr],0
+,ui.appBar.description,"Provides configuration to the main app toolbar. If not supplied, the all default appbar controls are displayed. To completely hide the toolbar, provide the following: { sideMenu: false, geoSearch: false, layers: false }.",1,[fr],0
+,ui.appBar.sideMenu.description,"Shows the side menu button in the main app toolbar.",1,[fr],0
+,ui.appBar.geoSearch.description,"Shows the geosearch button in the main app toolbar. The button will be hidden if geosearch component is disabled or no search service URLs are provided.",1,[fr],0
+,ui.appBar.basemap.description,"Shows the basemap selector button in the main app toolbar.",1,[fr],0
+,ui.appBar.layers.description,"Shows the layers button in the main app toolbar.",1,[fr],0
+,ui.sideMenu.description,"Specifies which options are available in the left side menu.",1,[fr],0
+,ui.sideMenu.logo.description,"Indicates if the logo should be shown in the left side menu.",1,[fr],0
+,ui.restrictNavigation.description,"Will restrict the user from panning beyond the maximum extent.",1,[fr],0
+,ui.about.description,"About properties from configuration file or Markdown folder",1,[fr],0
+,ui.help.description,"Help properties",1,[fr],0
+,ui.help.folderName.description,"Help folder name who contain the help description and images",1,[fr],0
+,ui.legend.reorderable.description,"Specifies if the items in the legend can be reordered; structured legend ignores this property.",1,[fr],0
+,ui.legend.allowImport.description,"Specifies if the user-added layers are allowed.",1,[fr],0
+,ui.legend.isOpen.description,"Specifies whether the legend is opened by default on initial loading of the map for small, medium, and large viewports",1,[fr],0
+,ui.legend.isOpen.large.description,"Whether the legend is opened by default on initial loading of the map for large viewports",1,[fr],0
+,ui.legend.isOpen.medium.description,"Whether the legend is opened by default on initial loading of the map for medium viewports",1,[fr],0
+,ui.legend.isOpen.small.description,"Whether the legend is opened by default on initial loading of the map for small viewports",1,[fr],0
+,ui.tableIsOpen.description,"Specifies whether the table panel is opened by default on initial loading of the map for small, medium, and large viewports",1,[fr],0
+,ui.tableIsOpen.id.description,"The id of the layer for referencing within the viewer",1,[fr],0
+,ui.tableIsOpen.large.description,"Whether the table panel is opened by default on initial loading of the map for large viewports",1,[fr],0
+,ui.tableIsOpen.medium.description,"Whether the table panel is opened by default on initial loading of the map for medium viewports",1,[fr],0
+,ui.tableIsOpen.small.description,"Whether the table panel is opened by default on initial loading of the map for small viewports",1,[fr],0
+,ui.widgetsWidget.description,"FIXME",1,[fr],0
+,services.description,"A set of service endpoints used by the viewer",1,[fr],0
+,services.proxyUrl.description,"An optional proxy to be used for dealing with same-origin issues.  URL must either be a relative path on the same server or an absolute path on a server which sets CORS headers.",1,[fr],0
+,services.exportMapUrl.description,"An ESRI service endpoint for generating map images.  Should point directly to an endpoint that can be consumed by ESRI PrintTask.",1,[fr],0
+,services.geometryUrl.description,"A URL to an ESRI ArcGIS geometry service REST endpoint.",1,[fr],0
+,services.googleAPIKey.description,"Google API key to enable geo location and share link shortening.",1,[fr],0
+,services.geolocation.description,"FIXME",1,[fr],0
+,services.coordInfo.description,"FIXME",1,[fr],0
+,services.print.description,"FIXME",1,[fr],0
+,services.search.description,"Search properties including ability to disable certain types of searches (NTS, FSA, and/or LAT/LNG) and to set service endpoint urls",1,[fr],0
+,services.search.disabledSearches.description,"Disable specific types of searches including NTS, FSA, or LAT/LNG",1,[fr],0
+,services.search.serviceUrls.description,"Service endpoint urls",1,[fr],0
+,services.search.serviceUrls.geoNames.description,"Endpoint url for geoNames service",1,[fr],0
+,services.search.serviceUrls.geoLocation.description,"Endpoint url for geoLocation service",1,[fr],0
+,services.search.serviceUrls.geoSuggest.description,"Endpoint url for geoSuggest service",1,[fr],0
+,services.search.serviceUrls.provinces.description,"Endpoint url for provinces service",1,[fr],0
+,services.search.serviceUrls.types.description,"Endpoint url for types service",1,[fr],0
+,services.export.description,"Export properties",1,[fr],0
+,services.export.title.description,"Title of the export graphic.",1,[fr],0
+,services.export.title.isSelected.description,"Indicates if the component is selected and included in the export graphic.",1,[fr],0
+,services.export.title.isSelectable.description,"Indicates if the component can be included or excluded from the export graphic by the user.",1,[fr],0
+,services.export.title.value.description,"Value to be passed to the generation function of this export component.",1,[fr],0
+,services.export.map.description,"Map component.",1,[fr],0
+,services.export.map.isSelected.description,"services.export.title.isSelected.description",1,[fr],0
+,services.export.map.isSelectable.description,"services.export.title.isSelectable.description",1,[fr],0
+,services.export.map.value.description,"services.export.title.value.description",1,[fr],0
+,services.export.mapElements.description,"North arrow and scalebar component.",1,[fr],0
+,services.export.mapElements.isSelected.description,"services.export.map.isSelected.description",1,[fr],0
+,services.export.mapElements.isSelectable.description,"services.export.map.isSelectable.description",1,[fr],0
+,services.export.mapElements.value.description,"services.export.map.value.description",1,[fr],0
+,services.export.legend.description,"Legend component.",1,[fr],0
+,services.export.legend.isSelected.description,"Indicates if the component is selected and included in the export graphic.",1,[fr],0
+,services.export.legend.isSelectable.description,"Indicates if the component can be included or excluded from the export graphic by the user.",1,[fr],0
+,services.export.legend.value.description,"Value to be passed to the generation function of this export component.",1,[fr],0
+,services.export.legend.showInfoSymbology.description,"Indicates whether symbology from info sections should be included in export legend",1,[fr],0
+,services.export.legend.showControlledSymbology.description,"Indicates whether symbology from controlled layers should be included in export legend",1,[fr],0
+,services.export.footnote.description,"Foot notice to add to exported map",1,[fr],0
+,services.export.footnote.isSelected.description,"services.export.mapElements.isSelected.description",1,[fr],0
+,services.export.footnote.isSelectable.description,"services.export.mapElements.isSelectable.description",1,[fr],0
+,services.export.footnote.value.description,"services.export.mapElements.value.description",1,[fr],0
+,services.export.timestamp.description,"Timestamp component.",1,[fr],0
+,services.export.timestamp.isSelected.description,"services.export.footnote.isSelected.description",1,[fr],0
+,services.export.timestamp.isSelectable.description,"services.export.footnote.isSelectable.description",1,[fr],0
+,services.export.timestamp.value.description,"services.export.footnote.value.description",1,[fr],0
+,map.description,"Core map properties (extent sets, levels of detail)",1,[fr],0
+,map.extentSets.description,"The default, full and maximum extents of the map",1,[fr],0
+,map.lodSets.description,"The levels of detail (zoom scales) available for the map",1,[fr],0
+,map.tileSchemas.description,"A unique combination of an LoD and an extent set (each basemap must fit into a tile schema)",1,[fr],0
+,map.initialBasemapId.description,"Initial basemap to load. If not supplied viewer will select any basemap.",1,[fr],0
+,map.baseMaps.description,"A list of basemaps to be made available via the basemap selector.",1,[fr],0
+,map.layers.description,"Layer list in the order which they should be added to the map.  NOTE: ESRI JSAPI v3 cannot draw imagery layers over feature layers.",1,[fr],0
+,map.legend.description,"A structured or automatically generated legend",1,[fr],0
+,version.enum.2.0,2.0,1,[fr],0
+,language.enum.en,en,1,[fr],0
+,language.enum.fr,fr,1,[fr],0
+,language.enum.es,es,1,[fr],0
+,ui.theme.enum.default,default,1,[fr],0
+,ui.navBar.zoom.enum.all,all,1,[fr],0
+,ui.navBar.zoom.enum.buttons,buttons,1,[fr],0
+,ui.navBar.zoom.enum.slider,slider,1,[fr],0
+,ui.navBar.extra.items.enum.geoLocator,geoLocator,1,[fr],0
+,ui.navBar.extra.items.enum.marquee,marquee,1,[fr],0
+,ui.navBar.extra.items.enum.home,home,1,[fr],0
+,ui.navBar.extra.items.enum.history,history,1,[fr],0
+,ui.navBar.extra.items.enum.basemap,basemap,1,[fr],0
+,ui.navBar.extra.items.enum.help,help,1,[fr],0
+,ui.navBar.extra.items.enum.fullscreen,fullscreen,1,[fr],0
+,ui.navBar.extra.items.enum.geoSearch,geoSearch,1,[fr],0
+,ui.navBar.extra.items.enum.sideMenu,sideMenu,1,[fr],0
+,ui.navBar.extra.items.enum.layers,layers,1,[fr],0
+,services.search.disabledSearches.items.enum.NTS,NTS,1,[fr],0
+,services.search.disabledSearches.items.enum.FSA,FSA,1,[fr],0
+,services.search.disabledSearches.items.enum.LAT/LNG,LAT/LNG,1,[fr],0
