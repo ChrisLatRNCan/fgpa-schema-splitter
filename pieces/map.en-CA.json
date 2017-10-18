@@ -17,27 +17,32 @@
               "wkid": {
                 "type": "number",
                 "title": "[en]",
-                "help": "[en]"
+                "help": "[en]",
+                "default": "[en]"
               },
               "vcsWkid": {
                 "type": "number",
                 "title": "[en]",
-                "help": "[en]"
+                "help": "[en]",
+                "default": "[en]"
               },
               "latestWkid": {
                 "type": "number",
                 "title": "[en]",
-                "help": "[en]"
+                "help": "[en]",
+                "default": "[en]"
               },
               "latestVcsWkid": {
                 "type": "number",
                 "title": "[en]",
-                "help": "[en]"
+                "help": "[en]",
+                "default": "[en]"
               },
               "wkt": {
                 "type": "string",
                 "title": "[en]",
-                "help": "[en]"
+                "help": "[en]",
+                "default": "[en]"
               }
             },
             "anyOf": [
@@ -154,7 +159,8 @@
       },
       "description": "The default, full and maximum extents of the map",
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "lodSets": {
       "type": "array",
@@ -197,7 +203,8 @@
       },
       "description": "The levels of detail (zoom scales) available for the map",
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "tileSchemas": {
       "type": "array",
@@ -274,27 +281,32 @@
                       "wkid": {
                         "type": "number",
                         "title": "map.components.mouseInfo.spatialReference.wkid.title",
-                        "help": "map.components.mouseInfo.spatialReference.wkid.help"
+                        "help": "map.components.mouseInfo.spatialReference.wkid.help",
+                        "default": "map.components.mouseInfo.spatialReference.wkid.default"
                       },
                       "vcsWkid": {
                         "type": "number",
                         "title": "map.components.mouseInfo.spatialReference.vcsWkid.title",
-                        "help": "map.components.mouseInfo.spatialReference.vcsWkid.help"
+                        "help": "map.components.mouseInfo.spatialReference.vcsWkid.help",
+                        "default": "map.components.mouseInfo.spatialReference.vcsWkid.default"
                       },
                       "latestWkid": {
                         "type": "number",
                         "title": "map.components.mouseInfo.spatialReference.latestWkid.title",
-                        "help": "map.components.mouseInfo.spatialReference.latestWkid.help"
+                        "help": "map.components.mouseInfo.spatialReference.latestWkid.help",
+                        "default": "map.components.mouseInfo.spatialReference.latestWkid.default"
                       },
                       "latestVcsWkid": {
                         "type": "number",
                         "title": "map.components.mouseInfo.spatialReference.latestVcsWkid.title",
-                        "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help"
+                        "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help",
+                        "default": "map.components.mouseInfo.spatialReference.latestVcsWkid.default"
                       },
                       "wkt": {
                         "type": "string",
                         "title": "map.components.mouseInfo.spatialReference.wkt.title",
-                        "help": "map.components.mouseInfo.spatialReference.wkt.help"
+                        "help": "map.components.mouseInfo.spatialReference.wkt.help",
+                        "default": "map.components.mouseInfo.spatialReference.wkt.default"
                       }
                     },
                     "anyOf": [
@@ -326,7 +338,8 @@
                     ],
                     "additionalProperties": false,
                     "title": "[en]",
-                    "help": "[en]"
+                    "help": "[en]",
+                    "default": "[en]"
                   }
                 },
                 "required": [
@@ -437,7 +450,8 @@
       "minItems": 1,
       "description": "A unique combination of an LoD and an extent set (each basemap must fit into a tile schema)",
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "components": {
       "type": "object",
@@ -448,21 +462,25 @@
             "enabled": {
               "type": "boolean",
               "title": "[en]",
-              "help": "[en]"
+              "help": "[en]",
+              "default": "[en]"
             },
             "showGraphic": {
               "type": "boolean",
               "title": "[en]",
-              "help": "[en]"
+              "help": "[en]",
+              "default": "[en]"
             },
             "showInfo": {
               "type": "boolean",
               "title": "[en]",
-              "help": "[en]"
+              "help": "[en]",
+              "default": "[en]"
             }
           },
           "title": "[en]",
-          "help": "[en]"
+          "help": "[en]",
+          "default": "[en]"
         },
         "mouseInfo": {
           "type": "object",
@@ -473,27 +491,32 @@
                 "wkid": {
                   "type": "number",
                   "title": "map.components.mouseInfo.spatialReference.wkid.title",
-                  "help": "map.components.mouseInfo.spatialReference.wkid.help"
+                  "help": "map.components.mouseInfo.spatialReference.wkid.help",
+                  "default": "map.components.mouseInfo.spatialReference.wkid.default"
                 },
                 "vcsWkid": {
                   "type": "number",
                   "title": "map.components.mouseInfo.spatialReference.vcsWkid.title",
-                  "help": "map.components.mouseInfo.spatialReference.vcsWkid.help"
+                  "help": "map.components.mouseInfo.spatialReference.vcsWkid.help",
+                  "default": "map.components.mouseInfo.spatialReference.vcsWkid.default"
                 },
                 "latestWkid": {
                   "type": "number",
                   "title": "map.components.mouseInfo.spatialReference.latestWkid.title",
-                  "help": "map.components.mouseInfo.spatialReference.latestWkid.help"
+                  "help": "map.components.mouseInfo.spatialReference.latestWkid.help",
+                  "default": "map.components.mouseInfo.spatialReference.latestWkid.default"
                 },
                 "latestVcsWkid": {
                   "type": "number",
                   "title": "map.components.mouseInfo.spatialReference.latestVcsWkid.title",
-                  "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help"
+                  "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help",
+                  "default": "map.components.mouseInfo.spatialReference.latestVcsWkid.default"
                 },
                 "wkt": {
                   "type": "string",
                   "title": "map.components.mouseInfo.spatialReference.wkt.title",
-                  "help": "map.components.mouseInfo.spatialReference.wkt.help"
+                  "help": "map.components.mouseInfo.spatialReference.wkt.help",
+                  "default": "map.components.mouseInfo.spatialReference.wkt.default"
                 }
               },
               "anyOf": [
@@ -525,16 +548,19 @@
               ],
               "additionalProperties": false,
               "title": "map.components.mouseInfo.spatialReference.title",
-              "help": "map.components.mouseInfo.spatialReference.help"
+              "help": "map.components.mouseInfo.spatialReference.help",
+              "default": "map.components.mouseInfo.spatialReference.default"
             }
           },
           "title": "[en]",
-          "help": "[en]"
+          "help": "[en]",
+          "default": "[en]"
         },
         "northArrow": {
           "type": "object",
           "title": "[en]",
-          "help": "[en]"
+          "help": "[en]",
+          "default": "[en]"
         },
         "overviewMap": {
           "type": "object",
@@ -542,7 +568,8 @@
             "enabled": {
               "type": "boolean",
               "title": "[en]",
-              "help": "[en]"
+              "help": "[en]",
+              "default": "[en]"
             },
             "expandFactor": {
               "type": "number",
@@ -552,28 +579,33 @@
             }
           },
           "title": "[en]",
-          "help": "[en]"
+          "help": "[en]",
+          "default": "[en]"
         },
         "scaleBar": {
           "type": "object",
           "title": "[en]",
-          "help": "[en]"
+          "help": "[en]",
+          "default": "[en]"
         },
         "basemap": {
           "type": "object",
           "title": "map.components.base[en]",
-          "help": "map.components.base[en]"
+          "help": "map.components.base[en]",
+          "default": "map.components.base[en]"
         }
       },
       "additionalProperties": false,
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "initialBasemapId": {
       "type": "string",
       "description": "Initial basemap to load. If not supplied viewer will select any basemap.",
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "baseMaps": {
       "type": "array",
@@ -711,7 +743,8 @@
       "minItems": 1,
       "description": "A list of basemaps to be made available via the basemap selector.",
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "layers": {
       "description": "Layer list in the order which they should be added to the map.  NOTE: ESRI JSAPI v3 cannot draw imagery layers over feature layers.",
@@ -773,27 +806,32 @@
                           "wkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.wkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.wkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.wkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.wkid.default"
                           },
                           "vcsWkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.vcsWkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.vcsWkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.vcsWkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.vcsWkid.default"
                           },
                           "latestWkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.latestWkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.latestWkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.latestWkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.latestWkid.default"
                           },
                           "latestVcsWkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.latestVcsWkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.latestVcsWkid.default"
                           },
                           "wkt": {
                             "type": "string",
                             "title": "map.components.mouseInfo.spatialReference.wkt.title",
-                            "help": "map.components.mouseInfo.spatialReference.wkt.help"
+                            "help": "map.components.mouseInfo.spatialReference.wkt.help",
+                            "default": "map.components.mouseInfo.spatialReference.wkt.default"
                           }
                         },
                         "anyOf": [
@@ -825,7 +863,8 @@
                         ],
                         "additionalProperties": false,
                         "title": "map.components.mouseInfo.spatialReference.title",
-                        "help": "map.components.mouseInfo.spatialReference.help"
+                        "help": "map.components.mouseInfo.spatialReference.help",
+                        "default": "map.components.mouseInfo.spatialReference.default"
                       }
                     },
                     "required": [
@@ -985,27 +1024,32 @@
                           "wkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.wkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.wkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.wkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.wkid.default"
                           },
                           "vcsWkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.vcsWkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.vcsWkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.vcsWkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.vcsWkid.default"
                           },
                           "latestWkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.latestWkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.latestWkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.latestWkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.latestWkid.default"
                           },
                           "latestVcsWkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.latestVcsWkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.latestVcsWkid.default"
                           },
                           "wkt": {
                             "type": "string",
                             "title": "map.components.mouseInfo.spatialReference.wkt.title",
-                            "help": "map.components.mouseInfo.spatialReference.wkt.help"
+                            "help": "map.components.mouseInfo.spatialReference.wkt.help",
+                            "default": "map.components.mouseInfo.spatialReference.wkt.default"
                           }
                         },
                         "anyOf": [
@@ -1037,7 +1081,8 @@
                         ],
                         "additionalProperties": false,
                         "title": "map.components.mouseInfo.spatialReference.title",
-                        "help": "map.components.mouseInfo.spatialReference.help"
+                        "help": "map.components.mouseInfo.spatialReference.help",
+                        "default": "map.components.mouseInfo.spatialReference.default"
                       }
                     },
                     "required": [
@@ -1403,27 +1448,32 @@
                           "wkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.wkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.wkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.wkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.wkid.default"
                           },
                           "vcsWkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.vcsWkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.vcsWkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.vcsWkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.vcsWkid.default"
                           },
                           "latestWkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.latestWkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.latestWkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.latestWkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.latestWkid.default"
                           },
                           "latestVcsWkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.latestVcsWkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.latestVcsWkid.default"
                           },
                           "wkt": {
                             "type": "string",
                             "title": "map.components.mouseInfo.spatialReference.wkt.title",
-                            "help": "map.components.mouseInfo.spatialReference.wkt.help"
+                            "help": "map.components.mouseInfo.spatialReference.wkt.help",
+                            "default": "map.components.mouseInfo.spatialReference.wkt.default"
                           }
                         },
                         "anyOf": [
@@ -1455,7 +1505,8 @@
                         ],
                         "additionalProperties": false,
                         "title": "map.components.mouseInfo.spatialReference.title",
-                        "help": "map.components.mouseInfo.spatialReference.help"
+                        "help": "map.components.mouseInfo.spatialReference.help",
+                        "default": "map.components.mouseInfo.spatialReference.default"
                       }
                     },
                     "required": [
@@ -1631,27 +1682,32 @@
                                 "wkid": {
                                   "type": "number",
                                   "title": "map.components.mouseInfo.spatialReference.wkid.title",
-                                  "help": "map.components.mouseInfo.spatialReference.wkid.help"
+                                  "help": "map.components.mouseInfo.spatialReference.wkid.help",
+                                  "default": "map.components.mouseInfo.spatialReference.wkid.default"
                                 },
                                 "vcsWkid": {
                                   "type": "number",
                                   "title": "map.components.mouseInfo.spatialReference.vcsWkid.title",
-                                  "help": "map.components.mouseInfo.spatialReference.vcsWkid.help"
+                                  "help": "map.components.mouseInfo.spatialReference.vcsWkid.help",
+                                  "default": "map.components.mouseInfo.spatialReference.vcsWkid.default"
                                 },
                                 "latestWkid": {
                                   "type": "number",
                                   "title": "map.components.mouseInfo.spatialReference.latestWkid.title",
-                                  "help": "map.components.mouseInfo.spatialReference.latestWkid.help"
+                                  "help": "map.components.mouseInfo.spatialReference.latestWkid.help",
+                                  "default": "map.components.mouseInfo.spatialReference.latestWkid.default"
                                 },
                                 "latestVcsWkid": {
                                   "type": "number",
                                   "title": "map.components.mouseInfo.spatialReference.latestVcsWkid.title",
-                                  "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help"
+                                  "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help",
+                                  "default": "map.components.mouseInfo.spatialReference.latestVcsWkid.default"
                                 },
                                 "wkt": {
                                   "type": "string",
                                   "title": "map.components.mouseInfo.spatialReference.wkt.title",
-                                  "help": "map.components.mouseInfo.spatialReference.wkt.help"
+                                  "help": "map.components.mouseInfo.spatialReference.wkt.help",
+                                  "default": "map.components.mouseInfo.spatialReference.wkt.default"
                                 }
                               },
                               "anyOf": [
@@ -1683,7 +1739,8 @@
                               ],
                               "additionalProperties": false,
                               "title": "map.components.mouseInfo.spatialReference.title",
-                              "help": "map.components.mouseInfo.spatialReference.help"
+                              "help": "map.components.mouseInfo.spatialReference.help",
+                              "default": "map.components.mouseInfo.spatialReference.default"
                             }
                           },
                           "required": [
@@ -1906,27 +1963,32 @@
                           "wkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.wkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.wkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.wkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.wkid.default"
                           },
                           "vcsWkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.vcsWkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.vcsWkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.vcsWkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.vcsWkid.default"
                           },
                           "latestWkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.latestWkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.latestWkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.latestWkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.latestWkid.default"
                           },
                           "latestVcsWkid": {
                             "type": "number",
                             "title": "map.components.mouseInfo.spatialReference.latestVcsWkid.title",
-                            "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help"
+                            "help": "map.components.mouseInfo.spatialReference.latestVcsWkid.help",
+                            "default": "map.components.mouseInfo.spatialReference.latestVcsWkid.default"
                           },
                           "wkt": {
                             "type": "string",
                             "title": "map.components.mouseInfo.spatialReference.wkt.title",
-                            "help": "map.components.mouseInfo.spatialReference.wkt.help"
+                            "help": "map.components.mouseInfo.spatialReference.wkt.help",
+                            "default": "map.components.mouseInfo.spatialReference.wkt.default"
                           }
                         },
                         "anyOf": [
@@ -1958,7 +2020,8 @@
                         ],
                         "additionalProperties": false,
                         "title": "map.components.mouseInfo.spatialReference.title",
-                        "help": "map.components.mouseInfo.spatialReference.help"
+                        "help": "map.components.mouseInfo.spatialReference.help",
+                        "default": "map.components.mouseInfo.spatialReference.default"
                       }
                     },
                     "required": [
@@ -2064,7 +2127,8 @@
       },
       "minItems": 0,
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "legend": {
       "oneOf": [
@@ -2437,7 +2501,8 @@
       ],
       "description": "A structured or automatically generated legend",
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     }
   },
   "required": [
@@ -2446,5 +2511,6 @@
   ],
   "schema": "map",
   "title": "map.title",
-  "help": "map.help"
+  "help": "map.help",
+  "default": "map.default"
 }

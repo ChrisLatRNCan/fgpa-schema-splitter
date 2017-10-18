@@ -6,46 +6,53 @@
       "type": "string",
       "description": "[fr]",
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "exportMapUrl": {
       "type": "string",
       "description": "[fr]",
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "geometryUrl": {
       "type": "string",
       "description": "[fr]",
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "googleAPIKey": {
       "type": "string",
       "description": "[fr]",
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "geolocation": {
       "type": "object",
       "additionalProperties": true,
       "description": "[fr]",
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "coordInfo": {
       "type": "object",
       "additionalProperties": true,
       "description": "[fr]",
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "print": {
       "type": "object",
       "additionalProperties": true,
       "description": "[fr]",
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "search": {
       "type": "object",
@@ -65,7 +72,8 @@
           "uniqueItems": true,
           "description": "[fr]",
           "title": "[fr]",
-          "help": "[fr]"
+          "help": "[fr]",
+          "default": "[fr]"
         },
         "serviceUrls": {
           "type": "object",
@@ -75,31 +83,36 @@
               "type": "string",
               "description": "[fr]",
               "title": "[fr]",
-              "help": "[fr]"
+              "help": "[fr]",
+              "default": "[fr]"
             },
             "geoLocation": {
               "type": "string",
               "description": "[fr]",
               "title": "[fr]",
-              "help": "[fr]"
+              "help": "[fr]",
+              "default": "[fr]"
             },
             "geoSuggest": {
               "type": "string",
               "description": "[fr]",
               "title": "[fr]",
-              "help": "[fr]"
+              "help": "[fr]",
+              "default": "[fr]"
             },
             "provinces": {
               "type": "string",
               "description": "[fr]",
               "title": "[fr]",
-              "help": "[fr]"
+              "help": "[fr]",
+              "default": "[fr]"
             },
             "types": {
               "type": "string",
               "description": "[fr]",
               "title": "[fr]",
-              "help": "[fr]"
+              "help": "[fr]",
+              "default": "[fr]"
             }
           },
           "additionalProperties": false,
@@ -111,7 +124,8 @@
             "types"
           ],
           "title": "[fr]",
-          "help": "[fr]"
+          "help": "[fr]",
+          "default": "[fr]"
         }
       },
       "additionalProperties": false,
@@ -119,7 +133,8 @@
         "serviceUrls"
       ],
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "export": {
       "type": "object",
@@ -147,12 +162,14 @@
               "type": "string",
               "description": "[fr]",
               "title": "[fr]",
-              "help": "[fr]"
+              "help": "[fr]",
+              "default": "[fr]"
             }
           },
           "additionalProperties": false,
           "title": "[fr]",
-          "help": "[fr]"
+          "help": "[fr]",
+          "default": "[fr]"
         },
         "map": {
           "description": "[fr]",
@@ -176,12 +193,14 @@
               "type": "string",
               "description": "services.export.timestamp.value.description",
               "title": "services.export.timestamp.value.title",
-              "help": "services.export.timestamp.value.help"
+              "help": "services.export.timestamp.value.help",
+              "default": "services.export.timestamp.value.default"
             }
           },
           "additionalProperties": false,
           "title": "[fr]",
-          "help": "[fr]"
+          "help": "[fr]",
+          "default": "[fr]"
         },
         "mapElements": {
           "description": "[fr]",
@@ -205,12 +224,14 @@
               "type": "string",
               "description": "services.export.timestamp.value.description",
               "title": "services.export.timestamp.value.title",
-              "help": "services.export.timestamp.value.help"
+              "help": "services.export.timestamp.value.help",
+              "default": "services.export.timestamp.value.default"
             }
           },
           "additionalProperties": false,
           "title": "[fr]",
-          "help": "[fr]"
+          "help": "[fr]",
+          "default": "[fr]"
         },
         "legend": {
           "description": "[fr]",
@@ -234,7 +255,8 @@
               "type": "string",
               "description": "[fr]",
               "title": "[fr]",
-              "help": "[fr]"
+              "help": "[fr]",
+              "default": "[fr]"
             },
             "showInfoSymbology": {
               "type": "boolean",
@@ -253,7 +275,8 @@
           },
           "additionalProperties": false,
           "title": "[fr]",
-          "help": "[fr]"
+          "help": "[fr]",
+          "default": "[fr]"
         },
         "footnote": {
           "description": "[fr]",
@@ -277,12 +300,14 @@
               "type": "string",
               "description": "services.export.timestamp.value.description",
               "title": "services.export.timestamp.value.title",
-              "help": "services.export.timestamp.value.help"
+              "help": "services.export.timestamp.value.help",
+              "default": "services.export.timestamp.value.default"
             }
           },
           "additionalProperties": false,
           "title": "[fr]",
-          "help": "[fr]"
+          "help": "[fr]",
+          "default": "[fr]"
         },
         "timestamp": {
           "description": "[fr]",
@@ -306,21 +331,25 @@
               "type": "string",
               "description": "services.export.timestamp.value.description",
               "title": "services.export.timestamp.value.title",
-              "help": "services.export.timestamp.value.help"
+              "help": "services.export.timestamp.value.help",
+              "default": "services.export.timestamp.value.default"
             }
           },
           "additionalProperties": false,
           "title": "[fr]",
-          "help": "[fr]"
+          "help": "[fr]",
+          "default": "[fr]"
         }
       },
       "additionalProperties": false,
       "title": "services.export.title",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     }
   },
   "additionalProperties": false,
   "schema": "services",
   "title": "[fr]",
-  "help": "[fr]"
+  "help": "[fr]",
+  "default": "[fr]"
 }

@@ -206,12 +206,14 @@ function addDefaultLabel(schema, parent = '') {
   let deflt = '';
 
   propNames.forEach(prop => {
+    const label = `${prefix}${prop}.default`;
     if ($DotProp.has(schema, `${prop}.default`)) {
-      const label = `${prefix}${prop}.default`;
       deflt = $DotProp.get(schema, `${prop}.default`);
       csvString = `${csvString},${label},"${deflt}",1,[fr],0\n`;
-      $DotProp.set(schema, `${prop}.default`, label);
+    } else {
+      csvString = `${csvString},${label},[en],0,[fr],0\n`;
     }
+    $DotProp.set(schema, `${prop}.default`, label);
     // go deeper ???
     if ($DotProp.has(schema, `${prop}.properties`)) {
       addDefaultLabel( $DotProp.get(schema, `${prop}.properties`), `${prefix}${prop}.`);

@@ -8,5 +8,6 @@
   "description": "[fr]",
   "schema": "language",
   "title": "[fr]",
-  "help": "[fr]"
+  "help": "[fr]",
+  "default": "[fr]"
 }

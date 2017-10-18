@@ -23,7 +23,8 @@
       "type": "string",
       "description": "An optional image to be used in the place of the default viewer logo",
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "failureFeedback": {
       "failureMessage": {
@@ -35,13 +36,15 @@
         "description": "An optional image to be used in place of the failure Image"
       },
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "title": {
       "type": "string",
       "description": "[en].description",
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "appBar": {
       "default": "[object Object]",
@@ -123,7 +126,8 @@
       ],
       "additionalProperties": false,
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "sideMenu": {
       "type": "object",
@@ -165,7 +169,8 @@
       "additionalProperties": false,
       "description": "Specifies which options are available in the left side menu.",
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "restrictNavigation": {
       "type": "boolean",
@@ -203,7 +208,8 @@
         }
       ],
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "help": {
       "type": "object",
@@ -213,7 +219,8 @@
           "type": "string",
           "description": "Help folder name who contain the help description and images",
           "title": "[en]",
-          "help": "[en]"
+          "help": "[en]",
+          "default": "[en]"
         }
       },
       "required": [
@@ -221,7 +228,8 @@
       ],
       "additionalProperties": false,
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "legend": {
       "type": "object",
@@ -268,12 +276,14 @@
           },
           "additionalProperties": false,
           "title": "[en]",
-          "help": "[en]"
+          "help": "[en]",
+          "default": "[en]"
         }
       },
       "additionalProperties": false,
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "tableIsOpen": {
       "type": "object",
@@ -283,7 +293,8 @@
           "type": "string",
           "description": "The id of the layer for referencing within the viewer",
           "title": "[en]",
-          "help": "[en]"
+          "help": "[en]",
+          "default": "[en]"
         },
         "large": {
           "type": "boolean",
@@ -312,17 +323,20 @@
         "id"
       ],
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     },
     "widgetsWidget": {
       "type": "object",
       "additionalProperties": true,
       "description": "FIXME",
       "title": "[en]",
-      "help": "[en]"
+      "help": "[en]",
+      "default": "[en]"
     }
   },
   "schema": "ui",
   "title": "ui.title",
-  "help": "ui.help"
+  "help": "ui.help",
+  "default": "[en]"
 }

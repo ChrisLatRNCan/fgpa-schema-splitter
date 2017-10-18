@@ -23,7 +23,8 @@
       "type": "string",
       "description": "[fr]",
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "failureFeedback": {
       "failureMessage": {
@@ -35,13 +36,15 @@
         "description": "An optional image to be used in place of the failure Image"
       },
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "title": {
       "type": "string",
       "description": "[fr].description",
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "appBar": {
       "default": "[fr]",
@@ -123,7 +126,8 @@
       ],
       "additionalProperties": false,
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "sideMenu": {
       "type": "object",
@@ -165,7 +169,8 @@
       "additionalProperties": false,
       "description": "[fr]",
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "restrictNavigation": {
       "type": "boolean",
@@ -203,7 +208,8 @@
         }
       ],
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "help": {
       "type": "object",
@@ -213,7 +219,8 @@
           "type": "string",
           "description": "[fr]",
           "title": "[fr]",
-          "help": "[fr]"
+          "help": "[fr]",
+          "default": "[fr]"
         }
       },
       "required": [
@@ -221,7 +228,8 @@
       ],
       "additionalProperties": false,
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "legend": {
       "type": "object",
@@ -268,12 +276,14 @@
           },
           "additionalProperties": false,
           "title": "[fr]",
-          "help": "[fr]"
+          "help": "[fr]",
+          "default": "[fr]"
         }
       },
       "additionalProperties": false,
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "tableIsOpen": {
       "type": "object",
@@ -283,7 +293,8 @@
           "type": "string",
           "description": "[fr]",
           "title": "[fr]",
-          "help": "[fr]"
+          "help": "[fr]",
+          "default": "[fr]"
         },
         "large": {
           "type": "boolean",
@@ -312,17 +323,20 @@
         "id"
       ],
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     },
     "widgetsWidget": {
       "type": "object",
       "additionalProperties": true,
       "description": "[fr]",
       "title": "[fr]",
-      "help": "[fr]"
+      "help": "[fr]",
+      "default": "[fr]"
     }
   },
   "schema": "ui",
   "title": "ui.title",
-  "help": "ui.help"
+  "help": "ui.help",
+  "default": "[fr]"
 }
