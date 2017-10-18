@@ -1,1 +1,10 @@
-{"type":"string","enum":["[fr]"],"description":"[fr]","schema":"version","title":"[fr]","help":"[fr]"}
+{
+  "type": "string",
+  "enum": [
+    "[fr]"
+  ],
+  "description": "[fr]",
+  "schema": "version",
+  "title": "[fr]",
+  "help": "[fr]"
+}

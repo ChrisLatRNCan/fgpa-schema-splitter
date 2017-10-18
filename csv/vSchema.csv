@@ -4,7 +4,13 @@
 ,ui.fullscreen.title,[en],0,[fr],0
 ,ui.theme.title,[en],0,[fr],0
 ,ui.logoUrl.title,[en],0,[fr],0
+,ui.failureFeedback.title,[en],0,[fr],0
 ,ui.title.title,[en],0,[fr],0
+,ui.appBar.title,[en],0,[fr],0
+,ui.appBar.sideMenu.title,[en],0,[fr],0
+,ui.appBar.geoSearch.title,[en],0,[fr],0
+,ui.appBar.basemap.title,[en],0,[fr],0
+,ui.appBar.layers.title,[en],0,[fr],0
 ,ui.navBar.title,[en],0,[fr],0
 ,ui.navBar.zoom.title,[en],0,[fr],0
 ,ui.navBar.extra.title,[en],0,[fr],0
@@ -61,6 +67,8 @@
 ,services.export.legend.isSelected.title,[en],0,[fr],0
 ,services.export.legend.isSelectable.title,[en],0,[fr],0
 ,services.export.legend.value.title,[en],0,[fr],0
+,services.export.legend.showInfoSymbology.title,[en],0,[fr],0
+,services.export.legend.showControlledSymbology.title,[en],0,[fr],0
 ,services.export.footnote.title,[en],0,[fr],0
 ,services.export.footnote.isSelected.title,[en],0,[fr],0
 ,services.export.footnote.isSelectable.title,[en],0,[fr],0
@@ -87,6 +95,8 @@
 ,map.components.mouseInfo.spatialReference.wkt.title,[en],0,[fr],0
 ,map.components.northArrow.title,[en],0,[fr],0
 ,map.components.overviewMap.title,[en],0,[fr],0
+,map.components.overviewMap.enabled.title,[en],0,[fr],0
+,map.components.overviewMap.expandFactor.title,[en],0,[fr],0
 ,map.components.scaleBar.title,[en],0,[fr],0
 ,map.components.basemap.title,[en],0,[fr],0
 ,map.initialBasemapId.title,[en],0,[fr],0
@@ -99,7 +109,13 @@
 ,ui.fullscreen.help,[en],0,[fr],0
 ,ui.theme.help,[en],0,[fr],0
 ,ui.logoUrl.help,[en],0,[fr],0
+,ui.failureFeedback.help,[en],0,[fr],0
 ,ui.title.help,[en],0,[fr],0
+,ui.appBar.help,[en],0,[fr],0
+,ui.appBar.sideMenu.help,[en],0,[fr],0
+,ui.appBar.geoSearch.help,[en],0,[fr],0
+,ui.appBar.basemap.help,[en],0,[fr],0
+,ui.appBar.layers.help,[en],0,[fr],0
 ,ui.navBar.help,[en],0,[fr],0
 ,ui.navBar.zoom.help,[en],0,[fr],0
 ,ui.navBar.extra.help,[en],0,[fr],0
@@ -156,6 +172,8 @@
 ,services.export.legend.isSelected.help,[en],0,[fr],0
 ,services.export.legend.isSelectable.help,[en],0,[fr],0
 ,services.export.legend.value.help,[en],0,[fr],0
+,services.export.legend.showInfoSymbology.help,[en],0,[fr],0
+,services.export.legend.showControlledSymbology.help,[en],0,[fr],0
 ,services.export.footnote.help,[en],0,[fr],0
 ,services.export.footnote.isSelected.help,[en],0,[fr],0
 ,services.export.footnote.isSelectable.help,[en],0,[fr],0
@@ -182,87 +200,132 @@
 ,map.components.mouseInfo.spatialReference.wkt.help,[en],0,[fr],0
 ,map.components.northArrow.help,[en],0,[fr],0
 ,map.components.overviewMap.help,[en],0,[fr],0
+,map.components.overviewMap.enabled.help,[en],0,[fr],0
+,map.components.overviewMap.expandFactor.help,[en],0,[fr],0
 ,map.components.scaleBar.help,[en],0,[fr],0
 ,map.components.basemap.help,[en],0,[fr],0
 ,map.initialBasemapId.help,[en],0,[fr],0
 ,map.baseMaps.help,[en],0,[fr],0
 ,map.layers.help,[en],0,[fr],0
 ,map.legend.help,[en],0,[fr],0
-,version.desc,"The schema version used to validate the configuration file.  The schema should enumerate the list of versions accepted by this version of the viewer.",1,[fr],0
-,language.desc,"ISO 639-1 code indicating the language of strings in the schema file",1,[fr],0
-,ui.desc,"A set of service endpoints used by the viewer",1,[fr],0
-,ui.fullscreen.desc,"Indicates viewer takes up entire viewport",1,[fr],0
-,ui.theme.desc,"UI theme of the viewer",1,[fr],0
-,ui.logoUrl.desc,"An optional image to be used in the place of the default viewer logo",1,[fr],0
-,ui.title.desc,"An optional title to be used in the place of the default viewer title",1,[fr],0
-,ui.sideMenu.desc,"Specifies which options are available in the left side menu.",1,[fr],0
-,ui.sideMenu.logo.desc,"Indicates if the logo should be shown in the left side menu.",1,[fr],0
-,ui.restrictNavigation.desc,"Will restrict the user from panning beyond the maximum extent.",1,[fr],0
-,ui.about.desc,"About properties from configuration file or Markdown folder",1,[fr],0
-,ui.help.desc,"Help properties",1,[fr],0
-,ui.help.folderName.desc,"Help folder name who contain the help description and images",1,[fr],0
-,ui.legend.reorderable.desc,"Specifies if the items in the legend can be reordered; structured legend ignores this property.",1,[fr],0
-,ui.legend.allowImport.desc,"Specifies if the user-added layers are allowed.",1,[fr],0
-,ui.legend.isOpen.desc,"Specifies whether the legend is opened by default on initial loading of the map for small, medium, and large viewports",1,[fr],0
-,ui.legend.isOpen.large.desc,"Whether the legend is opened by default on initial loading of the map for large viewports",1,[fr],0
-,ui.legend.isOpen.medium.desc,"Whether the legend is opened by default on initial loading of the map for medium viewports",1,[fr],0
-,ui.legend.isOpen.small.desc,"Whether the legend is opened by default on initial loading of the map for small viewports",1,[fr],0
-,ui.tableIsOpen.desc,"Specifies whether the table panel is opened by default on initial loading of the map for small, medium, and large viewports",1,[fr],0
-,ui.tableIsOpen.id.desc,"The id of the layer for referencing within the viewer",1,[fr],0
-,ui.tableIsOpen.large.desc,"Whether the table panel is opened by default on initial loading of the map for large viewports",1,[fr],0
-,ui.tableIsOpen.medium.desc,"Whether the table panel is opened by default on initial loading of the map for medium viewports",1,[fr],0
-,ui.tableIsOpen.small.desc,"Whether the table panel is opened by default on initial loading of the map for small viewports",1,[fr],0
-,ui.widgetsWidget.desc,"FIXME",1,[fr],0
-,services.desc,"A set of service endpoints used by the viewer",1,[fr],0
-,services.proxyUrl.desc,"An optional proxy to be used for dealing with same-origin issues.  URL must either be a relative path on the same server or an absolute path on a server which sets CORS headers.",1,[fr],0
-,services.exportMapUrl.desc,"An ESRI service endpoint for generating map images.  Should point directly to an endpoint that can be consumed by ESRI PrintTask.",1,[fr],0
-,services.geometryUrl.desc,"A URL to an ESRI ArcGIS geometry service REST endpoint.",1,[fr],0
-,services.googleAPIKey.desc,"Google API key to enable geo location and share link shortening.",1,[fr],0
-,services.geolocation.desc,"FIXME",1,[fr],0
-,services.coordInfo.desc,"FIXME",1,[fr],0
-,services.print.desc,"FIXME",1,[fr],0
-,services.search.desc,"Search properties including ability to disable certain types of searches (NTS, FSA, and/or LAT/LNG) and to set service endpoint urls",1,[fr],0
-,services.search.disabledSearches.desc,"Disable specific types of searches including NTS, FSA, or LAT/LNG",1,[fr],0
-,services.search.serviceUrls.desc,"Service endpoint urls",1,[fr],0
-,services.search.serviceUrls.geoNames.desc,"Endpoint url for geoNames service",1,[fr],0
-,services.search.serviceUrls.geoLocation.desc,"Endpoint url for geoLocation service",1,[fr],0
-,services.search.serviceUrls.geoSuggest.desc,"Endpoint url for geoSuggest service",1,[fr],0
-,services.search.serviceUrls.provinces.desc,"Endpoint url for provinces service",1,[fr],0
-,services.search.serviceUrls.types.desc,"Endpoint url for types service",1,[fr],0
-,services.export.desc,"Export properties",1,[fr],0
-,services.export.title.desc,"Title of the export graphic.",1,[fr],0
-,services.export.title.isSelected.desc,"Indicates if the component is selected and included in the export graphic.",1,[fr],0
-,services.export.title.isSelectable.desc,"Indicates if the component can be included or excluded from the export graphic by the user.",1,[fr],0
-,services.export.title.value.desc,"Value to be passed to the generation function of this export component.",1,[fr],0
-,services.export.map.desc,"Map component.",1,[fr],0
-,services.export.map.isSelected.desc,"services.export.title.isSelected.desc",1,[fr],0
-,services.export.map.isSelectable.desc,"services.export.title.isSelectable.desc",1,[fr],0
-,services.export.map.value.desc,"services.export.title.value.desc",1,[fr],0
-,services.export.mapElements.desc,"North arrow and scalebar component.",1,[fr],0
-,services.export.mapElements.isSelected.desc,"services.export.map.isSelected.desc",1,[fr],0
-,services.export.mapElements.isSelectable.desc,"services.export.map.isSelectable.desc",1,[fr],0
-,services.export.mapElements.value.desc,"services.export.map.value.desc",1,[fr],0
-,services.export.legend.desc,"Legend component.",1,[fr],0
-,services.export.legend.isSelected.desc,"services.export.mapElements.isSelected.desc",1,[fr],0
-,services.export.legend.isSelectable.desc,"services.export.mapElements.isSelectable.desc",1,[fr],0
-,services.export.legend.value.desc,"services.export.mapElements.value.desc",1,[fr],0
-,services.export.footnote.desc,"Foot notice to add to exported map",1,[fr],0
-,services.export.footnote.isSelected.desc,"services.export.legend.isSelected.desc",1,[fr],0
-,services.export.footnote.isSelectable.desc,"services.export.legend.isSelectable.desc",1,[fr],0
-,services.export.footnote.value.desc,"services.export.legend.value.desc",1,[fr],0
-,services.export.timestamp.desc,"Timestamp component.",1,[fr],0
-,services.export.timestamp.isSelected.desc,"services.export.footnote.isSelected.desc",1,[fr],0
-,services.export.timestamp.isSelectable.desc,"services.export.footnote.isSelectable.desc",1,[fr],0
-,services.export.timestamp.value.desc,"services.export.footnote.value.desc",1,[fr],0
-,map.desc,"Core map properties (extent sets, levels of detail)",1,[fr],0
-,map.extentSets.desc,"The default, full and maximum extents of the map",1,[fr],0
-,map.lodSets.desc,"The levels of detail (zoom scales) available for the map",1,[fr],0
-,map.tileSchemas.desc,"A unique combination of an LoD and an extent set (each basemap must fit into a tile schema)",1,[fr],0
-,map.initialBasemapId.desc,"Initial basemap to load. If not supplied viewer will select any basemap.",1,[fr],0
-,map.baseMaps.desc,"A list of basemaps to be made available via the basemap selector.",1,[fr],0
-,map.layers.desc,"Layer list in the order which they should be added to the map.  NOTE: ESRI JSAPI v3 cannot draw imagery layers over feature layers.",1,[fr],0
-,map.legend.desc,"A structured or automatically generated legend",1,[fr],0
+,ui.fullscreen.default,"false",1,[fr],0
+,ui.theme.default,"default",1,[fr],0
+,ui.appBar.default,"[object Object]",1,[fr],0
+,ui.appBar.sideMenu.default,"true",1,[fr],0
+,ui.appBar.geoSearch.default,"true",1,[fr],0
+,ui.appBar.basemap.default,"true",1,[fr],0
+,ui.appBar.layers.default,"true",1,[fr],0
+,ui.navBar.zoom.default,"buttons",1,[fr],0
+,ui.navBar.extra.default,"fullscreen,geoLocator,home,help",1,[fr],0
+,ui.sideMenu.logo.default,"true",1,[fr],0
+,ui.sideMenu.items.default,"layers,basemap,fullscreen,export,share,touch,help,about,language,plugins",1,[fr],0
+,ui.restrictNavigation.default,"false",1,[fr],0
+,ui.legend.reorderable.default,"true",1,[fr],0
+,ui.legend.allowImport.default,"true",1,[fr],0
+,ui.legend.isOpen.large.default,"false",1,[fr],0
+,ui.legend.isOpen.medium.default,"false",1,[fr],0
+,ui.legend.isOpen.small.default,"false",1,[fr],0
+,ui.tableIsOpen.large.default,"false",1,[fr],0
+,ui.tableIsOpen.medium.default,"false",1,[fr],0
+,ui.tableIsOpen.small.default,"false",1,[fr],0
+,services.export.title.isSelected.default,"true",1,[fr],0
+,services.export.title.isSelectable.default,"true",1,[fr],0
+,services.export.map.isSelected.default,"services.export.title.isSelected.default",1,[fr],0
+,services.export.map.isSelectable.default,"services.export.title.isSelectable.default",1,[fr],0
+,services.export.mapElements.isSelected.default,"services.export.map.isSelected.default",1,[fr],0
+,services.export.mapElements.isSelectable.default,"services.export.map.isSelectable.default",1,[fr],0
+,services.export.legend.isSelected.default,"true",1,[fr],0
+,services.export.legend.isSelectable.default,"true",1,[fr],0
+,services.export.legend.showInfoSymbology.default,"false",1,[fr],0
+,services.export.legend.showControlledSymbology.default,"false",1,[fr],0
+,services.export.footnote.isSelected.default,"services.export.mapElements.isSelected.default",1,[fr],0
+,services.export.footnote.isSelectable.default,"services.export.mapElements.isSelectable.default",1,[fr],0
+,services.export.timestamp.isSelected.default,"services.export.footnote.isSelected.default",1,[fr],0
+,services.export.timestamp.isSelectable.default,"services.export.footnote.isSelectable.default",1,[fr],0
+,map.components.overviewMap.expandFactor.default,"2",1,[fr],0
+,version.description,"The schema version used to validate the configuration file.  The schema should enumerate the list of versions accepted by this version of the viewer.",1,[fr],0
+,language.description,"ISO 639-1 code indicating the language of strings in the schema file",1,[fr],0
+,ui.description,"A set of service endpoints used by the viewer",1,[fr],0
+,ui.fullscreen.description,"Indicates viewer takes up entire viewport",1,[fr],0
+,ui.theme.description,"UI theme of the viewer",1,[fr],0
+,ui.logoUrl.description,"An optional image to be used in the place of the default viewer logo",1,[fr],0
+,ui.title.description,"An optional title to be used in the place of the default viewer title",1,[fr],0
+,ui.appBar.description,"Provides configuration to the main app toolbar. If not supplied, the all default appbar controls are displayed. To completely hide the toolbar, provide the following: { sideMenu: false, geoSearch: false, layers: false }.",1,[fr],0
+,ui.appBar.sideMenu.description,"Shows the side menu button in the main app toolbar.",1,[fr],0
+,ui.appBar.geoSearch.description,"Shows the geosearch button in the main app toolbar. The button will be hidden if geosearch component is disabled or no search service URLs are provided.",1,[fr],0
+,ui.appBar.basemap.description,"Shows the basemap selector button in the main app toolbar.",1,[fr],0
+,ui.appBar.layers.description,"Shows the layers button in the main app toolbar.",1,[fr],0
+,ui.sideMenu.description,"Specifies which options are available in the left side menu.",1,[fr],0
+,ui.sideMenu.logo.description,"Indicates if the logo should be shown in the left side menu.",1,[fr],0
+,ui.restrictNavigation.description,"Will restrict the user from panning beyond the maximum extent.",1,[fr],0
+,ui.about.description,"About properties from configuration file or Markdown folder",1,[fr],0
+,ui.help.description,"Help properties",1,[fr],0
+,ui.help.folderName.description,"Help folder name who contain the help description and images",1,[fr],0
+,ui.legend.reorderable.description,"Specifies if the items in the legend can be reordered; structured legend ignores this property.",1,[fr],0
+,ui.legend.allowImport.description,"Specifies if the user-added layers are allowed.",1,[fr],0
+,ui.legend.isOpen.description,"Specifies whether the legend is opened by default on initial loading of the map for small, medium, and large viewports",1,[fr],0
+,ui.legend.isOpen.large.description,"Whether the legend is opened by default on initial loading of the map for large viewports",1,[fr],0
+,ui.legend.isOpen.medium.description,"Whether the legend is opened by default on initial loading of the map for medium viewports",1,[fr],0
+,ui.legend.isOpen.small.description,"Whether the legend is opened by default on initial loading of the map for small viewports",1,[fr],0
+,ui.tableIsOpen.description,"Specifies whether the table panel is opened by default on initial loading of the map for small, medium, and large viewports",1,[fr],0
+,ui.tableIsOpen.id.description,"The id of the layer for referencing within the viewer",1,[fr],0
+,ui.tableIsOpen.large.description,"Whether the table panel is opened by default on initial loading of the map for large viewports",1,[fr],0
+,ui.tableIsOpen.medium.description,"Whether the table panel is opened by default on initial loading of the map for medium viewports",1,[fr],0
+,ui.tableIsOpen.small.description,"Whether the table panel is opened by default on initial loading of the map for small viewports",1,[fr],0
+,ui.widgetsWidget.description,"FIXME",1,[fr],0
+,services.description,"A set of service endpoints used by the viewer",1,[fr],0
+,services.proxyUrl.description,"An optional proxy to be used for dealing with same-origin issues.  URL must either be a relative path on the same server or an absolute path on a server which sets CORS headers.",1,[fr],0
+,services.exportMapUrl.description,"An ESRI service endpoint for generating map images.  Should point directly to an endpoint that can be consumed by ESRI PrintTask.",1,[fr],0
+,services.geometryUrl.description,"A URL to an ESRI ArcGIS geometry service REST endpoint.",1,[fr],0
+,services.googleAPIKey.description,"Google API key to enable geo location and share link shortening.",1,[fr],0
+,services.geolocation.description,"FIXME",1,[fr],0
+,services.coordInfo.description,"FIXME",1,[fr],0
+,services.print.description,"FIXME",1,[fr],0
+,services.search.description,"Search properties including ability to disable certain types of searches (NTS, FSA, and/or LAT/LNG) and to set service endpoint urls",1,[fr],0
+,services.search.disabledSearches.description,"Disable specific types of searches including NTS, FSA, or LAT/LNG",1,[fr],0
+,services.search.serviceUrls.description,"Service endpoint urls",1,[fr],0
+,services.search.serviceUrls.geoNames.description,"Endpoint url for geoNames service",1,[fr],0
+,services.search.serviceUrls.geoLocation.description,"Endpoint url for geoLocation service",1,[fr],0
+,services.search.serviceUrls.geoSuggest.description,"Endpoint url for geoSuggest service",1,[fr],0
+,services.search.serviceUrls.provinces.description,"Endpoint url for provinces service",1,[fr],0
+,services.search.serviceUrls.types.description,"Endpoint url for types service",1,[fr],0
+,services.export.description,"Export properties",1,[fr],0
+,services.export.title.description,"Title of the export graphic.",1,[fr],0
+,services.export.title.isSelected.description,"Indicates if the component is selected and included in the export graphic.",1,[fr],0
+,services.export.title.isSelectable.description,"Indicates if the component can be included or excluded from the export graphic by the user.",1,[fr],0
+,services.export.title.value.description,"Value to be passed to the generation function of this export component.",1,[fr],0
+,services.export.map.description,"Map component.",1,[fr],0
+,services.export.map.isSelected.description,"services.export.title.isSelected.description",1,[fr],0
+,services.export.map.isSelectable.description,"services.export.title.isSelectable.description",1,[fr],0
+,services.export.map.value.description,"services.export.title.value.description",1,[fr],0
+,services.export.mapElements.description,"North arrow and scalebar component.",1,[fr],0
+,services.export.mapElements.isSelected.description,"services.export.map.isSelected.description",1,[fr],0
+,services.export.mapElements.isSelectable.description,"services.export.map.isSelectable.description",1,[fr],0
+,services.export.mapElements.value.description,"services.export.map.value.description",1,[fr],0
+,services.export.legend.description,"Legend component.",1,[fr],0
+,services.export.legend.isSelected.description,"Indicates if the component is selected and included in the export graphic.",1,[fr],0
+,services.export.legend.isSelectable.description,"Indicates if the component can be included or excluded from the export graphic by the user.",1,[fr],0
+,services.export.legend.value.description,"Value to be passed to the generation function of this export component.",1,[fr],0
+,services.export.legend.showInfoSymbology.description,"Indicates whether symbology from info sections should be included in export legend",1,[fr],0
+,services.export.legend.showControlledSymbology.description,"Indicates whether symbology from controlled layers should be included in export legend",1,[fr],0
+,services.export.footnote.description,"Foot notice to add to exported map",1,[fr],0
+,services.export.footnote.isSelected.description,"services.export.mapElements.isSelected.description",1,[fr],0
+,services.export.footnote.isSelectable.description,"services.export.mapElements.isSelectable.description",1,[fr],0
+,services.export.footnote.value.description,"services.export.mapElements.value.description",1,[fr],0
+,services.export.timestamp.description,"Timestamp component.",1,[fr],0
+,services.export.timestamp.isSelected.description,"services.export.footnote.isSelected.description",1,[fr],0
+,services.export.timestamp.isSelectable.description,"services.export.footnote.isSelectable.description",1,[fr],0
+,services.export.timestamp.value.description,"services.export.footnote.value.description",1,[fr],0
+,map.description,"Core map properties (extent sets, levels of detail)",1,[fr],0
+,map.extentSets.description,"The default, full and maximum extents of the map",1,[fr],0
+,map.lodSets.description,"The levels of detail (zoom scales) available for the map",1,[fr],0
+,map.tileSchemas.description,"A unique combination of an LoD and an extent set (each basemap must fit into a tile schema)",1,[fr],0
+,map.initialBasemapId.description,"Initial basemap to load. If not supplied viewer will select any basemap.",1,[fr],0
+,map.baseMaps.description,"A list of basemaps to be made available via the basemap selector.",1,[fr],0
+,map.layers.description,"Layer list in the order which they should be added to the map.  NOTE: ESRI JSAPI v3 cannot draw imagery layers over feature layers.",1,[fr],0
+,map.legend.description,"A structured or automatically generated legend",1,[fr],0
 ,version.enum.2.0,2.0,1,[fr],0
+,language.enum.en,en,1,[fr],0
 ,language.enum.en,en,1,[fr],0
 ,language.enum.fr,fr,1,[fr],0
 ,language.enum.es,es,1,[fr],0
@@ -277,6 +340,9 @@
 ,ui.navBar.extra.items.enum.basemap,basemap,1,[fr],0
 ,ui.navBar.extra.items.enum.help,help,1,[fr],0
 ,ui.navBar.extra.items.enum.fullscreen,fullscreen,1,[fr],0
+,ui.navBar.extra.items.enum.geoSearch,geoSearch,1,[fr],0
+,ui.navBar.extra.items.enum.sideMenu,sideMenu,1,[fr],0
+,ui.navBar.extra.items.enum.layers,layers,1,[fr],0
 ,services.search.disabledSearches.items.enum.NTS,NTS,1,[fr],0
 ,services.search.disabledSearches.items.enum.FSA,FSA,1,[fr],0
 ,services.search.disabledSearches.items.enum.LAT/LNG,LAT/LNG,1,[fr],0

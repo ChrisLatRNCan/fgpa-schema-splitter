@@ -1,1 +1,326 @@
-{"description":"A set of service endpoints used by the viewer","type":"object","properties":{"proxyUrl":{"type":"string","description":"An optional proxy to be used for dealing with same-origin issues.  URL must either be a relative path on the same server or an absolute path on a server which sets CORS headers.","title":"[en]","help":"[en]"},"exportMapUrl":{"type":"string","description":"An ESRI service endpoint for generating map images.  Should point directly to an endpoint that can be consumed by ESRI PrintTask.","title":"[en]","help":"[en]"},"geometryUrl":{"type":"string","description":"A URL to an ESRI ArcGIS geometry service REST endpoint.","title":"[en]","help":"[en]"},"googleAPIKey":{"type":"string","description":"Google API key to enable geo location and share link shortening.","title":"[en]","help":"[en]"},"geolocation":{"type":"object","additionalProperties":true,"description":"FIXME","title":"[en]","help":"[en]"},"coordInfo":{"type":"object","additionalProperties":true,"description":"FIXME","title":"[en]","help":"[en]"},"print":{"type":"object","additionalProperties":true,"description":"FIXME","title":"[en]","help":"[en]"},"search":{"type":"object","description":"Search properties including ability to disable certain types of searches (NTS, FSA, and/or LAT/LNG) and to set service endpoint urls","properties":{"disabledSearches":{"type":"array","items":{"type":"string","enum":["NTS","FSA","LAT/LNG"]},"minItems":1,"uniqueItems":true,"description":"Disable specific types of searches including NTS, FSA, or LAT/LNG","title":"[en]","help":"[en]"},"serviceUrls":{"type":"object","description":"Service endpoint urls","properties":{"geoNames":{"type":"string","description":"Endpoint url for geoNames service","title":"[en]","help":"[en]"},"geoLocation":{"type":"string","description":"Endpoint url for geoLocation service","title":"[en]","help":"[en]"},"geoSuggest":{"type":"string","description":"Endpoint url for geoSuggest service","title":"[en]","help":"[en]"},"provinces":{"type":"string","description":"Endpoint url for provinces service","title":"[en]","help":"[en]"},"types":{"type":"string","description":"Endpoint url for types service","title":"[en]","help":"[en]"}},"additionalProperties":false,"required":["geoNames","geoLocation","geoSuggest","provinces","types"],"title":"[en]","help":"[en]"}},"additionalProperties":false,"required":["serviceUrls"],"title":"[en]","help":"[en]"},"export":{"type":"object","description":"Export properties","properties":{"title":{"description":"[en].desc","type":"object","properties":{"isSelected":{"type":"boolean","default":true,"description":"services.export.footnote.isSelected.desc","title":"[en]","help":"[en]"},"isSelectable":{"type":"boolean","default":true,"description":"services.export.footnote.isSelectable.desc","title":"[en]","help":"[en]"},"value":{"type":"string","description":"services.export.footnote.value.desc","title":"[en]","help":"[en]"}},"additionalProperties":false,"title":"[en]","help":"[en]"},"map":{"description":"Map component.","type":"object","properties":{"isSelected":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelected.desc","title":"services.export.timestamp.isSelected.title","help":"services.export.timestamp.isSelected.help"},"isSelectable":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelectable.desc","title":"services.export.timestamp.isSelectable.title","help":"services.export.timestamp.isSelectable.help"},"value":{"type":"string","description":"services.export.timestamp.value.desc","title":"services.export.timestamp.value.title","help":"services.export.timestamp.value.help"}},"additionalProperties":false,"title":"[en]","help":"[en]"},"mapElements":{"description":"North arrow and scalebar component.","type":"object","properties":{"isSelected":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelected.desc","title":"services.export.timestamp.isSelected.title","help":"services.export.timestamp.isSelected.help"},"isSelectable":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelectable.desc","title":"services.export.timestamp.isSelectable.title","help":"services.export.timestamp.isSelectable.help"},"value":{"type":"string","description":"services.export.timestamp.value.desc","title":"services.export.timestamp.value.title","help":"services.export.timestamp.value.help"}},"additionalProperties":false,"title":"[en]","help":"[en]"},"legend":{"description":"Legend component.","type":"object","properties":{"isSelected":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelected.desc","title":"services.export.timestamp.isSelected.title","help":"services.export.timestamp.isSelected.help"},"isSelectable":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelectable.desc","title":"services.export.timestamp.isSelectable.title","help":"services.export.timestamp.isSelectable.help"},"value":{"type":"string","description":"services.export.timestamp.value.desc","title":"services.export.timestamp.value.title","help":"services.export.timestamp.value.help"}},"additionalProperties":false,"title":"[en]","help":"[en]"},"footnote":{"description":"Foot notice to add to exported map","type":"object","properties":{"isSelected":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelected.desc","title":"services.export.timestamp.isSelected.title","help":"services.export.timestamp.isSelected.help"},"isSelectable":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelectable.desc","title":"services.export.timestamp.isSelectable.title","help":"services.export.timestamp.isSelectable.help"},"value":{"type":"string","description":"services.export.timestamp.value.desc","title":"services.export.timestamp.value.title","help":"services.export.timestamp.value.help"}},"additionalProperties":false,"title":"[en]","help":"[en]"},"timestamp":{"description":"Timestamp component.","type":"object","properties":{"isSelected":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelected.desc","title":"services.export.timestamp.isSelected.title","help":"services.export.timestamp.isSelected.help"},"isSelectable":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelectable.desc","title":"services.export.timestamp.isSelectable.title","help":"services.export.timestamp.isSelectable.help"},"value":{"type":"string","description":"services.export.timestamp.value.desc","title":"services.export.timestamp.value.title","help":"services.export.timestamp.value.help"}},"additionalProperties":false,"title":"[en]","help":"[en]"}},"additionalProperties":false,"title":"services.export.title","help":"[en]"}},"additionalProperties":false,"schema":"services","title":"[en]","help":"[en]"}
+{
+  "description": "A set of service endpoints used by the viewer",
+  "type": "object",
+  "properties": {
+    "proxyUrl": {
+      "type": "string",
+      "description": "An optional proxy to be used for dealing with same-origin issues.  URL must either be a relative path on the same server or an absolute path on a server which sets CORS headers.",
+      "title": "[en]",
+      "help": "[en]"
+    },
+    "exportMapUrl": {
+      "type": "string",
+      "description": "An ESRI service endpoint for generating map images.  Should point directly to an endpoint that can be consumed by ESRI PrintTask.",
+      "title": "[en]",
+      "help": "[en]"
+    },
+    "geometryUrl": {
+      "type": "string",
+      "description": "A URL to an ESRI ArcGIS geometry service REST endpoint.",
+      "title": "[en]",
+      "help": "[en]"
+    },
+    "googleAPIKey": {
+      "type": "string",
+      "description": "Google API key to enable geo location and share link shortening.",
+      "title": "[en]",
+      "help": "[en]"
+    },
+    "geolocation": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "FIXME",
+      "title": "[en]",
+      "help": "[en]"
+    },
+    "coordInfo": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "FIXME",
+      "title": "[en]",
+      "help": "[en]"
+    },
+    "print": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "FIXME",
+      "title": "[en]",
+      "help": "[en]"
+    },
+    "search": {
+      "type": "object",
+      "description": "Search properties including ability to disable certain types of searches (NTS, FSA, and/or LAT/LNG) and to set service endpoint urls",
+      "properties": {
+        "disabledSearches": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "NTS",
+              "FSA",
+              "LAT/LNG"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Disable specific types of searches including NTS, FSA, or LAT/LNG",
+          "title": "[en]",
+          "help": "[en]"
+        },
+        "serviceUrls": {
+          "type": "object",
+          "description": "Service endpoint urls",
+          "properties": {
+            "geoNames": {
+              "type": "string",
+              "description": "Endpoint url for geoNames service",
+              "title": "[en]",
+              "help": "[en]"
+            },
+            "geoLocation": {
+              "type": "string",
+              "description": "Endpoint url for geoLocation service",
+              "title": "[en]",
+              "help": "[en]"
+            },
+            "geoSuggest": {
+              "type": "string",
+              "description": "Endpoint url for geoSuggest service",
+              "title": "[en]",
+              "help": "[en]"
+            },
+            "provinces": {
+              "type": "string",
+              "description": "Endpoint url for provinces service",
+              "title": "[en]",
+              "help": "[en]"
+            },
+            "types": {
+              "type": "string",
+              "description": "Endpoint url for types service",
+              "title": "[en]",
+              "help": "[en]"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "geoNames",
+            "geoLocation",
+            "geoSuggest",
+            "provinces",
+            "types"
+          ],
+          "title": "[en]",
+          "help": "[en]"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "serviceUrls"
+      ],
+      "title": "[en]",
+      "help": "[en]"
+    },
+    "export": {
+      "type": "object",
+      "description": "Export properties",
+      "properties": {
+        "title": {
+          "description": "[en].description",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "services.export.footnote.isSelected.default",
+              "description": "services.export.footnote.isSelected.description",
+              "title": "[en]",
+              "help": "[en]"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "services.export.footnote.isSelectable.default",
+              "description": "services.export.footnote.isSelectable.description",
+              "title": "[en]",
+              "help": "[en]"
+            },
+            "value": {
+              "type": "string",
+              "description": "services.export.footnote.value.description",
+              "title": "[en]",
+              "help": "[en]"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[en]",
+          "help": "[en]"
+        },
+        "map": {
+          "description": "Map component.",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelected.default",
+              "description": "services.export.timestamp.isSelected.description",
+              "title": "services.export.timestamp.isSelected.title",
+              "help": "services.export.timestamp.isSelected.help"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelectable.default",
+              "description": "services.export.timestamp.isSelectable.description",
+              "title": "services.export.timestamp.isSelectable.title",
+              "help": "services.export.timestamp.isSelectable.help"
+            },
+            "value": {
+              "type": "string",
+              "description": "services.export.timestamp.value.description",
+              "title": "services.export.timestamp.value.title",
+              "help": "services.export.timestamp.value.help"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[en]",
+          "help": "[en]"
+        },
+        "mapElements": {
+          "description": "North arrow and scalebar component.",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelected.default",
+              "description": "services.export.timestamp.isSelected.description",
+              "title": "services.export.timestamp.isSelected.title",
+              "help": "services.export.timestamp.isSelected.help"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelectable.default",
+              "description": "services.export.timestamp.isSelectable.description",
+              "title": "services.export.timestamp.isSelectable.title",
+              "help": "services.export.timestamp.isSelectable.help"
+            },
+            "value": {
+              "type": "string",
+              "description": "services.export.timestamp.value.description",
+              "title": "services.export.timestamp.value.title",
+              "help": "services.export.timestamp.value.help"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[en]",
+          "help": "[en]"
+        },
+        "legend": {
+          "description": "Legend component.",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "true",
+              "description": "Indicates if the component is selected and included in the export graphic.",
+              "title": "[en]",
+              "help": "[en]"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "true",
+              "description": "Indicates if the component can be included or excluded from the export graphic by the user.",
+              "title": "[en]",
+              "help": "[en]"
+            },
+            "value": {
+              "type": "string",
+              "description": "Value to be passed to the generation function of this export component.",
+              "title": "[en]",
+              "help": "[en]"
+            },
+            "showInfoSymbology": {
+              "type": "boolean",
+              "default": "false",
+              "description": "Indicates whether symbology from info sections should be included in export legend",
+              "title": "[en]",
+              "help": "[en]"
+            },
+            "showControlledSymbology": {
+              "type": "boolean",
+              "default": "false",
+              "description": "Indicates whether symbology from controlled layers should be included in export legend",
+              "title": "[en]",
+              "help": "[en]"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[en]",
+          "help": "[en]"
+        },
+        "footnote": {
+          "description": "Foot notice to add to exported map",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelected.default",
+              "description": "services.export.timestamp.isSelected.description",
+              "title": "services.export.timestamp.isSelected.title",
+              "help": "services.export.timestamp.isSelected.help"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelectable.default",
+              "description": "services.export.timestamp.isSelectable.description",
+              "title": "services.export.timestamp.isSelectable.title",
+              "help": "services.export.timestamp.isSelectable.help"
+            },
+            "value": {
+              "type": "string",
+              "description": "services.export.timestamp.value.description",
+              "title": "services.export.timestamp.value.title",
+              "help": "services.export.timestamp.value.help"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[en]",
+          "help": "[en]"
+        },
+        "timestamp": {
+          "description": "Timestamp component.",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelected.default",
+              "description": "services.export.timestamp.isSelected.description",
+              "title": "services.export.timestamp.isSelected.title",
+              "help": "services.export.timestamp.isSelected.help"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelectable.default",
+              "description": "services.export.timestamp.isSelectable.description",
+              "title": "services.export.timestamp.isSelectable.title",
+              "help": "services.export.timestamp.isSelectable.help"
+            },
+            "value": {
+              "type": "string",
+              "description": "services.export.timestamp.value.description",
+              "title": "services.export.timestamp.value.title",
+              "help": "services.export.timestamp.value.help"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[en]",
+          "help": "[en]"
+        }
+      },
+      "additionalProperties": false,
+      "title": "services.export.title",
+      "help": "[en]"
+    }
+  },
+  "additionalProperties": false,
+  "schema": "services",
+  "title": "[en]",
+  "help": "[en]"
+}

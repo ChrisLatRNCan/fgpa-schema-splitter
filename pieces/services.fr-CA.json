@@ -1,1 +1,326 @@
-{"description":"[fr]","type":"object","properties":{"proxyUrl":{"type":"string","description":"[fr]","title":"[fr]","help":"[fr]"},"exportMapUrl":{"type":"string","description":"[fr]","title":"[fr]","help":"[fr]"},"geometryUrl":{"type":"string","description":"[fr]","title":"[fr]","help":"[fr]"},"googleAPIKey":{"type":"string","description":"[fr]","title":"[fr]","help":"[fr]"},"geolocation":{"type":"object","additionalProperties":true,"description":"[fr]","title":"[fr]","help":"[fr]"},"coordInfo":{"type":"object","additionalProperties":true,"description":"[fr]","title":"[fr]","help":"[fr]"},"print":{"type":"object","additionalProperties":true,"description":"[fr]","title":"[fr]","help":"[fr]"},"search":{"type":"object","description":"[fr]","properties":{"disabledSearches":{"type":"array","items":{"type":"string","enum":["[fr]","[fr]","[fr]"]},"minItems":1,"uniqueItems":true,"description":"[fr]","title":"[fr]","help":"[fr]"},"serviceUrls":{"type":"object","description":"[fr]","properties":{"geoNames":{"type":"string","description":"[fr]","title":"[fr]","help":"[fr]"},"geoLocation":{"type":"string","description":"[fr]","title":"[fr]","help":"[fr]"},"geoSuggest":{"type":"string","description":"[fr]","title":"[fr]","help":"[fr]"},"provinces":{"type":"string","description":"[fr]","title":"[fr]","help":"[fr]"},"types":{"type":"string","description":"[fr]","title":"[fr]","help":"[fr]"}},"additionalProperties":false,"required":["geoNames","geoLocation","geoSuggest","provinces","types"],"title":"[fr]","help":"[fr]"}},"additionalProperties":false,"required":["serviceUrls"],"title":"[fr]","help":"[fr]"},"export":{"type":"object","description":"[fr]","properties":{"title":{"description":"[fr].desc","type":"object","properties":{"isSelected":{"type":"boolean","default":true,"description":"[fr]","title":"[fr]","help":"[fr]"},"isSelectable":{"type":"boolean","default":true,"description":"[fr]","title":"[fr]","help":"[fr]"},"value":{"type":"string","description":"[fr]","title":"[fr]","help":"[fr]"}},"additionalProperties":false,"title":"[fr]","help":"[fr]"},"map":{"description":"[fr]","type":"object","properties":{"isSelected":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelected.desc","title":"services.export.timestamp.isSelected.title","help":"services.export.timestamp.isSelected.help"},"isSelectable":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelectable.desc","title":"services.export.timestamp.isSelectable.title","help":"services.export.timestamp.isSelectable.help"},"value":{"type":"string","description":"services.export.timestamp.value.desc","title":"services.export.timestamp.value.title","help":"services.export.timestamp.value.help"}},"additionalProperties":false,"title":"[fr]","help":"[fr]"},"mapElements":{"description":"[fr]","type":"object","properties":{"isSelected":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelected.desc","title":"services.export.timestamp.isSelected.title","help":"services.export.timestamp.isSelected.help"},"isSelectable":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelectable.desc","title":"services.export.timestamp.isSelectable.title","help":"services.export.timestamp.isSelectable.help"},"value":{"type":"string","description":"services.export.timestamp.value.desc","title":"services.export.timestamp.value.title","help":"services.export.timestamp.value.help"}},"additionalProperties":false,"title":"[fr]","help":"[fr]"},"legend":{"description":"[fr]","type":"object","properties":{"isSelected":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelected.desc","title":"services.export.timestamp.isSelected.title","help":"services.export.timestamp.isSelected.help"},"isSelectable":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelectable.desc","title":"services.export.timestamp.isSelectable.title","help":"services.export.timestamp.isSelectable.help"},"value":{"type":"string","description":"services.export.timestamp.value.desc","title":"services.export.timestamp.value.title","help":"services.export.timestamp.value.help"}},"additionalProperties":false,"title":"[fr]","help":"[fr]"},"footnote":{"description":"[fr]","type":"object","properties":{"isSelected":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelected.desc","title":"services.export.timestamp.isSelected.title","help":"services.export.timestamp.isSelected.help"},"isSelectable":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelectable.desc","title":"services.export.timestamp.isSelectable.title","help":"services.export.timestamp.isSelectable.help"},"value":{"type":"string","description":"services.export.timestamp.value.desc","title":"services.export.timestamp.value.title","help":"services.export.timestamp.value.help"}},"additionalProperties":false,"title":"[fr]","help":"[fr]"},"timestamp":{"description":"[fr]","type":"object","properties":{"isSelected":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelected.desc","title":"services.export.timestamp.isSelected.title","help":"services.export.timestamp.isSelected.help"},"isSelectable":{"type":"boolean","default":true,"description":"services.export.timestamp.isSelectable.desc","title":"services.export.timestamp.isSelectable.title","help":"services.export.timestamp.isSelectable.help"},"value":{"type":"string","description":"services.export.timestamp.value.desc","title":"services.export.timestamp.value.title","help":"services.export.timestamp.value.help"}},"additionalProperties":false,"title":"[fr]","help":"[fr]"}},"additionalProperties":false,"title":"services.export.title","help":"[fr]"}},"additionalProperties":false,"schema":"services","title":"[fr]","help":"[fr]"}
+{
+  "description": "[fr]",
+  "type": "object",
+  "properties": {
+    "proxyUrl": {
+      "type": "string",
+      "description": "[fr]",
+      "title": "[fr]",
+      "help": "[fr]"
+    },
+    "exportMapUrl": {
+      "type": "string",
+      "description": "[fr]",
+      "title": "[fr]",
+      "help": "[fr]"
+    },
+    "geometryUrl": {
+      "type": "string",
+      "description": "[fr]",
+      "title": "[fr]",
+      "help": "[fr]"
+    },
+    "googleAPIKey": {
+      "type": "string",
+      "description": "[fr]",
+      "title": "[fr]",
+      "help": "[fr]"
+    },
+    "geolocation": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "[fr]",
+      "title": "[fr]",
+      "help": "[fr]"
+    },
+    "coordInfo": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "[fr]",
+      "title": "[fr]",
+      "help": "[fr]"
+    },
+    "print": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "[fr]",
+      "title": "[fr]",
+      "help": "[fr]"
+    },
+    "search": {
+      "type": "object",
+      "description": "[fr]",
+      "properties": {
+        "disabledSearches": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "[fr]",
+              "[fr]",
+              "[fr]"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "[fr]",
+          "title": "[fr]",
+          "help": "[fr]"
+        },
+        "serviceUrls": {
+          "type": "object",
+          "description": "[fr]",
+          "properties": {
+            "geoNames": {
+              "type": "string",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "geoLocation": {
+              "type": "string",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "geoSuggest": {
+              "type": "string",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "provinces": {
+              "type": "string",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "types": {
+              "type": "string",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "geoNames",
+            "geoLocation",
+            "geoSuggest",
+            "provinces",
+            "types"
+          ],
+          "title": "[fr]",
+          "help": "[fr]"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "serviceUrls"
+      ],
+      "title": "[fr]",
+      "help": "[fr]"
+    },
+    "export": {
+      "type": "object",
+      "description": "[fr]",
+      "properties": {
+        "title": {
+          "description": "[fr].description",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "value": {
+              "type": "string",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[fr]",
+          "help": "[fr]"
+        },
+        "map": {
+          "description": "[fr]",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelected.default",
+              "description": "services.export.timestamp.isSelected.description",
+              "title": "services.export.timestamp.isSelected.title",
+              "help": "services.export.timestamp.isSelected.help"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelectable.default",
+              "description": "services.export.timestamp.isSelectable.description",
+              "title": "services.export.timestamp.isSelectable.title",
+              "help": "services.export.timestamp.isSelectable.help"
+            },
+            "value": {
+              "type": "string",
+              "description": "services.export.timestamp.value.description",
+              "title": "services.export.timestamp.value.title",
+              "help": "services.export.timestamp.value.help"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[fr]",
+          "help": "[fr]"
+        },
+        "mapElements": {
+          "description": "[fr]",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelected.default",
+              "description": "services.export.timestamp.isSelected.description",
+              "title": "services.export.timestamp.isSelected.title",
+              "help": "services.export.timestamp.isSelected.help"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelectable.default",
+              "description": "services.export.timestamp.isSelectable.description",
+              "title": "services.export.timestamp.isSelectable.title",
+              "help": "services.export.timestamp.isSelectable.help"
+            },
+            "value": {
+              "type": "string",
+              "description": "services.export.timestamp.value.description",
+              "title": "services.export.timestamp.value.title",
+              "help": "services.export.timestamp.value.help"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[fr]",
+          "help": "[fr]"
+        },
+        "legend": {
+          "description": "[fr]",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "value": {
+              "type": "string",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "showInfoSymbology": {
+              "type": "boolean",
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "showControlledSymbology": {
+              "type": "boolean",
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[fr]",
+          "help": "[fr]"
+        },
+        "footnote": {
+          "description": "[fr]",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelected.default",
+              "description": "services.export.timestamp.isSelected.description",
+              "title": "services.export.timestamp.isSelected.title",
+              "help": "services.export.timestamp.isSelected.help"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelectable.default",
+              "description": "services.export.timestamp.isSelectable.description",
+              "title": "services.export.timestamp.isSelectable.title",
+              "help": "services.export.timestamp.isSelectable.help"
+            },
+            "value": {
+              "type": "string",
+              "description": "services.export.timestamp.value.description",
+              "title": "services.export.timestamp.value.title",
+              "help": "services.export.timestamp.value.help"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[fr]",
+          "help": "[fr]"
+        },
+        "timestamp": {
+          "description": "[fr]",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelected.default",
+              "description": "services.export.timestamp.isSelected.description",
+              "title": "services.export.timestamp.isSelected.title",
+              "help": "services.export.timestamp.isSelected.help"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "services.export.timestamp.isSelectable.default",
+              "description": "services.export.timestamp.isSelectable.description",
+              "title": "services.export.timestamp.isSelectable.title",
+              "help": "services.export.timestamp.isSelectable.help"
+            },
+            "value": {
+              "type": "string",
+              "description": "services.export.timestamp.value.description",
+              "title": "services.export.timestamp.value.title",
+              "help": "services.export.timestamp.value.help"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[fr]",
+          "help": "[fr]"
+        }
+      },
+      "additionalProperties": false,
+      "title": "services.export.title",
+      "help": "[fr]"
+    }
+  },
+  "additionalProperties": false,
+  "schema": "services",
+  "title": "[fr]",
+  "help": "[fr]"
+}
