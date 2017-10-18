@@ -9,6 +9,7 @@
     "dependencies": {
       "json-schema-ref-parser": "^4.0.0",
       "dot-prop": "^4.2.0",
-      "papaparse": "^4.3.6"
+      "papaparse": "^4.3.6",
+      "promise": "^8.0.1"
     }
 }

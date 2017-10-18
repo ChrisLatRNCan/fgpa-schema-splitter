@@ -18,31 +18,31 @@
                 "type": "number",
                 "title": "[en]",
                 "help": "[en]",
-                "default": "[en]"
+                "default": "map.components.mouseInfo.spatialReference.wkid.default"
               },
               "vcsWkid": {
                 "type": "number",
                 "title": "[en]",
                 "help": "[en]",
-                "default": "[en]"
+                "default": "map.components.mouseInfo.spatialReference.vcsWkid.default"
               },
               "latestWkid": {
                 "type": "number",
                 "title": "[en]",
                 "help": "[en]",
-                "default": "[en]"
+                "default": "map.components.mouseInfo.spatialReference.latestWkid.default"
               },
               "latestVcsWkid": {
                 "type": "number",
                 "title": "[en]",
                 "help": "[en]",
-                "default": "[en]"
+                "default": "map.components.mouseInfo.spatialReference.latestVcsWkid.default"
               },
               "wkt": {
                 "type": "string",
                 "title": "[en]",
                 "help": "[en]",
-                "default": "[en]"
+                "default": "map.components.mouseInfo.spatialReference.wkt.default"
               }
             },
             "anyOf": [
@@ -160,7 +160,7 @@
       "description": "The default, full and maximum extents of the map",
       "title": "[en]",
       "help": "[en]",
-      "default": "[en]"
+      "default": "map.extentSets.default"
     },
     "lodSets": {
       "type": "array",
@@ -204,7 +204,7 @@
       "description": "The levels of detail (zoom scales) available for the map",
       "title": "[en]",
       "help": "[en]",
-      "default": "[en]"
+      "default": "map.lodSets.default"
     },
     "tileSchemas": {
       "type": "array",
@@ -339,7 +339,7 @@
                     "additionalProperties": false,
                     "title": "[en]",
                     "help": "[en]",
-                    "default": "[en]"
+                    "default": "map.components.mouseInfo.spatialReference.default"
                   }
                 },
                 "required": [
@@ -451,7 +451,7 @@
       "description": "A unique combination of an LoD and an extent set (each basemap must fit into a tile schema)",
       "title": "[en]",
       "help": "[en]",
-      "default": "[en]"
+      "default": "map.tileSchemas.default"
     },
     "components": {
       "type": "object",
@@ -463,24 +463,24 @@
               "type": "boolean",
               "title": "[en]",
               "help": "[en]",
-              "default": "[en]"
+              "default": "map.components.geoSearch.enabled.default"
             },
             "showGraphic": {
               "type": "boolean",
               "title": "[en]",
               "help": "[en]",
-              "default": "[en]"
+              "default": "map.components.geoSearch.showGraphic.default"
             },
             "showInfo": {
               "type": "boolean",
               "title": "[en]",
               "help": "[en]",
-              "default": "[en]"
+              "default": "map.components.geoSearch.showInfo.default"
             }
           },
           "title": "[en]",
           "help": "[en]",
-          "default": "[en]"
+          "default": "map.components.geoSearch.default"
         },
         "mouseInfo": {
           "type": "object",
@@ -554,13 +554,13 @@
           },
           "title": "[en]",
           "help": "[en]",
-          "default": "[en]"
+          "default": "map.components.mouseInfo.default"
         },
         "northArrow": {
           "type": "object",
           "title": "[en]",
           "help": "[en]",
-          "default": "[en]"
+          "default": "map.components.northArrow.default"
         },
         "overviewMap": {
           "type": "object",
@@ -569,43 +569,43 @@
               "type": "boolean",
               "title": "[en]",
               "help": "[en]",
-              "default": "[en]"
+              "default": "map.components.overviewMap.enabled.default"
             },
             "expandFactor": {
               "type": "number",
-              "default": "2",
+              "default": "map.components.overviewMap.expandFactor.default",
               "title": "[en]",
               "help": "[en]"
             }
           },
           "title": "[en]",
           "help": "[en]",
-          "default": "[en]"
+          "default": "map.components.overviewMap.default"
         },
         "scaleBar": {
           "type": "object",
           "title": "[en]",
           "help": "[en]",
-          "default": "[en]"
+          "default": "map.components.scaleBar.default"
         },
         "basemap": {
           "type": "object",
           "title": "map.components.base[en]",
           "help": "map.components.base[en]",
-          "default": "map.components.base[en]"
+          "default": "map.components.basemap.default"
         }
       },
       "additionalProperties": false,
       "title": "[en]",
       "help": "[en]",
-      "default": "[en]"
+      "default": "map.components.default"
     },
     "initialBasemapId": {
       "type": "string",
       "description": "Initial basemap to load. If not supplied viewer will select any basemap.",
       "title": "[en]",
       "help": "[en]",
-      "default": "[en]"
+      "default": "map.initialBasemapId.default"
     },
     "baseMaps": {
       "type": "array",
@@ -744,7 +744,7 @@
       "description": "A list of basemaps to be made available via the basemap selector.",
       "title": "[en]",
       "help": "[en]",
-      "default": "[en]"
+      "default": "map.baseMaps.default"
     },
     "layers": {
       "description": "Layer list in the order which they should be added to the map.  NOTE: ESRI JSAPI v3 cannot draw imagery layers over feature layers.",
@@ -2128,7 +2128,7 @@
       "minItems": 0,
       "title": "[en]",
       "help": "[en]",
-      "default": "[en]"
+      "default": "map.layers.default"
     },
     "legend": {
       "oneOf": [
@@ -2502,7 +2502,7 @@
       "description": "A structured or automatically generated legend",
       "title": "[en]",
       "help": "[en]",
-      "default": "[en]"
+      "default": "map.legend.default"
     }
   },
   "required": [

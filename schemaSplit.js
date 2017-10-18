@@ -208,8 +208,28 @@ function addDefaultLabel(schema, parent = '') {
   propNames.forEach(prop => {
     const label = `${prefix}${prop}.default`;
     if ($DotProp.has(schema, `${prop}.default`)) {
-      deflt = $DotProp.get(schema, `${prop}.default`);
-      csvString = `${csvString},${label},"${deflt}",1,[fr],0\n`;
+      // Is this an object
+      if (Array.isArray(schema[prop]['default'])){ // ARRAY
+        console.log('ARRAY')
+        console.log(schema[prop]['default']);
+        console.log(`${label},${$DotProp.get(schema, `${prop}.default`)},1,[fr],0\n`);
+      } else if (typeof schema[prop]['default'] === 'object'){ // OBJECT
+        const objPropNames = Object.getOwnPropertyNames(schema[prop]['default']);
+        objPropNames.forEach(objProp => {
+          const labelItem = `${label}.${objProp}`;
+          const defltItem = schema[prop]['default'][objProp];
+          csvString = `${csvString},${labelItem},${defltItem},1,[fr],0\n`;
+
+          // store as a simplified tree
+          $DotProp.set(schema, `${prop}.default.${prefix}${prop}.${objProp}`, labelItem);
+          $DotProp.delete(schema, `${prop}.default.${objProp}`);
+        });
+        deflt = JSON.stringify(schema[prop]['default']);
+        csvString = `${csvString},${label},${deflt},1,[fr],0\n`;
+      } else { // OTHERS
+        deflt = $DotProp.get(schema, `${prop}.default`);
+        csvString = `${csvString},${label},${deflt},1,[fr],0\n`;
+      }
     } else {
       csvString = `${csvString},${label},[en],0,[fr],0\n`;
     }
@@ -270,7 +290,7 @@ function addEnumLabel(schema, parent = '') {
         newEnum.push(label);
       });
       $DotProp.set(schema, `${prop}.enum`, newEnum);
-      console.log($DotProp.get(schema, `${prop}.enum`));
+      // console.log($DotProp.get(schema, `${prop}.enum`));
     }
 
     let newEnumItems = [];
@@ -282,7 +302,7 @@ function addEnumLabel(schema, parent = '') {
         newEnumItems.push(label);
       });
       $DotProp.set(schema, `${prop}.items.enum`, newEnumItems);
-      console.log($DotProp.get(schema, `${prop}.items.enum`));
+      // console.log($DotProp.get(schema, `${prop}.items.enum`));
     }
 
     // go deeper ???

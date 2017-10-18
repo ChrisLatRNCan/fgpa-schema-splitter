@@ -3,7 +3,7 @@
   "enum": [
     "[fr]"
   ],
-  "description": "[fr]",
+  "description": "version.description",
   "schema": "version",
   "title": "[fr]",
   "help": "[fr]",
