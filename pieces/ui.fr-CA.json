@@ -41,135 +41,40 @@
     },
     "title": {
       "type": "string",
-      "description": "[fr].description",
+      "description": "[fr]",
       "title": "[fr]",
       "help": "[fr]",
       "default": "[fr]"
     },
     "appBar": {
-      "default": "layers":"ui.appBar.default.layers"}}},1,[fr],0
-,ui.appBar.sideMenu.default,true,1,[fr],0
-,ui.appBar.geoSearch.default,true,1,[fr],0
-,ui.appBar.basemap.default,true,1,[fr],0
-,ui.appBar.layers.default,true,1,[fr],0
-,ui.navBar.default,[en],0,[fr],0
-,ui.navBar.zoom.default,buttons,1,[fr],0
-,ui.sideMenu.default,[en],0,[fr],0
-,ui.sideMenu.logo.default,true,1,[fr],0
-,ui.restrictNavigation.default,false,1,[fr],0
-,ui.about.default,[en],0,[fr],0
-,ui.help.default,[en],0,[fr],0
-,ui.help.folderName.default,[en],0,[fr],0
-,ui.legend.default,[en],0,[fr],0
-,ui.legend.reorderable.default,true,1,[fr],0
-,ui.legend.allowImport.default,true,1,[fr],0
-,ui.legend.isOpen.default,[en],0,[fr],0
-,ui.legend.isOpen.large.default,false,1,[fr],0
-,ui.legend.isOpen.medium.default,false,1,[fr],0
-,ui.legend.isOpen.small.default,false,1,[fr],0
-,ui.tableIsOpen.default,[en],0,[fr],0
-,ui.tableIsOpen.id.default,[en],0,[fr],0
-,ui.tableIsOpen.large.default,false,1,[fr],0
-,ui.tableIsOpen.medium.default,false,1,[fr],0
-,ui.tableIsOpen.small.default,false,1,[fr],0
-,ui.widgetsWidget.default,[en],0,[fr],0
-,services.default,[en],0,[fr],0
-,services.proxyUrl.default,[en],0,[fr],0
-,services.exportMapUrl.default,[en],0,[fr],0
-,services.geometryUrl.default,[en],0,[fr],0
-,services.googleAPIKey.default,[en],0,[fr],0
-,services.geolocation.default,[en],0,[fr],0
-,services.coordInfo.default,[en],0,[fr],0
-,services.print.default,[en],0,[fr],0
-,services.search.default,[en],0,[fr],0
-,services.search.disabledSearches.default,[en],0,[fr],0
-,services.search.serviceUrls.default,[en],0,[fr],0
-,services.search.serviceUrls.geoNames.default,[en],0,[fr],0
-,services.search.serviceUrls.geoLocation.default,[en],0,[fr],0
-,services.search.serviceUrls.geoSuggest.default,[en],0,[fr],0
-,services.search.serviceUrls.provinces.default,[en],0,[fr],0
-,services.search.serviceUrls.types.default,[en],0,[fr],0
-,services.export.default,[en],0,[fr],0
-,services.export.title.default,[en],0,[fr],0
-,services.export.title.isSelected.default,true,1,[fr],0
-,services.export.title.isSelectable.default,true,1,[fr],0
-,services.export.title.value.default,[en],0,[fr],0
-,services.export.map.default,[en],0,[fr],0
-,services.export.map.isSelected.default,services.export.title.isSelected.default,1,[fr],0
-,services.export.map.isSelectable.default,services.export.title.isSelectable.default,1,[fr],0
-,services.export.map.value.default,services.export.title.value.default,1,[fr],0
-,services.export.mapElements.default,[en],0,[fr],0
-,services.export.mapElements.isSelected.default,services.export.map.isSelected.default,1,[fr],0
-,services.export.mapElements.isSelectable.default,services.export.map.isSelectable.default,1,[fr],0
-,services.export.mapElements.value.default,services.export.map.value.default,1,[fr],0
-,services.export.legend.default,[en],0,[fr],0
-,services.export.legend.isSelected.default,true,1,[fr],0
-,services.export.legend.isSelectable.default,true,1,[fr],0
-,services.export.legend.value.default,[en],0,[fr],0
-,services.export.legend.showInfoSymbology.default,false,1,[fr],0
-,services.export.legend.showControlledSymbology.default,false,1,[fr],0
-,services.export.footnote.default,[en],0,[fr],0
-,services.export.footnote.isSelected.default,services.export.mapElements.isSelected.default,1,[fr],0
-,services.export.footnote.isSelectable.default,services.export.mapElements.isSelectable.default,1,[fr],0
-,services.export.footnote.value.default,services.export.mapElements.value.default,1,[fr],0
-,services.export.timestamp.default,[en],0,[fr],0
-,services.export.timestamp.isSelected.default,services.export.footnote.isSelected.default,1,[fr],0
-,services.export.timestamp.isSelectable.default,services.export.footnote.isSelectable.default,1,[fr],0
-,services.export.timestamp.value.default,services.export.footnote.value.default,1,[fr],0
-,map.default,[en],0,[fr],0
-,map.extentSets.default,[en],0,[fr],0
-,map.lodSets.default,[en],0,[fr],0
-,map.tileSchemas.default,[en],0,[fr],0
-,map.components.default,[en],0,[fr],0
-,map.components.geoSearch.default,[en],0,[fr],0
-,map.components.geoSearch.enabled.default,[en],0,[fr],0
-,map.components.geoSearch.showGraphic.default,[en],0,[fr],0
-,map.components.geoSearch.showInfo.default,[en],0,[fr],0
-,map.components.mouseInfo.default,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.default,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.wkid.default,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.vcsWkid.default,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.latestWkid.default,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.latestVcsWkid.default,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.wkt.default,[en],0,[fr],0
-,map.components.northArrow.default,[en],0,[fr],0
-,map.components.overviewMap.default,[en],0,[fr],0
-,map.components.overviewMap.enabled.default,[en],0,[fr],0
-,map.components.overviewMap.expandFactor.default,2,1,[fr],0
-,map.components.scaleBar.default,[en],0,[fr],0
-,map.components.basemap.default,[en],0,[fr],0
-,map.initialBasemapId.default,[en],0,[fr],0
-,map.baseMaps.default,[en],0,[fr],0
-,map.layers.default,[en],0,[fr],0
-,map.legend.default,[en],0,[fr],0
-,version.description,"The schema version used to validate the configuration file.  The schema should enumerate the list of versions accepted by this version of the viewer.",
+      "default": "[fr]",
       "description": "[fr]",
       "type": "object",
       "properties": {
         "sideMenu": {
           "type": "boolean",
-          "default": "ui.appBar.sideMenu.default",
+          "default": "[fr]",
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]"
         },
         "geoSearch": {
           "type": "boolean",
-          "default": "ui.appBar.geoSearch.default",
+          "default": "[fr]",
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]"
         },
         "basemap": {
           "type": "boolean",
-          "default": "ui.appBar.basemap.default",
+          "default": "[fr]",
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]"
         },
         "layers": {
           "type": "boolean",
-          "default": "ui.appBar.layers.default",
+          "default": "[fr]",
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]"
@@ -189,12 +94,12 @@
             "[fr]",
             "[fr]"
           ],
-          "default": "ui.navBar.zoom.default",
+          "default": "[fr]",
           "title": "[fr]",
           "help": "[fr]"
         },
         "extra": {
-          "default": "ui.navBar.extra.default",
+          "default": "home",
           "type": "array",
           "uniqueItems": true,
           "items": {
@@ -222,14 +127,14 @@
       "additionalProperties": false,
       "title": "[fr]",
       "help": "[fr]",
-      "default": "ui.navBar.default"
+      "default": "[fr]"
     },
     "sideMenu": {
       "type": "object",
       "properties": {
         "logo": {
           "type": "boolean",
-          "default": "ui.sideMenu.logo.default",
+          "default": "[fr]",
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]"
@@ -256,7 +161,7 @@
               ]
             }
           },
-          "default": "ui.sideMenu.items.default",
+          "default": "fullscreen",
           "title": "[fr]",
           "help": "[fr]"
         }
@@ -265,11 +170,11 @@
       "description": "[fr]",
       "title": "[fr]",
       "help": "[fr]",
-      "default": "ui.sideMenu.default"
+      "default": "[fr]"
     },
     "restrictNavigation": {
       "type": "boolean",
-      "default": "ui.restrictNavigation.default",
+      "default": "[fr]",
       "description": "[fr]",
       "title": "[fr]",
       "help": "[fr]"
@@ -304,18 +209,18 @@
       ],
       "title": "[fr]",
       "help": "[fr]",
-      "default": "ui.about.default"
+      "default": "[fr]"
     },
     "help": {
       "type": "object",
-      "description": "[fr].description",
+      "description": "[fr]",
       "properties": {
         "folderName": {
           "type": "string",
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]",
-          "default": "ui.help.folderName.default"
+          "default": "[fr]"
         }
       },
       "required": [
@@ -324,21 +229,21 @@
       "additionalProperties": false,
       "title": "[fr]",
       "help": "[fr]",
-      "default": "ui.help.default"
+      "default": "[fr]"
     },
     "legend": {
       "type": "object",
       "properties": {
         "reorderable": {
           "type": "boolean",
-          "default": "ui.legend.reorderable.default",
+          "default": "[fr]",
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]"
         },
         "allowImport": {
           "type": "boolean",
-          "default": "ui.legend.allowImport.default",
+          "default": "[fr]",
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]"
@@ -349,21 +254,21 @@
           "properties": {
             "large": {
               "type": "boolean",
-              "default": "ui.legend.isOpen.large.default",
+              "default": "[fr]",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]"
             },
             "medium": {
               "type": "boolean",
-              "default": "ui.legend.isOpen.medium.default",
+              "default": "[fr]",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]"
             },
             "small": {
               "type": "boolean",
-              "default": "ui.legend.isOpen.small.default",
+              "default": "[fr]",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]"
@@ -372,13 +277,13 @@
           "additionalProperties": false,
           "title": "[fr]",
           "help": "[fr]",
-          "default": "ui.legend.isOpen.default"
+          "default": "[fr]"
         }
       },
       "additionalProperties": false,
       "title": "[fr]",
       "help": "[fr]",
-      "default": "ui.legend.default"
+      "default": "[fr]"
     },
     "tableIsOpen": {
       "type": "object",
@@ -389,25 +294,25 @@
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]",
-          "default": "ui.tableIsOpen.id.default"
+          "default": "[fr]"
         },
         "large": {
           "type": "boolean",
-          "default": "ui.tableIsOpen.large.default",
+          "default": "[fr]",
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]"
         },
         "medium": {
           "type": "boolean",
-          "default": "ui.tableIsOpen.medium.default",
+          "default": "[fr]",
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]"
         },
         "small": {
           "type": "boolean",
-          "default": "ui.tableIsOpen.small.default",
+          "default": "[fr]",
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]"
@@ -419,7 +324,7 @@
       ],
       "title": "[fr]",
       "help": "[fr]",
-      "default": "ui.tableIsOpen.default"
+      "default": "[fr]"
     },
     "widgetsWidget": {
       "type": "object",
@@ -427,11 +332,11 @@
       "description": "[fr]",
       "title": "[fr]",
       "help": "[fr]",
-      "default": "ui.widgetsWidget.default"
+      "default": "[fr]"
     }
   },
   "schema": "ui",
-  "title": "ui.title",
-  "help": "ui.help",
+  "title": "[fr]",
+  "help": "[fr]",
   "default": "[fr]"
 }

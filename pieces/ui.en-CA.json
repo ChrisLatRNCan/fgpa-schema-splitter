@@ -4,7 +4,7 @@
   "properties": {
     "fullscreen": {
       "type": "boolean",
-      "default": "false",
+      "default": false,
       "description": "Indicates viewer takes up entire viewport",
       "title": "[en]",
       "help": "[en]"
@@ -41,40 +41,40 @@
     },
     "title": {
       "type": "string",
-      "description": "[en].description",
+      "description": "An optional title to be used in the place of the default viewer title",
       "title": "[en]",
       "help": "[en]",
       "default": "[en]"
     },
     "appBar": {
-      "default": "{"ui":{"appBar":{"sideMenu":"ui.appBar.default.sideMenu"",
+      "default": "[object Object]",
       "description": "Provides configuration to the main app toolbar. If not supplied, the all default appbar controls are displayed. To completely hide the toolbar, provide the following: { sideMenu: false, geoSearch: false, layers: false }.",
       "type": "object",
       "properties": {
         "sideMenu": {
           "type": "boolean",
-          "default": "ui.appBar.sideMenu.default",
+          "default": true,
           "description": "Shows the side menu button in the main app toolbar.",
           "title": "[en]",
           "help": "[en]"
         },
         "geoSearch": {
           "type": "boolean",
-          "default": "ui.appBar.geoSearch.default",
+          "default": true,
           "description": "Shows the geosearch button in the main app toolbar. The button will be hidden if geosearch component is disabled or no search service URLs are provided.",
           "title": "[en]",
           "help": "[en]"
         },
         "basemap": {
           "type": "boolean",
-          "default": "ui.appBar.basemap.default",
+          "default": true,
           "description": "Shows the basemap selector button in the main app toolbar.",
           "title": "[en]",
           "help": "[en]"
         },
         "layers": {
           "type": "boolean",
-          "default": "ui.appBar.layers.default",
+          "default": true,
           "description": "Shows the layers button in the main app toolbar.",
           "title": "[en]",
           "help": "[en]"
@@ -94,12 +94,12 @@
             "buttons",
             "slider"
           ],
-          "default": "ui.navBar.zoom.default",
+          "default": "buttons",
           "title": "[en]",
           "help": "[en]"
         },
         "extra": {
-          "default": "ui.navBar.extra.default",
+          "default": "fullscreen",
           "type": "array",
           "uniqueItems": true,
           "items": {
@@ -127,14 +127,14 @@
       "additionalProperties": false,
       "title": "[en]",
       "help": "[en]",
-      "default": "ui.navBar.default"
+      "default": "[en]"
     },
     "sideMenu": {
       "type": "object",
       "properties": {
         "logo": {
           "type": "boolean",
-          "default": "ui.sideMenu.logo.default",
+          "default": true,
           "description": "Indicates if the logo should be shown in the left side menu.",
           "title": "[en]",
           "help": "[en]"
@@ -161,7 +161,7 @@
               ]
             }
           },
-          "default": "ui.sideMenu.items.default",
+          "default": "layers",
           "title": "[en]",
           "help": "[en]"
         }
@@ -170,11 +170,11 @@
       "description": "Specifies which options are available in the left side menu.",
       "title": "[en]",
       "help": "[en]",
-      "default": "ui.sideMenu.default"
+      "default": "[en]"
     },
     "restrictNavigation": {
       "type": "boolean",
-      "default": "ui.restrictNavigation.default",
+      "default": false,
       "description": "Will restrict the user from panning beyond the maximum extent.",
       "title": "[en]",
       "help": "[en]"
@@ -209,18 +209,18 @@
       ],
       "title": "[en]",
       "help": "[en]",
-      "default": "ui.about.default"
+      "default": "[en]"
     },
     "help": {
       "type": "object",
-      "description": "[en].description",
+      "description": "Help properties",
       "properties": {
         "folderName": {
           "type": "string",
           "description": "Help folder name who contain the help description and images",
           "title": "[en]",
           "help": "[en]",
-          "default": "ui.help.folderName.default"
+          "default": "[en]"
         }
       },
       "required": [
@@ -229,21 +229,21 @@
       "additionalProperties": false,
       "title": "[en]",
       "help": "[en]",
-      "default": "ui.help.default"
+      "default": "[en]"
     },
     "legend": {
       "type": "object",
       "properties": {
         "reorderable": {
           "type": "boolean",
-          "default": "ui.legend.reorderable.default",
+          "default": true,
           "description": "Specifies if the items in the legend can be reordered; structured legend ignores this property.",
           "title": "[en]",
           "help": "[en]"
         },
         "allowImport": {
           "type": "boolean",
-          "default": "ui.legend.allowImport.default",
+          "default": true,
           "description": "Specifies if the user-added layers are allowed.",
           "title": "[en]",
           "help": "[en]"
@@ -254,21 +254,21 @@
           "properties": {
             "large": {
               "type": "boolean",
-              "default": "ui.legend.isOpen.large.default",
+              "default": false,
               "description": "Whether the legend is opened by default on initial loading of the map for large viewports",
               "title": "[en]",
               "help": "[en]"
             },
             "medium": {
               "type": "boolean",
-              "default": "ui.legend.isOpen.medium.default",
+              "default": false,
               "description": "Whether the legend is opened by default on initial loading of the map for medium viewports",
               "title": "[en]",
               "help": "[en]"
             },
             "small": {
               "type": "boolean",
-              "default": "ui.legend.isOpen.small.default",
+              "default": false,
               "description": "Whether the legend is opened by default on initial loading of the map for small viewports",
               "title": "[en]",
               "help": "[en]"
@@ -277,13 +277,13 @@
           "additionalProperties": false,
           "title": "[en]",
           "help": "[en]",
-          "default": "ui.legend.isOpen.default"
+          "default": "[en]"
         }
       },
       "additionalProperties": false,
       "title": "[en]",
       "help": "[en]",
-      "default": "ui.legend.default"
+      "default": "[en]"
     },
     "tableIsOpen": {
       "type": "object",
@@ -294,25 +294,25 @@
           "description": "The id of the layer for referencing within the viewer",
           "title": "[en]",
           "help": "[en]",
-          "default": "ui.tableIsOpen.id.default"
+          "default": "[en]"
         },
         "large": {
           "type": "boolean",
-          "default": "ui.tableIsOpen.large.default",
+          "default": false,
           "description": "Whether the table panel is opened by default on initial loading of the map for large viewports",
           "title": "[en]",
           "help": "[en]"
         },
         "medium": {
           "type": "boolean",
-          "default": "ui.tableIsOpen.medium.default",
+          "default": false,
           "description": "Whether the table panel is opened by default on initial loading of the map for medium viewports",
           "title": "[en]",
           "help": "[en]"
         },
         "small": {
           "type": "boolean",
-          "default": "ui.tableIsOpen.small.default",
+          "default": false,
           "description": "Whether the table panel is opened by default on initial loading of the map for small viewports",
           "title": "[en]",
           "help": "[en]"
@@ -324,7 +324,7 @@
       ],
       "title": "[en]",
       "help": "[en]",
-      "default": "ui.tableIsOpen.default"
+      "default": "[en]"
     },
     "widgetsWidget": {
       "type": "object",
@@ -332,11 +332,11 @@
       "description": "FIXME",
       "title": "[en]",
       "help": "[en]",
-      "default": "ui.widgetsWidget.default"
+      "default": "[en]"
     }
   },
   "schema": "ui",
-  "title": "ui.title",
-  "help": "ui.help",
+  "title": "[en]",
+  "help": "[en]",
   "default": "[en]"
 }

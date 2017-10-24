@@ -216,18 +216,17 @@
 ,ui.logoUrl.default,[en],0,[fr],0
 ,ui.failureFeedback.default,[en],0,[fr],0
 ,ui.title.default,[en],0,[fr],0
-,ui.appBar.default.sideMenu,true,1,[fr],0
-,ui.appBar.default.geoSearch,true,1,[fr],0
-,ui.appBar.default.layers,true,1,[fr],0
-,ui.appBar.default,{"ui":{"appBar":{"sideMenu":"ui.appBar.default.sideMenu","geoSearch":"ui.appBar.default.geoSearch","layers":"ui.appBar.default.layers"}}},1,[fr],0
+,ui.appBar.default,[object Object],1,[fr],0
 ,ui.appBar.sideMenu.default,true,1,[fr],0
 ,ui.appBar.geoSearch.default,true,1,[fr],0
 ,ui.appBar.basemap.default,true,1,[fr],0
 ,ui.appBar.layers.default,true,1,[fr],0
 ,ui.navBar.default,[en],0,[fr],0
 ,ui.navBar.zoom.default,buttons,1,[fr],0
+,ui.navBar.extra.default,fullscreen,geoLocator,home,help,1,[fr],0
 ,ui.sideMenu.default,[en],0,[fr],0
 ,ui.sideMenu.logo.default,true,1,[fr],0
+,ui.sideMenu.items.default,layers,basemap,fullscreen,export,share,touch,help,about,language,plugins,1,[fr],0
 ,ui.restrictNavigation.default,false,1,[fr],0
 ,ui.about.default,[en],0,[fr],0
 ,ui.help.default,[en],0,[fr],0

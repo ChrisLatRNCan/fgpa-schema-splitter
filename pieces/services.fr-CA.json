@@ -7,28 +7,28 @@
       "description": "[fr]",
       "title": "[fr]",
       "help": "[fr]",
-      "default": "services.proxyUrl.default"
+      "default": "[fr]"
     },
     "exportMapUrl": {
       "type": "string",
       "description": "[fr]",
       "title": "[fr]",
       "help": "[fr]",
-      "default": "services.exportMapUrl.default"
+      "default": "[fr]"
     },
     "geometryUrl": {
       "type": "string",
       "description": "[fr]",
       "title": "[fr]",
       "help": "[fr]",
-      "default": "services.geometryUrl.default"
+      "default": "[fr]"
     },
     "googleAPIKey": {
       "type": "string",
       "description": "[fr]",
       "title": "[fr]",
       "help": "[fr]",
-      "default": "services.googleAPIKey.default"
+      "default": "[fr]"
     },
     "geolocation": {
       "type": "object",
@@ -36,7 +36,7 @@
       "description": "[fr]",
       "title": "[fr]",
       "help": "[fr]",
-      "default": "services.geolocation.default"
+      "default": "[fr]"
     },
     "coordInfo": {
       "type": "object",
@@ -44,7 +44,7 @@
       "description": "[fr]",
       "title": "[fr]",
       "help": "[fr]",
-      "default": "services.coordInfo.default"
+      "default": "[fr]"
     },
     "print": {
       "type": "object",
@@ -52,7 +52,7 @@
       "description": "[fr]",
       "title": "[fr]",
       "help": "[fr]",
-      "default": "services.print.default"
+      "default": "[fr]"
     },
     "search": {
       "type": "object",
@@ -73,7 +73,7 @@
           "description": "[fr]",
           "title": "[fr]",
           "help": "[fr]",
-          "default": "services.search.disabledSearches.default"
+          "default": "[fr]"
         },
         "serviceUrls": {
           "type": "object",
@@ -84,35 +84,35 @@
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]",
-              "default": "services.search.serviceUrls.geoNames.default"
+              "default": "[fr]"
             },
             "geoLocation": {
               "type": "string",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]",
-              "default": "services.search.serviceUrls.geoLocation.default"
+              "default": "[fr]"
             },
             "geoSuggest": {
               "type": "string",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]",
-              "default": "services.search.serviceUrls.geoSuggest.default"
+              "default": "[fr]"
             },
             "provinces": {
               "type": "string",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]",
-              "default": "services.search.serviceUrls.provinces.default"
+              "default": "[fr]"
             },
             "types": {
               "type": "string",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]",
-              "default": "services.search.serviceUrls.types.default"
+              "default": "[fr]"
             }
           },
           "additionalProperties": false,
@@ -125,7 +125,7 @@
           ],
           "title": "[fr]",
           "help": "[fr]",
-          "default": "services.search.serviceUrls.default"
+          "default": "[fr]"
         }
       },
       "additionalProperties": false,
@@ -134,26 +134,26 @@
       ],
       "title": "[fr]",
       "help": "[fr]",
-      "default": "services.search.default"
+      "default": "[fr]"
     },
     "export": {
       "type": "object",
       "description": "[fr]",
       "properties": {
         "title": {
-          "description": "[fr].description",
+          "description": "[fr]",
           "type": "object",
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelected.default",
+              "default": "[fr]",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelectable.default",
+              "default": "[fr]",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]"
@@ -163,13 +163,13 @@
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]",
-              "default": "services.export.timestamp.value.default"
+              "default": "[fr]"
             }
           },
           "additionalProperties": false,
           "title": "[fr]",
           "help": "[fr]",
-          "default": "services.export.title.default"
+          "default": "[fr]"
         },
         "map": {
           "description": "[fr]",
@@ -177,76 +177,14 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelected.default",
-              "description": "services.export.timestamp.isSelected.description",
-              "title": "services.export.timestamp.isSelected.title",
-              "help": "services.export.timestamp.isSelected.help"
-            },
-            "isSelectable": {
-              "type": "boolean",
-              "default": "services.export.timestamp.isSelectable.default",
-              "description": "services.export.timestamp.isSelectable.description",
-              "title": "services.export.timestamp.isSelectable.title",
-              "help": "services.export.timestamp.isSelectable.help"
-            },
-            "value": {
-              "type": "string",
-              "description": "services.export.timestamp.value.description",
-              "title": "services.export.timestamp.value.title",
-              "help": "services.export.timestamp.value.help",
-              "default": "services.export.timestamp.value.default"
-            }
-          },
-          "additionalProperties": false,
-          "title": "[fr]",
-          "help": "[fr]",
-          "default": "services.export.map.default"
-        },
-        "mapElements": {
-          "description": "[fr]",
-          "type": "object",
-          "properties": {
-            "isSelected": {
-              "type": "boolean",
-              "default": "services.export.timestamp.isSelected.default",
-              "description": "services.export.timestamp.isSelected.description",
-              "title": "services.export.timestamp.isSelected.title",
-              "help": "services.export.timestamp.isSelected.help"
-            },
-            "isSelectable": {
-              "type": "boolean",
-              "default": "services.export.timestamp.isSelectable.default",
-              "description": "services.export.timestamp.isSelectable.description",
-              "title": "services.export.timestamp.isSelectable.title",
-              "help": "services.export.timestamp.isSelectable.help"
-            },
-            "value": {
-              "type": "string",
-              "description": "services.export.timestamp.value.description",
-              "title": "services.export.timestamp.value.title",
-              "help": "services.export.timestamp.value.help",
-              "default": "services.export.timestamp.value.default"
-            }
-          },
-          "additionalProperties": false,
-          "title": "[fr]",
-          "help": "[fr]",
-          "default": "services.export.mapElements.default"
-        },
-        "legend": {
-          "description": "[fr]",
-          "type": "object",
-          "properties": {
-            "isSelected": {
-              "type": "boolean",
-              "default": "services.export.legend.isSelected.default",
+              "default": "[fr]",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.legend.isSelectable.default",
+              "default": "[fr]",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]"
@@ -256,18 +194,80 @@
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]",
-              "default": "services.export.legend.value.default"
+              "default": "[fr]"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[fr]",
+          "help": "[fr]",
+          "default": "[fr]"
+        },
+        "mapElements": {
+          "description": "[fr]",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "value": {
+              "type": "string",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]",
+              "default": "[fr]"
+            }
+          },
+          "additionalProperties": false,
+          "title": "[fr]",
+          "help": "[fr]",
+          "default": "[fr]"
+        },
+        "legend": {
+          "description": "[fr]",
+          "type": "object",
+          "properties": {
+            "isSelected": {
+              "type": "boolean",
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "isSelectable": {
+              "type": "boolean",
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
+            },
+            "value": {
+              "type": "string",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]",
+              "default": "[fr]"
             },
             "showInfoSymbology": {
               "type": "boolean",
-              "default": "services.export.legend.showInfoSymbology.default",
+              "default": "[fr]",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]"
             },
             "showControlledSymbology": {
               "type": "boolean",
-              "default": "services.export.legend.showControlledSymbology.default",
+              "default": "[fr]",
               "description": "[fr]",
               "title": "[fr]",
               "help": "[fr]"
@@ -276,7 +276,7 @@
           "additionalProperties": false,
           "title": "[fr]",
           "help": "[fr]",
-          "default": "services.export.legend.default"
+          "default": "[fr]"
         },
         "footnote": {
           "description": "[fr]",
@@ -284,30 +284,30 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelected.default",
-              "description": "services.export.timestamp.isSelected.description",
-              "title": "services.export.timestamp.isSelected.title",
-              "help": "services.export.timestamp.isSelected.help"
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelectable.default",
-              "description": "services.export.timestamp.isSelectable.description",
-              "title": "services.export.timestamp.isSelectable.title",
-              "help": "services.export.timestamp.isSelectable.help"
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
             },
             "value": {
               "type": "string",
-              "description": "services.export.timestamp.value.description",
-              "title": "services.export.timestamp.value.title",
-              "help": "services.export.timestamp.value.help",
-              "default": "services.export.timestamp.value.default"
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]",
+              "default": "[fr]"
             }
           },
           "additionalProperties": false,
           "title": "[fr]",
           "help": "[fr]",
-          "default": "services.export.footnote.default"
+          "default": "[fr]"
         },
         "timestamp": {
           "description": "[fr]",
@@ -315,41 +315,41 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelected.default",
-              "description": "services.export.timestamp.isSelected.description",
-              "title": "services.export.timestamp.isSelected.title",
-              "help": "services.export.timestamp.isSelected.help"
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelectable.default",
-              "description": "services.export.timestamp.isSelectable.description",
-              "title": "services.export.timestamp.isSelectable.title",
-              "help": "services.export.timestamp.isSelectable.help"
+              "default": "[fr]",
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]"
             },
             "value": {
               "type": "string",
-              "description": "services.export.timestamp.value.description",
-              "title": "services.export.timestamp.value.title",
-              "help": "services.export.timestamp.value.help",
-              "default": "services.export.timestamp.value.default"
+              "description": "[fr]",
+              "title": "[fr]",
+              "help": "[fr]",
+              "default": "[fr]"
             }
           },
           "additionalProperties": false,
           "title": "[fr]",
           "help": "[fr]",
-          "default": "services.export.timestamp.default"
+          "default": "[fr]"
         }
       },
       "additionalProperties": false,
-      "title": "services.export.title",
+      "title": "[fr]",
       "help": "[fr]",
-      "default": "services.export.default"
+      "default": "[fr]"
     }
   },
   "additionalProperties": false,
   "schema": "services",
   "title": "[fr]",
   "help": "[fr]",
-  "default": "services.default"
+  "default": "[fr]"
 }

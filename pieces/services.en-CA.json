@@ -7,28 +7,28 @@
       "description": "An optional proxy to be used for dealing with same-origin issues.  URL must either be a relative path on the same server or an absolute path on a server which sets CORS headers.",
       "title": "[en]",
       "help": "[en]",
-      "default": "services.proxyUrl.default"
+      "default": "[en]"
     },
     "exportMapUrl": {
       "type": "string",
       "description": "An ESRI service endpoint for generating map images.  Should point directly to an endpoint that can be consumed by ESRI PrintTask.",
       "title": "[en]",
       "help": "[en]",
-      "default": "services.exportMapUrl.default"
+      "default": "[en]"
     },
     "geometryUrl": {
       "type": "string",
       "description": "A URL to an ESRI ArcGIS geometry service REST endpoint.",
       "title": "[en]",
       "help": "[en]",
-      "default": "services.geometryUrl.default"
+      "default": "[en]"
     },
     "googleAPIKey": {
       "type": "string",
       "description": "Google API key to enable geo location and share link shortening.",
       "title": "[en]",
       "help": "[en]",
-      "default": "services.googleAPIKey.default"
+      "default": "[en]"
     },
     "geolocation": {
       "type": "object",
@@ -36,7 +36,7 @@
       "description": "FIXME",
       "title": "[en]",
       "help": "[en]",
-      "default": "services.geolocation.default"
+      "default": "[en]"
     },
     "coordInfo": {
       "type": "object",
@@ -44,7 +44,7 @@
       "description": "FIXME",
       "title": "[en]",
       "help": "[en]",
-      "default": "services.coordInfo.default"
+      "default": "[en]"
     },
     "print": {
       "type": "object",
@@ -52,7 +52,7 @@
       "description": "FIXME",
       "title": "[en]",
       "help": "[en]",
-      "default": "services.print.default"
+      "default": "[en]"
     },
     "search": {
       "type": "object",
@@ -73,7 +73,7 @@
           "description": "Disable specific types of searches including NTS, FSA, or LAT/LNG",
           "title": "[en]",
           "help": "[en]",
-          "default": "services.search.disabledSearches.default"
+          "default": "[en]"
         },
         "serviceUrls": {
           "type": "object",
@@ -84,35 +84,35 @@
               "description": "Endpoint url for geoNames service",
               "title": "[en]",
               "help": "[en]",
-              "default": "services.search.serviceUrls.geoNames.default"
+              "default": "[en]"
             },
             "geoLocation": {
               "type": "string",
               "description": "Endpoint url for geoLocation service",
               "title": "[en]",
               "help": "[en]",
-              "default": "services.search.serviceUrls.geoLocation.default"
+              "default": "[en]"
             },
             "geoSuggest": {
               "type": "string",
               "description": "Endpoint url for geoSuggest service",
               "title": "[en]",
               "help": "[en]",
-              "default": "services.search.serviceUrls.geoSuggest.default"
+              "default": "[en]"
             },
             "provinces": {
               "type": "string",
               "description": "Endpoint url for provinces service",
               "title": "[en]",
               "help": "[en]",
-              "default": "services.search.serviceUrls.provinces.default"
+              "default": "[en]"
             },
             "types": {
               "type": "string",
               "description": "Endpoint url for types service",
               "title": "[en]",
               "help": "[en]",
-              "default": "services.search.serviceUrls.types.default"
+              "default": "[en]"
             }
           },
           "additionalProperties": false,
@@ -125,7 +125,7 @@
           ],
           "title": "[en]",
           "help": "[en]",
-          "default": "services.search.serviceUrls.default"
+          "default": "[en]"
         }
       },
       "additionalProperties": false,
@@ -134,26 +134,26 @@
       ],
       "title": "[en]",
       "help": "[en]",
-      "default": "services.search.default"
+      "default": "[en]"
     },
     "export": {
       "type": "object",
       "description": "Export properties",
       "properties": {
         "title": {
-          "description": "[en].description",
+          "description": "Title of the export graphic.",
           "type": "object",
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelected.default",
+              "default": "services.export.footnote.isSelected.default",
               "description": "services.export.footnote.isSelected.description",
               "title": "[en]",
               "help": "[en]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelectable.default",
+              "default": "services.export.footnote.isSelectable.default",
               "description": "services.export.footnote.isSelectable.description",
               "title": "[en]",
               "help": "[en]"
@@ -163,13 +163,13 @@
               "description": "services.export.footnote.value.description",
               "title": "[en]",
               "help": "[en]",
-              "default": "services.export.timestamp.value.default"
+              "default": "services.export.footnote.value.default"
             }
           },
           "additionalProperties": false,
           "title": "[en]",
           "help": "[en]",
-          "default": "services.export.title.default"
+          "default": "[en]"
         },
         "map": {
           "description": "Map component.",
@@ -177,30 +177,30 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelected.default",
-              "description": "services.export.timestamp.isSelected.description",
-              "title": "services.export.timestamp.isSelected.title",
-              "help": "services.export.timestamp.isSelected.help"
+              "default": "services.export.footnote.isSelected.default",
+              "description": "services.export.footnote.isSelected.description",
+              "title": "[en]",
+              "help": "[en]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelectable.default",
-              "description": "services.export.timestamp.isSelectable.description",
-              "title": "services.export.timestamp.isSelectable.title",
-              "help": "services.export.timestamp.isSelectable.help"
+              "default": "services.export.footnote.isSelectable.default",
+              "description": "services.export.footnote.isSelectable.description",
+              "title": "[en]",
+              "help": "[en]"
             },
             "value": {
               "type": "string",
-              "description": "services.export.timestamp.value.description",
-              "title": "services.export.timestamp.value.title",
-              "help": "services.export.timestamp.value.help",
-              "default": "services.export.timestamp.value.default"
+              "description": "services.export.footnote.value.description",
+              "title": "[en]",
+              "help": "[en]",
+              "default": "services.export.footnote.value.default"
             }
           },
           "additionalProperties": false,
           "title": "[en]",
           "help": "[en]",
-          "default": "services.export.map.default"
+          "default": "[en]"
         },
         "mapElements": {
           "description": "North arrow and scalebar component.",
@@ -208,30 +208,30 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelected.default",
-              "description": "services.export.timestamp.isSelected.description",
-              "title": "services.export.timestamp.isSelected.title",
-              "help": "services.export.timestamp.isSelected.help"
+              "default": "services.export.footnote.isSelected.default",
+              "description": "services.export.footnote.isSelected.description",
+              "title": "[en]",
+              "help": "[en]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelectable.default",
-              "description": "services.export.timestamp.isSelectable.description",
-              "title": "services.export.timestamp.isSelectable.title",
-              "help": "services.export.timestamp.isSelectable.help"
+              "default": "services.export.footnote.isSelectable.default",
+              "description": "services.export.footnote.isSelectable.description",
+              "title": "[en]",
+              "help": "[en]"
             },
             "value": {
               "type": "string",
-              "description": "services.export.timestamp.value.description",
-              "title": "services.export.timestamp.value.title",
-              "help": "services.export.timestamp.value.help",
-              "default": "services.export.timestamp.value.default"
+              "description": "services.export.footnote.value.description",
+              "title": "[en]",
+              "help": "[en]",
+              "default": "services.export.footnote.value.default"
             }
           },
           "additionalProperties": false,
           "title": "[en]",
           "help": "[en]",
-          "default": "services.export.mapElements.default"
+          "default": "[en]"
         },
         "legend": {
           "description": "Legend component.",
@@ -239,14 +239,14 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.legend.isSelected.default",
+              "default": true,
               "description": "Indicates if the component is selected and included in the export graphic.",
               "title": "[en]",
               "help": "[en]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.legend.isSelectable.default",
+              "default": true,
               "description": "Indicates if the component can be included or excluded from the export graphic by the user.",
               "title": "[en]",
               "help": "[en]"
@@ -256,18 +256,18 @@
               "description": "Value to be passed to the generation function of this export component.",
               "title": "[en]",
               "help": "[en]",
-              "default": "services.export.legend.value.default"
+              "default": "[en]"
             },
             "showInfoSymbology": {
               "type": "boolean",
-              "default": "services.export.legend.showInfoSymbology.default",
+              "default": false,
               "description": "Indicates whether symbology from info sections should be included in export legend",
               "title": "[en]",
               "help": "[en]"
             },
             "showControlledSymbology": {
               "type": "boolean",
-              "default": "services.export.legend.showControlledSymbology.default",
+              "default": false,
               "description": "Indicates whether symbology from controlled layers should be included in export legend",
               "title": "[en]",
               "help": "[en]"
@@ -276,7 +276,7 @@
           "additionalProperties": false,
           "title": "[en]",
           "help": "[en]",
-          "default": "services.export.legend.default"
+          "default": "[en]"
         },
         "footnote": {
           "description": "Foot notice to add to exported map",
@@ -284,30 +284,30 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelected.default",
-              "description": "services.export.timestamp.isSelected.description",
-              "title": "services.export.timestamp.isSelected.title",
-              "help": "services.export.timestamp.isSelected.help"
+              "default": "services.export.footnote.isSelected.default",
+              "description": "services.export.footnote.isSelected.description",
+              "title": "[en]",
+              "help": "[en]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelectable.default",
-              "description": "services.export.timestamp.isSelectable.description",
-              "title": "services.export.timestamp.isSelectable.title",
-              "help": "services.export.timestamp.isSelectable.help"
+              "default": "services.export.footnote.isSelectable.default",
+              "description": "services.export.footnote.isSelectable.description",
+              "title": "[en]",
+              "help": "[en]"
             },
             "value": {
               "type": "string",
-              "description": "services.export.timestamp.value.description",
-              "title": "services.export.timestamp.value.title",
-              "help": "services.export.timestamp.value.help",
-              "default": "services.export.timestamp.value.default"
+              "description": "services.export.footnote.value.description",
+              "title": "[en]",
+              "help": "[en]",
+              "default": "services.export.footnote.value.default"
             }
           },
           "additionalProperties": false,
           "title": "[en]",
           "help": "[en]",
-          "default": "services.export.footnote.default"
+          "default": "[en]"
         },
         "timestamp": {
           "description": "Timestamp component.",
@@ -315,41 +315,41 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelected.default",
-              "description": "services.export.timestamp.isSelected.description",
-              "title": "services.export.timestamp.isSelected.title",
-              "help": "services.export.timestamp.isSelected.help"
+              "default": "services.export.footnote.isSelected.default",
+              "description": "services.export.footnote.isSelected.description",
+              "title": "[en]",
+              "help": "[en]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.timestamp.isSelectable.default",
-              "description": "services.export.timestamp.isSelectable.description",
-              "title": "services.export.timestamp.isSelectable.title",
-              "help": "services.export.timestamp.isSelectable.help"
+              "default": "services.export.footnote.isSelectable.default",
+              "description": "services.export.footnote.isSelectable.description",
+              "title": "[en]",
+              "help": "[en]"
             },
             "value": {
               "type": "string",
-              "description": "services.export.timestamp.value.description",
-              "title": "services.export.timestamp.value.title",
-              "help": "services.export.timestamp.value.help",
-              "default": "services.export.timestamp.value.default"
+              "description": "services.export.footnote.value.description",
+              "title": "[en]",
+              "help": "[en]",
+              "default": "services.export.footnote.value.default"
             }
           },
           "additionalProperties": false,
           "title": "[en]",
           "help": "[en]",
-          "default": "services.export.timestamp.default"
+          "default": "[en]"
         }
       },
       "additionalProperties": false,
-      "title": "services.export.title",
+      "title": "[en]",
       "help": "[en]",
-      "default": "services.export.default"
+      "default": "[en]"
     }
   },
   "additionalProperties": false,
   "schema": "services",
   "title": "[en]",
   "help": "[en]",
-  "default": "services.default"
+  "default": "[en]"
 }
