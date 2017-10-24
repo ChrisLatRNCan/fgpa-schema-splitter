@@ -47,7 +47,11 @@
       "default": "[fr]"
     },
     "appBar": {
-      "default": "[fr]",
+      "default": {
+        "sideMenu": "[fr]",
+        "geoSearch": "[fr]",
+        "layers": "[fr]"
+      },
       "description": "[fr]",
       "type": "object",
       "properties": {
@@ -99,7 +103,7 @@
           "help": "[fr]"
         },
         "extra": {
-          "default": "home",
+          "default": "[fr]",
           "type": "array",
           "uniqueItems": true,
           "items": {
@@ -161,7 +165,7 @@
               ]
             }
           },
-          "default": "fullscreen",
+          "default": "[fr]",
           "title": "[fr]",
           "help": "[fr]"
         }

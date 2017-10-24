@@ -7230,7 +7230,11 @@
           "default": "ui.title.default"
         },
         "appBar": {
-          "default": "ui.appBar.default",
+          "default": {
+            "sideMenu": "ui.appBar.default.sideMenu",
+            "geoSearch": "ui.appBar.default.geoSearch",
+            "layers": "ui.appBar.default.layers"
+          },
           "description": "ui.appBar.description",
           "type": "object",
           "properties": {

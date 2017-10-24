@@ -210,12 +210,15 @@ function addDefaultLabel(schema, parent = '') {
     const label = `${prefix}${prop}.default`;
     if ($DotProp.has(schema, `${prop}.default`)) {
       // Is this an object
-      /*if (Array.isArray(schema[prop]['default'])){ // ARRAY
-        const labelArr = `${prefix}${prop}`;
-        labelNestedtArrays(schema[prop]['default'],labelArr);
-        deflt = JSON.stringify(schema[prop]['default']);
-        csvString = `${csvString},${label},""${deflt}"",1,[fr],0\n`;
+      if (Array.isArray(schema[prop]['default'])){ // ARRAY
 
+        // Finally,won't labelled array's elements
+        // const labelArr = `${prefix}${prop}`;
+        // labelNestedtArrays(schema[prop]['default'],labelArr);
+
+        deflt = JSON.stringify(schema[prop]['default']).replace(/['"]+/g, '');
+        csvString = `${csvString},${label},"${deflt}",1,[fr],0\n`;
+        $DotProp.set(schema, `${prop}.default`, label);
       } else if (typeof schema[prop]['default'] === 'object'){ // OBJECT
         // We keep it as an object in the csv file.
         // Keys of the object are references to existing properties
@@ -225,22 +228,18 @@ function addDefaultLabel(schema, parent = '') {
           const labelItem = `${label}.${objProp}`;
           const defltItem = schema[prop]['default'][objProp];
           csvString = `${csvString},"${labelItem}",${defltItem},1,[fr],0\n`;
-
-          newObj[`${prefix}${prop}.${objProp}`] = labelItem;
-
+          $DotProp.set(schema, `${prop}.default.${objProp}`, labelItem);
         });
-        deflt = JSON.stringify(newObj);
-        csvString = `${csvString},${label},${deflt},1,[fr],0\n`;
 
-      } else {*/ // OTHERS*/
+      } else { // OTHERS*/
         deflt = $DotProp.get(schema, `${prop}.default`);
         csvString = `${csvString},${label},${deflt},1,[fr],0\n`;
-
-      // }
+        $DotProp.set(schema, `${prop}.default`, label);
+      }
     } else {
       csvString = `${csvString},${label},[en],0,[fr],0\n`;
+      $DotProp.set(schema, `${prop}.default`, label);
     }
-    $DotProp.set(schema, `${prop}.default`, label);
     // go deeper ???
     if ($DotProp.has(schema, `${prop}.properties`)) {
       addDefaultLabel( $DotProp.get(schema, `${prop}.properties`), `${prefix}${prop}.`);

@@ -47,7 +47,11 @@
       "default": "[en]"
     },
     "appBar": {
-      "default": "[object Object]",
+      "default": {
+        "sideMenu": true,
+        "geoSearch": true,
+        "layers": true
+      },
       "description": "Provides configuration to the main app toolbar. If not supplied, the all default appbar controls are displayed. To completely hide the toolbar, provide the following: { sideMenu: false, geoSearch: false, layers: false }.",
       "type": "object",
       "properties": {
@@ -99,7 +103,7 @@
           "help": "[en]"
         },
         "extra": {
-          "default": "fullscreen",
+          "default": "[fullscreen,geoLocator,home,help]",
           "type": "array",
           "uniqueItems": true,
           "items": {
@@ -161,7 +165,7 @@
               ]
             }
           },
-          "default": "layers",
+          "default": "[[layers,basemap],[fullscreen,export,share,touch,help,about],[language],[plugins]]",
           "title": "[en]",
           "help": "[en]"
         }
