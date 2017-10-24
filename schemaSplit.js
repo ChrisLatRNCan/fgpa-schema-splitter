@@ -30,6 +30,7 @@ let csvString = '';
  *  - addTitleLabel: add title attribute to properties.
  *  - addHelpLabel: add help attribute to properties.
  *  - addDefaultLabel: add default attribute to properties.
+ *  - labelNestedtArrays: labelling nested arrays
  *  - addDescriptionLabel: save existing descriptions in a csv like blob
  *                          and replace them with labels.
  *  - addEnumLabel: save existing enum aray values in a csv like blob
@@ -209,27 +210,33 @@ function addDefaultLabel(schema, parent = '') {
     const label = `${prefix}${prop}.default`;
     if ($DotProp.has(schema, `${prop}.default`)) {
       // Is this an object
-      if (Array.isArray(schema[prop]['default'])){ // ARRAY
-        console.log('ARRAY')
-        console.log(schema[prop]['default']);
-        console.log(`${label},${$DotProp.get(schema, `${prop}.default`)},1,[fr],0\n`);
+      /*if (Array.isArray(schema[prop]['default'])){ // ARRAY
+        const labelArr = `${prefix}${prop}`;
+        labelNestedtArrays(schema[prop]['default'],labelArr);
+        deflt = JSON.stringify(schema[prop]['default']);
+        csvString = `${csvString},${label},""${deflt}"",1,[fr],0\n`;
+
       } else if (typeof schema[prop]['default'] === 'object'){ // OBJECT
+        // We keep it as an object in the csv file.
+        // Keys of the object are references to existing properties
         const objPropNames = Object.getOwnPropertyNames(schema[prop]['default']);
+        let newObj = {};
         objPropNames.forEach(objProp => {
           const labelItem = `${label}.${objProp}`;
           const defltItem = schema[prop]['default'][objProp];
-          csvString = `${csvString},${labelItem},${defltItem},1,[fr],0\n`;
+          csvString = `${csvString},"${labelItem}",${defltItem},1,[fr],0\n`;
 
-          // store as a simplified tree
-          $DotProp.set(schema, `${prop}.default.${prefix}${prop}.${objProp}`, labelItem);
-          $DotProp.delete(schema, `${prop}.default.${objProp}`);
+          newObj[`${prefix}${prop}.${objProp}`] = labelItem;
+
         });
-        deflt = JSON.stringify(schema[prop]['default']);
+        deflt = JSON.stringify(newObj);
         csvString = `${csvString},${label},${deflt},1,[fr],0\n`;
-      } else { // OTHERS
+
+      } else {*/ // OTHERS*/
         deflt = $DotProp.get(schema, `${prop}.default`);
         csvString = `${csvString},${label},${deflt},1,[fr],0\n`;
-      }
+
+      // }
     } else {
       csvString = `${csvString},${label},[en],0,[fr],0\n`;
     }
@@ -240,6 +247,25 @@ function addDefaultLabel(schema, parent = '') {
     }
   });
 }
+
+/**
+ * Labelling in nested arrays
+ * @function labelNestedtArrays
+ * @private
+ * @param {Array} arr
+ * @param {String} label to compose label
+ */
+function labelNestedtArrays(arr, label) {
+
+    const arrayLength = arr.length;
+    for (var i = 0; i < arrayLength; i++) {
+      if (Array.isArray(arr[i])) {
+        labelNestedtArrays(arr[i], label);
+      }else {
+        arr[i] = `${label}.${arr[i]}`;
+      }
+    }
+  }
 
 /**
  * Save existing `descriptions` property values in a csv like blob
@@ -429,8 +455,14 @@ function resolveLabels(schemaString, csvJSON, langIdx) {
     if(record[1] !== undefined) {
       const label = record[1];
       const value = record[idx];
-      const regex = new RegExp(label);
-      newString = newString.replace(regex, value);
+      const regex = new RegExp('[^\.a-z]' + label + '[^\.a-z]', 'g');
+
+      // put string between double quotes
+      if (value === 'true' || value === 'false') {
+        newString = newString.replace(regex, value);
+      } else {
+        newString = newString.replace(regex, '"' + value + '"');
+      }
     }
   });
   return newString;
