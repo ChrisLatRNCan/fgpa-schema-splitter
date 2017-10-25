@@ -286,9 +286,22 @@ function addDescriptionLabel(schema, parent = '') {
       csvString = `${csvString},${label},"${description}",1,[fr],0\n`;
       $DotProp.set(schema, `${prop}.description`, label);
     }
+
+    propArr = Object.getOwnPropertyNames(schema[prop]);
     // go deeper ???
     if ($DotProp.has(schema, `${prop}.properties`)) {
       addDescriptionLabel( $DotProp.get(schema, `${prop}.properties`), `${prefix}${prop}.`);
+    } else if ($DotProp.has(schema, `${prop}.items.properties`)) {
+      addDescriptionLabel( $DotProp.get(schema, `${prop}.items.properties`), `${prefix}${prop}.items.`);
+    } else if (propArr.length !== 0) {
+      propArr.forEach(Att => {
+          if ($DotProp.has(schema[prop], `${Att}.description`)) {
+            const label = `${prefix}${prop}.${Att}.description`;
+            description = $DotProp.get(schema[prop], `${Att}.description`);
+            csvString = `${csvString},${label},"${description}",1,[fr],0\n`;
+            $DotProp.set(schema, `${prop}.${Att}.description`, label);
+          }
+      });
     }
   });
 }
