@@ -216,9 +216,9 @@
 ,ui.logoUrl.default,[en],0,[fr],0
 ,ui.failureFeedback.default,[en],0,[fr],0
 ,ui.title.default,[en],0,[fr],0
-,"ui.appBar.default.sideMenu",true,1,[fr],0
-,"ui.appBar.default.geoSearch",true,1,[fr],0
-,"ui.appBar.default.layers",true,1,[fr],0
+,ui.appBar.default.sideMenu,true,1,[fr],0
+,ui.appBar.default.geoSearch,true,1,[fr],0
+,ui.appBar.default.layers,true,1,[fr],0
 ,ui.appBar.sideMenu.default,true,1,[fr],0
 ,ui.appBar.geoSearch.default,true,1,[fr],0
 ,ui.appBar.basemap.default,true,1,[fr],0
@@ -321,6 +321,8 @@
 ,ui.fullscreen.description,"Indicates viewer takes up entire viewport",1,[fr],0
 ,ui.theme.description,"UI theme of the viewer",1,[fr],0
 ,ui.logoUrl.description,"An optional image to be used in the place of the default viewer logo",1,[fr],0
+,ui.failureFeedback.failureMessage.description,"An optional message to be used in place of the failure message",1,[fr],0
+,ui.failureFeedback.failureImageUrl.description,"An optional image to be used in place of the failure Image",1,[fr],0
 ,ui.title.description,"An optional title to be used in the place of the default viewer title",1,[fr],0
 ,ui.appBar.description,"Provides configuration to the main app toolbar. If not supplied, the all default appbar controls are displayed. To completely hide the toolbar, provide the following: { sideMenu: false, geoSearch: false, layers: false }.",1,[fr],0
 ,ui.appBar.sideMenu.description,"Shows the side menu button in the main app toolbar.",1,[fr],0
@@ -390,10 +392,44 @@
 ,services.export.timestamp.value.description,"services.export.footnote.value.description",1,[fr],0
 ,map.description,"Core map properties (extent sets, levels of detail)",1,[fr],0
 ,map.extentSets.description,"The default, full and maximum extents of the map",1,[fr],0
+,map.extentSets.items.spatialReference.description,"The projection for the given extents",1,[fr],0
+,map.extentSets.items.default.description,"The default (starting) extent.",1,[fr],0
+,map.extentSets.items.full.description,"The full extent (should give good view of the whole map, not necessarily the maximum extent); default will be used if not supplied.",1,[fr],0
+,map.extentSets.items.maximum.description,"The maximum extent; full or default extents will be used if not supplied.",1,[fr],0
 ,map.lodSets.description,"The levels of detail (zoom scales) available for the map",1,[fr],0
+,map.lodSets.items.lods.description,"Level of details for a specific tile schema",1,[fr],0
 ,map.tileSchemas.description,"A unique combination of an LoD and an extent set (each basemap must fit into a tile schema)",1,[fr],0
+,map.tileSchemas.items.id.description,"A unique id identifying a tile schema (combination of an extent set and a zoom scale)",1,[fr],0
+,map.tileSchemas.items.name.description,"The name to display in the basemap selector for the set of basemaps referencing this schema",1,[fr],0
+,map.tileSchemas.items.extentSetId.description,"The extent set to be used for this basemap (should reference map.extentSets.id)",1,[fr],0
+,map.tileSchemas.items.lodSetId.description,"Optional.  The level of details set to be used for this basemap (should reference map.lod.id)",1,[fr],0
+,map.tileSchemas.items.overviewUrl.description,"Optional. If set, the overview map will use this layer instead of the active basemap",1,[fr],0
+,map.tileSchemas.items.overviewUrl.id.description,"The id of the layer for referencing within the viewer (does not relate directly to any external service)",1,[fr],0
+,map.tileSchemas.items.overviewUrl.name.description,"The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",1,[fr],0
+,map.tileSchemas.items.overviewUrl.url.description,"The service endpoint of the layer.  It should match the type provided in layerType.",1,[fr],0
+,map.tileSchemas.items.overviewUrl.metadataUrl.description,"The metadata url of the layer service",1,[fr],0
+,map.tileSchemas.items.overviewUrl.catalogueUrl.description,"The catalogue url of the layer service",1,[fr],0
+,map.tileSchemas.items.overviewUrl.controls.description,"A list of all controls to be enabled on the specified layer",1,[fr],0
+,map.tileSchemas.items.overviewUrl.disabledControls.description,"A list of controls which are blocked from modification either by the user or programmatically. These controls can be visible or not as defined in the `controls` array.",1,[fr],0
+,map.tileSchemas.items.overviewUrl.state.opacity.description,"Initial opacity",1,[fr],0
+,map.tileSchemas.items.overviewUrl.state.visibility.description,"Initial visibility setting",1,[fr],0
+,map.tileSchemas.items.overviewUrl.state.boundingBox.description,"Display bounding box",1,[fr],0
+,map.tileSchemas.items.overviewUrl.state.query.description,"Allow querying",1,[fr],0
+,map.tileSchemas.items.overviewUrl.state.snapshot.description,"Retrieve all feature data immediately on load",1,[fr],0
+,map.tileSchemas.items.overviewUrl.state.hovertips.description,"Disable hover tips",1,[fr],0
 ,map.initialBasemapId.description,"Initial basemap to load. If not supplied viewer will select any basemap.",1,[fr],0
 ,map.baseMaps.description,"A list of basemaps to be made available via the basemap selector.",1,[fr],0
+,map.baseMaps.items.id.description,"A unique identifier for the basemap",1,[fr],0
+,map.baseMaps.items.name.description,"Name of the basemap used for labeling",1,[fr],0
+,map.baseMaps.items.description.description,"Description of the basemap. Will be visible when basemap selector is expanded.Description of the basemap. Will be visible when basemap selector is expanded.",1,[fr],0
+,map.baseMaps.items.typeSummary.description,"Optional base map type. This is descriptive only, and will be shown in the basemap selector.",1,[fr],0
+,map.baseMaps.items.altText.description,"Alt text for the basemap thumbnail image.Alt text for the basemap thumbnail image.",1,[fr],0
+,map.baseMaps.items.thumbnailUrl.description,"Path to image file to display in the basemap selector.",1,[fr],0
+,map.baseMaps.items.tileSchemaId.description,"The tile schema for this basemap (should reference map.tileSchemas.id)",1,[fr],0
+,map.baseMaps.items.layers.description,"A set of URLs which should be composited to form a basemap entry",1,[fr],0
+,map.baseMaps.items.attribution.text.value.description,"Optional. Contains the attribution value. If empty, it will use copyright text from the server.",1,[fr],0
+,map.baseMaps.items.attribution.logo.value.description,"URL for the image.",1,[fr],0
+,map.baseMaps.items.attribution.logo.link.description,"URL to go to when clicked.",1,[fr],0
 ,map.layers.description,"Layer list in the order which they should be added to the map.  NOTE: ESRI JSAPI v3 cannot draw imagery layers over feature layers.",1,[fr],0
 ,map.legend.description,"A structured or automatically generated legend",1,[fr],0
 ,version.enum.2.0,2.0,1,[fr],0

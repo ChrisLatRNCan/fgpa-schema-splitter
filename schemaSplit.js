@@ -227,7 +227,7 @@ function addDefaultLabel(schema, parent = '') {
         objPropNames.forEach(objProp => {
           const labelItem = `${label}.${objProp}`;
           const defltItem = schema[prop]['default'][objProp];
-          csvString = `${csvString},"${labelItem}",${defltItem},1,[fr],0\n`;
+          csvString = `${csvString},${labelItem},${defltItem},1,[fr],0\n`;
           $DotProp.set(schema, `${prop}.default.${objProp}`, labelItem);
         });
 
