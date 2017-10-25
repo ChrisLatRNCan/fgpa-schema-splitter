@@ -5,6 +5,7 @@ let viewerSchema = require('./schemas/schema.json');
 const $RefParser = require('json-schema-ref-parser');
 const $DotProp = require('dot-prop');
 const $PapaParse = require('papaparse');
+const deepKeys = require('deep-keys');
 
 // nodejs library
 const $FS = require('fs');
@@ -51,6 +52,8 @@ const parser = new $RefParser();
 parser.dereference(viewerSchema)
   .then(vSchema => {
 
+    const deepK = deepKeys(vSchema);
+    $FS.writeFileSync('./schemas/deepKeys.txt', deepK);
   // Promise
   const labellingSchema = new $Promise(
     (resolve, reject) => {
