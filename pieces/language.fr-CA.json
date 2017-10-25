@@ -7,7 +7,7 @@
   ],
   "description": "[fr]",
   "schema": "language",
-  "title": "[fr]",
+  "title": "Langue",
   "help": "[fr]",
   "default": "[fr]"
 }

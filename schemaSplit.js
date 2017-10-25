@@ -437,7 +437,8 @@ function saveParseConfigSchema(schema) {
 function loadCSVinJSON() {
 
   // Read file as a string
-  const csvFilename = `./csv/vSchema.csv`;
+  // const csvFilename = `./csv/vSchema.csv`;
+  const csvFilename = `./csv/vSchemaValues.csv`;
   const csvString = $FS.readFileSync(csvFilename, 'utf8');
 
   // config for papaParse

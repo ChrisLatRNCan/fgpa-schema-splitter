@@ -246,7 +246,8 @@
                     "reload",
                     "remove",
                     "settings",
-                    "data"
+                    "data",
+                    "styles"
                 ]
             },
             "uniqueItems": true,
@@ -269,6 +270,12 @@
             "properties": {
                 "id": { "type": "string", "description": "The id of the layer entry in the WMS" },
                 "name": { "type": "string", "description": "A descriptive name for the layer.  To be used in the legend." },
+                "allStyles": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "All the styles for the layer entry in the WMS"
+                },
+                "currentStyle": { "type": "string", "description": "The current style for the layer entry in the WMS" },
                 "controls": { "$ref": "#/definitions/legendEntryControls" },
                 "state": { "$ref": "#/definitions/initialLayerSettings" }
             },
@@ -522,6 +529,7 @@
                 "name": { "type": "string", "description": "The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information." },
                 "url": { "type": "string", "description": "The service endpoint of the layer.  It should match the type provided in layerType." },
                 "layerType": { "type": "string", "enum": [ "esriDynamic", "esriFeature", "esriImage", "esriTile", "ogcWms" ] },
+                "toggleSymbology": { "type": "boolean", "default": true, "description": "Allows individual symbols to have visibility toggled on/off."},
                 "extent": { "$ref": "#/definitions/extentWithReferenceNode" }
             },
             "required": [ "id", "layerType", "url" ]
@@ -553,6 +561,7 @@
                 "metadataUrl": { "type": "string", "default": null, "description": "The metadata url of the layer service" },
                 "catalogueUrl": { "type": "string", "default": null, "description": "The catalogue url of the layer service" },
                 "layerType": { "type": "string", "enum": [ "esriFeature" ] },
+                "toggleSymbology": { "type": "boolean", "default": true, "description": "Allows individual symbols to have visibility toggled on/off."},
                 "tolerance": { "type": "number", "default": 5, "description": "Specifies the tolerance in pixels when determining if a feature was clicked. Should be non-negative integer" },
                 "extent": { "$ref": "#/definitions/extentWithReferenceNode" },
                 "controls": { "$ref": "#/definitions/legendEntryControls" },
@@ -596,6 +605,7 @@
                 "metadataUrl": { "type": "string", "default": null, "description": "The metadata url of the layer service" },
                 "catalogueUrl": { "type": "string", "default": null, "description": "The catalogue url of the layer service" },
                 "layerType": { "type": "string", "enum": [ "esriDynamic" ] },
+                "toggleSymbology": { "type": "boolean", "default": true, "description": "Allows individual symbols to have visibility toggled on/off."},
                 "singleEntryCollapse": { "type": "boolean", "default": false, "description": "Indicates that the dynamic layer with a single layer entry should be rendered without the root group." },
                 "layerEntries": {
                     "type": "array",

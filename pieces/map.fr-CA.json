@@ -11,7 +11,7 @@
             "type": "string"
           },
           "spatialReference": {
-            "description": "The projection for the given extents",
+            "description": "[fr]",
             "type": "object",
             "properties": {
               "wkid": {
@@ -75,7 +75,7 @@
             "additionalProperties": false
           },
           "default": {
-            "description": "The default (starting) extent.",
+            "description": "[fr]",
             "type": "object",
             "properties": {
               "xmin": {
@@ -100,7 +100,7 @@
             "additionalProperties": false
           },
           "full": {
-            "description": "The full extent (should give good view of the whole map, not necessarily the maximum extent); default will be used if not supplied.",
+            "description": "[fr]",
             "type": "object",
             "properties": {
               "xmin": {
@@ -125,7 +125,7 @@
             "additionalProperties": false
           },
           "maximum": {
-            "description": "The maximum extent; full or default extents will be used if not supplied.",
+            "description": "[fr]",
             "type": "object",
             "properties": {
               "xmin": {
@@ -192,7 +192,7 @@
               ],
               "additionalProperties": false
             },
-            "description": "Level of details for a specific tile schema"
+            "description": "[fr]"
           }
         },
         "required": [
@@ -213,45 +213,45 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "A unique id identifying a tile schema (combination of an extent set and a zoom scale)"
+            "description": "[fr]"
           },
           "name": {
             "type": "string",
-            "description": "The name to display in the basemap selector for the set of basemaps referencing this schema"
+            "description": "[fr]"
           },
           "extentSetId": {
             "type": "string",
-            "description": "The extent set to be used for this basemap (should reference map.extentSets.id)"
+            "description": "[fr]"
           },
           "lodSetId": {
             "type": "string",
-            "description": "Optional.  The level of details set to be used for this basemap (should reference map.lod.id)"
+            "description": "[fr]"
           },
           "overviewUrl": {
-            "description": "Optional. If set, the overview map will use this layer instead of the active basemap",
+            "description": "[fr]",
             "type": "object",
             "properties": {
               "id": {
                 "type": "string",
-                "description": "The id of the layer for referencing within the viewer (does not relate directly to any external service)"
+                "description": "[fr]"
               },
               "name": {
                 "type": "string",
-                "description": "The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information."
+                "description": "[fr]"
               },
               "url": {
                 "type": "string",
-                "description": "The service endpoint of the layer.  It should match the type provided in layerType."
+                "description": "[fr]"
               },
               "metadataUrl": {
                 "type": "string",
                 "default": null,
-                "description": "The metadata url of the layer service"
+                "description": "[fr]"
               },
               "catalogueUrl": {
                 "type": "string",
                 "default": null,
-                "description": "The catalogue url of the layer service"
+                "description": "[fr]"
               },
               "layerType": {
                 "type": "string",
@@ -366,14 +366,15 @@
                     "reload",
                     "remove",
                     "settings",
-                    "data"
+                    "data",
+                    "styles"
                   ]
                 },
                 "uniqueItems": true,
-                "description": "A list of all controls to be enabled on the specified layer"
+                "description": "[fr]"
               },
               "disabledControls": {
-                "description": "A list of controls which are blocked from modification either by the user or programmatically. These controls can be visible or not as defined in the `controls` array.",
+                "description": "[fr]",
                 "type": "array",
                 "items": {
                   "type": "string",
@@ -389,7 +390,8 @@
                     "reload",
                     "remove",
                     "settings",
-                    "data"
+                    "data",
+                    "styles"
                   ]
                 },
                 "uniqueItems": true
@@ -400,32 +402,32 @@
                   "opacity": {
                     "type": "number",
                     "default": 1,
-                    "description": "Initial opacity"
+                    "description": "[fr]"
                   },
                   "visibility": {
                     "type": "boolean",
                     "default": true,
-                    "description": "Initial visibility setting"
+                    "description": "[fr]"
                   },
                   "boundingBox": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Display bounding box"
+                    "description": "[fr]"
                   },
                   "query": {
                     "type": "boolean",
                     "default": true,
-                    "description": "Allow querying"
+                    "description": "[fr]"
                   },
                   "snapshot": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Retrieve all feature data immediately on load"
+                    "description": "[fr]"
                   },
                   "hovertips": {
                     "type": "boolean",
                     "default": true,
-                    "description": "Disable hover tips"
+                    "description": "[fr]"
                   }
                 },
                 "additionalProperties": false
@@ -614,31 +616,31 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "A unique identifier for the basemap"
+            "description": "[fr]"
           },
           "name": {
             "type": "string",
-            "description": "Name of the basemap used for labeling"
+            "description": "[fr]"
           },
           "description": {
             "type": "string",
-            "description": "Description of the basemap. Will be visible when basemap selector is expanded.Description of the basemap. Will be visible when basemap selector is expanded."
+            "description": "[fr]"
           },
           "typeSummary": {
             "type": "string",
-            "description": "Optional base map type. This is descriptive only, and will be shown in the basemap selector."
+            "description": "[fr]"
           },
           "altText": {
             "type": "string",
-            "description": "Alt text for the basemap thumbnail image.Alt text for the basemap thumbnail image."
+            "description": "[fr]"
           },
           "thumbnailUrl": {
             "type": "string",
-            "description": "Path to image file to display in the basemap selector."
+            "description": "[fr]"
           },
           "tileSchemaId": {
             "type": "string",
-            "description": "The tile schema for this basemap (should reference map.tileSchemas.id)"
+            "description": "[fr]"
           },
           "layers": {
             "type": "array",
@@ -666,7 +668,7 @@
               ]
             },
             "minItems": 1,
-            "description": "A set of URLs which should be composited to form a basemap entry"
+            "description": "[fr]"
           },
           "attribution": {
             "type": "object",
@@ -680,7 +682,7 @@
                   },
                   "value": {
                     "type": "string",
-                    "description": "Optional. Contains the attribution value. If empty, it will use copyright text from the server."
+                    "description": "[fr]"
                   }
                 },
                 "required": [
@@ -697,11 +699,11 @@
                   },
                   "value": {
                     "type": "string",
-                    "description": "URL for the image."
+                    "description": "[fr]"
                   },
                   "link": {
                     "type": "string",
-                    "description": "URL to go to when clicked."
+                    "description": "[fr]"
                   }
                 },
                 "required": [
@@ -758,25 +760,25 @@
                 "properties": {
                   "id": {
                     "type": "string",
-                    "description": "The id of the layer for referencing within the viewer (does not relate directly to any external service)"
+                    "description": "[fr]"
                   },
                   "name": {
                     "type": "string",
-                    "description": "The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information."
+                    "description": "[fr]"
                   },
                   "url": {
                     "type": "string",
-                    "description": "The service endpoint of the layer.  It should match the type provided in layerType."
+                    "description": "[fr]"
                   },
                   "metadataUrl": {
                     "type": "string",
                     "default": null,
-                    "description": "The metadata url of the layer service"
+                    "description": "[fr]"
                   },
                   "catalogueUrl": {
                     "type": "string",
                     "default": null,
-                    "description": "The catalogue url of the layer service"
+                    "description": "[fr]"
                   },
                   "layerType": {
                     "type": "string",
@@ -891,14 +893,15 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true,
-                    "description": "A list of all controls to be enabled on the specified layer"
+                    "description": "[fr]"
                   },
                   "disabledControls": {
-                    "description": "A list of controls which are blocked from modification either by the user or programmatically. These controls can be visible or not as defined in the `controls` array.",
+                    "description": "[fr]",
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -914,7 +917,8 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true
@@ -925,32 +929,32 @@
                       "opacity": {
                         "type": "number",
                         "default": 1,
-                        "description": "Initial opacity"
+                        "description": "[fr]"
                       },
                       "visibility": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Initial visibility setting"
+                        "description": "[fr]"
                       },
                       "boundingBox": {
                         "type": "boolean",
                         "default": false,
-                        "description": "Display bounding box"
+                        "description": "[fr]"
                       },
                       "query": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Allow querying"
+                        "description": "[fr]"
                       },
                       "snapshot": {
                         "type": "boolean",
                         "default": false,
-                        "description": "Retrieve all feature data immediately on load"
+                        "description": "[fr]"
                       },
                       "hovertips": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Disable hover tips"
+                        "description": "[fr]"
                       }
                     },
                     "additionalProperties": false
@@ -997,6 +1001,11 @@
                     "enum": [
                       "esriFeature"
                     ]
+                  },
+                  "toggleSymbology": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Allows individual symbols to have visibility toggled on/off."
                   },
                   "tolerance": {
                     "type": "number",
@@ -1109,11 +1118,12 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true,
-                    "description": "A list of all controls to be enabled on the specified layer"
+                    "description": "[fr]"
                   },
                   "disabledControls": {
                     "description": "A list of controls which are visible, but disabled for user modification",
@@ -1132,7 +1142,8 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true
@@ -1143,32 +1154,32 @@
                       "opacity": {
                         "type": "number",
                         "default": 1,
-                        "description": "Initial opacity"
+                        "description": "[fr]"
                       },
                       "visibility": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Initial visibility setting"
+                        "description": "[fr]"
                       },
                       "boundingBox": {
                         "type": "boolean",
                         "default": false,
-                        "description": "Display bounding box"
+                        "description": "[fr]"
                       },
                       "query": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Allow querying"
+                        "description": "[fr]"
                       },
                       "snapshot": {
                         "type": "boolean",
                         "default": false,
-                        "description": "Retrieve all feature data immediately on load"
+                        "description": "[fr]"
                       },
                       "hovertips": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Disable hover tips"
+                        "description": "[fr]"
                       }
                     },
                     "additionalProperties": false
@@ -1334,6 +1345,17 @@
                           "type": "string",
                           "description": "A descriptive name for the layer.  To be used in the legend."
                         },
+                        "allStyles": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "All the styles for the layer entry in the WMS"
+                        },
+                        "currentStyle": {
+                          "type": "string",
+                          "description": "The current style for the layer entry in the WMS"
+                        },
                         "controls": {
                           "type": "array",
                           "items": {
@@ -1350,11 +1372,12 @@
                               "reload",
                               "remove",
                               "settings",
-                              "data"
+                              "data",
+                              "styles"
                             ]
                           },
                           "uniqueItems": true,
-                          "description": "A list of all controls to be enabled on the specified layer"
+                          "description": "[fr]"
                         },
                         "state": {
                           "type": "object",
@@ -1362,32 +1385,32 @@
                             "opacity": {
                               "type": "number",
                               "default": 1,
-                              "description": "Initial opacity"
+                              "description": "[fr]"
                             },
                             "visibility": {
                               "type": "boolean",
                               "default": true,
-                              "description": "Initial visibility setting"
+                              "description": "[fr]"
                             },
                             "boundingBox": {
                               "type": "boolean",
                               "default": false,
-                              "description": "Display bounding box"
+                              "description": "[fr]"
                             },
                             "query": {
                               "type": "boolean",
                               "default": true,
-                              "description": "Allow querying"
+                              "description": "[fr]"
                             },
                             "snapshot": {
                               "type": "boolean",
                               "default": false,
-                              "description": "Retrieve all feature data immediately on load"
+                              "description": "[fr]"
                             },
                             "hovertips": {
                               "type": "boolean",
                               "default": true,
-                              "description": "Disable hover tips"
+                              "description": "[fr]"
                             }
                           },
                           "additionalProperties": false
@@ -1533,11 +1556,12 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true,
-                    "description": "A list of all controls to be enabled on the specified layer"
+                    "description": "[fr]"
                   },
                   "disabledControls": {
                     "description": "A list of controls which are visible, but disabled for user modification",
@@ -1556,7 +1580,8 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true
@@ -1567,32 +1592,32 @@
                       "opacity": {
                         "type": "number",
                         "default": 1,
-                        "description": "Initial opacity"
+                        "description": "[fr]"
                       },
                       "visibility": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Initial visibility setting"
+                        "description": "[fr]"
                       },
                       "boundingBox": {
                         "type": "boolean",
                         "default": false,
-                        "description": "Display bounding box"
+                        "description": "[fr]"
                       },
                       "query": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Allow querying"
+                        "description": "[fr]"
                       },
                       "snapshot": {
                         "type": "boolean",
                         "default": false,
-                        "description": "Retrieve all feature data immediately on load"
+                        "description": "[fr]"
                       },
                       "hovertips": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Disable hover tips"
+                        "description": "[fr]"
                       }
                     },
                     "additionalProperties": false
@@ -1636,6 +1661,11 @@
                     "enum": [
                       "esriDynamic"
                     ]
+                  },
+                  "toggleSymbology": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Allows individual symbols to have visibility toggled on/off."
                   },
                   "singleEntryCollapse": {
                     "type": "boolean",
@@ -1767,11 +1797,12 @@
                               "reload",
                               "remove",
                               "settings",
-                              "data"
+                              "data",
+                              "styles"
                             ]
                           },
                           "uniqueItems": true,
-                          "description": "A list of all controls to be enabled on the specified layer"
+                          "description": "[fr]"
                         },
                         "state": {
                           "type": "object",
@@ -1779,32 +1810,32 @@
                             "opacity": {
                               "type": "number",
                               "default": 1,
-                              "description": "Initial opacity"
+                              "description": "[fr]"
                             },
                             "visibility": {
                               "type": "boolean",
                               "default": true,
-                              "description": "Initial visibility setting"
+                              "description": "[fr]"
                             },
                             "boundingBox": {
                               "type": "boolean",
                               "default": false,
-                              "description": "Display bounding box"
+                              "description": "[fr]"
                             },
                             "query": {
                               "type": "boolean",
                               "default": true,
-                              "description": "Allow querying"
+                              "description": "[fr]"
                             },
                             "snapshot": {
                               "type": "boolean",
                               "default": false,
-                              "description": "Retrieve all feature data immediately on load"
+                              "description": "[fr]"
                             },
                             "hovertips": {
                               "type": "boolean",
                               "default": true,
-                              "description": "Disable hover tips"
+                              "description": "[fr]"
                             }
                           },
                           "additionalProperties": false
@@ -2048,11 +2079,12 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true,
-                    "description": "A list of all controls to be enabled on the specified layer"
+                    "description": "[fr]"
                   },
                   "disabledControls": {
                     "description": "A list of controls which are visible, but disabled for user modification",
@@ -2071,7 +2103,8 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true
@@ -2082,32 +2115,32 @@
                       "opacity": {
                         "type": "number",
                         "default": 1,
-                        "description": "Initial opacity"
+                        "description": "[fr]"
                       },
                       "visibility": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Initial visibility setting"
+                        "description": "[fr]"
                       },
                       "boundingBox": {
                         "type": "boolean",
                         "default": false,
-                        "description": "Display bounding box"
+                        "description": "[fr]"
                       },
                       "query": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Allow querying"
+                        "description": "[fr]"
                       },
                       "snapshot": {
                         "type": "boolean",
                         "default": false,
-                        "description": "Retrieve all feature data immediately on load"
+                        "description": "[fr]"
                       },
                       "hovertips": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Disable hover tips"
+                        "description": "[fr]"
                       }
                     },
                     "additionalProperties": false

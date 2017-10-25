@@ -366,7 +366,8 @@
                     "reload",
                     "remove",
                     "settings",
-                    "data"
+                    "data",
+                    "styles"
                   ]
                 },
                 "uniqueItems": true,
@@ -389,7 +390,8 @@
                     "reload",
                     "remove",
                     "settings",
-                    "data"
+                    "data",
+                    "styles"
                   ]
                 },
                 "uniqueItems": true
@@ -891,7 +893,8 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true,
@@ -914,7 +917,8 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true
@@ -997,6 +1001,11 @@
                     "enum": [
                       "esriFeature"
                     ]
+                  },
+                  "toggleSymbology": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Allows individual symbols to have visibility toggled on/off."
                   },
                   "tolerance": {
                     "type": "number",
@@ -1109,7 +1118,8 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true,
@@ -1132,7 +1142,8 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true
@@ -1334,6 +1345,17 @@
                           "type": "string",
                           "description": "A descriptive name for the layer.  To be used in the legend."
                         },
+                        "allStyles": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "All the styles for the layer entry in the WMS"
+                        },
+                        "currentStyle": {
+                          "type": "string",
+                          "description": "The current style for the layer entry in the WMS"
+                        },
                         "controls": {
                           "type": "array",
                           "items": {
@@ -1350,7 +1372,8 @@
                               "reload",
                               "remove",
                               "settings",
-                              "data"
+                              "data",
+                              "styles"
                             ]
                           },
                           "uniqueItems": true,
@@ -1533,7 +1556,8 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true,
@@ -1556,7 +1580,8 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true
@@ -1636,6 +1661,11 @@
                     "enum": [
                       "esriDynamic"
                     ]
+                  },
+                  "toggleSymbology": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Allows individual symbols to have visibility toggled on/off."
                   },
                   "singleEntryCollapse": {
                     "type": "boolean",
@@ -1767,7 +1797,8 @@
                               "reload",
                               "remove",
                               "settings",
-                              "data"
+                              "data",
+                              "styles"
                             ]
                           },
                           "uniqueItems": true,
@@ -2048,7 +2079,8 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true,
@@ -2071,7 +2103,8 @@
                         "reload",
                         "remove",
                         "settings",
-                        "data"
+                        "data",
+                        "styles"
                       ]
                     },
                     "uniqueItems": true
