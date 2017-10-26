@@ -48,43 +48,62 @@ let csvString = '';
 
 replaceCircularRef(viewerSchema);
 
-const parser = new $RefParser();
-parser.dereference(viewerSchema)
-  .then(vSchema => {
+const labellingSchemaDef = new $Promise(
+  (resolve, reject) => {
+      if (addLabels(viewerSchema, 'definitions')) {
+          resolve(viewerSchema);
+      } else {
+          const reason = new Error('labelling def went wrong');
+          reject(reason);
+      }
 
-    const deepK = deepKeys(vSchema);
-    $FS.writeFileSync('./schemas/deepKeys.txt', deepK);
-  // Promise
-  const labellingSchema = new $Promise(
-    (resolve, reject) => {
-        if (addLabels(vSchema)) {
-            resolve(vSchema);
-        } else {
-            const reason = new Error('labelling went wrong');
-            reject(reason);
-        }
+  }
+);
 
-    }
-  );
+// call our promise
+const LabelMyDef = function () {
+  labellingSchemaDef
+      .then(() => {
+        const parser = new $RefParser();
+        parser.dereference(viewerSchema)
+          .then(vSchema => {
 
-  // call our promise
-  const splitMe = function () {
-    labellingSchema
-        .then(() => {
-          saveCSV(csvString);
-          saveSchema(vSchema);
-          saveParseConfigSchema(vSchema);
-        })
-        .catch(error => console.log(error.message));
-  };
+          // Promise
+          const labellingSchemaProp = new $Promise(
+            (resolve, reject) => {
+                if (addLabels(vSchema, 'properties')) {
+                    resolve(vSchema);
+                } else {
+                    const reason = new Error('labelling properties went wrong');
+                    reject(reason);
+                }
+        
+            }
+          );
+        
+          // call our promise
+          const splitMe = function () {
+            labellingSchemaProp
+                .then(() => {
+                  saveCSV(csvString);
+                  saveSchema(vSchema);
+                  saveParseConfigSchema(vSchema);
+                  console.log('This is the END');
+                })
+                .catch(error => console.log(error.message));
+          };
+        
+          splitMe();
+        
+          })
+          .catch(err => {
+            console.error(err);
+          });
+      })
+      .catch(error => console.log(error.message));
+};
 
-  splitMe();
-
-  })
-  .catch(err => {
-    console.error(err);
-  });
-
+LabelMyDef();
 
 // functions declarations
 
@@ -122,13 +141,13 @@ function replaceCircularRef(schema) {
  * @private
  * @param {Object} schema
  */
-function addLabels(schema) {
-  addSchemaLabel(schema.properties);
-  addTitleLabel(schema.properties);
-  addHelpLabel(schema.properties);
-  addDefaultLabel(schema.properties);
-  addDescriptionLabel(schema.properties);
-  addEnumLabel(schema.properties);
+function addLabels(schema, start) {
+  addSchemaLabel(schema[start]);
+  addTitleLabel(schema[start]);
+  // addHelpLabel(schema[start]);
+  // addDefaultLabel(schema[start]);
+  addDescriptionLabel(schema[start]);
+  addEnumLabel(schema[start]);
   return true;
 }
 
@@ -441,7 +460,7 @@ function loadCSVinJSON() {
 
   // Read file as a string
   // const csvFilename = `./csv/vSchema.csv`;
-  const csvFilename = `./csv/vSchemaValues.csv`;
+  const csvFilename = `./csv/vSchema.csv`;
   const csvString = $FS.readFileSync(csvFilename, 'utf8');
 
   // config for papaParse

@@ -5,54 +5,40 @@
     "proxyUrl": {
       "type": "string",
       "description": "[fr]",
-      "title": "[fr]",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "exportMapUrl": {
       "type": "string",
       "description": "[fr]",
-      "title": "[fr]",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "geometryUrl": {
       "type": "string",
       "description": "[fr]",
-      "title": "[fr]",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "googleAPIKey": {
       "type": "string",
       "description": "[fr]",
-      "title": "[fr]",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "geolocation": {
       "type": "object",
       "additionalProperties": true,
       "description": "[fr]",
-      "title": "[fr]",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "coordInfo": {
       "type": "object",
       "additionalProperties": true,
       "description": "[fr]",
-      "title": "[fr]",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "print": {
       "type": "object",
       "additionalProperties": true,
       "description": "[fr]",
-      "title": "[fr]",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "search": {
       "type": "object",
@@ -71,9 +57,7 @@
           "minItems": 1,
           "uniqueItems": true,
           "description": "[fr]",
-          "title": "[fr]",
-          "help": "[fr]",
-          "default": "[fr]"
+          "title": "[fr]"
         },
         "serviceUrls": {
           "type": "object",
@@ -82,37 +66,27 @@
             "geoNames": {
               "type": "string",
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]",
-              "default": "[fr]"
+              "title": "[fr]"
             },
             "geoLocation": {
               "type": "string",
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]",
-              "default": "[fr]"
+              "title": "[fr]"
             },
             "geoSuggest": {
               "type": "string",
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]",
-              "default": "[fr]"
+              "title": "[fr]"
             },
             "provinces": {
               "type": "string",
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]",
-              "default": "[fr]"
+              "title": "[fr]"
             },
             "types": {
               "type": "string",
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]",
-              "default": "[fr]"
+              "title": "[fr]"
             }
           },
           "additionalProperties": false,
@@ -123,18 +97,14 @@
             "provinces",
             "types"
           ],
-          "title": "[fr]",
-          "help": "[fr]",
-          "default": "[fr]"
+          "title": "[fr]"
         }
       },
       "additionalProperties": false,
       "required": [
         "serviceUrls"
       ],
-      "title": "[fr]",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "export": {
       "type": "object",
@@ -146,30 +116,25 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": true,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": true,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "value": {
               "type": "string",
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]",
-              "default": "[fr]"
+              "title": "[fr]"
             }
           },
           "additionalProperties": false,
-          "title": "[fr]",
-          "help": "[fr]",
-          "default": "[fr]"
+          "schema": "exportComponent",
+          "title": "[fr]"
         },
         "map": {
           "description": "[fr]",
@@ -177,30 +142,25 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": true,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": true,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "value": {
               "type": "string",
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]",
-              "default": "[fr]"
+              "title": "[fr]"
             }
           },
           "additionalProperties": false,
-          "title": "[fr]",
-          "help": "[fr]",
-          "default": "[fr]"
+          "schema": "exportComponent",
+          "title": "[fr]"
         },
         "mapElements": {
           "description": "[fr]",
@@ -208,30 +168,25 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": true,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": true,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "value": {
               "type": "string",
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]",
-              "default": "[fr]"
+              "title": "[fr]"
             }
           },
           "additionalProperties": false,
-          "title": "[fr]",
-          "help": "[fr]",
-          "default": "[fr]"
+          "schema": "exportComponent",
+          "title": "[fr]"
         },
         "legend": {
           "description": "[fr]",
@@ -239,44 +194,37 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": true,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": true,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "value": {
               "type": "string",
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]",
-              "default": "[fr]"
+              "title": "[fr]"
             },
             "showInfoSymbology": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": false,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "showControlledSymbology": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": false,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             }
           },
           "additionalProperties": false,
-          "title": "[fr]",
-          "help": "[fr]",
-          "default": "[fr]"
+          "schema": "legendExportComponent",
+          "title": "[fr]"
         },
         "footnote": {
           "description": "[fr]",
@@ -284,30 +232,25 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": true,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": true,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "value": {
               "type": "string",
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]",
-              "default": "[fr]"
+              "title": "[fr]"
             }
           },
           "additionalProperties": false,
-          "title": "[fr]",
-          "help": "[fr]",
-          "default": "[fr]"
+          "schema": "exportComponent",
+          "title": "[fr]"
         },
         "timestamp": {
           "description": "[fr]",
@@ -315,41 +258,32 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": true,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": true,
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "value": {
               "type": "string",
               "description": "[fr]",
-              "title": "[fr]",
-              "help": "[fr]",
-              "default": "[fr]"
+              "title": "[fr]"
             }
           },
           "additionalProperties": false,
-          "title": "[fr]",
-          "help": "[fr]",
-          "default": "[fr]"
+          "schema": "exportComponent",
+          "title": "[fr]"
         }
       },
       "additionalProperties": false,
-      "title": "[fr]",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     }
   },
   "additionalProperties": false,
   "schema": "services",
-  "title": "[fr]",
-  "help": "[fr]",
-  "default": "[fr]"
+  "title": "[fr]"
 }

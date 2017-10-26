@@ -5,54 +5,40 @@
     "proxyUrl": {
       "type": "string",
       "description": "An optional proxy to be used for dealing with same-origin issues.  URL must either be a relative path on the same server or an absolute path on a server which sets CORS headers.",
-      "title": "[en]",
-      "help": "[en]",
-      "default": "[en]"
+      "title": "[en]"
     },
     "exportMapUrl": {
       "type": "string",
       "description": "An ESRI service endpoint for generating map images.  Should point directly to an endpoint that can be consumed by ESRI PrintTask.",
-      "title": "[en]",
-      "help": "[en]",
-      "default": "[en]"
+      "title": "[en]"
     },
     "geometryUrl": {
       "type": "string",
       "description": "A URL to an ESRI ArcGIS geometry service REST endpoint.",
-      "title": "[en]",
-      "help": "[en]",
-      "default": "[en]"
+      "title": "[en]"
     },
     "googleAPIKey": {
       "type": "string",
       "description": "Google API key to enable geo location and share link shortening.",
-      "title": "[en]",
-      "help": "[en]",
-      "default": "[en]"
+      "title": "[en]"
     },
     "geolocation": {
       "type": "object",
       "additionalProperties": true,
       "description": "FIXME",
-      "title": "[en]",
-      "help": "[en]",
-      "default": "[en]"
+      "title": "[en]"
     },
     "coordInfo": {
       "type": "object",
       "additionalProperties": true,
       "description": "FIXME",
-      "title": "[en]",
-      "help": "[en]",
-      "default": "[en]"
+      "title": "[en]"
     },
     "print": {
       "type": "object",
       "additionalProperties": true,
       "description": "FIXME",
-      "title": "[en]",
-      "help": "[en]",
-      "default": "[en]"
+      "title": "[en]"
     },
     "search": {
       "type": "object",
@@ -71,9 +57,7 @@
           "minItems": 1,
           "uniqueItems": true,
           "description": "Disable specific types of searches including NTS, FSA, or LAT/LNG",
-          "title": "[en]",
-          "help": "[en]",
-          "default": "[en]"
+          "title": "[en]"
         },
         "serviceUrls": {
           "type": "object",
@@ -82,37 +66,27 @@
             "geoNames": {
               "type": "string",
               "description": "Endpoint url for geoNames service",
-              "title": "[en]",
-              "help": "[en]",
-              "default": "[en]"
+              "title": "[en]"
             },
             "geoLocation": {
               "type": "string",
               "description": "Endpoint url for geoLocation service",
-              "title": "[en]",
-              "help": "[en]",
-              "default": "[en]"
+              "title": "[en]"
             },
             "geoSuggest": {
               "type": "string",
               "description": "Endpoint url for geoSuggest service",
-              "title": "[en]",
-              "help": "[en]",
-              "default": "[en]"
+              "title": "[en]"
             },
             "provinces": {
               "type": "string",
               "description": "Endpoint url for provinces service",
-              "title": "[en]",
-              "help": "[en]",
-              "default": "[en]"
+              "title": "[en]"
             },
             "types": {
               "type": "string",
               "description": "Endpoint url for types service",
-              "title": "[en]",
-              "help": "[en]",
-              "default": "[en]"
+              "title": "[en]"
             }
           },
           "additionalProperties": false,
@@ -123,18 +97,14 @@
             "provinces",
             "types"
           ],
-          "title": "[en]",
-          "help": "[en]",
-          "default": "[en]"
+          "title": "[en]"
         }
       },
       "additionalProperties": false,
       "required": [
         "serviceUrls"
       ],
-      "title": "[en]",
-      "help": "[en]",
-      "default": "[en]"
+      "title": "[en]"
     },
     "export": {
       "type": "object",
@@ -146,30 +116,25 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.footnote.isSelected.default",
+              "default": true,
               "description": "services.export.footnote.isSelected.description",
-              "title": "[en]",
-              "help": "[en]"
+              "title": "[en]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.footnote.isSelectable.default",
+              "default": true,
               "description": "services.export.footnote.isSelectable.description",
-              "title": "[en]",
-              "help": "[en]"
+              "title": "[en]"
             },
             "value": {
               "type": "string",
               "description": "services.export.footnote.value.description",
-              "title": "[en]",
-              "help": "[en]",
-              "default": "services.export.footnote.value.default"
+              "title": "[en]"
             }
           },
           "additionalProperties": false,
-          "title": "[en]",
-          "help": "[en]",
-          "default": "[en]"
+          "schema": "exportComponent",
+          "title": "[en]"
         },
         "map": {
           "description": "Map component.",
@@ -177,30 +142,25 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.footnote.isSelected.default",
+              "default": true,
               "description": "services.export.footnote.isSelected.description",
-              "title": "[en]",
-              "help": "[en]"
+              "title": "[en]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.footnote.isSelectable.default",
+              "default": true,
               "description": "services.export.footnote.isSelectable.description",
-              "title": "[en]",
-              "help": "[en]"
+              "title": "[en]"
             },
             "value": {
               "type": "string",
               "description": "services.export.footnote.value.description",
-              "title": "[en]",
-              "help": "[en]",
-              "default": "services.export.footnote.value.default"
+              "title": "[en]"
             }
           },
           "additionalProperties": false,
-          "title": "[en]",
-          "help": "[en]",
-          "default": "[en]"
+          "schema": "exportComponent",
+          "title": "[en]"
         },
         "mapElements": {
           "description": "North arrow and scalebar component.",
@@ -208,30 +168,25 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.footnote.isSelected.default",
+              "default": true,
               "description": "services.export.footnote.isSelected.description",
-              "title": "[en]",
-              "help": "[en]"
+              "title": "[en]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.footnote.isSelectable.default",
+              "default": true,
               "description": "services.export.footnote.isSelectable.description",
-              "title": "[en]",
-              "help": "[en]"
+              "title": "[en]"
             },
             "value": {
               "type": "string",
               "description": "services.export.footnote.value.description",
-              "title": "[en]",
-              "help": "[en]",
-              "default": "services.export.footnote.value.default"
+              "title": "[en]"
             }
           },
           "additionalProperties": false,
-          "title": "[en]",
-          "help": "[en]",
-          "default": "[en]"
+          "schema": "exportComponent",
+          "title": "[en]"
         },
         "legend": {
           "description": "Legend component.",
@@ -240,43 +195,36 @@
             "isSelected": {
               "type": "boolean",
               "default": true,
-              "description": "Indicates if the component is selected and included in the export graphic.",
-              "title": "[en]",
-              "help": "[en]"
+              "description": "legendExportComponent.isSelected.description",
+              "title": "[en]"
             },
             "isSelectable": {
               "type": "boolean",
               "default": true,
-              "description": "Indicates if the component can be included or excluded from the export graphic by the user.",
-              "title": "[en]",
-              "help": "[en]"
+              "description": "legendExportComponent.isSelectable.description",
+              "title": "[en]"
             },
             "value": {
               "type": "string",
-              "description": "Value to be passed to the generation function of this export component.",
-              "title": "[en]",
-              "help": "[en]",
-              "default": "[en]"
+              "description": "legendExportComponent.value.description",
+              "title": "[en]"
             },
             "showInfoSymbology": {
               "type": "boolean",
               "default": false,
-              "description": "Indicates whether symbology from info sections should be included in export legend",
-              "title": "[en]",
-              "help": "[en]"
+              "description": "legendExportComponent.showInfoSymbology.description",
+              "title": "[en]"
             },
             "showControlledSymbology": {
               "type": "boolean",
               "default": false,
-              "description": "Indicates whether symbology from controlled layers should be included in export legend",
-              "title": "[en]",
-              "help": "[en]"
+              "description": "legendExportComponent.showControlledSymbology.description",
+              "title": "[en]"
             }
           },
           "additionalProperties": false,
-          "title": "[en]",
-          "help": "[en]",
-          "default": "[en]"
+          "schema": "legendExportComponent",
+          "title": "[en]"
         },
         "footnote": {
           "description": "Foot notice to add to exported map",
@@ -284,30 +232,25 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.footnote.isSelected.default",
+              "default": true,
               "description": "services.export.footnote.isSelected.description",
-              "title": "[en]",
-              "help": "[en]"
+              "title": "[en]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.footnote.isSelectable.default",
+              "default": true,
               "description": "services.export.footnote.isSelectable.description",
-              "title": "[en]",
-              "help": "[en]"
+              "title": "[en]"
             },
             "value": {
               "type": "string",
               "description": "services.export.footnote.value.description",
-              "title": "[en]",
-              "help": "[en]",
-              "default": "services.export.footnote.value.default"
+              "title": "[en]"
             }
           },
           "additionalProperties": false,
-          "title": "[en]",
-          "help": "[en]",
-          "default": "[en]"
+          "schema": "exportComponent",
+          "title": "[en]"
         },
         "timestamp": {
           "description": "Timestamp component.",
@@ -315,41 +258,32 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": "services.export.footnote.isSelected.default",
+              "default": true,
               "description": "services.export.footnote.isSelected.description",
-              "title": "[en]",
-              "help": "[en]"
+              "title": "[en]"
             },
             "isSelectable": {
               "type": "boolean",
-              "default": "services.export.footnote.isSelectable.default",
+              "default": true,
               "description": "services.export.footnote.isSelectable.description",
-              "title": "[en]",
-              "help": "[en]"
+              "title": "[en]"
             },
             "value": {
               "type": "string",
               "description": "services.export.footnote.value.description",
-              "title": "[en]",
-              "help": "[en]",
-              "default": "services.export.footnote.value.default"
+              "title": "[en]"
             }
           },
           "additionalProperties": false,
-          "title": "[en]",
-          "help": "[en]",
-          "default": "[en]"
+          "schema": "exportComponent",
+          "title": "[en]"
         }
       },
       "additionalProperties": false,
-      "title": "[en]",
-      "help": "[en]",
-      "default": "[en]"
+      "title": "[en]"
     }
   },
   "additionalProperties": false,
   "schema": "services",
-  "title": "[en]",
-  "help": "[en]",
-  "default": "[en]"
+  "title": "[en]"
 }

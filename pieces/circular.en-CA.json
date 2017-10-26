@@ -3,11 +3,13 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "Title of the group"
+      "description": "Title of the group",
+      "title": "[en]"
     },
     "expanded": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "title": "[en]"
     },
     "children": {
       "type": "array",
@@ -16,8 +18,12 @@
           {
             "type": "object",
             "properties": {
-              "circRef": "entryGroup"
-            }
+              "circRef": {
+                "title": "[en]"
+              }
+            },
+            "schema": "circular",
+            "title": "[en]"
           },
           {
             "type": "object",
@@ -29,8 +35,12 @@
                     {
                       "type": "object",
                       "properties": {
-                        "circRef": "entryGroup"
-                      }
+                        "circRef": {
+                          "title": "[en]"
+                        }
+                      },
+                      "schema": "circular",
+                      "title": "[en]"
                     },
                     {
                       "type": "object",
@@ -38,12 +48,14 @@
                       "properties": {
                         "layerId": {
                           "type": "string",
-                          "description": "Link to a layer defined in the layers section"
+                          "description": "Link to a layer defined in the layers section",
+                          "title": "[en]"
                         },
                         "hidden": {
                           "type": "boolean",
                           "default": false,
-                          "description": "Indicates that the legend block will be hidden from the UI and all its controls will be inaccessible to the user."
+                          "description": "Indicates that the legend block will be hidden from the UI and all its controls will be inaccessible to the user.",
+                          "title": "[en]"
                         },
                         "controlledIds": {
                           "type": "array",
@@ -51,26 +63,32 @@
                             "type": "string",
                             "description": "Additional layer ids which are controlled by this layer"
                           },
-                          "default": []
+                          "default": [],
+                          "title": "[en]"
                         },
                         "entryIndex": {
                           "type": "integer",
-                          "description": "Index of the 'sublayer' in the case of an ESRI dynamic layer.  This cannot point to an entry with stateOnly:true ."
+                          "description": "Index of the 'sublayer' in the case of an ESRI dynamic layer.  This cannot point to an entry with stateOnly:true .",
+                          "title": "[en]"
                         },
                         "entryId": {
                           "type": "string",
-                          "description": "Id of the 'sublayer' in the case of an OGC WMS layer"
+                          "description": "Id of the 'sublayer' in the case of an OGC WMS layer",
+                          "title": "[en]"
                         },
                         "coverIcon": {
                           "type": "string",
-                          "description": "An optional icon, if present it will be used to primarily represent the layer"
+                          "description": "An optional icon, if present it will be used to primarily represent the layer",
+                          "title": "[en]"
                         },
                         "description": {
                           "type": "string",
                           "default": "",
-                          "description": "Optional description displayed above the symbology stack."
+                          "description": "Optional description displayed above the symbology stack.",
+                          "title": "[en]"
                         },
                         "symbologyStack": {
+                          "title": "[en]",
                           "type": "array",
                           "items": {
                             "type": "object",
@@ -88,7 +106,8 @@
                             ],
                             "additionalProperties": false
                           },
-                          "minItems": 1
+                          "minItems": 1,
+                          "schema": "symbologyStack"
                         },
                         "symbologyRenderStyle": {
                           "type": "string",
@@ -96,23 +115,29 @@
                             "icons",
                             "images"
                           ],
-                          "description": "An optional style, describes how the symbology stack should be rendered"
+                          "description": "An optional style, describes how the symbology stack should be rendered",
+                          "title": "[en]"
                         }
                       },
                       "required": [
                         "layerId"
                       ],
-                      "additionalProperties": false
+                      "additionalProperties": false,
+                      "schema": "entry",
+                      "title": "[en]"
                     }
                   ]
                 },
-                "minItems": 1
+                "minItems": 1,
+                "title": "[en]"
               }
             },
             "required": [
               "exclusiveVisibility"
             ],
-            "additionalProperties": false
+            "additionalProperties": false,
+            "schema": "visibilitySet",
+            "title": "[en]"
           },
           {
             "type": "object",
@@ -120,12 +145,14 @@
             "properties": {
               "layerId": {
                 "type": "string",
-                "description": "Link to a layer defined in the layers section"
+                "description": "Link to a layer defined in the layers section",
+                "title": "[en]"
               },
               "hidden": {
                 "type": "boolean",
                 "default": false,
-                "description": "Indicates that the legend block will be hidden from the UI and all its controls will be inaccessible to the user."
+                "description": "Indicates that the legend block will be hidden from the UI and all its controls will be inaccessible to the user.",
+                "title": "[en]"
               },
               "controlledIds": {
                 "type": "array",
@@ -133,26 +160,32 @@
                   "type": "string",
                   "description": "Additional layer ids which are controlled by this layer"
                 },
-                "default": []
+                "default": [],
+                "title": "[en]"
               },
               "entryIndex": {
                 "type": "integer",
-                "description": "Index of the 'sublayer' in the case of an ESRI dynamic layer.  This cannot point to an entry with stateOnly:true ."
+                "description": "Index of the 'sublayer' in the case of an ESRI dynamic layer.  This cannot point to an entry with stateOnly:true .",
+                "title": "[en]"
               },
               "entryId": {
                 "type": "string",
-                "description": "Id of the 'sublayer' in the case of an OGC WMS layer"
+                "description": "Id of the 'sublayer' in the case of an OGC WMS layer",
+                "title": "[en]"
               },
               "coverIcon": {
                 "type": "string",
-                "description": "An optional icon, if present it will be used to primarily represent the layer"
+                "description": "An optional icon, if present it will be used to primarily represent the layer",
+                "title": "[en]"
               },
               "description": {
                 "type": "string",
                 "default": "",
-                "description": "Optional description displayed above the symbology stack."
+                "description": "Optional description displayed above the symbology stack.",
+                "title": "[en]"
               },
               "symbologyStack": {
+                "title": "[en]",
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -170,7 +203,8 @@
                   ],
                   "additionalProperties": false
                 },
-                "minItems": 1
+                "minItems": 1,
+                "schema": "symbologyStack"
               },
               "symbologyRenderStyle": {
                 "type": "string",
@@ -178,13 +212,16 @@
                   "icons",
                   "images"
                 ],
-                "description": "An optional style, describes how the symbology stack should be rendered"
+                "description": "An optional style, describes how the symbology stack should be rendered",
+                "title": "[en]"
               }
             },
             "required": [
               "layerId"
             ],
-            "additionalProperties": false
+            "additionalProperties": false,
+            "schema": "entry",
+            "title": "[en]"
           },
           {
             "oneOf": [
@@ -254,7 +291,9 @@
                       ],
                       "additionalProperties": false
                     },
-                    "minItems": 1
+                    "minItems": 1,
+                    "schema": "symbologyStack",
+                    "title": "[en]"
                   },
                   "symbologyRenderStyle": {
                     "type": "string",
@@ -286,13 +325,17 @@
             "required": [
               "infoType",
               "content"
-            ]
+            ],
+            "schema": "infoSection",
+            "title": "[en]"
           }
         ]
       },
-      "minItems": 1
+      "minItems": 1,
+      "title": "[en]"
     },
     "controls": {
+      "title": "[en]",
       "type": "array",
       "items": {
         "type": "string",
@@ -307,9 +350,11 @@
         ]
       },
       "uniqueItems": true,
-      "description": "A list of all controls to be enabled on the specified group"
+      "description": "A list of all controls to be enabled on the specified group",
+      "schema": "legendGroupControls"
     },
     "disabledControls": {
+      "title": "[en]",
       "type": "array",
       "items": {
         "type": "string",
@@ -324,14 +369,17 @@
         ]
       },
       "uniqueItems": true,
-      "description": "A list of all controls to be enabled on the specified group"
+      "description": "A list of all controls to be enabled on the specified group",
+      "schema": "legendGroupControls"
     }
   },
   "required": [
     "name",
     "children"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "schema": "entryGroup",
+  "title": "[en]"
 },
 "visibilitySet": {
   "type": "object",
@@ -343,8 +391,12 @@
           {
             "type": "object",
             "properties": {
-              "circRef": "entryGroup"
-            }
+              "circRef": {
+                "title": "[en]"
+              }
+            },
+            "schema": "circular",
+            "title": "[en]"
           },
           {
             "type": "object",
@@ -352,12 +404,14 @@
             "properties": {
               "layerId": {
                 "type": "string",
-                "description": "Link to a layer defined in the layers section"
+                "description": "Link to a layer defined in the layers section",
+                "title": "[en]"
               },
               "hidden": {
                 "type": "boolean",
                 "default": false,
-                "description": "Indicates that the legend block will be hidden from the UI and all its controls will be inaccessible to the user."
+                "description": "Indicates that the legend block will be hidden from the UI and all its controls will be inaccessible to the user.",
+                "title": "[en]"
               },
               "controlledIds": {
                 "type": "array",
@@ -365,26 +419,32 @@
                   "type": "string",
                   "description": "Additional layer ids which are controlled by this layer"
                 },
-                "default": []
+                "default": [],
+                "title": "[en]"
               },
               "entryIndex": {
                 "type": "integer",
-                "description": "Index of the 'sublayer' in the case of an ESRI dynamic layer.  This cannot point to an entry with stateOnly:true ."
+                "description": "Index of the 'sublayer' in the case of an ESRI dynamic layer.  This cannot point to an entry with stateOnly:true .",
+                "title": "[en]"
               },
               "entryId": {
                 "type": "string",
-                "description": "Id of the 'sublayer' in the case of an OGC WMS layer"
+                "description": "Id of the 'sublayer' in the case of an OGC WMS layer",
+                "title": "[en]"
               },
               "coverIcon": {
                 "type": "string",
-                "description": "An optional icon, if present it will be used to primarily represent the layer"
+                "description": "An optional icon, if present it will be used to primarily represent the layer",
+                "title": "[en]"
               },
               "description": {
                 "type": "string",
                 "default": "",
-                "description": "Optional description displayed above the symbology stack."
+                "description": "Optional description displayed above the symbology stack.",
+                "title": "[en]"
               },
               "symbologyStack": {
+                "title": "[en]",
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -402,7 +462,8 @@
                   ],
                   "additionalProperties": false
                 },
-                "minItems": 1
+                "minItems": 1,
+                "schema": "symbologyStack"
               },
               "symbologyRenderStyle": {
                 "type": "string",
@@ -410,23 +471,29 @@
                   "icons",
                   "images"
                 ],
-                "description": "An optional style, describes how the symbology stack should be rendered"
+                "description": "An optional style, describes how the symbology stack should be rendered",
+                "title": "[en]"
               }
             },
             "required": [
               "layerId"
             ],
-            "additionalProperties": false
+            "additionalProperties": false,
+            "schema": "entry",
+            "title": "[en]"
           }
         ]
       },
-      "minItems": 1
+      "minItems": 1,
+      "title": "[en]"
     }
   },
   "required": [
     "exclusiveVisibility"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "schema": "visibilitySet",
+  "title": "[en]"
 },
 "infoSection": {
   "oneOf": [
@@ -496,7 +563,9 @@
             ],
             "additionalProperties": false
           },
-          "minItems": 1
+          "minItems": 1,
+          "schema": "symbologyStack",
+          "title": "[en]"
         },
         "symbologyRenderStyle": {
           "type": "string",
@@ -528,7 +597,9 @@
   "required": [
     "infoType",
     "content"
-  ]
+  ],
+  "schema": "infoSection",
+  "title": "[en]"
 },
 "entry": {
   "type": "object",
@@ -536,12 +607,14 @@
   "properties": {
     "layerId": {
       "type": "string",
-      "description": "Link to a layer defined in the layers section"
+      "description": "Link to a layer defined in the layers section",
+      "title": "[en]"
     },
     "hidden": {
       "type": "boolean",
       "default": false,
-      "description": "Indicates that the legend block will be hidden from the UI and all its controls will be inaccessible to the user."
+      "description": "Indicates that the legend block will be hidden from the UI and all its controls will be inaccessible to the user.",
+      "title": "[en]"
     },
     "controlledIds": {
       "type": "array",
@@ -549,26 +622,32 @@
         "type": "string",
         "description": "Additional layer ids which are controlled by this layer"
       },
-      "default": []
+      "default": [],
+      "title": "[en]"
     },
     "entryIndex": {
       "type": "integer",
-      "description": "Index of the 'sublayer' in the case of an ESRI dynamic layer.  This cannot point to an entry with stateOnly:true ."
+      "description": "Index of the 'sublayer' in the case of an ESRI dynamic layer.  This cannot point to an entry with stateOnly:true .",
+      "title": "[en]"
     },
     "entryId": {
       "type": "string",
-      "description": "Id of the 'sublayer' in the case of an OGC WMS layer"
+      "description": "Id of the 'sublayer' in the case of an OGC WMS layer",
+      "title": "[en]"
     },
     "coverIcon": {
       "type": "string",
-      "description": "An optional icon, if present it will be used to primarily represent the layer"
+      "description": "An optional icon, if present it will be used to primarily represent the layer",
+      "title": "[en]"
     },
     "description": {
       "type": "string",
       "default": "",
-      "description": "Optional description displayed above the symbology stack."
+      "description": "Optional description displayed above the symbology stack.",
+      "title": "[en]"
     },
     "symbologyStack": {
+      "title": "[en]",
       "type": "array",
       "items": {
         "type": "object",
@@ -586,7 +665,8 @@
         ],
         "additionalProperties": false
       },
-      "minItems": 1
+      "minItems": 1,
+      "schema": "symbologyStack"
     },
     "symbologyRenderStyle": {
       "type": "string",
@@ -594,13 +674,16 @@
         "icons",
         "images"
       ],
-      "description": "An optional style, describes how the symbology stack should be rendered"
+      "description": "An optional style, describes how the symbology stack should be rendered",
+      "title": "[en]"
     }
   },
   "required": [
     "layerId"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "schema": "entry",
+  "title": "[en]"
 },
 "symbologyStack": {
   "type": "array",
@@ -620,7 +703,9 @@
     ],
     "additionalProperties": false
   },
-  "minItems": 1
+  "minItems": 1,
+  "schema": "symbologyStack",
+  "title": "[en]"
 },
 "legendGroupControls": {
   "type": "array",
@@ -637,11 +722,17 @@
     ]
   },
   "uniqueItems": true,
-  "description": "A list of all controls to be enabled on the specified group"
+  "description": "A list of all controls to be enabled on the specified group",
+  "schema": "legendGroupControls",
+  "title": "[en]"
 },
 "circular": {
   "type": "object",
   "properties": {
-    "circRef": "entryGroup"
-  }
+    "circRef": {
+      "title": "[en]"
+    }
+  },
+  "schema": "circular",
+  "title": "[en]"
 }

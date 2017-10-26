@@ -1,3 +1,438 @@
+,spatialReference.title,[en],0,[fr],0
+,spatialReference.wkid.title,[en],0,[fr],0
+,spatialReference.vcsWkid.title,[en],0,[fr],0
+,spatialReference.latestWkid.title,[en],0,[fr],0
+,spatialReference.latestVcsWkid.title,[en],0,[fr],0
+,spatialReference.wkt.title,[en],0,[fr],0
+,spatialReferenceNode.title,[en],0,[fr],0
+,spatialReferenceNode.wkid.title,[en],0,[fr],0
+,spatialReferenceNode.vcsWkid.title,[en],0,[fr],0
+,spatialReferenceNode.latestWkid.title,[en],0,[fr],0
+,spatialReferenceNode.latestVcsWkid.title,[en],0,[fr],0
+,spatialReferenceNode.wkt.title,[en],0,[fr],0
+,extent.title,[en],0,[fr],0
+,extent.xmin.title,[en],0,[fr],0
+,extent.ymin.title,[en],0,[fr],0
+,extent.xmax.title,[en],0,[fr],0
+,extent.ymax.title,[en],0,[fr],0
+,extentNode.title,[en],0,[fr],0
+,extentNode.xmin.title,[en],0,[fr],0
+,extentNode.ymin.title,[en],0,[fr],0
+,extentNode.xmax.title,[en],0,[fr],0
+,extentNode.ymax.title,[en],0,[fr],0
+,extentWithReferenceNode.title,[en],0,[fr],0
+,extentWithReferenceNode.xmin.title,[en],0,[fr],0
+,extentWithReferenceNode.ymin.title,[en],0,[fr],0
+,extentWithReferenceNode.xmax.title,[en],0,[fr],0
+,extentWithReferenceNode.ymax.title,[en],0,[fr],0
+,extentWithReferenceNode.spatialReference.title,[en],0,[fr],0
+,extentSetNode.title,[en],0,[fr],0
+,extentSetNode.id.title,[en],0,[fr],0
+,extentSetNode.spatialReference.title,[en],0,[fr],0
+,extentSetNode.default.title,[en],0,[fr],0
+,extentSetNode.full.title,[en],0,[fr],0
+,extentSetNode.maximum.title,[en],0,[fr],0
+,symbolNode.title,[en],0,[fr],0
+,symbolNode.label.title,[en],0,[fr],0
+,symbolNode.icon.title,[en],0,[fr],0
+,lodSetNode.title,[en],0,[fr],0
+,lodSetNode.id.title,[en],0,[fr],0
+,lodSetNode.lods.title,[en],0,[fr],0
+,tileSchemaNode.title,[en],0,[fr],0
+,tileSchemaNode.id.title,[en],0,[fr],0
+,tileSchemaNode.name.title,[en],0,[fr],0
+,tileSchemaNode.extentSetId.title,[en],0,[fr],0
+,tileSchemaNode.lodSetId.title,[en],0,[fr],0
+,tileSchemaNode.overviewUrl.title,[en],0,[fr],0
+,exportComponent.title,[en],0,[fr],0
+,exportComponent.isSelected.title,[en],0,[fr],0
+,exportComponent.isSelectable.title,[en],0,[fr],0
+,exportComponent.value.title,[en],0,[fr],0
+,legendExportComponent.title,[en],0,[fr],0
+,legendExportComponent.isSelected.title,[en],0,[fr],0
+,legendExportComponent.isSelectable.title,[en],0,[fr],0
+,legendExportComponent.value.title,[en],0,[fr],0
+,legendExportComponent.showInfoSymbology.title,[en],0,[fr],0
+,legendExportComponent.showControlledSymbology.title,[en],0,[fr],0
+,attributionNode.title,[en],0,[fr],0
+,attributionNode.text.title,[en],0,[fr],0
+,attributionNode.text.enabled.title,[en],0,[fr],0
+,attributionNode.text.value.title,[en],0,[fr],0
+,attributionNode.logo.title,[en],0,[fr],0
+,attributionNode.logo.enabled.title,[en],0,[fr],0
+,attributionNode.logo.value.title,[en],0,[fr],0
+,attributionNode.logo.link.title,[en],0,[fr],0
+,legendGroupControls.title,[en],0,[fr],0
+,legendEntryControls.title,[en],0,[fr],0
+,initialLayerSettings.title,[en],0,[fr],0
+,initialLayerSettings.opacity.title,[en],0,[fr],0
+,initialLayerSettings.visibility.title,[en],0,[fr],0
+,initialLayerSettings.boundingBox.title,[en],0,[fr],0
+,initialLayerSettings.query.title,[en],0,[fr],0
+,initialLayerSettings.snapshot.title,[en],0,[fr],0
+,initialLayerSettings.hovertips.title,[en],0,[fr],0
+,wmsLayerEntryNode.title,[en],0,[fr],0
+,wmsLayerEntryNode.id.title,[en],0,[fr],0
+,wmsLayerEntryNode.name.title,[en],0,[fr],0
+,wmsLayerEntryNode.allStyles.title,[en],0,[fr],0
+,wmsLayerEntryNode.currentStyle.title,[en],0,[fr],0
+,wmsLayerEntryNode.controls.title,[en],0,[fr],0
+,wmsLayerEntryNode.state.title,[en],0,[fr],0
+,dynamicLayerEntryNode.title,[en],0,[fr],0
+,dynamicLayerEntryNode.index.title,[en],0,[fr],0
+,dynamicLayerEntryNode.name.title,[en],0,[fr],0
+,dynamicLayerEntryNode.outfields.title,[en],0,[fr],0
+,dynamicLayerEntryNode.extent.title,[en],0,[fr],0
+,dynamicLayerEntryNode.controls.title,[en],0,[fr],0
+,dynamicLayerEntryNode.state.title,[en],0,[fr],0
+,dynamicLayerEntryNode.stateOnly.title,[en],0,[fr],0
+,dynamicLayerEntryNode.table.title,[en],0,[fr],0
+,entryGroup.title,[en],0,[fr],0
+,entryGroup.name.title,[en],0,[fr],0
+,entryGroup.expanded.title,[en],0,[fr],0
+,entryGroup.children.title,[en],0,[fr],0
+,entryGroup.controls.title,[en],0,[fr],0
+,entryGroup.disabledControls.title,[en],0,[fr],0
+,visibilitySet.title,[en],0,[fr],0
+,visibilitySet.exclusiveVisibility.title,[en],0,[fr],0
+,symbologyStack.title,[en],0,[fr],0
+,entry.title,[en],0,[fr],0
+,entry.layerId.title,[en],0,[fr],0
+,entry.hidden.title,[en],0,[fr],0
+,entry.controlledIds.title,[en],0,[fr],0
+,entry.entryIndex.title,[en],0,[fr],0
+,entry.entryId.title,[en],0,[fr],0
+,entry.coverIcon.title,[en],0,[fr],0
+,entry.description.title,[en],0,[fr],0
+,entry.symbologyStack.title,[en],0,[fr],0
+,entry.symbologyRenderStyle.title,[en],0,[fr],0
+,infoSection.title,[en],0,[fr],0
+,legendAuto.title,[en],0,[fr],0
+,legendAuto.type.title,[en],0,[fr],0
+,legendStructured.title,[en],0,[fr],0
+,legendStructured.type.title,[en],0,[fr],0
+,legendStructured.root.title,[en],0,[fr],0
+,tableNode.title,[en],0,[fr],0
+,tableNode.title.title,[en],0,[fr],0
+,tableNode.description.title,[en],0,[fr],0
+,tableNode.maximize.title,[en],0,[fr],0
+,tableNode.search.title,[en],0,[fr],0
+,tableNode.applyMap.title,[en],0,[fr],0
+,tableNode.columns.title,[en],0,[fr],0
+,columnNode.title,[en],0,[fr],0
+,columnNode.data.title,[en],0,[fr],0
+,columnNode.title.title,[en],0,[fr],0
+,columnNode.description.title,[en],0,[fr],0
+,columnNode.visible.title,[en],0,[fr],0
+,columnNode.width.title,[en],0,[fr],0
+,columnNode.sort.title,[en],0,[fr],0
+,columnNode.searchable.title,[en],0,[fr],0
+,columnNode.filter.title,[en],0,[fr],0
+,filterNode.title,[en],0,[fr],0
+,filterNode.type.title,[en],0,[fr],0
+,filterNode.value.title,[en],0,[fr],0
+,filterNode.static.title,[en],0,[fr],0
+,basicLayer.title,[en],0,[fr],0
+,basicLayer.id.title,[en],0,[fr],0
+,basicLayer.name.title,[en],0,[fr],0
+,basicLayer.url.title,[en],0,[fr],0
+,basicLayer.layerType.title,[en],0,[fr],0
+,basicLayer.toggleSymbology.title,[en],0,[fr],0
+,basicLayer.extent.title,[en],0,[fr],0
+,basicLayerNode.title,[en],0,[fr],0
+,basicLayerNode.id.title,[en],0,[fr],0
+,basicLayerNode.name.title,[en],0,[fr],0
+,basicLayerNode.url.title,[en],0,[fr],0
+,basicLayerNode.metadataUrl.title,[en],0,[fr],0
+,basicLayerNode.catalogueUrl.title,[en],0,[fr],0
+,basicLayerNode.layerType.title,[en],0,[fr],0
+,basicLayerNode.extent.title,[en],0,[fr],0
+,basicLayerNode.controls.title,[en],0,[fr],0
+,basicLayerNode.disabledControls.title,[en],0,[fr],0
+,basicLayerNode.state.title,[en],0,[fr],0
+,featureLayerNode.title,[en],0,[fr],0
+,featureLayerNode.id.title,[en],0,[fr],0
+,featureLayerNode.name.title,[en],0,[fr],0
+,featureLayerNode.nameField.title,[en],0,[fr],0
+,featureLayerNode.url.title,[en],0,[fr],0
+,featureLayerNode.metadataUrl.title,[en],0,[fr],0
+,featureLayerNode.catalogueUrl.title,[en],0,[fr],0
+,featureLayerNode.layerType.title,[en],0,[fr],0
+,featureLayerNode.toggleSymbology.title,[en],0,[fr],0
+,featureLayerNode.tolerance.title,[en],0,[fr],0
+,featureLayerNode.extent.title,[en],0,[fr],0
+,featureLayerNode.controls.title,[en],0,[fr],0
+,featureLayerNode.disabledControls.title,[en],0,[fr],0
+,featureLayerNode.state.title,[en],0,[fr],0
+,featureLayerNode.table.title,[en],0,[fr],0
+,wmsLayerNode.title,[en],0,[fr],0
+,wmsLayerNode.id.title,[en],0,[fr],0
+,wmsLayerNode.name.title,[en],0,[fr],0
+,wmsLayerNode.url.title,[en],0,[fr],0
+,wmsLayerNode.metadataUrl.title,[en],0,[fr],0
+,wmsLayerNode.catalogueUrl.title,[en],0,[fr],0
+,wmsLayerNode.layerEntries.title,[en],0,[fr],0
+,wmsLayerNode.layerType.title,[en],0,[fr],0
+,wmsLayerNode.featureInfoMimeType.title,[en],0,[fr],0
+,wmsLayerNode.legendMimeType.title,[en],0,[fr],0
+,wmsLayerNode.extent.title,[en],0,[fr],0
+,wmsLayerNode.controls.title,[en],0,[fr],0
+,wmsLayerNode.disabledControls.title,[en],0,[fr],0
+,wmsLayerNode.state.title,[en],0,[fr],0
+,dynamicLayerNode.title,[en],0,[fr],0
+,dynamicLayerNode.id.title,[en],0,[fr],0
+,dynamicLayerNode.name.title,[en],0,[fr],0
+,dynamicLayerNode.url.title,[en],0,[fr],0
+,dynamicLayerNode.metadataUrl.title,[en],0,[fr],0
+,dynamicLayerNode.catalogueUrl.title,[en],0,[fr],0
+,dynamicLayerNode.layerType.title,[en],0,[fr],0
+,dynamicLayerNode.toggleSymbology.title,[en],0,[fr],0
+,dynamicLayerNode.singleEntryCollapse.title,[en],0,[fr],0
+,dynamicLayerNode.layerEntries.title,[en],0,[fr],0
+,dynamicLayerNode.tolerance.title,[en],0,[fr],0
+,dynamicLayerNode.extent.title,[en],0,[fr],0
+,dynamicLayerNode.controls.title,[en],0,[fr],0
+,dynamicLayerNode.disabledControls.title,[en],0,[fr],0
+,dynamicLayerNode.state.title,[en],0,[fr],0
+,layerNode.title,[en],0,[fr],0
+,layerList.title,[en],0,[fr],0
+,baseMapNode.title,[en],0,[fr],0
+,baseMapNode.id.title,[en],0,[fr],0
+,baseMapNode.name.title,[en],0,[fr],0
+,baseMapNode.description.title,[en],0,[fr],0
+,baseMapNode.typeSummary.title,[en],0,[fr],0
+,baseMapNode.altText.title,[en],0,[fr],0
+,baseMapNode.thumbnailUrl.title,[en],0,[fr],0
+,baseMapNode.tileSchemaId.title,[en],0,[fr],0
+,baseMapNode.layers.title,[en],0,[fr],0
+,baseMapNode.attribution.title,[en],0,[fr],0
+,baseMapNode.zoomLevels.title,[en],0,[fr],0
+,baseMapNode.zoomLevels.min.title,[en],0,[fr],0
+,baseMapNode.zoomLevels.max.title,[en],0,[fr],0
+,sideMenuNode.title,[en],0,[fr],0
+,sideMenuNode.logo.title,[en],0,[fr],0
+,sideMenuNode.items.title,[en],0,[fr],0
+,sideMenuButtons.title,[en],0,[fr],0
+,appBarNode.title,[en],0,[fr],0
+,appBarNode.sideMenu.title,[en],0,[fr],0
+,appBarNode.geoSearch.title,[en],0,[fr],0
+,appBarNode.basemap.title,[en],0,[fr],0
+,appBarNode.layers.title,[en],0,[fr],0
+,navBarNode.title,[en],0,[fr],0
+,navBarNode.zoom.title,[en],0,[fr],0
+,navBarNode.extra.title,[en],0,[fr],0
+,navBarButtons.title,[en],0,[fr],0
+,mapComponentsNode.title,[en],0,[fr],0
+,mapComponentsNode.geoSearch.title,[en],0,[fr],0
+,mapComponentsNode.geoSearch.enabled.title,[en],0,[fr],0
+,mapComponentsNode.geoSearch.showGraphic.title,[en],0,[fr],0
+,mapComponentsNode.geoSearch.showInfo.title,[en],0,[fr],0
+,mapComponentsNode.mouseInfo.title,[en],0,[fr],0
+,mapComponentsNode.mouseInfo.spatialReference.title,[en],0,[fr],0
+,mapComponentsNode.northArrow.title,[en],0,[fr],0
+,mapComponentsNode.overviewMap.title,[en],0,[fr],0
+,mapComponentsNode.overviewMap.enabled.title,[en],0,[fr],0
+,mapComponentsNode.overviewMap.expandFactor.title,[en],0,[fr],0
+,mapComponentsNode.scaleBar.title,[en],0,[fr],0
+,mapComponentsNode.basemap.title,[en],0,[fr],0
+,circular.title,[en],0,[fr],0
+,circular.circRef.title,[en],0,[fr],0
+,extentSetNode.spatialReference.description,"The projection for the given extents",1,[fr],0
+,extentSetNode.default.description,"The default (starting) extent.",1,[fr],0
+,extentSetNode.full.description,"The full extent (should give good view of the whole map, not necessarily the maximum extent); default will be used if not supplied.",1,[fr],0
+,extentSetNode.maximum.description,"The maximum extent; full or default extents will be used if not supplied.",1,[fr],0
+,symbolNode.label.description,"description",1,[fr],0
+,symbolNode.icon.description,"Graphical symbol as a URL (data URLs are encouraged for smaller symbols)",1,[fr],0
+,lodSetNode.lods.description,"Level of details for a specific tile schema",1,[fr],0
+,tileSchemaNode.id.description,"A unique id identifying a tile schema (combination of an extent set and a zoom scale)",1,[fr],0
+,tileSchemaNode.name.description,"The name to display in the basemap selector for the set of basemaps referencing this schema",1,[fr],0
+,tileSchemaNode.extentSetId.description,"The extent set to be used for this basemap (should reference map.extentSets.id)",1,[fr],0
+,tileSchemaNode.lodSetId.description,"Optional.  The level of details set to be used for this basemap (should reference map.lod.id)",1,[fr],0
+,tileSchemaNode.overviewUrl.description,"Optional. If set, the overview map will use this layer instead of the active basemap",1,[fr],0
+,exportComponent.description,"This is the initial configuration for an export component.",1,[fr],0
+,exportComponent.isSelected.description,"Indicates if the component is selected and included in the export graphic.",1,[fr],0
+,exportComponent.isSelectable.description,"Indicates if the component can be included or excluded from the export graphic by the user.",1,[fr],0
+,exportComponent.value.description,"Value to be passed to the generation function of this export component.",1,[fr],0
+,legendExportComponent.description,"This is the initial configuration for a legend export component.",1,[fr],0
+,legendExportComponent.isSelected.description,"Indicates if the component is selected and included in the export graphic.",1,[fr],0
+,legendExportComponent.isSelectable.description,"Indicates if the component can be included or excluded from the export graphic by the user.",1,[fr],0
+,legendExportComponent.value.description,"Value to be passed to the generation function of this export component.",1,[fr],0
+,legendExportComponent.showInfoSymbology.description,"Indicates whether symbology from info sections should be included in export legend",1,[fr],0
+,legendExportComponent.showControlledSymbology.description,"Indicates whether symbology from controlled layers should be included in export legend",1,[fr],0
+,attributionNode.text.value.description,"Optional. Contains the attribution value. If empty, it will use copyright text from the server.",1,[fr],0
+,attributionNode.logo.value.description,"URL for the image.",1,[fr],0
+,attributionNode.logo.link.description,"URL to go to when clicked.",1,[fr],0
+,legendGroupControls.description,"A list of all controls to be enabled on the specified group",1,[fr],0
+,legendEntryControls.description,"A list of all controls to be enabled on the specified layer",1,[fr],0
+,initialLayerSettings.opacity.description,"Initial opacity",1,[fr],0
+,initialLayerSettings.visibility.description,"Initial visibility setting",1,[fr],0
+,initialLayerSettings.boundingBox.description,"Display bounding box",1,[fr],0
+,initialLayerSettings.query.description,"Allow querying",1,[fr],0
+,initialLayerSettings.snapshot.description,"Retrieve all feature data immediately on load",1,[fr],0
+,initialLayerSettings.hovertips.description,"Disable hover tips",1,[fr],0
+,wmsLayerEntryNode.id.description,"The id of the layer entry in the WMS",1,[fr],0
+,wmsLayerEntryNode.name.description,"A descriptive name for the layer.  To be used in the legend.",1,[fr],0
+,wmsLayerEntryNode.allStyles.description,"All the styles for the layer entry in the WMS",1,[fr],0
+,wmsLayerEntryNode.currentStyle.description,"The current style for the layer entry in the WMS",1,[fr],0
+,dynamicLayerEntryNode.index.description,"The index of the layer in the map service.",1,[fr],0
+,dynamicLayerEntryNode.name.description,"A descriptive name for the layer, can override the name coming from the service.",1,[fr],0
+,dynamicLayerEntryNode.outfields.description,"A comma separated list of attribute names that should be requested on query.",1,[fr],0
+,dynamicLayerEntryNode.extent.description,"Allows for overriding the bounding box supplied by the service.",1,[fr],0
+,dynamicLayerEntryNode.stateOnly.description,"A flag indicating this entry is only for state tracking (i.e. it should not be displayed on the UI and all of the controls will be ignored, but the layer itself will be displayed on the map with the given state settings).",1,[fr],0
+,dynamicLayerEntryNode.table.description,"Settings for table panel",1,[fr],0
+,entryGroup.name.description,"Title of the group",1,[fr],0
+,entry.description,"",1,[fr],0
+,entry.layerId.description,"Link to a layer defined in the layers section",1,[fr],0
+,entry.hidden.description,"Indicates that the legend block will be hidden from the UI and all its controls will be inaccessible to the user.",1,[fr],0
+,entry.controlledIds.items.description,"Additional layer ids which are controlled by this layer",1,[fr],0
+,entry.entryIndex.description,"Index of the 'sublayer' in the case of an ESRI dynamic layer.  This cannot point to an entry with stateOnly:true .",1,[fr],0
+,entry.entryId.description,"Id of the 'sublayer' in the case of an OGC WMS layer",1,[fr],0
+,entry.coverIcon.description,"An optional icon, if present it will be used to primarily represent the layer",1,[fr],0
+,entry.description.description,"Optional description displayed above the symbology stack.",1,[fr],0
+,entry.symbologyRenderStyle.description,"An optional style, describes how the symbology stack should be rendered",1,[fr],0
+,tableNode.description,"Specifies how layers columns and global search are set",1,[fr],0
+,tableNode.title.description,"Specifies the table title to apply.",1,[fr],0
+,tableNode.description.description,"Specifies the additional information to display in the setting panel to give more information about a table.",1,[fr],0
+,tableNode.maximize.description,"Specifies the default table size when first open. True: maximize view; False: split view.",1,[fr],0
+,tableNode.search.value.description,"Specifies the default filter to apply to a table (for global search).",1,[fr],0
+,tableNode.applyMap.description,"Specifies if the default filters (from columns filter) are apply to the map (definition query). True: it is applied; False: it is not applied.",1,[fr],0
+,tableNode.columns.description,"Specifies the array of columns for the table. When there is an item in this array, it will be use to define wich and how column will be set for the table. If a column is not in the array it will be assume as disabled.",1,[fr],0
+,columnNode.description,"Specifies option for each column. OID field must be present, if not data will not appear. The order they appears inside the table is the same as the order of this array.",1,[fr],0
+,columnNode.data.description,"Specifies the field name (data) to use to link to the layer column. Must exist in the layer.",1,[fr],0
+,columnNode.title.description,"Specifies the column title, uses the layer column name or alias if missing.",1,[fr],0
+,columnNode.description.description,"Specifies the additional information to display in the setting panel to give more information about a column. Do not add description if missing.",1,[fr],0
+,columnNode.visible.description,"Specifies if column is visible by default. True: column is visible; False: column is hidden.",1,[fr],0
+,columnNode.width.description,"Specifies the column width. If missing, calculated column width will be use.",1,[fr],0
+,columnNode.sort.description,"Specifies if column is sort. If missing, no sort is applied.",1,[fr],0
+,columnNode.searchable.description,"Specifies if column can be filter. True: column can be filter; False: no filter can be applied from global search or filter. If this is false, do not set a filter because it will not be use.",1,[fr],0
+,filterNode.description,"Specifies the filter information for a column.",1,[fr],0
+,filterNode.type.description,"Specifies the filter type to use. If type is not specified, data field type will be use. String filter can be string or selector. Other filter must be the same type. If not, apply on map will fails.",1,[fr],0
+,filterNode.value.description,"Specifies the filter value. For date and number values are split by ',' (e.g. 0,100). For selector it needs an array like ["Fire", "Fatality"]",1,[fr],0
+,filterNode.static.description,"Specifies if filter is modifiable. True: filter value can't be modified; False: filter value can be modified.",1,[fr],0
+,basicLayer.id.description,"The id of the layer for referencing within the viewer (does not relate directly to any external service)",1,[fr],0
+,basicLayer.name.description,"The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",1,[fr],0
+,basicLayer.url.description,"The service endpoint of the layer.  It should match the type provided in layerType.",1,[fr],0
+,basicLayer.toggleSymbology.description,"Allows individual symbols to have visibility toggled on/off.",1,[fr],0
+,basicLayerNode.id.description,"The id of the layer for referencing within the viewer (does not relate directly to any external service)",1,[fr],0
+,basicLayerNode.name.description,"The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",1,[fr],0
+,basicLayerNode.url.description,"The service endpoint of the layer.  It should match the type provided in layerType.",1,[fr],0
+,basicLayerNode.metadataUrl.description,"The metadata url of the layer service",1,[fr],0
+,basicLayerNode.catalogueUrl.description,"The catalogue url of the layer service",1,[fr],0
+,basicLayerNode.disabledControls.description,"A list of controls which are blocked from modification either by the user or programmatically. These controls can be visible or not as defined in the `controls` array.",1,[fr],0
+,featureLayerNode.id.description,"The id of the layer for referencing within the viewer (does not relate directly to any external service)",1,[fr],0
+,featureLayerNode.name.description,"The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",1,[fr],0
+,featureLayerNode.nameField.description,"The display field of the layer.  If it is not present the viewer will make an attempt to scrape this information.",1,[fr],0
+,featureLayerNode.url.description,"The service endpoint of the layer.  It should match the type provided in layerType.",1,[fr],0
+,featureLayerNode.metadataUrl.description,"The metadata url of the layer service",1,[fr],0
+,featureLayerNode.catalogueUrl.description,"The catalogue url of the layer service",1,[fr],0
+,featureLayerNode.toggleSymbology.description,"Allows individual symbols to have visibility toggled on/off.",1,[fr],0
+,featureLayerNode.tolerance.description,"Specifies the tolerance in pixels when determining if a feature was clicked. Should be non-negative integer",1,[fr],0
+,featureLayerNode.disabledControls.description,"A list of controls which are visible, but disabled for user modification",1,[fr],0
+,featureLayerNode.table.description,"Settings for the table",1,[fr],0
+,wmsLayerNode.id.description,"The id of the layer for referencing within the viewer (does not relate directly to any external service)",1,[fr],0
+,wmsLayerNode.name.description,"The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",1,[fr],0
+,wmsLayerNode.url.description,"The service endpoint of the layer.  It should match the type provided in layerType.",1,[fr],0
+,wmsLayerNode.metadataUrl.description,"The metadata url of the layer service",1,[fr],0
+,wmsLayerNode.catalogueUrl.description,"The catalogue url of the layer service",1,[fr],0
+,wmsLayerNode.featureInfoMimeType.description,"If specified indicates that GetFeatureInfo should be enabled for this WMS and indicates the format that should be requested.",1,[fr],0
+,wmsLayerNode.legendMimeType.description,"If specified indicates that GetLegendGraphic should be enabled for this WMS and indicates the format that should be requested.  FIXME check legendUrl for additional requirements",1,[fr],0
+,wmsLayerNode.disabledControls.description,"A list of controls which are visible, but disabled for user modification",1,[fr],0
+,dynamicLayerNode.id.description,"The id of the layer for referencing within the viewer (does not relate directly to any external service)",1,[fr],0
+,dynamicLayerNode.name.description,"The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",1,[fr],0
+,dynamicLayerNode.url.description,"The service endpoint of the layer.  It should match the type provided in layerType.",1,[fr],0
+,dynamicLayerNode.metadataUrl.description,"The metadata url of the layer service",1,[fr],0
+,dynamicLayerNode.catalogueUrl.description,"The catalogue url of the layer service",1,[fr],0
+,dynamicLayerNode.toggleSymbology.description,"Allows individual symbols to have visibility toggled on/off.",1,[fr],0
+,dynamicLayerNode.singleEntryCollapse.description,"Indicates that the dynamic layer with a single layer entry should be rendered without the root group.",1,[fr],0
+,dynamicLayerNode.tolerance.description,"Specifies the tolerance in pixels when determining if a feature was clicked. Should be non-negative integer",1,[fr],0
+,dynamicLayerNode.disabledControls.description,"A list of controls which are visible, but disabled for user modification",1,[fr],0
+,baseMapNode.id.description,"A unique identifier for the basemap",1,[fr],0
+,baseMapNode.name.description,"Name of the basemap used for labeling",1,[fr],0
+,baseMapNode.description.description,"Description of the basemap. Will be visible when basemap selector is expanded.Description of the basemap. Will be visible when basemap selector is expanded.",1,[fr],0
+,baseMapNode.typeSummary.description,"Optional base map type. This is descriptive only, and will be shown in the basemap selector.",1,[fr],0
+,baseMapNode.altText.description,"Alt text for the basemap thumbnail image.Alt text for the basemap thumbnail image.",1,[fr],0
+,baseMapNode.thumbnailUrl.description,"Path to image file to display in the basemap selector.",1,[fr],0
+,baseMapNode.tileSchemaId.description,"The tile schema for this basemap (should reference map.tileSchemas.id)",1,[fr],0
+,baseMapNode.layers.description,"A set of URLs which should be composited to form a basemap entry",1,[fr],0
+,sideMenuNode.description,"Specifies which options are available in the left side menu.",1,[fr],0
+,sideMenuNode.logo.description,"Indicates if the logo should be shown in the left side menu.",1,[fr],0
+,appBarNode.sideMenu.description,"Shows the side menu button in the main app toolbar.",1,[fr],0
+,appBarNode.geoSearch.description,"Shows the geosearch button in the main app toolbar. The button will be hidden if geosearch component is disabled or no search service URLs are provided.",1,[fr],0
+,appBarNode.basemap.description,"Shows the basemap selector button in the main app toolbar.",1,[fr],0
+,appBarNode.layers.description,"Shows the layers button in the main app toolbar.",1,[fr],0
+,legendGroupControls.items.enum.opacity,opacity,1,[fr],0
+,legendGroupControls.items.enum.visibility,visibility,1,[fr],0
+,legendGroupControls.items.enum.symbology,symbology,1,[fr],0
+,legendGroupControls.items.enum.query,query,1,[fr],0
+,legendGroupControls.items.enum.reload,reload,1,[fr],0
+,legendGroupControls.items.enum.remove,remove,1,[fr],0
+,legendGroupControls.items.enum.settings,settings,1,[fr],0
+,legendEntryControls.items.enum.opacity,opacity,1,[fr],0
+,legendEntryControls.items.enum.visibility,visibility,1,[fr],0
+,legendEntryControls.items.enum.boundingBox,boundingBox,1,[fr],0
+,legendEntryControls.items.enum.query,query,1,[fr],0
+,legendEntryControls.items.enum.snapshot,snapshot,1,[fr],0
+,legendEntryControls.items.enum.metadata,metadata,1,[fr],0
+,legendEntryControls.items.enum.boundaryZoom,boundaryZoom,1,[fr],0
+,legendEntryControls.items.enum.refresh,refresh,1,[fr],0
+,legendEntryControls.items.enum.reload,reload,1,[fr],0
+,legendEntryControls.items.enum.remove,remove,1,[fr],0
+,legendEntryControls.items.enum.settings,settings,1,[fr],0
+,legendEntryControls.items.enum.data,data,1,[fr],0
+,legendEntryControls.items.enum.styles,styles,1,[fr],0
+,entry.symbologyRenderStyle.enum.icons,icons,1,[fr],0
+,entry.symbologyRenderStyle.enum.images,images,1,[fr],0
+,legendAuto.type.enum.autopopulate,autopopulate,1,[fr],0
+,legendStructured.type.enum.structured,structured,1,[fr],0
+,columnNode.sort.enum.asc,asc,1,[fr],0
+,columnNode.sort.enum.desc,desc,1,[fr],0
+,filterNode.type.enum.string,string,1,[fr],0
+,filterNode.type.enum.number,number,1,[fr],0
+,filterNode.type.enum.date,date,1,[fr],0
+,filterNode.type.enum.selector,selector,1,[fr],0
+,basicLayer.layerType.enum.esriDynamic,esriDynamic,1,[fr],0
+,basicLayer.layerType.enum.esriFeature,esriFeature,1,[fr],0
+,basicLayer.layerType.enum.esriImage,esriImage,1,[fr],0
+,basicLayer.layerType.enum.esriTile,esriTile,1,[fr],0
+,basicLayer.layerType.enum.ogcWms,ogcWms,1,[fr],0
+,basicLayerNode.layerType.enum.esriImage,esriImage,1,[fr],0
+,basicLayerNode.layerType.enum.esriTile,esriTile,1,[fr],0
+,featureLayerNode.layerType.enum.esriFeature,esriFeature,1,[fr],0
+,wmsLayerNode.layerType.enum.ogcWms,ogcWms,1,[fr],0
+,wmsLayerNode.featureInfoMimeType.enum.text/html;fgpv=summary,text/html;fgpv=summary,1,[fr],0
+,wmsLayerNode.featureInfoMimeType.enum.text/html,text/html,1,[fr],0
+,wmsLayerNode.featureInfoMimeType.enum.text/plain,text/plain,1,[fr],0
+,wmsLayerNode.featureInfoMimeType.enum.application/json,application/json,1,[fr],0
+,wmsLayerNode.legendMimeType.enum.image/png,image/png,1,[fr],0
+,wmsLayerNode.legendMimeType.enum.image/gif,image/gif,1,[fr],0
+,wmsLayerNode.legendMimeType.enum.image/jpeg,image/jpeg,1,[fr],0
+,wmsLayerNode.legendMimeType.enum.image/svg,image/svg,1,[fr],0
+,wmsLayerNode.legendMimeType.enum.image/svg+xml,image/svg+xml,1,[fr],0
+,dynamicLayerNode.layerType.enum.esriDynamic,esriDynamic,1,[fr],0
+,sideMenuButtons.items.enum.layers,layers,1,[fr],0
+,sideMenuButtons.items.enum.basemap,basemap,1,[fr],0
+,sideMenuButtons.items.enum.geoSearch,geoSearch,1,[fr],0
+,sideMenuButtons.items.enum.about,about,1,[fr],0
+,sideMenuButtons.items.enum.fullscreen,fullscreen,1,[fr],0
+,sideMenuButtons.items.enum.export,export,1,[fr],0
+,sideMenuButtons.items.enum.share,share,1,[fr],0
+,sideMenuButtons.items.enum.touch,touch,1,[fr],0
+,sideMenuButtons.items.enum.help,help,1,[fr],0
+,sideMenuButtons.items.enum.language,language,1,[fr],0
+,sideMenuButtons.items.enum.plugins,plugins,1,[fr],0
+,navBarNode.zoom.enum.all,all,1,[fr],0
+,navBarNode.zoom.enum.buttons,buttons,1,[fr],0
+,navBarNode.zoom.enum.slider,slider,1,[fr],0
+,navBarButtons.items.enum.geoLocator,geoLocator,1,[fr],0
+,navBarButtons.items.enum.marquee,marquee,1,[fr],0
+,navBarButtons.items.enum.home,home,1,[fr],0
+,navBarButtons.items.enum.history,history,1,[fr],0
+,navBarButtons.items.enum.basemap,basemap,1,[fr],0
+,navBarButtons.items.enum.help,help,1,[fr],0
+,navBarButtons.items.enum.fullscreen,fullscreen,1,[fr],0
+,navBarButtons.items.enum.geoSearch,geoSearch,1,[fr],0
+,navBarButtons.items.enum.sideMenu,sideMenu,1,[fr],0
+,navBarButtons.items.enum.layers,layers,1,[fr],0
 ,version.title,[en],0,[fr],0
 ,language.title,[en],0,[fr],0
 ,ui.title,[en],0,[fr],0
@@ -103,218 +538,6 @@
 ,map.baseMaps.title,[en],0,[fr],0
 ,map.layers.title,[en],0,[fr],0
 ,map.legend.title,[en],0,[fr],0
-,version.help,[en],0,[fr],0
-,language.help,[en],0,[fr],0
-,ui.help,[en],0,[fr],0
-,ui.fullscreen.help,[en],0,[fr],0
-,ui.theme.help,[en],0,[fr],0
-,ui.logoUrl.help,[en],0,[fr],0
-,ui.failureFeedback.help,[en],0,[fr],0
-,ui.title.help,[en],0,[fr],0
-,ui.appBar.help,[en],0,[fr],0
-,ui.appBar.sideMenu.help,[en],0,[fr],0
-,ui.appBar.geoSearch.help,[en],0,[fr],0
-,ui.appBar.basemap.help,[en],0,[fr],0
-,ui.appBar.layers.help,[en],0,[fr],0
-,ui.navBar.help,[en],0,[fr],0
-,ui.navBar.zoom.help,[en],0,[fr],0
-,ui.navBar.extra.help,[en],0,[fr],0
-,ui.sideMenu.help,[en],0,[fr],0
-,ui.sideMenu.logo.help,[en],0,[fr],0
-,ui.sideMenu.items.help,[en],0,[fr],0
-,ui.restrictNavigation.help,[en],0,[fr],0
-,ui.about.help,[en],0,[fr],0
-,ui.help.help,[en],0,[fr],0
-,ui.help.folderName.help,[en],0,[fr],0
-,ui.legend.help,[en],0,[fr],0
-,ui.legend.reorderable.help,[en],0,[fr],0
-,ui.legend.allowImport.help,[en],0,[fr],0
-,ui.legend.isOpen.help,[en],0,[fr],0
-,ui.legend.isOpen.large.help,[en],0,[fr],0
-,ui.legend.isOpen.medium.help,[en],0,[fr],0
-,ui.legend.isOpen.small.help,[en],0,[fr],0
-,ui.tableIsOpen.help,[en],0,[fr],0
-,ui.tableIsOpen.id.help,[en],0,[fr],0
-,ui.tableIsOpen.large.help,[en],0,[fr],0
-,ui.tableIsOpen.medium.help,[en],0,[fr],0
-,ui.tableIsOpen.small.help,[en],0,[fr],0
-,ui.widgetsWidget.help,[en],0,[fr],0
-,services.help,[en],0,[fr],0
-,services.proxyUrl.help,[en],0,[fr],0
-,services.exportMapUrl.help,[en],0,[fr],0
-,services.geometryUrl.help,[en],0,[fr],0
-,services.googleAPIKey.help,[en],0,[fr],0
-,services.geolocation.help,[en],0,[fr],0
-,services.coordInfo.help,[en],0,[fr],0
-,services.print.help,[en],0,[fr],0
-,services.search.help,[en],0,[fr],0
-,services.search.disabledSearches.help,[en],0,[fr],0
-,services.search.serviceUrls.help,[en],0,[fr],0
-,services.search.serviceUrls.geoNames.help,[en],0,[fr],0
-,services.search.serviceUrls.geoLocation.help,[en],0,[fr],0
-,services.search.serviceUrls.geoSuggest.help,[en],0,[fr],0
-,services.search.serviceUrls.provinces.help,[en],0,[fr],0
-,services.search.serviceUrls.types.help,[en],0,[fr],0
-,services.export.help,[en],0,[fr],0
-,services.export.title.help,[en],0,[fr],0
-,services.export.title.isSelected.help,[en],0,[fr],0
-,services.export.title.isSelectable.help,[en],0,[fr],0
-,services.export.title.value.help,[en],0,[fr],0
-,services.export.map.help,[en],0,[fr],0
-,services.export.map.isSelected.help,[en],0,[fr],0
-,services.export.map.isSelectable.help,[en],0,[fr],0
-,services.export.map.value.help,[en],0,[fr],0
-,services.export.mapElements.help,[en],0,[fr],0
-,services.export.mapElements.isSelected.help,[en],0,[fr],0
-,services.export.mapElements.isSelectable.help,[en],0,[fr],0
-,services.export.mapElements.value.help,[en],0,[fr],0
-,services.export.legend.help,[en],0,[fr],0
-,services.export.legend.isSelected.help,[en],0,[fr],0
-,services.export.legend.isSelectable.help,[en],0,[fr],0
-,services.export.legend.value.help,[en],0,[fr],0
-,services.export.legend.showInfoSymbology.help,[en],0,[fr],0
-,services.export.legend.showControlledSymbology.help,[en],0,[fr],0
-,services.export.footnote.help,[en],0,[fr],0
-,services.export.footnote.isSelected.help,[en],0,[fr],0
-,services.export.footnote.isSelectable.help,[en],0,[fr],0
-,services.export.footnote.value.help,[en],0,[fr],0
-,services.export.timestamp.help,[en],0,[fr],0
-,services.export.timestamp.isSelected.help,[en],0,[fr],0
-,services.export.timestamp.isSelectable.help,[en],0,[fr],0
-,services.export.timestamp.value.help,[en],0,[fr],0
-,map.help,[en],0,[fr],0
-,map.extentSets.help,[en],0,[fr],0
-,map.lodSets.help,[en],0,[fr],0
-,map.tileSchemas.help,[en],0,[fr],0
-,map.components.help,[en],0,[fr],0
-,map.components.geoSearch.help,[en],0,[fr],0
-,map.components.geoSearch.enabled.help,[en],0,[fr],0
-,map.components.geoSearch.showGraphic.help,[en],0,[fr],0
-,map.components.geoSearch.showInfo.help,[en],0,[fr],0
-,map.components.mouseInfo.help,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.help,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.wkid.help,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.vcsWkid.help,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.latestWkid.help,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.latestVcsWkid.help,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.wkt.help,[en],0,[fr],0
-,map.components.northArrow.help,[en],0,[fr],0
-,map.components.overviewMap.help,[en],0,[fr],0
-,map.components.overviewMap.enabled.help,[en],0,[fr],0
-,map.components.overviewMap.expandFactor.help,[en],0,[fr],0
-,map.components.scaleBar.help,[en],0,[fr],0
-,map.components.basemap.help,[en],0,[fr],0
-,map.initialBasemapId.help,[en],0,[fr],0
-,map.baseMaps.help,[en],0,[fr],0
-,map.layers.help,[en],0,[fr],0
-,map.legend.help,[en],0,[fr],0
-,version.default,[en],0,[fr],0
-,language.default,[en],0,[fr],0
-,ui.default,[en],0,[fr],0
-,ui.fullscreen.default,false,1,[fr],0
-,ui.theme.default,default,1,[fr],0
-,ui.logoUrl.default,[en],0,[fr],0
-,ui.failureFeedback.default,[en],0,[fr],0
-,ui.title.default,[en],0,[fr],0
-,ui.appBar.default.sideMenu,true,1,[fr],0
-,ui.appBar.default.geoSearch,true,1,[fr],0
-,ui.appBar.default.layers,true,1,[fr],0
-,ui.appBar.sideMenu.default,true,1,[fr],0
-,ui.appBar.geoSearch.default,true,1,[fr],0
-,ui.appBar.basemap.default,true,1,[fr],0
-,ui.appBar.layers.default,true,1,[fr],0
-,ui.navBar.default,[en],0,[fr],0
-,ui.navBar.zoom.default,buttons,1,[fr],0
-,ui.navBar.extra.default,"[fullscreen,geoLocator,home,help]",1,[fr],0
-,ui.sideMenu.default,[en],0,[fr],0
-,ui.sideMenu.logo.default,true,1,[fr],0
-,ui.sideMenu.items.default,"[[layers,basemap],[fullscreen,export,share,touch,help,about],[language],[plugins]]",1,[fr],0
-,ui.restrictNavigation.default,false,1,[fr],0
-,ui.about.default,[en],0,[fr],0
-,ui.help.default,[en],0,[fr],0
-,ui.help.folderName.default,[en],0,[fr],0
-,ui.legend.default,[en],0,[fr],0
-,ui.legend.reorderable.default,true,1,[fr],0
-,ui.legend.allowImport.default,true,1,[fr],0
-,ui.legend.isOpen.default,[en],0,[fr],0
-,ui.legend.isOpen.large.default,false,1,[fr],0
-,ui.legend.isOpen.medium.default,false,1,[fr],0
-,ui.legend.isOpen.small.default,false,1,[fr],0
-,ui.tableIsOpen.default,[en],0,[fr],0
-,ui.tableIsOpen.id.default,[en],0,[fr],0
-,ui.tableIsOpen.large.default,false,1,[fr],0
-,ui.tableIsOpen.medium.default,false,1,[fr],0
-,ui.tableIsOpen.small.default,false,1,[fr],0
-,ui.widgetsWidget.default,[en],0,[fr],0
-,services.default,[en],0,[fr],0
-,services.proxyUrl.default,[en],0,[fr],0
-,services.exportMapUrl.default,[en],0,[fr],0
-,services.geometryUrl.default,[en],0,[fr],0
-,services.googleAPIKey.default,[en],0,[fr],0
-,services.geolocation.default,[en],0,[fr],0
-,services.coordInfo.default,[en],0,[fr],0
-,services.print.default,[en],0,[fr],0
-,services.search.default,[en],0,[fr],0
-,services.search.disabledSearches.default,[en],0,[fr],0
-,services.search.serviceUrls.default,[en],0,[fr],0
-,services.search.serviceUrls.geoNames.default,[en],0,[fr],0
-,services.search.serviceUrls.geoLocation.default,[en],0,[fr],0
-,services.search.serviceUrls.geoSuggest.default,[en],0,[fr],0
-,services.search.serviceUrls.provinces.default,[en],0,[fr],0
-,services.search.serviceUrls.types.default,[en],0,[fr],0
-,services.export.default,[en],0,[fr],0
-,services.export.title.default,[en],0,[fr],0
-,services.export.title.isSelected.default,true,1,[fr],0
-,services.export.title.isSelectable.default,true,1,[fr],0
-,services.export.title.value.default,[en],0,[fr],0
-,services.export.map.default,[en],0,[fr],0
-,services.export.map.isSelected.default,services.export.title.isSelected.default,1,[fr],0
-,services.export.map.isSelectable.default,services.export.title.isSelectable.default,1,[fr],0
-,services.export.map.value.default,services.export.title.value.default,1,[fr],0
-,services.export.mapElements.default,[en],0,[fr],0
-,services.export.mapElements.isSelected.default,services.export.map.isSelected.default,1,[fr],0
-,services.export.mapElements.isSelectable.default,services.export.map.isSelectable.default,1,[fr],0
-,services.export.mapElements.value.default,services.export.map.value.default,1,[fr],0
-,services.export.legend.default,[en],0,[fr],0
-,services.export.legend.isSelected.default,true,1,[fr],0
-,services.export.legend.isSelectable.default,true,1,[fr],0
-,services.export.legend.value.default,[en],0,[fr],0
-,services.export.legend.showInfoSymbology.default,false,1,[fr],0
-,services.export.legend.showControlledSymbology.default,false,1,[fr],0
-,services.export.footnote.default,[en],0,[fr],0
-,services.export.footnote.isSelected.default,services.export.mapElements.isSelected.default,1,[fr],0
-,services.export.footnote.isSelectable.default,services.export.mapElements.isSelectable.default,1,[fr],0
-,services.export.footnote.value.default,services.export.mapElements.value.default,1,[fr],0
-,services.export.timestamp.default,[en],0,[fr],0
-,services.export.timestamp.isSelected.default,services.export.footnote.isSelected.default,1,[fr],0
-,services.export.timestamp.isSelectable.default,services.export.footnote.isSelectable.default,1,[fr],0
-,services.export.timestamp.value.default,services.export.footnote.value.default,1,[fr],0
-,map.default,[en],0,[fr],0
-,map.extentSets.default,[en],0,[fr],0
-,map.lodSets.default,[en],0,[fr],0
-,map.tileSchemas.default,[en],0,[fr],0
-,map.components.default,[en],0,[fr],0
-,map.components.geoSearch.default,[en],0,[fr],0
-,map.components.geoSearch.enabled.default,[en],0,[fr],0
-,map.components.geoSearch.showGraphic.default,[en],0,[fr],0
-,map.components.geoSearch.showInfo.default,[en],0,[fr],0
-,map.components.mouseInfo.default,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.default,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.wkid.default,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.vcsWkid.default,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.latestWkid.default,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.latestVcsWkid.default,[en],0,[fr],0
-,map.components.mouseInfo.spatialReference.wkt.default,[en],0,[fr],0
-,map.components.northArrow.default,[en],0,[fr],0
-,map.components.overviewMap.default,[en],0,[fr],0
-,map.components.overviewMap.enabled.default,[en],0,[fr],0
-,map.components.overviewMap.expandFactor.default,2,1,[fr],0
-,map.components.scaleBar.default,[en],0,[fr],0
-,map.components.basemap.default,[en],0,[fr],0
-,map.initialBasemapId.default,[en],0,[fr],0
-,map.baseMaps.default,[en],0,[fr],0
-,map.layers.default,[en],0,[fr],0
-,map.legend.default,[en],0,[fr],0
 ,version.description,"The schema version used to validate the configuration file.  The schema should enumerate the list of versions accepted by this version of the viewer.",1,[fr],0
 ,language.description,"ISO 639-1 code indicating the language of strings in the schema file",1,[fr],0
 ,ui.description,"A set of service endpoints used by the viewer",1,[fr],0
@@ -325,12 +548,12 @@
 ,ui.failureFeedback.failureImageUrl.description,"An optional image to be used in place of the failure Image",1,[fr],0
 ,ui.title.description,"An optional title to be used in the place of the default viewer title",1,[fr],0
 ,ui.appBar.description,"Provides configuration to the main app toolbar. If not supplied, the all default appbar controls are displayed. To completely hide the toolbar, provide the following: { sideMenu: false, geoSearch: false, layers: false }.",1,[fr],0
-,ui.appBar.sideMenu.description,"Shows the side menu button in the main app toolbar.",1,[fr],0
-,ui.appBar.geoSearch.description,"Shows the geosearch button in the main app toolbar. The button will be hidden if geosearch component is disabled or no search service URLs are provided.",1,[fr],0
-,ui.appBar.basemap.description,"Shows the basemap selector button in the main app toolbar.",1,[fr],0
-,ui.appBar.layers.description,"Shows the layers button in the main app toolbar.",1,[fr],0
-,ui.sideMenu.description,"Specifies which options are available in the left side menu.",1,[fr],0
-,ui.sideMenu.logo.description,"Indicates if the logo should be shown in the left side menu.",1,[fr],0
+,ui.appBar.sideMenu.description,"appBarNode.sideMenu.description",1,[fr],0
+,ui.appBar.geoSearch.description,"appBarNode.geoSearch.description",1,[fr],0
+,ui.appBar.basemap.description,"appBarNode.basemap.description",1,[fr],0
+,ui.appBar.layers.description,"appBarNode.layers.description",1,[fr],0
+,ui.sideMenu.description,"sideMenuNode.description",1,[fr],0
+,ui.sideMenu.logo.description,"sideMenuNode.logo.description",1,[fr],0
 ,ui.restrictNavigation.description,"Will restrict the user from panning beyond the maximum extent.",1,[fr],0
 ,ui.about.description,"About properties from configuration file or Markdown folder",1,[fr],0
 ,ui.help.description,"Help properties",1,[fr],0
@@ -365,9 +588,9 @@
 ,services.search.serviceUrls.types.description,"Endpoint url for types service",1,[fr],0
 ,services.export.description,"Export properties",1,[fr],0
 ,services.export.title.description,"Title of the export graphic.",1,[fr],0
-,services.export.title.isSelected.description,"Indicates if the component is selected and included in the export graphic.",1,[fr],0
-,services.export.title.isSelectable.description,"Indicates if the component can be included or excluded from the export graphic by the user.",1,[fr],0
-,services.export.title.value.description,"Value to be passed to the generation function of this export component.",1,[fr],0
+,services.export.title.isSelected.description,"exportComponent.isSelected.description",1,[fr],0
+,services.export.title.isSelectable.description,"exportComponent.isSelectable.description",1,[fr],0
+,services.export.title.value.description,"exportComponent.value.description",1,[fr],0
 ,services.export.map.description,"Map component.",1,[fr],0
 ,services.export.map.isSelected.description,"services.export.title.isSelected.description",1,[fr],0
 ,services.export.map.isSelectable.description,"services.export.title.isSelectable.description",1,[fr],0
@@ -377,11 +600,11 @@
 ,services.export.mapElements.isSelectable.description,"services.export.map.isSelectable.description",1,[fr],0
 ,services.export.mapElements.value.description,"services.export.map.value.description",1,[fr],0
 ,services.export.legend.description,"Legend component.",1,[fr],0
-,services.export.legend.isSelected.description,"Indicates if the component is selected and included in the export graphic.",1,[fr],0
-,services.export.legend.isSelectable.description,"Indicates if the component can be included or excluded from the export graphic by the user.",1,[fr],0
-,services.export.legend.value.description,"Value to be passed to the generation function of this export component.",1,[fr],0
-,services.export.legend.showInfoSymbology.description,"Indicates whether symbology from info sections should be included in export legend",1,[fr],0
-,services.export.legend.showControlledSymbology.description,"Indicates whether symbology from controlled layers should be included in export legend",1,[fr],0
+,services.export.legend.isSelected.description,"legendExportComponent.isSelected.description",1,[fr],0
+,services.export.legend.isSelectable.description,"legendExportComponent.isSelectable.description",1,[fr],0
+,services.export.legend.value.description,"legendExportComponent.value.description",1,[fr],0
+,services.export.legend.showInfoSymbology.description,"legendExportComponent.showInfoSymbology.description",1,[fr],0
+,services.export.legend.showControlledSymbology.description,"legendExportComponent.showControlledSymbology.description",1,[fr],0
 ,services.export.footnote.description,"Foot notice to add to exported map",1,[fr],0
 ,services.export.footnote.isSelected.description,"services.export.mapElements.isSelected.description",1,[fr],0
 ,services.export.footnote.isSelectable.description,"services.export.mapElements.isSelectable.description",1,[fr],0
@@ -392,44 +615,44 @@
 ,services.export.timestamp.value.description,"services.export.footnote.value.description",1,[fr],0
 ,map.description,"Core map properties (extent sets, levels of detail)",1,[fr],0
 ,map.extentSets.description,"The default, full and maximum extents of the map",1,[fr],0
-,map.extentSets.items.spatialReference.description,"The projection for the given extents",1,[fr],0
-,map.extentSets.items.default.description,"The default (starting) extent.",1,[fr],0
-,map.extentSets.items.full.description,"The full extent (should give good view of the whole map, not necessarily the maximum extent); default will be used if not supplied.",1,[fr],0
-,map.extentSets.items.maximum.description,"The maximum extent; full or default extents will be used if not supplied.",1,[fr],0
+,map.extentSets.items.spatialReference.description,"extentSetNode.spatialReference.description",1,[fr],0
+,map.extentSets.items.default.description,"extentSetNode.default.description",1,[fr],0
+,map.extentSets.items.full.description,"extentSetNode.full.description",1,[fr],0
+,map.extentSets.items.maximum.description,"extentSetNode.maximum.description",1,[fr],0
 ,map.lodSets.description,"The levels of detail (zoom scales) available for the map",1,[fr],0
-,map.lodSets.items.lods.description,"Level of details for a specific tile schema",1,[fr],0
+,map.lodSets.items.lods.description,"lodSetNode.lods.description",1,[fr],0
 ,map.tileSchemas.description,"A unique combination of an LoD and an extent set (each basemap must fit into a tile schema)",1,[fr],0
-,map.tileSchemas.items.id.description,"A unique id identifying a tile schema (combination of an extent set and a zoom scale)",1,[fr],0
-,map.tileSchemas.items.name.description,"The name to display in the basemap selector for the set of basemaps referencing this schema",1,[fr],0
-,map.tileSchemas.items.extentSetId.description,"The extent set to be used for this basemap (should reference map.extentSets.id)",1,[fr],0
-,map.tileSchemas.items.lodSetId.description,"Optional.  The level of details set to be used for this basemap (should reference map.lod.id)",1,[fr],0
-,map.tileSchemas.items.overviewUrl.description,"Optional. If set, the overview map will use this layer instead of the active basemap",1,[fr],0
-,map.tileSchemas.items.overviewUrl.id.description,"The id of the layer for referencing within the viewer (does not relate directly to any external service)",1,[fr],0
-,map.tileSchemas.items.overviewUrl.name.description,"The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",1,[fr],0
-,map.tileSchemas.items.overviewUrl.url.description,"The service endpoint of the layer.  It should match the type provided in layerType.",1,[fr],0
-,map.tileSchemas.items.overviewUrl.metadataUrl.description,"The metadata url of the layer service",1,[fr],0
-,map.tileSchemas.items.overviewUrl.catalogueUrl.description,"The catalogue url of the layer service",1,[fr],0
-,map.tileSchemas.items.overviewUrl.controls.description,"A list of all controls to be enabled on the specified layer",1,[fr],0
-,map.tileSchemas.items.overviewUrl.disabledControls.description,"A list of controls which are blocked from modification either by the user or programmatically. These controls can be visible or not as defined in the `controls` array.",1,[fr],0
-,map.tileSchemas.items.overviewUrl.state.opacity.description,"Initial opacity",1,[fr],0
-,map.tileSchemas.items.overviewUrl.state.visibility.description,"Initial visibility setting",1,[fr],0
-,map.tileSchemas.items.overviewUrl.state.boundingBox.description,"Display bounding box",1,[fr],0
-,map.tileSchemas.items.overviewUrl.state.query.description,"Allow querying",1,[fr],0
-,map.tileSchemas.items.overviewUrl.state.snapshot.description,"Retrieve all feature data immediately on load",1,[fr],0
-,map.tileSchemas.items.overviewUrl.state.hovertips.description,"Disable hover tips",1,[fr],0
+,map.tileSchemas.items.id.description,"tileSchemaNode.id.description",1,[fr],0
+,map.tileSchemas.items.name.description,"tileSchemaNode.name.description",1,[fr],0
+,map.tileSchemas.items.extentSetId.description,"tileSchemaNode.extentSetId.description",1,[fr],0
+,map.tileSchemas.items.lodSetId.description,"tileSchemaNode.lodSetId.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.description,"tileSchemaNode.overviewUrl.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.id.description,"basicLayerNode.id.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.name.description,"basicLayerNode.name.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.url.description,"basicLayerNode.url.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.metadataUrl.description,"basicLayerNode.metadataUrl.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.catalogueUrl.description,"basicLayerNode.catalogueUrl.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.controls.description,"legendEntryControls.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.disabledControls.description,"basicLayerNode.disabledControls.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.state.opacity.description,"initialLayerSettings.opacity.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.state.visibility.description,"initialLayerSettings.visibility.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.state.boundingBox.description,"initialLayerSettings.boundingBox.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.state.query.description,"initialLayerSettings.query.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.state.snapshot.description,"initialLayerSettings.snapshot.description",1,[fr],0
+,map.tileSchemas.items.overviewUrl.state.hovertips.description,"initialLayerSettings.hovertips.description",1,[fr],0
 ,map.initialBasemapId.description,"Initial basemap to load. If not supplied viewer will select any basemap.",1,[fr],0
 ,map.baseMaps.description,"A list of basemaps to be made available via the basemap selector.",1,[fr],0
-,map.baseMaps.items.id.description,"A unique identifier for the basemap",1,[fr],0
-,map.baseMaps.items.name.description,"Name of the basemap used for labeling",1,[fr],0
-,map.baseMaps.items.description.description,"Description of the basemap. Will be visible when basemap selector is expanded.Description of the basemap. Will be visible when basemap selector is expanded.",1,[fr],0
-,map.baseMaps.items.typeSummary.description,"Optional base map type. This is descriptive only, and will be shown in the basemap selector.",1,[fr],0
-,map.baseMaps.items.altText.description,"Alt text for the basemap thumbnail image.Alt text for the basemap thumbnail image.",1,[fr],0
-,map.baseMaps.items.thumbnailUrl.description,"Path to image file to display in the basemap selector.",1,[fr],0
-,map.baseMaps.items.tileSchemaId.description,"The tile schema for this basemap (should reference map.tileSchemas.id)",1,[fr],0
-,map.baseMaps.items.layers.description,"A set of URLs which should be composited to form a basemap entry",1,[fr],0
-,map.baseMaps.items.attribution.text.value.description,"Optional. Contains the attribution value. If empty, it will use copyright text from the server.",1,[fr],0
-,map.baseMaps.items.attribution.logo.value.description,"URL for the image.",1,[fr],0
-,map.baseMaps.items.attribution.logo.link.description,"URL to go to when clicked.",1,[fr],0
+,map.baseMaps.items.id.description,"baseMapNode.id.description",1,[fr],0
+,map.baseMaps.items.name.description,"baseMapNode.name.description",1,[fr],0
+,map.baseMaps.items.description.description,"baseMapNode.description.description",1,[fr],0
+,map.baseMaps.items.typeSummary.description,"baseMapNode.typeSummary.description",1,[fr],0
+,map.baseMaps.items.altText.description,"baseMapNode.altText.description",1,[fr],0
+,map.baseMaps.items.thumbnailUrl.description,"baseMapNode.thumbnailUrl.description",1,[fr],0
+,map.baseMaps.items.tileSchemaId.description,"baseMapNode.tileSchemaId.description",1,[fr],0
+,map.baseMaps.items.layers.description,"baseMapNode.layers.description",1,[fr],0
+,map.baseMaps.items.attribution.text.value.description,"attributionNode.text.value.description",1,[fr],0
+,map.baseMaps.items.attribution.logo.value.description,"attributionNode.logo.value.description",1,[fr],0
+,map.baseMaps.items.attribution.logo.link.description,"attributionNode.logo.link.description",1,[fr],0
 ,map.layers.description,"Layer list in the order which they should be added to the map.  NOTE: ESRI JSAPI v3 cannot draw imagery layers over feature layers.",1,[fr],0
 ,map.legend.description,"A structured or automatically generated legend",1,[fr],0
 ,version.enum.2.0,2.0,1,[fr],0
@@ -437,19 +660,19 @@
 ,language.enum.fr,fr,1,[fr],0
 ,language.enum.es,es,1,[fr],0
 ,ui.theme.enum.default,default,1,[fr],0
-,ui.navBar.zoom.enum.all,all,1,[fr],0
-,ui.navBar.zoom.enum.buttons,buttons,1,[fr],0
-,ui.navBar.zoom.enum.slider,slider,1,[fr],0
-,ui.navBar.extra.items.enum.geoLocator,geoLocator,1,[fr],0
-,ui.navBar.extra.items.enum.marquee,marquee,1,[fr],0
-,ui.navBar.extra.items.enum.home,home,1,[fr],0
-,ui.navBar.extra.items.enum.history,history,1,[fr],0
-,ui.navBar.extra.items.enum.basemap,basemap,1,[fr],0
-,ui.navBar.extra.items.enum.help,help,1,[fr],0
-,ui.navBar.extra.items.enum.fullscreen,fullscreen,1,[fr],0
-,ui.navBar.extra.items.enum.geoSearch,geoSearch,1,[fr],0
-,ui.navBar.extra.items.enum.sideMenu,sideMenu,1,[fr],0
-,ui.navBar.extra.items.enum.layers,layers,1,[fr],0
+,ui.navBar.zoom.enum.navBarNode.zoom.enum.all,navBarNode.zoom.enum.all,1,[fr],0
+,ui.navBar.zoom.enum.navBarNode.zoom.enum.buttons,navBarNode.zoom.enum.buttons,1,[fr],0
+,ui.navBar.zoom.enum.navBarNode.zoom.enum.slider,navBarNode.zoom.enum.slider,1,[fr],0
+,ui.navBar.extra.items.enum.navBarButtons.items.enum.geoLocator,navBarButtons.items.enum.geoLocator,1,[fr],0
+,ui.navBar.extra.items.enum.navBarButtons.items.enum.marquee,navBarButtons.items.enum.marquee,1,[fr],0
+,ui.navBar.extra.items.enum.navBarButtons.items.enum.home,navBarButtons.items.enum.home,1,[fr],0
+,ui.navBar.extra.items.enum.navBarButtons.items.enum.history,navBarButtons.items.enum.history,1,[fr],0
+,ui.navBar.extra.items.enum.navBarButtons.items.enum.basemap,navBarButtons.items.enum.basemap,1,[fr],0
+,ui.navBar.extra.items.enum.navBarButtons.items.enum.help,navBarButtons.items.enum.help,1,[fr],0
+,ui.navBar.extra.items.enum.navBarButtons.items.enum.fullscreen,navBarButtons.items.enum.fullscreen,1,[fr],0
+,ui.navBar.extra.items.enum.navBarButtons.items.enum.geoSearch,navBarButtons.items.enum.geoSearch,1,[fr],0
+,ui.navBar.extra.items.enum.navBarButtons.items.enum.sideMenu,navBarButtons.items.enum.sideMenu,1,[fr],0
+,ui.navBar.extra.items.enum.navBarButtons.items.enum.layers,navBarButtons.items.enum.layers,1,[fr],0
 ,services.search.disabledSearches.items.enum.NTS,NTS,1,[fr],0
 ,services.search.disabledSearches.items.enum.FSA,FSA,1,[fr],0
 ,services.search.disabledSearches.items.enum.LAT/LNG,LAT/LNG,1,[fr],0

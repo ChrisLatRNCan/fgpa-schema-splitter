@@ -4,27 +4,23 @@
   "properties": {
     "fullscreen": {
       "type": "boolean",
-      "default": "[fr]",
+      "default": false,
       "description": "[fr]",
-      "title": "Plein écran",
-      "help": "[fr]"
+      "title": "[fr]"
     },
     "theme": {
       "type": "string",
       "enum": [
         "[fr]"
       ],
-      "default": "[fr]",
+      "default": "default",
       "description": "[fr]",
-      "title": "Thème",
-      "help": "[fr]"
+      "title": "[fr]"
     },
     "logoUrl": {
       "type": "string",
       "description": "[fr]",
-      "title": "URL du logo",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "failureFeedback": {
       "failureMessage": {
@@ -35,58 +31,50 @@
         "type": "string",
         "description": "[fr]"
       },
-      "title": "Rétroaction concernant la défaillance",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "title": {
       "type": "string",
       "description": "[fr]",
-      "title": "Titre",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "appBar": {
       "default": {
-        "sideMenu": "[fr]",
-        "geoSearch": "[fr]",
-        "layers": "[fr]"
+        "sideMenu": true,
+        "geoSearch": true,
+        "layers": true
       },
       "description": "[fr]",
       "type": "object",
       "properties": {
         "sideMenu": {
           "type": "boolean",
-          "default": "[fr]",
+          "default": true,
           "description": "[fr]",
-          "title": "Menu latéral",
-          "help": "[fr]"
+          "title": "[fr]"
         },
         "geoSearch": {
           "type": "boolean",
-          "default": "[fr]",
+          "default": true,
           "description": "[fr]",
-          "title": "Recherche géospatiale",
-          "help": "[fr]"
+          "title": "[fr]"
         },
         "basemap": {
           "type": "boolean",
-          "default": "[fr]",
+          "default": true,
           "description": "[fr]",
-          "title": "Carte de base",
-          "help": "[fr]"
+          "title": "[fr]"
         },
         "layers": {
           "type": "boolean",
-          "default": "[fr]",
+          "default": true,
           "description": "[fr]",
-          "title": "Couches",
-          "help": "[fr]"
+          "title": "[fr]"
         }
       },
       "additionalProperties": false,
-      "title": "Barre d'applications",
-      "help": "[fr]"
+      "schema": "appBarNode",
+      "title": "[fr]"
     },
     "navBar": {
       "type": "object",
@@ -98,12 +86,17 @@
             "[fr]",
             "[fr]"
           ],
-          "default": "[fr]",
-          "title": "Zoom",
-          "help": "[fr]"
+          "default": "buttons",
+          "title": "[fr]"
         },
         "extra": {
-          "default": "[fr]",
+          "default": [
+            "fullscreen",
+            "geoLocator",
+            "home",
+            "help"
+          ],
+          "title": "[fr]",
           "type": "array",
           "uniqueItems": true,
           "items": {
@@ -121,27 +114,24 @@
               "[fr]"
             ]
           },
-          "title": "Suppléments",
-          "help": "[fr]"
+          "schema": "navBarButtons"
         }
       },
       "required": [
         "zoom"
       ],
       "additionalProperties": false,
-      "title": "Barre de navigation",
-      "help": "[fr]",
-      "default": "[fr]"
+      "schema": "navBarNode",
+      "title": "[fr]"
     },
     "sideMenu": {
       "type": "object",
       "properties": {
         "logo": {
           "type": "boolean",
-          "default": "[fr]",
+          "default": true,
           "description": "[fr]",
-          "title": "logo",
-          "help": "[fr]"
+          "title": "[fr]"
         },
         "items": {
           "type": "array",
@@ -151,37 +141,55 @@
             "items": {
               "type": "string",
               "enum": [
-                "layers",
-                "basemap",
-                "geoSearch",
-                "about",
-                "fullscreen",
-                "export",
-                "share",
-                "touch",
-                "help",
-                "language",
-                "plugins"
+                "[fr]",
+                "[fr]",
+                "[fr]",
+                "[fr]",
+                "[fr]",
+                "[fr]",
+                "[fr]",
+                "[fr]",
+                "[fr]",
+                "[fr]",
+                "[fr]"
               ]
-            }
+            },
+            "schema": "sideMenuButtons",
+            "title": "[fr]"
           },
-          "default": "[fr]",
-          "title": "Éléments",
-          "help": "[fr]"
+          "default": [
+            [
+              "layers",
+              "basemap"
+            ],
+            [
+              "fullscreen",
+              "export",
+              "share",
+              "touch",
+              "help",
+              "about"
+            ],
+            [
+              "language"
+            ],
+            [
+              "plugins"
+            ]
+          ],
+          "title": "[fr]"
         }
       },
       "additionalProperties": false,
       "description": "[fr]",
-      "title": "Menu latéral",
-      "help": "[fr]",
-      "default": "[fr]"
+      "schema": "sideMenuNode",
+      "title": "[fr]"
     },
     "restrictNavigation": {
       "type": "boolean",
-      "default": "[fr]",
+      "default": false,
       "description": "[fr]",
-      "title": "Restreindre la navigation",
-      "help": "[fr]"
+      "title": "[fr]"
     },
     "about": {
       "description": "[fr]",
@@ -211,9 +219,7 @@
           "additionalProperties": false
         }
       ],
-      "title": "À propos",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "help": {
       "type": "object",
@@ -222,35 +228,29 @@
         "folderName": {
           "type": "string",
           "description": "[fr]",
-          "title": "Nom du dossier",
-          "help": "[fr]",
-          "default": "[fr]"
+          "title": "[fr]"
         }
       },
       "required": [
         "folderName"
       ],
       "additionalProperties": false,
-      "title": "Aide",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "legend": {
       "type": "object",
       "properties": {
         "reorderable": {
           "type": "boolean",
-          "default": "[fr]",
+          "default": true,
           "description": "[fr]",
-          "title": "Réordonnable",
-          "help": "[fr]"
+          "title": "[fr]"
         },
         "allowImport": {
           "type": "boolean",
-          "default": "[fr]",
+          "default": true,
           "description": "[fr]",
-          "title": "Permettre l'importation",
-          "help": "[fr]"
+          "title": "[fr]"
         },
         "isOpen": {
           "type": "object",
@@ -258,36 +258,29 @@
           "properties": {
             "large": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": false,
               "description": "[fr]",
-              "title": "Étendu",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "medium": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": false,
               "description": "[fr]",
-              "title": "Moyen",
-              "help": "[fr]"
+              "title": "[fr]"
             },
             "small": {
               "type": "boolean",
-              "default": "[fr]",
+              "default": false,
               "description": "[fr]",
-              "title": "Restreint",
-              "help": "[fr]"
+              "title": "[fr]"
             }
           },
           "additionalProperties": false,
-          "title": "Ouverture de la légende",
-          "help": "[fr]",
-          "default": "[fr]"
+          "title": "[fr]"
         }
       },
       "additionalProperties": false,
-      "title": "Légende",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "tableIsOpen": {
       "type": "object",
@@ -296,51 +289,40 @@
         "id": {
           "type": "string",
           "description": "[fr]",
-          "title": "ID",
-          "help": "[fr]",
-          "default": "[fr]"
+          "title": "[fr]"
         },
         "large": {
           "type": "boolean",
-          "default": "[fr]",
+          "default": false,
           "description": "[fr]",
-          "title": "Étende",
-          "help": "[fr]"
+          "title": "[fr]"
         },
         "medium": {
           "type": "boolean",
-          "default": "[fr]",
+          "default": false,
           "description": "[fr]",
-          "title": "Moyenne",
-          "help": "[fr]"
+          "title": "[fr]"
         },
         "small": {
           "type": "boolean",
-          "default": "[fr]",
+          "default": false,
           "description": "[fr]",
-          "title": "Restreinte",
-          "help": "[fr]"
+          "title": "[fr]"
         }
       },
       "additionalProperties": false,
       "required": [
         "id"
       ],
-      "title": "Ouverture de la table",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     },
     "widgetsWidget": {
       "type": "object",
       "additionalProperties": true,
       "description": "[fr]",
-      "title": "Widget",
-      "help": "[fr]",
-      "default": "[fr]"
+      "title": "[fr]"
     }
   },
   "schema": "ui",
-  "title": "Interface utilisateur",
-  "help": "[fr]",
-  "default": "[fr]"
+  "title": "[fr]"
 }

@@ -5,7 +5,5 @@
   ],
   "description": "[fr]",
   "schema": "version",
-  "title": "Version",
-  "help": "[fr]",
-  "default": "[fr]"
+  "title": "[fr]"
 }
