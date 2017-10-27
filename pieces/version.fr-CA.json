@@ -1,9 +1,9 @@
 {
   "type": "string",
   "enum": [
-    "[fr]"
+    ""
   ],
-  "description": "[fr]",
+  "description": "",
   "schema": "version",
-  "title": "[fr]"
+  "title": ""
 }

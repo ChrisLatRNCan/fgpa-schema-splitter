@@ -1,11 +1,11 @@
 {
   "type": "string",
   "enum": [
-    "[fr]",
-    "[fr]",
-    "[fr]"
+    "",
+    "",
+    ""
   ],
-  "description": "[fr]",
+  "description": "",
   "schema": "language",
-  "title": "[fr]"
+  "title": ""
 }

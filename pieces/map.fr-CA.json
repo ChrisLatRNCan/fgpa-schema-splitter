@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "description": "[fr]",
+  "description": "",
   "properties": {
     "extentSets": {
       "type": "array",
@@ -9,32 +9,32 @@
         "properties": {
           "id": {
             "type": "string",
-            "title": "[fr]"
+            "title": ""
           },
           "spatialReference": {
-            "description": "[fr]",
-            "title": "[fr]",
+            "description": "",
+            "title": "",
             "type": "object",
             "properties": {
               "wkid": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "vcsWkid": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "latestWkid": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "latestVcsWkid": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "wkt": {
                 "type": "string",
-                "title": "[fr]"
+                "title": ""
               }
             },
             "anyOf": [
@@ -64,29 +64,28 @@
                 ]
               }
             ],
-            "additionalProperties": false,
-            "schema": "spatialReferenceNode"
+            "additionalProperties": false
           },
           "default": {
-            "description": "[fr]",
-            "title": "[fr]",
+            "description": "",
+            "title": "",
             "type": "object",
             "properties": {
               "xmin": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "ymin": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "xmax": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "ymax": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               }
             },
             "required": [
@@ -95,29 +94,28 @@
               "xmax",
               "ymax"
             ],
-            "additionalProperties": false,
-            "schema": "extentNode"
+            "additionalProperties": false
           },
           "full": {
-            "description": "[fr]",
-            "title": "[fr]",
+            "description": "",
+            "title": "",
             "type": "object",
             "properties": {
               "xmin": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "ymin": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "xmax": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "ymax": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               }
             },
             "required": [
@@ -126,29 +124,28 @@
               "xmax",
               "ymax"
             ],
-            "additionalProperties": false,
-            "schema": "extentNode"
+            "additionalProperties": false
           },
           "maximum": {
-            "description": "[fr]",
-            "title": "[fr]",
+            "description": "",
+            "title": "",
             "type": "object",
             "properties": {
               "xmin": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "ymin": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "xmax": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "ymax": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               }
             },
             "required": [
@@ -157,8 +154,7 @@
               "xmax",
               "ymax"
             ],
-            "additionalProperties": false,
-            "schema": "extentNode"
+            "additionalProperties": false
           }
         },
         "required": [
@@ -167,11 +163,10 @@
           "spatialReference"
         ],
         "additionalProperties": false,
-        "schema": "extentSetNode",
-        "title": "[fr]"
+        "title": ""
       },
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     },
     "lodSets": {
       "type": "array",
@@ -180,7 +175,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "title": "[fr]"
+            "title": ""
           },
           "lods": {
             "type": "array",
@@ -204,8 +199,8 @@
               ],
               "additionalProperties": false
             },
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           }
         },
         "required": [
@@ -213,11 +208,10 @@
           "lods"
         ],
         "additionalProperties": false,
-        "schema": "lodSetNode",
-        "title": "[fr]"
+        "title": ""
       },
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     },
     "tileSchemas": {
       "type": "array",
@@ -226,107 +220,107 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           },
           "name": {
             "type": "string",
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           },
           "extentSetId": {
             "type": "string",
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           },
           "lodSetId": {
             "type": "string",
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           },
           "overviewUrl": {
-            "description": "[fr]",
-            "title": "[fr]",
+            "description": "",
+            "title": "",
             "type": "object",
             "properties": {
               "id": {
                 "type": "string",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "name": {
                 "type": "string",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "url": {
                 "type": "string",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "metadataUrl": {
                 "type": "string",
                 "default": null,
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "catalogueUrl": {
                 "type": "string",
                 "default": null,
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "layerType": {
                 "type": "string",
                 "enum": [
-                  "[fr]",
-                  "[fr]"
+                  "",
+                  ""
                 ],
-                "title": "[fr]"
+                "title": ""
               },
               "extent": {
-                "title": "[fr]",
+                "title": "",
                 "type": "object",
                 "properties": {
                   "xmin": {
                     "type": "number",
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "ymin": {
                     "type": "number",
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "xmax": {
                     "type": "number",
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "ymax": {
                     "type": "number",
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "spatialReference": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "object",
                     "properties": {
                       "wkid": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "vcsWkid": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "latestWkid": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "latestVcsWkid": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "wkt": {
                         "type": "string",
-                        "title": "[fr]"
+                        "title": ""
                       }
                     },
                     "anyOf": [
@@ -356,8 +350,7 @@
                         ]
                       }
                     ],
-                    "additionalProperties": false,
-                    "schema": "spatialReferenceNode"
+                    "additionalProperties": false
                   }
                 },
                 "required": [
@@ -366,102 +359,98 @@
                   "xmax",
                   "ymax"
                 ],
-                "additionalProperties": false,
-                "schema": "extentWithReferenceNode"
+                "additionalProperties": false
               },
               "controls": {
-                "title": "[fr]",
+                "title": "",
                 "type": "array",
                 "items": {
                   "type": "string",
                   "enum": [
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]"
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
                   ]
                 },
                 "uniqueItems": true,
-                "description": "[fr]",
-                "schema": "legendEntryControls"
+                "description": ""
               },
               "disabledControls": {
-                "description": "[fr]",
-                "title": "[fr]",
+                "description": "",
+                "title": "",
                 "type": "array",
                 "items": {
                   "type": "string",
                   "enum": [
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]",
-                    "[fr]"
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
                   ]
                 },
-                "uniqueItems": true,
-                "schema": "legendEntryControls"
+                "uniqueItems": true
               },
               "state": {
-                "title": "[fr]",
+                "title": "",
                 "type": "object",
                 "properties": {
                   "opacity": {
                     "type": "number",
                     "default": 1,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "visibility": {
                     "type": "boolean",
                     "default": true,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "boundingBox": {
                     "type": "boolean",
                     "default": false,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "query": {
                     "type": "boolean",
                     "default": true,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "snapshot": {
                     "type": "boolean",
                     "default": false,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "hovertips": {
                     "type": "boolean",
                     "default": true,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   }
                 },
-                "additionalProperties": false,
-                "schema": "initialLayerSettings"
+                "additionalProperties": false
               }
             },
             "required": [
@@ -469,8 +458,7 @@
               "layerType",
               "url"
             ],
-            "additionalProperties": false,
-            "schema": "basicLayerNode"
+            "additionalProperties": false
           }
         },
         "required": [
@@ -480,12 +468,11 @@
           "name"
         ],
         "additionalProperties": false,
-        "schema": "tileSchemaNode",
-        "title": "[fr]"
+        "title": ""
       },
       "minItems": 1,
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     },
     "components": {
       "type": "object",
@@ -495,45 +482,45 @@
           "properties": {
             "enabled": {
               "type": "boolean",
-              "title": "[fr]"
+              "title": ""
             },
             "showGraphic": {
               "type": "boolean",
-              "title": "[fr]"
+              "title": ""
             },
             "showInfo": {
               "type": "boolean",
-              "title": "[fr]"
+              "title": ""
             }
           },
-          "title": "[fr]"
+          "title": ""
         },
         "mouseInfo": {
           "type": "object",
           "properties": {
             "spatialReference": {
-              "title": "[fr]",
+              "title": "",
               "type": "object",
               "properties": {
                 "wkid": {
                   "type": "number",
-                  "title": "[fr]"
+                  "title": ""
                 },
                 "vcsWkid": {
                   "type": "number",
-                  "title": "[fr]"
+                  "title": ""
                 },
                 "latestWkid": {
                   "type": "number",
-                  "title": "[fr]"
+                  "title": ""
                 },
                 "latestVcsWkid": {
                   "type": "number",
-                  "title": "[fr]"
+                  "title": ""
                 },
                 "wkt": {
                   "type": "string",
-                  "title": "[fr]"
+                  "title": ""
                 }
               },
               "anyOf": [
@@ -563,48 +550,46 @@
                   ]
                 }
               ],
-              "additionalProperties": false,
-              "schema": "spatialReferenceNode"
+              "additionalProperties": false
             }
           },
-          "title": "[fr]"
+          "title": ""
         },
         "northArrow": {
           "type": "object",
-          "title": "[fr]"
+          "title": ""
         },
         "overviewMap": {
           "type": "object",
           "properties": {
             "enabled": {
               "type": "boolean",
-              "title": "[fr]"
+              "title": ""
             },
             "expandFactor": {
               "type": "number",
               "default": 2,
-              "title": "[fr]"
+              "title": ""
             }
           },
-          "title": "[fr]"
+          "title": ""
         },
         "scaleBar": {
           "type": "object",
-          "title": "[fr]"
+          "title": ""
         },
         "basemap": {
           "type": "object",
-          "title": "[fr]"
+          "title": ""
         }
       },
       "additionalProperties": false,
-      "schema": "mapComponentsNode",
-      "title": "[fr]"
+      "title": ""
     },
     "initialBasemapId": {
       "type": "string",
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     },
     "baseMaps": {
       "type": "array",
@@ -613,38 +598,38 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           },
           "name": {
             "type": "string",
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           },
           "description": {
             "type": "string",
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           },
           "typeSummary": {
             "type": "string",
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           },
           "altText": {
             "type": "string",
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           },
           "thumbnailUrl": {
             "type": "string",
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           },
           "tileSchemaId": {
             "type": "string",
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           },
           "layers": {
             "type": "array",
@@ -672,11 +657,11 @@
               ]
             },
             "minItems": 1,
-            "description": "[fr]",
-            "title": "[fr]"
+            "description": "",
+            "title": ""
           },
           "attribution": {
-            "title": "[fr]",
+            "title": "",
             "type": "object",
             "properties": {
               "text": {
@@ -685,19 +670,19 @@
                   "enabled": {
                     "type": "boolean",
                     "default": true,
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "value": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   }
                 },
                 "required": [
                   "enabled"
                 ],
                 "additionalProperties": false,
-                "title": "[fr]"
+                "title": ""
               },
               "logo": {
                 "type": "object",
@@ -705,48 +690,47 @@
                   "enabled": {
                     "type": "boolean",
                     "default": true,
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "value": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "link": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   }
                 },
                 "required": [
                   "enabled"
                 ],
                 "additionalProperties": false,
-                "title": "[fr]"
+                "title": ""
               }
             },
             "required": [
               "text",
               "logo"
             ],
-            "additionalProperties": false,
-            "schema": "attributionNode"
+            "additionalProperties": false
           },
           "zoomLevels": {
             "type": "object",
             "properties": {
               "min": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               },
               "max": {
                 "type": "number",
-                "title": "[fr]"
+                "title": ""
               }
             },
             "default": {},
             "additionalProperties": false,
-            "title": "[fr]"
+            "title": ""
           }
         },
         "required": [
@@ -758,15 +742,14 @@
           "tileSchemaId"
         ],
         "additionalProperties": false,
-        "schema": "baseMapNode",
-        "title": "[fr]"
+        "title": ""
       },
       "minItems": 1,
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     },
     "layers": {
-      "description": "[fr]",
+      "description": "",
       "type": "array",
       "items": {
         "oneOf": [
@@ -777,82 +760,82 @@
                 "properties": {
                   "id": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "name": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "url": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "metadataUrl": {
                     "type": "string",
                     "default": null,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "catalogueUrl": {
                     "type": "string",
                     "default": null,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "layerType": {
                     "type": "string",
                     "enum": [
-                      "[fr]",
-                      "[fr]"
+                      "",
+                      ""
                     ],
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "extent": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "object",
                     "properties": {
                       "xmin": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "ymin": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "xmax": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "ymax": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "spatialReference": {
-                        "title": "[fr]",
+                        "title": "",
                         "type": "object",
                         "properties": {
                           "wkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "vcsWkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "latestWkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "latestVcsWkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "wkt": {
                             "type": "string",
-                            "title": "[fr]"
+                            "title": ""
                           }
                         },
                         "anyOf": [
@@ -882,8 +865,7 @@
                             ]
                           }
                         ],
-                        "additionalProperties": false,
-                        "schema": "spatialReferenceNode"
+                        "additionalProperties": false
                       }
                     },
                     "required": [
@@ -892,102 +874,98 @@
                       "xmax",
                       "ymax"
                     ],
-                    "additionalProperties": false,
-                    "schema": "extentWithReferenceNode"
+                    "additionalProperties": false
                   },
                   "controls": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "array",
                     "items": {
                       "type": "string",
                       "enum": [
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]"
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
                       ]
                     },
                     "uniqueItems": true,
-                    "description": "[fr]",
-                    "schema": "legendEntryControls"
+                    "description": ""
                   },
                   "disabledControls": {
-                    "description": "[fr]",
-                    "title": "[fr]",
+                    "description": "",
+                    "title": "",
                     "type": "array",
                     "items": {
                       "type": "string",
                       "enum": [
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]"
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
                       ]
                     },
-                    "uniqueItems": true,
-                    "schema": "legendEntryControls"
+                    "uniqueItems": true
                   },
                   "state": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "object",
                     "properties": {
                       "opacity": {
                         "type": "number",
                         "default": 1,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "visibility": {
                         "type": "boolean",
                         "default": true,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "boundingBox": {
                         "type": "boolean",
                         "default": false,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "query": {
                         "type": "boolean",
                         "default": true,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "snapshot": {
                         "type": "boolean",
                         "default": false,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "hovertips": {
                         "type": "boolean",
                         "default": true,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       }
                     },
-                    "additionalProperties": false,
-                    "schema": "initialLayerSettings"
+                    "additionalProperties": false
                   }
                 },
                 "required": [
@@ -996,106 +974,105 @@
                   "url"
                 ],
                 "additionalProperties": false,
-                "schema": "basicLayerNode",
-                "title": "[fr]"
+                "title": ""
               },
               {
                 "type": "object",
                 "properties": {
                   "id": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "name": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "nameField": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "url": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "metadataUrl": {
                     "type": "string",
                     "default": null,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "catalogueUrl": {
                     "type": "string",
                     "default": null,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "layerType": {
                     "type": "string",
                     "enum": [
-                      "[fr]"
+                      ""
                     ],
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "toggleSymbology": {
                     "type": "boolean",
                     "default": true,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "tolerance": {
                     "type": "number",
                     "default": 5,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "extent": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "object",
                     "properties": {
                       "xmin": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "ymin": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "xmax": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "ymax": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "spatialReference": {
-                        "title": "[fr]",
+                        "title": "",
                         "type": "object",
                         "properties": {
                           "wkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "vcsWkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "latestWkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "latestVcsWkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "wkt": {
                             "type": "string",
-                            "title": "[fr]"
+                            "title": ""
                           }
                         },
                         "anyOf": [
@@ -1125,8 +1102,7 @@
                             ]
                           }
                         ],
-                        "additionalProperties": false,
-                        "schema": "spatialReferenceNode"
+                        "additionalProperties": false
                       }
                     },
                     "required": [
@@ -1135,124 +1111,120 @@
                       "xmax",
                       "ymax"
                     ],
-                    "additionalProperties": false,
-                    "schema": "extentWithReferenceNode"
+                    "additionalProperties": false
                   },
                   "controls": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "array",
                     "items": {
                       "type": "string",
                       "enum": [
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]"
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
                       ]
                     },
                     "uniqueItems": true,
-                    "description": "[fr]",
-                    "schema": "legendEntryControls"
+                    "description": ""
                   },
                   "disabledControls": {
-                    "description": "[fr]",
-                    "title": "[fr]",
+                    "description": "",
+                    "title": "",
                     "type": "array",
                     "items": {
                       "type": "string",
                       "enum": [
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]"
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
                       ]
                     },
-                    "uniqueItems": true,
-                    "schema": "legendEntryControls"
+                    "uniqueItems": true
                   },
                   "state": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "object",
                     "properties": {
                       "opacity": {
                         "type": "number",
                         "default": 1,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "visibility": {
                         "type": "boolean",
                         "default": true,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "boundingBox": {
                         "type": "boolean",
                         "default": false,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "query": {
                         "type": "boolean",
                         "default": true,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "snapshot": {
                         "type": "boolean",
                         "default": false,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "hovertips": {
                         "type": "boolean",
                         "default": true,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       }
                     },
-                    "additionalProperties": false,
-                    "schema": "initialLayerSettings"
+                    "additionalProperties": false
                   },
                   "table": {
-                    "description": "[fr]",
-                    "title": "[fr]",
+                    "description": "",
+                    "title": "",
                     "type": "object",
                     "properties": {
                       "title": {
                         "type": "string",
                         "default": "",
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "description": {
                         "type": "string",
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "maximize": {
                         "type": "boolean",
                         "default": false,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "search": {
                         "enabled": {
@@ -1262,15 +1234,15 @@
                         "value": {
                           "type": "string",
                           "default": null,
-                          "description": "[fr]"
+                          "description": ""
                         },
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "applyMap": {
                         "type": "boolean",
                         "default": false,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "columns": {
                         "type": "array",
@@ -1279,95 +1251,92 @@
                           "properties": {
                             "data": {
                               "type": "string",
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "title": {
                               "type": "string",
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "description": {
                               "type": "string",
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "visible": {
                               "type": "boolean",
                               "default": true,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "width": {
                               "type": "number",
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "sort": {
                               "type": "string",
                               "enum": [
-                                "[fr]",
-                                "[fr]"
+                                "",
+                                ""
                               ],
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "searchable": {
                               "type": "boolean",
                               "default": true,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "filter": {
-                              "title": "[fr]",
+                              "title": "",
                               "type": "object",
-                              "description": "[fr]",
+                              "description": "",
                               "properties": {
                                 "type": {
                                   "type": "string",
                                   "enum": [
-                                    "[fr]",
-                                    "[fr]",
-                                    "[fr]",
-                                    "[fr]"
+                                    "",
+                                    "",
+                                    "",
+                                    ""
                                   ],
-                                  "description": "[fr]",
-                                  "title": "[fr]"
+                                  "description": "",
+                                  "title": ""
                                 },
                                 "value": {
                                   "type": "string",
                                   "default": "",
                                   "description": "1",
-                                  "title": "[fr]"
+                                  "title": ""
                                 },
                                 "static": {
                                   "type": "boolean",
                                   "default": false,
-                                  "description": "[fr]",
-                                  "title": "[fr]"
+                                  "description": "",
+                                  "title": ""
                                 }
                               },
                               "required": [
                                 "type"
                               ],
-                              "additionalProperties": false,
-                              "schema": "filterNode"
+                              "additionalProperties": false
                             }
                           },
                           "required": [
                             "data"
                           ],
                           "additionalProperties": false,
-                          "description": "[fr]",
-                          "schema": "columnNode",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       }
                     },
-                    "additionalProperties": false,
-                    "schema": "tableNode"
+                    "additionalProperties": false
                   }
                 },
                 "required": [
@@ -1376,38 +1345,37 @@
                   "url"
                 ],
                 "additionalProperties": false,
-                "schema": "featureLayerNode",
-                "title": "[fr]"
+                "title": ""
               },
               {
                 "type": "object",
                 "properties": {
                   "id": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "name": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "url": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "metadataUrl": {
                     "type": "string",
                     "default": null,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "catalogueUrl": {
                     "type": "string",
                     "default": null,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "layerEntries": {
                     "type": "array",
@@ -1416,180 +1384,177 @@
                       "properties": {
                         "id": {
                           "type": "string",
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "name": {
                           "type": "string",
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "allStyles": {
                           "type": "array",
                           "items": {
                             "type": "string"
                           },
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "currentStyle": {
                           "type": "string",
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "controls": {
-                          "title": "[fr]",
+                          "title": "",
                           "type": "array",
                           "items": {
                             "type": "string",
                             "enum": [
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]"
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              ""
                             ]
                           },
                           "uniqueItems": true,
-                          "description": "[fr]",
-                          "schema": "legendEntryControls"
+                          "description": ""
                         },
                         "state": {
-                          "title": "[fr]",
+                          "title": "",
                           "type": "object",
                           "properties": {
                             "opacity": {
                               "type": "number",
                               "default": 1,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "visibility": {
                               "type": "boolean",
                               "default": true,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "boundingBox": {
                               "type": "boolean",
                               "default": false,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "query": {
                               "type": "boolean",
                               "default": true,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "snapshot": {
                               "type": "boolean",
                               "default": false,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "hovertips": {
                               "type": "boolean",
                               "default": true,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             }
                           },
-                          "additionalProperties": false,
-                          "schema": "initialLayerSettings"
+                          "additionalProperties": false
                         }
                       },
                       "required": [
                         "id"
                       ],
                       "additionalProperties": false,
-                      "schema": "wmsLayerEntryNode",
-                      "title": "[fr]"
+                      "title": ""
                     },
                     "minItems": 1,
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "layerType": {
                     "type": "string",
                     "enum": [
-                      "[fr]"
+                      ""
                     ],
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "featureInfoMimeType": {
                     "type": "string",
                     "enum": [
-                      "[fr]",
-                      "[fr]",
-                      "[fr]",
-                      "[fr]"
+                      "",
+                      "",
+                      "",
+                      ""
                     ],
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "legendMimeType": {
                     "type": "string",
                     "enum": [
-                      "[fr]",
-                      "[fr]",
-                      "[fr]",
-                      "[fr]",
-                      "[fr]"xml"
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""xml"
                     ],
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "extent": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "object",
                     "properties": {
                       "xmin": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "ymin": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "xmax": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "ymax": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "spatialReference": {
-                        "title": "[fr]",
+                        "title": "",
                         "type": "object",
                         "properties": {
                           "wkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "vcsWkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "latestWkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "latestVcsWkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "wkt": {
                             "type": "string",
-                            "title": "[fr]"
+                            "title": ""
                           }
                         },
                         "anyOf": [
@@ -1619,8 +1584,7 @@
                             ]
                           }
                         ],
-                        "additionalProperties": false,
-                        "schema": "spatialReferenceNode"
+                        "additionalProperties": false
                       }
                     },
                     "required": [
@@ -1629,102 +1593,98 @@
                       "xmax",
                       "ymax"
                     ],
-                    "additionalProperties": false,
-                    "schema": "extentWithReferenceNode"
+                    "additionalProperties": false
                   },
                   "controls": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "array",
                     "items": {
                       "type": "string",
                       "enum": [
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]"
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
                       ]
                     },
                     "uniqueItems": true,
-                    "description": "[fr]",
-                    "schema": "legendEntryControls"
+                    "description": ""
                   },
                   "disabledControls": {
-                    "description": "[fr]",
-                    "title": "[fr]",
+                    "description": "",
+                    "title": "",
                     "type": "array",
                     "items": {
                       "type": "string",
                       "enum": [
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]"
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
                       ]
                     },
-                    "uniqueItems": true,
-                    "schema": "legendEntryControls"
+                    "uniqueItems": true
                   },
                   "state": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "object",
                     "properties": {
                       "opacity": {
                         "type": "number",
                         "default": 1,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "visibility": {
                         "type": "boolean",
                         "default": true,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "boundingBox": {
                         "type": "boolean",
                         "default": false,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "query": {
                         "type": "boolean",
                         "default": true,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "snapshot": {
                         "type": "boolean",
                         "default": false,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "hovertips": {
                         "type": "boolean",
                         "default": true,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       }
                     },
-                    "additionalProperties": false,
-                    "schema": "initialLayerSettings"
+                    "additionalProperties": false
                   }
                 },
                 "required": [
@@ -1734,57 +1694,56 @@
                   "url"
                 ],
                 "additionalProperties": false,
-                "schema": "wmsLayerNode",
-                "title": "[fr]"
+                "title": ""
               },
               {
                 "type": "object",
                 "properties": {
                   "id": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "name": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "url": {
                     "type": "string",
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "metadataUrl": {
                     "type": "string",
                     "default": null,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "catalogueUrl": {
                     "type": "string",
                     "default": null,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "layerType": {
                     "type": "string",
                     "enum": [
-                      "[fr]"
+                      ""
                     ],
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "toggleSymbology": {
                     "type": "boolean",
                     "default": true,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "singleEntryCollapse": {
                     "type": "boolean",
                     "default": false,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "layerEntries": {
                     "type": "array",
@@ -1793,64 +1752,64 @@
                       "properties": {
                         "index": {
                           "type": "number",
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "name": {
                           "type": "string",
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "outfields": {
                           "type": "string",
                           "default": "*",
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "extent": {
-                          "description": "[fr]",
-                          "title": "[fr]",
+                          "description": "",
+                          "title": "",
                           "type": "object",
                           "properties": {
                             "xmin": {
                               "type": "number",
-                              "title": "[fr]"
+                              "title": ""
                             },
                             "ymin": {
                               "type": "number",
-                              "title": "[fr]"
+                              "title": ""
                             },
                             "xmax": {
                               "type": "number",
-                              "title": "[fr]"
+                              "title": ""
                             },
                             "ymax": {
                               "type": "number",
-                              "title": "[fr]"
+                              "title": ""
                             },
                             "spatialReference": {
-                              "title": "[fr]",
+                              "title": "",
                               "type": "object",
                               "properties": {
                                 "wkid": {
                                   "type": "number",
-                                  "title": "[fr]"
+                                  "title": ""
                                 },
                                 "vcsWkid": {
                                   "type": "number",
-                                  "title": "[fr]"
+                                  "title": ""
                                 },
                                 "latestWkid": {
                                   "type": "number",
-                                  "title": "[fr]"
+                                  "title": ""
                                 },
                                 "latestVcsWkid": {
                                   "type": "number",
-                                  "title": "[fr]"
+                                  "title": ""
                                 },
                                 "wkt": {
                                   "type": "string",
-                                  "title": "[fr]"
+                                  "title": ""
                                 }
                               },
                               "anyOf": [
@@ -1880,8 +1839,7 @@
                                   ]
                                 }
                               ],
-                              "additionalProperties": false,
-                              "schema": "spatialReferenceNode"
+                              "additionalProperties": false
                             }
                           },
                           "required": [
@@ -1890,105 +1848,102 @@
                             "xmax",
                             "ymax"
                           ],
-                          "additionalProperties": false,
-                          "schema": "extentWithReferenceNode"
+                          "additionalProperties": false
                         },
                         "controls": {
-                          "title": "[fr]",
+                          "title": "",
                           "type": "array",
                           "items": {
                             "type": "string",
                             "enum": [
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]",
-                              "[fr]"
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              "",
+                              ""
                             ]
                           },
                           "uniqueItems": true,
-                          "description": "[fr]",
-                          "schema": "legendEntryControls"
+                          "description": ""
                         },
                         "state": {
-                          "title": "[fr]",
+                          "title": "",
                           "type": "object",
                           "properties": {
                             "opacity": {
                               "type": "number",
                               "default": 1,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "visibility": {
                               "type": "boolean",
                               "default": true,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "boundingBox": {
                               "type": "boolean",
                               "default": false,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "query": {
                               "type": "boolean",
                               "default": true,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "snapshot": {
                               "type": "boolean",
                               "default": false,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "hovertips": {
                               "type": "boolean",
                               "default": true,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             }
                           },
-                          "additionalProperties": false,
-                          "schema": "initialLayerSettings"
+                          "additionalProperties": false
                         },
                         "stateOnly": {
                           "type": "boolean",
                           "default": false,
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "table": {
-                          "description": "[fr]",
-                          "title": "[fr]",
+                          "description": "",
+                          "title": "",
                           "type": "object",
                           "properties": {
                             "title": {
                               "type": "string",
                               "default": "",
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "description": {
                               "type": "string",
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "maximize": {
                               "type": "boolean",
                               "default": false,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "search": {
                               "enabled": {
@@ -1998,15 +1953,15 @@
                               "value": {
                                 "type": "string",
                                 "default": null,
-                                "description": "[fr]"
+                                "description": ""
                               },
-                              "title": "[fr]"
+                              "title": ""
                             },
                             "applyMap": {
                               "type": "boolean",
                               "default": false,
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             },
                             "columns": {
                               "type": "array",
@@ -2015,156 +1970,152 @@
                                 "properties": {
                                   "data": {
                                     "type": "string",
-                                    "description": "[fr]",
-                                    "title": "[fr]"
+                                    "description": "",
+                                    "title": ""
                                   },
                                   "title": {
                                     "type": "string",
-                                    "description": "[fr]",
-                                    "title": "[fr]"
+                                    "description": "",
+                                    "title": ""
                                   },
                                   "description": {
                                     "type": "string",
-                                    "description": "[fr]",
-                                    "title": "[fr]"
+                                    "description": "",
+                                    "title": ""
                                   },
                                   "visible": {
                                     "type": "boolean",
                                     "default": true,
-                                    "description": "[fr]",
-                                    "title": "[fr]"
+                                    "description": "",
+                                    "title": ""
                                   },
                                   "width": {
                                     "type": "number",
-                                    "description": "[fr]",
-                                    "title": "[fr]"
+                                    "description": "",
+                                    "title": ""
                                   },
                                   "sort": {
                                     "type": "string",
                                     "enum": [
-                                      "[fr]",
-                                      "[fr]"
+                                      "",
+                                      ""
                                     ],
-                                    "description": "[fr]",
-                                    "title": "[fr]"
+                                    "description": "",
+                                    "title": ""
                                   },
                                   "searchable": {
                                     "type": "boolean",
                                     "default": true,
-                                    "description": "[fr]",
-                                    "title": "[fr]"
+                                    "description": "",
+                                    "title": ""
                                   },
                                   "filter": {
-                                    "title": "[fr]",
+                                    "title": "",
                                     "type": "object",
-                                    "description": "[fr]",
+                                    "description": "",
                                     "properties": {
                                       "type": {
                                         "type": "string",
                                         "enum": [
-                                          "[fr]",
-                                          "[fr]",
-                                          "[fr]",
-                                          "[fr]"
+                                          "",
+                                          "",
+                                          "",
+                                          ""
                                         ],
-                                        "description": "[fr]",
-                                        "title": "[fr]"
+                                        "description": "",
+                                        "title": ""
                                       },
                                       "value": {
                                         "type": "string",
                                         "default": "",
                                         "description": "1",
-                                        "title": "[fr]"
+                                        "title": ""
                                       },
                                       "static": {
                                         "type": "boolean",
                                         "default": false,
-                                        "description": "[fr]",
-                                        "title": "[fr]"
+                                        "description": "",
+                                        "title": ""
                                       }
                                     },
                                     "required": [
                                       "type"
                                     ],
-                                    "additionalProperties": false,
-                                    "schema": "filterNode"
+                                    "additionalProperties": false
                                   }
                                 },
                                 "required": [
                                   "data"
                                 ],
                                 "additionalProperties": false,
-                                "description": "[fr]",
-                                "schema": "columnNode",
-                                "title": "[fr]"
+                                "description": "",
+                                "title": ""
                               },
-                              "description": "[fr]",
-                              "title": "[fr]"
+                              "description": "",
+                              "title": ""
                             }
                           },
-                          "additionalProperties": false,
-                          "schema": "tableNode"
+                          "additionalProperties": false
                         }
                       },
                       "required": [
                         "index"
                       ],
                       "additionalProperties": false,
-                      "schema": "dynamicLayerEntryNode",
-                      "title": "[fr]"
+                      "title": ""
                     },
                     "minItems": 1,
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "tolerance": {
                     "type": "number",
                     "default": 5,
-                    "description": "[fr]",
-                    "title": "[fr]"
+                    "description": "",
+                    "title": ""
                   },
                   "extent": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "object",
                     "properties": {
                       "xmin": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "ymin": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "xmax": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "ymax": {
                         "type": "number",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       "spatialReference": {
-                        "title": "[fr]",
+                        "title": "",
                         "type": "object",
                         "properties": {
                           "wkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "vcsWkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "latestWkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "latestVcsWkid": {
                             "type": "number",
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "wkt": {
                             "type": "string",
-                            "title": "[fr]"
+                            "title": ""
                           }
                         },
                         "anyOf": [
@@ -2194,8 +2145,7 @@
                             ]
                           }
                         ],
-                        "additionalProperties": false,
-                        "schema": "spatialReferenceNode"
+                        "additionalProperties": false
                       }
                     },
                     "required": [
@@ -2204,102 +2154,98 @@
                       "xmax",
                       "ymax"
                     ],
-                    "additionalProperties": false,
-                    "schema": "extentWithReferenceNode"
+                    "additionalProperties": false
                   },
                   "controls": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "array",
                     "items": {
                       "type": "string",
                       "enum": [
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]"
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
                       ]
                     },
                     "uniqueItems": true,
-                    "description": "[fr]",
-                    "schema": "legendEntryControls"
+                    "description": ""
                   },
                   "disabledControls": {
-                    "description": "[fr]",
-                    "title": "[fr]",
+                    "description": "",
+                    "title": "",
                     "type": "array",
                     "items": {
                       "type": "string",
                       "enum": [
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]",
-                        "[fr]"
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
                       ]
                     },
-                    "uniqueItems": true,
-                    "schema": "legendEntryControls"
+                    "uniqueItems": true
                   },
                   "state": {
-                    "title": "[fr]",
+                    "title": "",
                     "type": "object",
                     "properties": {
                       "opacity": {
                         "type": "number",
                         "default": 1,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "visibility": {
                         "type": "boolean",
                         "default": true,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "boundingBox": {
                         "type": "boolean",
                         "default": false,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "query": {
                         "type": "boolean",
                         "default": true,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "snapshot": {
                         "type": "boolean",
                         "default": false,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       },
                       "hovertips": {
                         "type": "boolean",
                         "default": true,
-                        "description": "[fr]",
-                        "title": "[fr]"
+                        "description": "",
+                        "title": ""
                       }
                     },
-                    "additionalProperties": false,
-                    "schema": "initialLayerSettings"
+                    "additionalProperties": false
                   }
                 },
                 "required": [
@@ -2309,18 +2255,15 @@
                   "url"
                 ],
                 "additionalProperties": false,
-                "schema": "dynamicLayerNode",
-                "title": "[fr]"
+                "title": ""
               }
             ],
-            "schema": "layerNode",
-            "title": "[fr]"
+            "title": ""
           }
         ]
       },
       "minItems": 0,
-      "schema": "layerList",
-      "title": "[fr]"
+      "title": ""
     },
     "legend": {
       "oneOf": [
@@ -2330,17 +2273,16 @@
             "type": {
               "type": "string",
               "enum": [
-                "[fr]"
+                ""
               ],
-              "title": "[fr]"
+              "title": ""
             }
           },
           "required": [
             "type"
           ],
           "additionalProperties": false,
-          "schema": "legendAuto",
-          "title": "[fr]"
+          "title": ""
         },
         {
           "type": "object",
@@ -2348,23 +2290,23 @@
             "type": {
               "type": "string",
               "enum": [
-                "[fr]"
+                ""
               ],
-              "title": "[fr]"
+              "title": ""
             },
             "root": {
-              "title": "[fr]",
+              "title": "",
               "type": "object",
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "[fr]",
-                  "title": "[fr]"
+                  "description": "",
+                  "title": ""
                 },
                 "expanded": {
                   "type": "boolean",
                   "default": true,
-                  "title": "[fr]"
+                  "title": ""
                 },
                 "children": {
                   "type": "array",
@@ -2374,11 +2316,10 @@
                         "type": "object",
                         "properties": {
                           "circRef": {
-                            "title": "[fr]"
+                            "title": ""
                           }
                         },
-                        "schema": "circular",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       {
                         "type": "object",
@@ -2391,59 +2332,58 @@
                                   "type": "object",
                                   "properties": {
                                     "circRef": {
-                                      "title": "[fr]"
+                                      "title": ""
                                     }
                                   },
-                                  "schema": "circular",
-                                  "title": "[fr]"
+                                  "title": ""
                                 },
                                 {
                                   "type": "object",
-                                  "description": "[fr]",
+                                  "description": "",
                                   "properties": {
                                     "layerId": {
                                       "type": "string",
-                                      "description": "[fr]",
-                                      "title": "[fr]"
+                                      "description": "",
+                                      "title": ""
                                     },
                                     "hidden": {
                                       "type": "boolean",
                                       "default": false,
-                                      "description": "[fr]",
-                                      "title": "[fr]"
+                                      "description": "",
+                                      "title": ""
                                     },
                                     "controlledIds": {
                                       "type": "array",
                                       "items": {
                                         "type": "string",
-                                        "description": "[fr]"
+                                        "description": ""
                                       },
                                       "default": [],
-                                      "title": "[fr]"
+                                      "title": ""
                                     },
                                     "entryIndex": {
                                       "type": "integer",
-                                      "description": "[fr]",
-                                      "title": "[fr]"
+                                      "description": "",
+                                      "title": ""
                                     },
                                     "entryId": {
                                       "type": "string",
-                                      "description": "[fr]",
-                                      "title": "[fr]"
+                                      "description": "",
+                                      "title": ""
                                     },
                                     "coverIcon": {
                                       "type": "string",
-                                      "description": "[fr]",
-                                      "title": "[fr]"
+                                      "description": "",
+                                      "title": ""
                                     },
                                     "description": {
                                       "type": "string",
                                       "default": "",
-                                      "description": "[fr]",
-                                      "title": "[fr]"
+                                      "description": "",
+                                      "title": ""
                                     },
                                     "symbologyStack": {
-                                      "title": "[fr]",
+                                      "title": "",
                                       "type": "array",
                                       "items": {
                                         "type": "object",
@@ -2461,86 +2401,83 @@
                                         ],
                                         "additionalProperties": false
                                       },
-                                      "minItems": 1,
-                                      "schema": "symbologyStack"
+                                      "minItems": 1
                                     },
                                     "symbologyRenderStyle": {
                                       "type": "string",
                                       "enum": [
-                                        "[fr]",
-                                        "[fr]"
+                                        "",
+                                        ""
                                       ],
-                                      "description": "[fr]",
-                                      "title": "[fr]"
+                                      "description": "",
+                                      "title": ""
                                     }
                                   },
                                   "required": [
                                     "layerId"
                                   ],
                                   "additionalProperties": false,
-                                  "schema": "entry",
-                                  "title": "[fr]"
+                                  "title": ""
                                 }
                               ]
                             },
                             "minItems": 1,
-                            "title": "[fr]"
+                            "title": ""
                           }
                         },
                         "required": [
                           "exclusiveVisibility"
                         ],
                         "additionalProperties": false,
-                        "schema": "visibilitySet",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       {
                         "type": "object",
-                        "description": "[fr]",
+                        "description": "",
                         "properties": {
                           "layerId": {
                             "type": "string",
-                            "description": "[fr]",
-                            "title": "[fr]"
+                            "description": "",
+                            "title": ""
                           },
                           "hidden": {
                             "type": "boolean",
                             "default": false,
-                            "description": "[fr]",
-                            "title": "[fr]"
+                            "description": "",
+                            "title": ""
                           },
                           "controlledIds": {
                             "type": "array",
                             "items": {
                               "type": "string",
-                              "description": "[fr]"
+                              "description": ""
                             },
                             "default": [],
-                            "title": "[fr]"
+                            "title": ""
                           },
                           "entryIndex": {
                             "type": "integer",
-                            "description": "[fr]",
-                            "title": "[fr]"
+                            "description": "",
+                            "title": ""
                           },
                           "entryId": {
                             "type": "string",
-                            "description": "[fr]",
-                            "title": "[fr]"
+                            "description": "",
+                            "title": ""
                           },
                           "coverIcon": {
                             "type": "string",
-                            "description": "[fr]",
-                            "title": "[fr]"
+                            "description": "",
+                            "title": ""
                           },
                           "description": {
                             "type": "string",
                             "default": "",
-                            "description": "[fr]",
-                            "title": "[fr]"
+                            "description": "",
+                            "title": ""
                           },
                           "symbologyStack": {
-                            "title": "[fr]",
+                            "title": "",
                             "type": "array",
                             "items": {
                               "type": "object",
@@ -2558,25 +2495,23 @@
                               ],
                               "additionalProperties": false
                             },
-                            "minItems": 1,
-                            "schema": "symbologyStack"
+                            "minItems": 1
                           },
                           "symbologyRenderStyle": {
                             "type": "string",
                             "enum": [
-                              "[fr]",
-                              "[fr]"
+                              "",
+                              ""
                             ],
-                            "description": "[fr]",
-                            "title": "[fr]"
+                            "description": "",
+                            "title": ""
                           }
                         },
                         "required": [
                           "layerId"
                         ],
                         "additionalProperties": false,
-                        "schema": "entry",
-                        "title": "[fr]"
+                        "title": ""
                       },
                       {
                         "oneOf": [
@@ -2647,8 +2582,7 @@
                                   "additionalProperties": false
                                 },
                                 "minItems": 1,
-                                "schema": "symbologyStack",
-                                "title": "[fr]"
+                                "title": ""
                               },
                               "symbologyRenderStyle": {
                                 "type": "string",
@@ -2681,59 +2615,55 @@
                           "infoType",
                           "content"
                         ],
-                        "schema": "infoSection",
-                        "title": "[fr]"
+                        "title": ""
                       }
                     ]
                   },
                   "minItems": 1,
-                  "title": "[fr]"
+                  "title": ""
                 },
                 "controls": {
-                  "title": "[fr]",
+                  "title": "",
                   "type": "array",
                   "items": {
                     "type": "string",
                     "enum": [
-                      "[fr]",
-                      "[fr]",
-                      "[fr]",
-                      "[fr]",
-                      "[fr]",
-                      "[fr]",
-                      "[fr]"
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
                     ]
                   },
                   "uniqueItems": true,
-                  "description": "[fr]",
-                  "schema": "legendGroupControls"
+                  "description": ""
                 },
                 "disabledControls": {
-                  "title": "[fr]",
+                  "title": "",
                   "type": "array",
                   "items": {
                     "type": "string",
                     "enum": [
-                      "[fr]",
-                      "[fr]",
-                      "[fr]",
-                      "[fr]",
-                      "[fr]",
-                      "[fr]",
-                      "[fr]"
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
                     ]
                   },
                   "uniqueItems": true,
-                  "description": "[fr]",
-                  "schema": "legendGroupControls"
+                  "description": ""
                 }
               },
               "required": [
                 "name",
                 "children"
               ],
-              "additionalProperties": false,
-              "schema": "entryGroup"
+              "additionalProperties": false
             }
           },
           "required": [
@@ -2741,12 +2671,11 @@
             "root"
           ],
           "additionalProperties": false,
-          "schema": "legendStructured",
-          "title": "[fr]"
+          "title": ""
         }
       ],
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     }
   },
   "required": [
@@ -2754,5 +2683,5 @@
     "baseMaps"
   ],
   "schema": "map",
-  "title": "[fr]"
+  "title": ""
 }

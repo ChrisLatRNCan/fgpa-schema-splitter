@@ -3,13 +3,13 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     },
     "expanded": {
       "type": "boolean",
       "default": true,
-      "title": "[fr]"
+      "title": ""
     },
     "children": {
       "type": "array",
@@ -19,11 +19,10 @@
             "type": "object",
             "properties": {
               "circRef": {
-                "title": "[fr]"
+                "title": ""
               }
             },
-            "schema": "circular",
-            "title": "[fr]"
+            "title": ""
           },
           {
             "type": "object",
@@ -36,59 +35,58 @@
                       "type": "object",
                       "properties": {
                         "circRef": {
-                          "title": "[fr]"
+                          "title": ""
                         }
                       },
-                      "schema": "circular",
-                      "title": "[fr]"
+                      "title": ""
                     },
                     {
                       "type": "object",
-                      "description": "[fr]",
+                      "description": "",
                       "properties": {
                         "layerId": {
                           "type": "string",
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "hidden": {
                           "type": "boolean",
                           "default": false,
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "controlledIds": {
                           "type": "array",
                           "items": {
                             "type": "string",
-                            "description": "[fr]"
+                            "description": ""
                           },
                           "default": [],
-                          "title": "[fr]"
+                          "title": ""
                         },
                         "entryIndex": {
                           "type": "integer",
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "entryId": {
                           "type": "string",
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "coverIcon": {
                           "type": "string",
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "description": {
                           "type": "string",
                           "default": "",
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         },
                         "symbologyStack": {
-                          "title": "[fr]",
+                          "title": "",
                           "type": "array",
                           "items": {
                             "type": "object",
@@ -106,86 +104,83 @@
                             ],
                             "additionalProperties": false
                           },
-                          "minItems": 1,
-                          "schema": "symbologyStack"
+                          "minItems": 1
                         },
                         "symbologyRenderStyle": {
                           "type": "string",
                           "enum": [
-                            "[fr]",
-                            "[fr]"
+                            "",
+                            ""
                           ],
-                          "description": "[fr]",
-                          "title": "[fr]"
+                          "description": "",
+                          "title": ""
                         }
                       },
                       "required": [
                         "layerId"
                       ],
                       "additionalProperties": false,
-                      "schema": "entry",
-                      "title": "[fr]"
+                      "title": ""
                     }
                   ]
                 },
                 "minItems": 1,
-                "title": "[fr]"
+                "title": ""
               }
             },
             "required": [
               "exclusiveVisibility"
             ],
             "additionalProperties": false,
-            "schema": "visibilitySet",
-            "title": "[fr]"
+            "title": ""
           },
           {
             "type": "object",
-            "description": "[fr]",
+            "description": "",
             "properties": {
               "layerId": {
                 "type": "string",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "hidden": {
                 "type": "boolean",
                 "default": false,
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "controlledIds": {
                 "type": "array",
                 "items": {
                   "type": "string",
-                  "description": "[fr]"
+                  "description": ""
                 },
                 "default": [],
-                "title": "[fr]"
+                "title": ""
               },
               "entryIndex": {
                 "type": "integer",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "entryId": {
                 "type": "string",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "coverIcon": {
                 "type": "string",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "description": {
                 "type": "string",
                 "default": "",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "symbologyStack": {
-                "title": "[fr]",
+                "title": "",
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -203,25 +198,23 @@
                   ],
                   "additionalProperties": false
                 },
-                "minItems": 1,
-                "schema": "symbologyStack"
+                "minItems": 1
               },
               "symbologyRenderStyle": {
                 "type": "string",
                 "enum": [
-                  "[fr]",
-                  "[fr]"
+                  "",
+                  ""
                 ],
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               }
             },
             "required": [
               "layerId"
             ],
             "additionalProperties": false,
-            "schema": "entry",
-            "title": "[fr]"
+            "title": ""
           },
           {
             "oneOf": [
@@ -292,8 +285,7 @@
                       "additionalProperties": false
                     },
                     "minItems": 1,
-                    "schema": "symbologyStack",
-                    "title": "[fr]"
+                    "title": ""
                   },
                   "symbologyRenderStyle": {
                     "type": "string",
@@ -326,51 +318,48 @@
               "infoType",
               "content"
             ],
-            "schema": "infoSection",
-            "title": "[fr]"
+            "title": ""
           }
         ]
       },
       "minItems": 1,
-      "title": "[fr]"
+      "title": ""
     },
     "controls": {
-      "title": "[fr]",
+      "title": "",
       "type": "array",
       "items": {
         "type": "string",
         "enum": [
-          "[fr]",
-          "[fr]",
-          "[fr]",
-          "[fr]",
-          "[fr]",
-          "[fr]",
-          "[fr]"
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ]
       },
       "uniqueItems": true,
-      "description": "[fr]",
-      "schema": "legendGroupControls"
+      "description": ""
     },
     "disabledControls": {
-      "title": "[fr]",
+      "title": "",
       "type": "array",
       "items": {
         "type": "string",
         "enum": [
-          "[fr]",
-          "[fr]",
-          "[fr]",
-          "[fr]",
-          "[fr]",
-          "[fr]",
-          "[fr]"
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ]
       },
       "uniqueItems": true,
-      "description": "[fr]",
-      "schema": "legendGroupControls"
+      "description": ""
     }
   },
   "required": [
@@ -378,8 +367,7 @@
     "children"
   ],
   "additionalProperties": false,
-  "schema": "entryGroup",
-  "title": "[fr]"
+  "title": ""
 },
 "visibilitySet": {
   "type": "object",
@@ -392,59 +380,58 @@
             "type": "object",
             "properties": {
               "circRef": {
-                "title": "[fr]"
+                "title": ""
               }
             },
-            "schema": "circular",
-            "title": "[fr]"
+            "title": ""
           },
           {
             "type": "object",
-            "description": "[fr]",
+            "description": "",
             "properties": {
               "layerId": {
                 "type": "string",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "hidden": {
                 "type": "boolean",
                 "default": false,
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "controlledIds": {
                 "type": "array",
                 "items": {
                   "type": "string",
-                  "description": "[fr]"
+                  "description": ""
                 },
                 "default": [],
-                "title": "[fr]"
+                "title": ""
               },
               "entryIndex": {
                 "type": "integer",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "entryId": {
                 "type": "string",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "coverIcon": {
                 "type": "string",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "description": {
                 "type": "string",
                 "default": "",
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               },
               "symbologyStack": {
-                "title": "[fr]",
+                "title": "",
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -462,38 +449,35 @@
                   ],
                   "additionalProperties": false
                 },
-                "minItems": 1,
-                "schema": "symbologyStack"
+                "minItems": 1
               },
               "symbologyRenderStyle": {
                 "type": "string",
                 "enum": [
-                  "[fr]",
-                  "[fr]"
+                  "",
+                  ""
                 ],
-                "description": "[fr]",
-                "title": "[fr]"
+                "description": "",
+                "title": ""
               }
             },
             "required": [
               "layerId"
             ],
             "additionalProperties": false,
-            "schema": "entry",
-            "title": "[fr]"
+            "title": ""
           }
         ]
       },
       "minItems": 1,
-      "title": "[fr]"
+      "title": ""
     }
   },
   "required": [
     "exclusiveVisibility"
   ],
   "additionalProperties": false,
-  "schema": "visibilitySet",
-  "title": "[fr]"
+  "title": ""
 },
 "infoSection": {
   "oneOf": [
@@ -564,8 +548,7 @@
             "additionalProperties": false
           },
           "minItems": 1,
-          "schema": "symbologyStack",
-          "title": "[fr]"
+          "title": ""
         },
         "symbologyRenderStyle": {
           "type": "string",
@@ -598,56 +581,55 @@
     "infoType",
     "content"
   ],
-  "schema": "infoSection",
-  "title": "[fr]"
+  "title": ""
 },
 "entry": {
   "type": "object",
-  "description": "[fr]",
+  "description": "",
   "properties": {
     "layerId": {
       "type": "string",
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     },
     "hidden": {
       "type": "boolean",
       "default": false,
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     },
     "controlledIds": {
       "type": "array",
       "items": {
         "type": "string",
-        "description": "[fr]"
+        "description": ""
       },
       "default": [],
-      "title": "[fr]"
+      "title": ""
     },
     "entryIndex": {
       "type": "integer",
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     },
     "entryId": {
       "type": "string",
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     },
     "coverIcon": {
       "type": "string",
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     },
     "description": {
       "type": "string",
       "default": "",
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     },
     "symbologyStack": {
-      "title": "[fr]",
+      "title": "",
       "type": "array",
       "items": {
         "type": "object",
@@ -665,25 +647,23 @@
         ],
         "additionalProperties": false
       },
-      "minItems": 1,
-      "schema": "symbologyStack"
+      "minItems": 1
     },
     "symbologyRenderStyle": {
       "type": "string",
       "enum": [
-        "[fr]",
-        "[fr]"
+        "",
+        ""
       ],
-      "description": "[fr]",
-      "title": "[fr]"
+      "description": "",
+      "title": ""
     }
   },
   "required": [
     "layerId"
   ],
   "additionalProperties": false,
-  "schema": "entry",
-  "title": "[fr]"
+  "title": ""
 },
 "symbologyStack": {
   "type": "array",
@@ -704,35 +684,32 @@
     "additionalProperties": false
   },
   "minItems": 1,
-  "schema": "symbologyStack",
-  "title": "[fr]"
+  "title": ""
 },
 "legendGroupControls": {
   "type": "array",
   "items": {
     "type": "string",
     "enum": [
-      "[fr]",
-      "[fr]",
-      "[fr]",
-      "[fr]",
-      "[fr]",
-      "[fr]",
-      "[fr]"
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
     ]
   },
   "uniqueItems": true,
-  "description": "[fr]",
-  "schema": "legendGroupControls",
-  "title": "[fr]"
+  "description": "",
+  "title": ""
 },
 "circular": {
   "type": "object",
   "properties": {
     "circRef": {
-      "title": "[fr]"
+      "title": ""
     }
   },
-  "schema": "circular",
-  "title": "[fr]"
+  "title": ""
 }

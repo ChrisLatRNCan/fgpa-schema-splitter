@@ -5,7 +5,7 @@ let viewerSchema = require('./schemas/schema.json');
 const $RefParser = require('json-schema-ref-parser');
 const $DotProp = require('dot-prop');
 const $PapaParse = require('papaparse');
-const deepKeys = require('deep-keys');
+// const deepKeys = require('deep-keys');
 
 // nodejs library
 const $FS = require('fs');
@@ -48,9 +48,11 @@ let csvString = '';
 
 replaceCircularRef(viewerSchema);
 
+addSchemaLabel(viewerSchema['properties']);
+
 const labellingSchemaDef = new $Promise(
   (resolve, reject) => {
-      if (addLabels(viewerSchema, 'definitions')) {
+      if (addLabels(viewerSchema, 'definitions', 'def.')) {
           resolve(viewerSchema);
       } else {
           const reason = new Error('labelling def went wrong');
@@ -67,7 +69,7 @@ const LabelMyDef = function () {
         const parser = new $RefParser();
         parser.dereference(viewerSchema)
           .then(vSchema => {
-
+            saveSchema(viewerSchema, './schemas/schemaAuthorBefProp.json');
           // Promise
           const labellingSchemaProp = new $Promise(
             (resolve, reject) => {
@@ -77,24 +79,24 @@ const LabelMyDef = function () {
                     const reason = new Error('labelling properties went wrong');
                     reject(reason);
                 }
-        
+
             }
           );
-        
+
           // call our promise
           const splitMe = function () {
             labellingSchemaProp
                 .then(() => {
                   saveCSV(csvString);
-                  saveSchema(vSchema);
+                  saveSchema(vSchema, './schemas/schemaAuthor.json');
                   saveParseConfigSchema(vSchema);
                   console.log('This is the END');
                 })
                 .catch(error => console.log(error.message));
           };
-        
+
           splitMe();
-        
+
           })
           .catch(err => {
             console.error(err);
@@ -141,13 +143,12 @@ function replaceCircularRef(schema) {
  * @private
  * @param {Object} schema
  */
-function addLabels(schema, start) {
-  addSchemaLabel(schema[start]);
-  addTitleLabel(schema[start]);
+function addLabels(schema, start = '', customPrefix = '') {
+  addTitleLabel(schema[start], '', customPrefix);
   // addHelpLabel(schema[start]);
   // addDefaultLabel(schema[start]);
-  addDescriptionLabel(schema[start]);
-  addEnumLabel(schema[start]);
+  addDescriptionLabel(schema[start], '', customPrefix);
+  addEnumLabel(schema[start], '', customPrefix);
   return true;
 }
 
@@ -173,15 +174,15 @@ function addSchemaLabel(schema) {
  * @param {Object} schema
  * @param {String} parent [optional] use as a prefix to generate labels
  */
-function addTitleLabel(schema, parent = '') {
+function addTitleLabel(schema, parent = '', customPrefix = '') {
 
     const propNames = Object.getOwnPropertyNames(schema);
-    let prefix = parent;
+    let prefix = `${customPrefix}${parent}`;
 
     propNames.forEach( prop => {
       const label = `${prefix}${prop}.title`;
       $DotProp.set(schema, `${prop}.title`, label);
-      csvString = `${csvString},${label},[en],0,[fr],0\n`;
+      csvString = `${csvString},${label},"",0,"",0\n`;
       // go deeper ???
       if ($DotProp.has(schema, `${prop}.properties`)) {
         addTitleLabel( $DotProp.get(schema, `${prop}.properties`), `${prefix}${prop}.`);
@@ -205,7 +206,7 @@ function addHelpLabel(schema, parent = '') {
   propNames.forEach( prop => {
     const label = `${prefix}${prop}.help`;
     $DotProp.set(schema, `${prop}.help`, label);
-    csvString = `${csvString},${label},[en],0,[fr],0\n`;
+    csvString = `${csvString},${label},"",0,"",0\n`;
     // go deeper ???
     if ($DotProp.has(schema, `${prop}.properties`)) {
       addHelpLabel( $DotProp.get(schema, `${prop}.properties`), `${prefix}${prop}.`);
@@ -239,7 +240,7 @@ function addDefaultLabel(schema, parent = '') {
         // labelNestedtArrays(schema[prop]['default'],labelArr);
 
         deflt = JSON.stringify(schema[prop]['default']).replace(/['"]+/g, '');
-        csvString = `${csvString},${label},"${deflt}",1,[fr],0\n`;
+        csvString = `${csvString},${label},"${deflt}",1,"",0\n`;
         $DotProp.set(schema, `${prop}.default`, label);
       } else if (typeof schema[prop]['default'] === 'object'){ // OBJECT
         // We keep it as an object in the csv file.
@@ -249,17 +250,17 @@ function addDefaultLabel(schema, parent = '') {
         objPropNames.forEach(objProp => {
           const labelItem = `${label}.${objProp}`;
           const defltItem = schema[prop]['default'][objProp];
-          csvString = `${csvString},${labelItem},${defltItem},1,[fr],0\n`;
+          csvString = `${csvString},${labelItem},${defltItem},1,"",0\n`;
           $DotProp.set(schema, `${prop}.default.${objProp}`, labelItem);
         });
 
       } else { // OTHERS*/
         deflt = $DotProp.get(schema, `${prop}.default`);
-        csvString = `${csvString},${label},${deflt},1,[fr],0\n`;
+        csvString = `${csvString},${label},${deflt},1,"",0\n`;
         $DotProp.set(schema, `${prop}.default`, label);
       }
     } else {
-      csvString = `${csvString},${label},[en],0,[fr],0\n`;
+      csvString = `${csvString},${label},"",0,"",0\n`;
       $DotProp.set(schema, `${prop}.default`, label);
     }
     // go deeper ???
@@ -296,17 +297,19 @@ function labelNestedtArrays(arr, label) {
  * @param {Object} schema
  * @param {String} parent [optional] use as a prefix to generate labels
  */
-function addDescriptionLabel(schema, parent = '') {
+function addDescriptionLabel(schema, parent = '', customPrefix = '') {
   const propNames = Object.getOwnPropertyNames(schema);
-  let prefix = parent;
+  let prefix = `${customPrefix}${parent}`;
   let description = '';
 
   propNames.forEach(prop => {
     if ($DotProp.has(schema, `${prop}.description`)) {
       const label = `${prefix}${prop}.description`;
       description = $DotProp.get(schema, `${prop}.description`);
-      csvString = `${csvString},${label},"${description}",1,[fr],0\n`;
-      $DotProp.set(schema, `${prop}.description`, label);
+      if (!description.startsWith('def.')) {
+        csvString = `${csvString},${label},"${description}",1,"",0\n`;
+        $DotProp.set(schema, `${prop}.description`, label);
+      }
     }
 
     propArr = Object.getOwnPropertyNames(schema[prop]);
@@ -320,8 +323,10 @@ function addDescriptionLabel(schema, parent = '') {
           if ($DotProp.has(schema[prop], `${Att}.description`)) {
             const label = `${prefix}${prop}.${Att}.description`;
             description = $DotProp.get(schema[prop], `${Att}.description`);
-            csvString = `${csvString},${label},"${description}",1,[fr],0\n`;
-            $DotProp.set(schema, `${prop}.${Att}.description`, label);
+            if (!description.startsWith('def.')) {
+              csvString = `${csvString},${label},"${description}",1,"",0\n`;
+              $DotProp.set(schema, `${prop}.${Att}.description`, label);
+            }
           }
       });
     }
@@ -336,9 +341,9 @@ function addDescriptionLabel(schema, parent = '') {
  * @param {Object} schema
  * @param {String} parent [optional] use as a prefix to generate labels
  */
-function addEnumLabel(schema, parent = '') {
+function addEnumLabel(schema, parent = '', customPrefix = '') {
   const propNames = Object.getOwnPropertyNames(schema);
-  let prefix = parent;
+  let prefix = `${customPrefix}${parent}`;
 
   propNames.forEach(prop => {
     if ($DotProp.has(schema, `${prop}.enum`)) {
@@ -346,8 +351,12 @@ function addEnumLabel(schema, parent = '') {
       let newEnum = [];
       enumArray.forEach( element => {
         const label = `${prefix}${prop}.enum.${element}`;
-        csvString = `${csvString},${label},${element},1,[fr],0\n`;
-        newEnum.push(label);
+        if (!element.startsWith('def.')) {
+          csvString = `${csvString},${label},${element},1,"",0\n`;
+          newEnum.push(label);
+        }else {
+          newEnum.push(element);
+        }
       });
       $DotProp.set(schema, `${prop}.enum`, newEnum);
       // console.log($DotProp.get(schema, `${prop}.enum`));
@@ -358,8 +367,12 @@ function addEnumLabel(schema, parent = '') {
       let enumArray = $DotProp.get(schema, `${prop}.items.enum`);
       enumArray.forEach(element => {
         const label = `${prefix}${prop}.items.enum.${element}`;
-        csvString = `${csvString},${label},${element},1,[fr],0\n`;
-        newEnumItems.push(label);
+        if (!element.startsWith('def.')) {
+          csvString = `${csvString},${label},${element},1,"",0\n`;
+          newEnumItems.push(label);
+        } else {
+          newEnumItems.push(element);
+        }
       });
       $DotProp.set(schema, `${prop}.items.enum`, newEnumItems);
       // console.log($DotProp.get(schema, `${prop}.items.enum`));
@@ -389,9 +402,9 @@ function saveCSV(csv) {
  * @private
  * @param {Object} schema
  */
-function saveSchema(schema) {
+function saveSchema(schema, filename) {
   schemaString = JSON.stringify(schema, null, 2);
-  $FS.writeFileSync('./schemas/schemaAuthor.json', schemaString);
+  $FS.writeFileSync(filename, schemaString);
 }
 
 /**
@@ -459,7 +472,6 @@ function saveParseConfigSchema(schema) {
 function loadCSVinJSON() {
 
   // Read file as a string
-  // const csvFilename = `./csv/vSchema.csv`;
   const csvFilename = `./csv/vSchema.csv`;
   const csvString = $FS.readFileSync(csvFilename, 'utf8');
 
@@ -489,6 +501,9 @@ function resolveLabels(schemaString, csvJSON, langIdx) {
   csvJSON.data.forEach(record => {
     if(record[1] !== undefined) {
       const label = record[1];
+      if (label === 'navBarButtons.items.enum.geoLocator') {
+        console.log();
+      }
       const value = record[idx];
       const regex = new RegExp('[^\.a-z]' + label + '[^\.a-z]', 'g');
 
