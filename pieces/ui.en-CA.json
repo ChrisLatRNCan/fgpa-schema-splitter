@@ -20,7 +20,8 @@
     "logoUrl": {
       "type": "string",
       "description": "An optional image to be used in the place of the default viewer logo",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "failureFeedback": {
       "failureMessage": {
@@ -31,12 +32,14 @@
         "type": "string",
         "description": "An optional image to be used in place of the failure Image"
       },
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "title": {
       "type": "string",
       "description": "An optional title to be used in the place of the default viewer title",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "appBar": {
       "default": {
@@ -49,25 +52,25 @@
       "properties": {
         "sideMenu": {
           "type": "boolean",
-          "default": true,
+          "default": "def.appBarNode.sideMenu.default",
           "description": "Shows the side menu button in the main app toolbar.",
           "title": ""
         },
         "geoSearch": {
           "type": "boolean",
-          "default": true,
+          "default": "def.appBarNode.geoSearch.default",
           "description": "Shows the geosearch button in the main app toolbar. The button will be hidden if geosearch component is disabled or no search service URLs are provided.",
           "title": ""
         },
         "basemap": {
           "type": "boolean",
-          "default": true,
+          "default": "def.appBarNode.basemap.default",
           "description": "Shows the basemap selector button in the main app toolbar.",
           "title": ""
         },
         "layers": {
           "type": "boolean",
-          "default": true,
+          "default": "def.appBarNode.layers.default",
           "description": "Shows the layers button in the main app toolbar.",
           "title": ""
         }
@@ -85,16 +88,11 @@
             "buttons",
             "slider"
           ],
-          "default": "buttons",
+          "default": "def.navBarNode.zoom.default",
           "title": ""
         },
         "extra": {
-          "default": [
-            "fullscreen",
-            "geoLocator",
-            "home",
-            "help"
-          ],
+          "default": "def.navBarNode.extra.default",
           "title": "",
           "type": "array",
           "uniqueItems": true,
@@ -119,14 +117,15 @@
         "zoom"
       ],
       "additionalProperties": false,
-      "title": ""
+      "title": "",
+      "default": "def.navBarNode.default"
     },
     "sideMenu": {
       "type": "object",
       "properties": {
         "logo": {
           "type": "boolean",
-          "default": true,
+          "default": "def.sideMenuNode.logo.default",
           "description": "Indicates if the logo should be shown in the left side menu.",
           "title": ""
         },
@@ -151,34 +150,17 @@
                 "plugins"
               ]
             },
-            "title": ""
+            "title": "",
+            "default": ""
           },
-          "default": [
-            [
-              "layers",
-              "basemap"
-            ],
-            [
-              "fullscreen",
-              "export",
-              "share",
-              "touch",
-              "help",
-              "about"
-            ],
-            [
-              "language"
-            ],
-            [
-              "plugins"
-            ]
-          ],
+          "default": "def.sideMenuNode.items.default",
           "title": ""
         }
       },
       "additionalProperties": false,
       "description": "Specifies which options are available in the left side menu.",
-      "title": ""
+      "title": "",
+      "default": "def.sideMenuNode.default"
     },
     "restrictNavigation": {
       "type": "boolean",
@@ -214,7 +196,8 @@
           "additionalProperties": false
         }
       ],
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "help": {
       "type": "object",
@@ -223,14 +206,16 @@
         "folderName": {
           "type": "string",
           "description": "Help folder name who contain the help description and images",
-          "title": ""
+          "title": "",
+          "default": ""
         }
       },
       "required": [
         "folderName"
       ],
       "additionalProperties": false,
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "legend": {
       "type": "object",
@@ -271,11 +256,13 @@
             }
           },
           "additionalProperties": false,
-          "title": ""
+          "title": "",
+          "default": ""
         }
       },
       "additionalProperties": false,
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "tableIsOpen": {
       "type": "object",
@@ -284,7 +271,8 @@
         "id": {
           "type": "string",
           "description": "The id of the layer for referencing within the viewer",
-          "title": ""
+          "title": "",
+          "default": ""
         },
         "large": {
           "type": "boolean",
@@ -309,15 +297,18 @@
       "required": [
         "id"
       ],
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "widgetsWidget": {
       "type": "object",
       "additionalProperties": true,
       "description": "FIXME",
-      "title": ""
+      "title": "",
+      "default": ""
     }
   },
   "schema": "ui",
-  "title": ""
+  "title": "",
+  "default": ""
 }

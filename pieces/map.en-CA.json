@@ -9,32 +9,39 @@
         "properties": {
           "id": {
             "type": "string",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "spatialReference": {
             "description": "The projection for the given extents",
             "title": "",
+            "default": "",
             "type": "object",
             "properties": {
               "wkid": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": "def.spatialReferenceNode.wkid.default"
               },
               "vcsWkid": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": "def.spatialReferenceNode.vcsWkid.default"
               },
               "latestWkid": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": "def.spatialReferenceNode.latestWkid.default"
               },
               "latestVcsWkid": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": "def.spatialReferenceNode.latestVcsWkid.default"
               },
               "wkt": {
                 "type": "string",
-                "title": ""
+                "title": "",
+                "default": "def.spatialReferenceNode.wkt.default"
               }
             },
             "anyOf": [
@@ -69,23 +76,28 @@
           "default": {
             "description": "The default (starting) extent.",
             "title": "",
+            "default": "",
             "type": "object",
             "properties": {
               "xmin": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "ymin": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "xmax": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "ymax": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               }
             },
             "required": [
@@ -99,23 +111,28 @@
           "full": {
             "description": "The full extent (should give good view of the whole map, not necessarily the maximum extent); default will be used if not supplied.",
             "title": "",
+            "default": "",
             "type": "object",
             "properties": {
               "xmin": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "ymin": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "xmax": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "ymax": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               }
             },
             "required": [
@@ -129,23 +146,28 @@
           "maximum": {
             "description": "The maximum extent; full or default extents will be used if not supplied.",
             "title": "",
+            "default": "",
             "type": "object",
             "properties": {
               "xmin": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "ymin": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "xmax": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "ymax": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               }
             },
             "required": [
@@ -163,10 +185,12 @@
           "spatialReference"
         ],
         "additionalProperties": false,
-        "title": ""
+        "title": "",
+        "default": ""
       },
       "description": "The default, full and maximum extents of the map",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "lodSets": {
       "type": "array",
@@ -175,7 +199,8 @@
         "properties": {
           "id": {
             "type": "string",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "lods": {
             "type": "array",
@@ -200,7 +225,8 @@
               "additionalProperties": false
             },
             "description": "Level of details for a specific tile schema",
-            "title": ""
+            "title": "",
+            "default": ""
           }
         },
         "required": [
@@ -208,10 +234,12 @@
           "lods"
         ],
         "additionalProperties": false,
-        "title": ""
+        "title": "",
+        "default": ""
       },
       "description": "The levels of detail (zoom scales) available for the map",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "tileSchemas": {
       "type": "array",
@@ -221,52 +249,60 @@
           "id": {
             "type": "string",
             "description": "A unique id identifying a tile schema (combination of an extent set and a zoom scale)",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "name": {
             "type": "string",
             "description": "The name to display in the basemap selector for the set of basemaps referencing this schema",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "extentSetId": {
             "type": "string",
             "description": "The extent set to be used for this basemap (should reference map.extentSets.id)",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "lodSetId": {
             "type": "string",
             "description": "Optional.  The level of details set to be used for this basemap (should reference map.lod.id)",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "overviewUrl": {
             "description": "Optional. If set, the overview map will use this layer instead of the active basemap",
             "title": "",
+            "default": "",
             "type": "object",
             "properties": {
               "id": {
                 "type": "string",
                 "description": "The id of the layer for referencing within the viewer (does not relate directly to any external service)",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "name": {
                 "type": "string",
                 "description": "The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "url": {
                 "type": "string",
                 "description": "The service endpoint of the layer.  It should match the type provided in layerType.",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "metadataUrl": {
                 "type": "string",
-                "default": null,
+                "default": "null",
                 "description": "The metadata url of the layer service",
                 "title": ""
               },
               "catalogueUrl": {
                 "type": "string",
-                "default": null,
+                "default": "null",
                 "description": "The catalogue url of the layer service",
                 "title": ""
               },
@@ -276,51 +312,63 @@
                   "esriImage",
                   "esriTile"
                 ],
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "extent": {
                 "title": "",
+                "default": "",
                 "type": "object",
                 "properties": {
                   "xmin": {
                     "type": "number",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "ymin": {
                     "type": "number",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "xmax": {
                     "type": "number",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "ymax": {
                     "type": "number",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "spatialReference": {
                     "title": "",
+                    "default": "",
                     "type": "object",
                     "properties": {
                       "wkid": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": "def.spatialReferenceNode.wkid.default"
                       },
                       "vcsWkid": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": "def.spatialReferenceNode.vcsWkid.default"
                       },
                       "latestWkid": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": "def.spatialReferenceNode.latestWkid.default"
                       },
                       "latestVcsWkid": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": "def.spatialReferenceNode.latestVcsWkid.default"
                       },
                       "wkt": {
                         "type": "string",
-                        "title": ""
+                        "title": "",
+                        "default": "def.spatialReferenceNode.wkt.default"
                       }
                     },
                     "anyOf": [
@@ -363,6 +411,7 @@
               },
               "controls": {
                 "title": "",
+                "default": "",
                 "type": "array",
                 "items": {
                   "type": "string",
@@ -388,6 +437,7 @@
               "disabledControls": {
                 "description": "A list of controls which are blocked from modification either by the user or programmatically. These controls can be visible or not as defined in the `controls` array.",
                 "title": "",
+                "default": "",
                 "type": "array",
                 "items": {
                   "type": "string",
@@ -411,11 +461,12 @@
               },
               "state": {
                 "title": "",
+                "default": "",
                 "type": "object",
                 "properties": {
                   "opacity": {
                     "type": "number",
-                    "default": 1,
+                    "default": "1",
                     "description": "Initial opacity",
                     "title": ""
                   },
@@ -468,11 +519,13 @@
           "name"
         ],
         "additionalProperties": false,
-        "title": ""
+        "title": "",
+        "default": ""
       },
       "minItems": 1,
       "description": "A unique combination of an LoD and an extent set (each basemap must fit into a tile schema)",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "components": {
       "type": "object",
@@ -482,45 +535,55 @@
           "properties": {
             "enabled": {
               "type": "boolean",
-              "title": ""
+              "title": "",
+              "default": "def.mapComponentsNode.geoSearch.enabled.default"
             },
             "showGraphic": {
               "type": "boolean",
-              "title": ""
+              "title": "",
+              "default": "def.mapComponentsNode.geoSearch.showGraphic.default"
             },
             "showInfo": {
               "type": "boolean",
-              "title": ""
+              "title": "",
+              "default": "def.mapComponentsNode.geoSearch.showInfo.default"
             }
           },
-          "title": ""
+          "title": "",
+          "default": "def.mapComponentsNode.geoSearch.default"
         },
         "mouseInfo": {
           "type": "object",
           "properties": {
             "spatialReference": {
               "title": "",
+              "default": "def.mapComponentsNode.mouseInfo.spatialReference.default",
               "type": "object",
               "properties": {
                 "wkid": {
                   "type": "number",
-                  "title": ""
+                  "title": "",
+                  "default": "def.spatialReferenceNode.wkid.default"
                 },
                 "vcsWkid": {
                   "type": "number",
-                  "title": ""
+                  "title": "",
+                  "default": "def.spatialReferenceNode.vcsWkid.default"
                 },
                 "latestWkid": {
                   "type": "number",
-                  "title": ""
+                  "title": "",
+                  "default": "def.spatialReferenceNode.latestWkid.default"
                 },
                 "latestVcsWkid": {
                   "type": "number",
-                  "title": ""
+                  "title": "",
+                  "default": "def.spatialReferenceNode.latestVcsWkid.default"
                 },
                 "wkt": {
                   "type": "string",
-                  "title": ""
+                  "title": "",
+                  "default": "def.spatialReferenceNode.wkt.default"
                 }
               },
               "anyOf": [
@@ -553,43 +616,51 @@
               "additionalProperties": false
             }
           },
-          "title": ""
+          "title": "",
+          "default": "def.mapComponentsNode.mouseInfo.default"
         },
         "northArrow": {
           "type": "object",
-          "title": ""
+          "title": "",
+          "default": "def.mapComponentsNode.northArrow.default"
         },
         "overviewMap": {
           "type": "object",
           "properties": {
             "enabled": {
               "type": "boolean",
-              "title": ""
+              "title": "",
+              "default": "def.mapComponentsNode.overviewMap.enabled.default"
             },
             "expandFactor": {
               "type": "number",
-              "default": 2,
+              "default": "def.mapComponentsNode.overviewMap.expandFactor.default",
               "title": ""
             }
           },
-          "title": ""
+          "title": "",
+          "default": "def.mapComponentsNode.overviewMap.default"
         },
         "scaleBar": {
           "type": "object",
-          "title": ""
+          "title": "",
+          "default": "def.mapComponentsNode.scaleBar.default"
         },
         "basemap": {
           "type": "object",
-          "title": ""
+          "title": "",
+          "default": "def.mapComponentsNode.basemap.default"
         }
       },
       "additionalProperties": false,
-      "title": ""
+      "title": "",
+      "default": "def.mapComponentsNode.default"
     },
     "initialBasemapId": {
       "type": "string",
       "description": "Initial basemap to load. If not supplied viewer will select any basemap.",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "baseMaps": {
       "type": "array",
@@ -599,37 +670,44 @@
           "id": {
             "type": "string",
             "description": "A unique identifier for the basemap",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "name": {
             "type": "string",
             "description": "Name of the basemap used for labeling",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "description": {
             "type": "string",
             "description": "Description of the basemap. Will be visible when basemap selector is expanded.Description of the basemap. Will be visible when basemap selector is expanded.",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "typeSummary": {
             "type": "string",
             "description": "Optional base map type. This is descriptive only, and will be shown in the basemap selector.",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "altText": {
             "type": "string",
             "description": "Alt text for the basemap thumbnail image.Alt text for the basemap thumbnail image.",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "thumbnailUrl": {
             "type": "string",
             "description": "Path to image file to display in the basemap selector.",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "tileSchemaId": {
             "type": "string",
             "description": "The tile schema for this basemap (should reference map.tileSchemas.id)",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "layers": {
             "type": "array",
@@ -658,10 +736,12 @@
             },
             "minItems": 1,
             "description": "A set of URLs which should be composited to form a basemap entry",
-            "title": ""
+            "title": "",
+            "default": ""
           },
           "attribution": {
             "title": "",
+            "default": "",
             "type": "object",
             "properties": {
               "text": {
@@ -675,14 +755,16 @@
                   "value": {
                     "type": "string",
                     "description": "Optional. Contains the attribution value. If empty, it will use copyright text from the server.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   }
                 },
                 "required": [
                   "enabled"
                 ],
                 "additionalProperties": false,
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "logo": {
                 "type": "object",
@@ -695,19 +777,22 @@
                   "value": {
                     "type": "string",
                     "description": "URL for the image.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "link": {
                     "type": "string",
                     "description": "URL to go to when clicked.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   }
                 },
                 "required": [
                   "enabled"
                 ],
                 "additionalProperties": false,
-                "title": ""
+                "title": "",
+                "default": ""
               }
             },
             "required": [
@@ -721,11 +806,13 @@
             "properties": {
               "min": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               },
               "max": {
                 "type": "number",
-                "title": ""
+                "title": "",
+                "default": ""
               }
             },
             "default": {},
@@ -742,11 +829,13 @@
           "tileSchemaId"
         ],
         "additionalProperties": false,
-        "title": ""
+        "title": "",
+        "default": ""
       },
       "minItems": 1,
       "description": "A list of basemaps to be made available via the basemap selector.",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "layers": {
       "description": "Layer list in the order which they should be added to the map.  NOTE: ESRI JSAPI v3 cannot draw imagery layers over feature layers.",
@@ -761,27 +850,30 @@
                   "id": {
                     "type": "string",
                     "description": "The id of the layer for referencing within the viewer (does not relate directly to any external service)",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "name": {
                     "type": "string",
                     "description": "The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "url": {
                     "type": "string",
                     "description": "The service endpoint of the layer.  It should match the type provided in layerType.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "metadataUrl": {
                     "type": "string",
-                    "default": null,
+                    "default": "null",
                     "description": "The metadata url of the layer service",
                     "title": ""
                   },
                   "catalogueUrl": {
                     "type": "string",
-                    "default": null,
+                    "default": "null",
                     "description": "The catalogue url of the layer service",
                     "title": ""
                   },
@@ -791,51 +883,63 @@
                       "esriImage",
                       "esriTile"
                     ],
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "extent": {
                     "title": "",
+                    "default": "",
                     "type": "object",
                     "properties": {
                       "xmin": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "ymin": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "xmax": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "ymax": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "spatialReference": {
                         "title": "",
+                        "default": "",
                         "type": "object",
                         "properties": {
                           "wkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.wkid.default"
                           },
                           "vcsWkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.vcsWkid.default"
                           },
                           "latestWkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.latestWkid.default"
                           },
                           "latestVcsWkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.latestVcsWkid.default"
                           },
                           "wkt": {
                             "type": "string",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.wkt.default"
                           }
                         },
                         "anyOf": [
@@ -878,6 +982,7 @@
                   },
                   "controls": {
                     "title": "",
+                    "default": "",
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -903,6 +1008,7 @@
                   "disabledControls": {
                     "description": "A list of controls which are blocked from modification either by the user or programmatically. These controls can be visible or not as defined in the `controls` array.",
                     "title": "",
+                    "default": "",
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -926,11 +1032,12 @@
                   },
                   "state": {
                     "title": "",
+                    "default": "",
                     "type": "object",
                     "properties": {
                       "opacity": {
                         "type": "number",
-                        "default": 1,
+                        "default": "1",
                         "description": "Initial opacity",
                         "title": ""
                       },
@@ -974,7 +1081,8 @@
                   "url"
                 ],
                 "additionalProperties": false,
-                "title": ""
+                "title": "",
+                "default": ""
               },
               {
                 "type": "object",
@@ -982,32 +1090,36 @@
                   "id": {
                     "type": "string",
                     "description": "The id of the layer for referencing within the viewer (does not relate directly to any external service)",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "name": {
                     "type": "string",
                     "description": "The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "nameField": {
                     "type": "string",
                     "description": "The display field of the layer.  If it is not present the viewer will make an attempt to scrape this information.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "url": {
                     "type": "string",
                     "description": "The service endpoint of the layer.  It should match the type provided in layerType.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "metadataUrl": {
                     "type": "string",
-                    "default": null,
+                    "default": "null",
                     "description": "The metadata url of the layer service",
                     "title": ""
                   },
                   "catalogueUrl": {
                     "type": "string",
-                    "default": null,
+                    "default": "null",
                     "description": "The catalogue url of the layer service",
                     "title": ""
                   },
@@ -1016,7 +1128,8 @@
                     "enum": [
                       "esriFeature"
                     ],
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "toggleSymbology": {
                     "type": "boolean",
@@ -1026,53 +1139,64 @@
                   },
                   "tolerance": {
                     "type": "number",
-                    "default": 5,
+                    "default": "5",
                     "description": "Specifies the tolerance in pixels when determining if a feature was clicked. Should be non-negative integer",
                     "title": ""
                   },
                   "extent": {
                     "title": "",
+                    "default": "",
                     "type": "object",
                     "properties": {
                       "xmin": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "ymin": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "xmax": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "ymax": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "spatialReference": {
                         "title": "",
+                        "default": "",
                         "type": "object",
                         "properties": {
                           "wkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.wkid.default"
                           },
                           "vcsWkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.vcsWkid.default"
                           },
                           "latestWkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.latestWkid.default"
                           },
                           "latestVcsWkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.latestVcsWkid.default"
                           },
                           "wkt": {
                             "type": "string",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.wkt.default"
                           }
                         },
                         "anyOf": [
@@ -1115,6 +1239,7 @@
                   },
                   "controls": {
                     "title": "",
+                    "default": "",
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -1140,6 +1265,7 @@
                   "disabledControls": {
                     "description": "A list of controls which are visible, but disabled for user modification",
                     "title": "",
+                    "default": "",
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -1163,11 +1289,12 @@
                   },
                   "state": {
                     "title": "",
+                    "default": "",
                     "type": "object",
                     "properties": {
                       "opacity": {
                         "type": "number",
-                        "default": 1,
+                        "default": "1",
                         "description": "Initial opacity",
                         "title": ""
                       },
@@ -1207,6 +1334,7 @@
                   "table": {
                     "description": "Settings for the table",
                     "title": "",
+                    "default": "",
                     "type": "object",
                     "properties": {
                       "title": {
@@ -1218,7 +1346,8 @@
                       "description": {
                         "type": "string",
                         "description": "Specifies the additional information to display in the setting panel to give more information about a table.",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "maximize": {
                         "type": "boolean",
@@ -1236,7 +1365,8 @@
                           "default": null,
                           "description": "Specifies the default filter to apply to a table (for global search)."
                         },
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "applyMap": {
                         "type": "boolean",
@@ -1252,17 +1382,20 @@
                             "data": {
                               "type": "string",
                               "description": "Specifies the field name (data) to use to link to the layer column. Must exist in the layer.",
-                              "title": ""
+                              "title": "",
+                              "default": ""
                             },
                             "title": {
                               "type": "string",
                               "description": "Specifies the column title, uses the layer column name or alias if missing.",
-                              "title": ""
+                              "title": "",
+                              "default": ""
                             },
                             "description": {
                               "type": "string",
                               "description": "Specifies the additional information to display in the setting panel to give more information about a column. Do not add description if missing.",
-                              "title": ""
+                              "title": "",
+                              "default": ""
                             },
                             "visible": {
                               "type": "boolean",
@@ -1273,7 +1406,8 @@
                             "width": {
                               "type": "number",
                               "description": "Specifies the column width. If missing, calculated column width will be use.",
-                              "title": ""
+                              "title": "",
+                              "default": ""
                             },
                             "sort": {
                               "type": "string",
@@ -1282,7 +1416,8 @@
                                 "desc"
                               ],
                               "description": "Specifies if column is sort. If missing, no sort is applied.",
-                              "title": ""
+                              "title": "",
+                              "default": ""
                             },
                             "searchable": {
                               "type": "boolean",
@@ -1292,6 +1427,7 @@
                             },
                             "filter": {
                               "title": "",
+                              "default": "",
                               "type": "object",
                               "description": "Specifies the filter information for a column.",
                               "properties": {
@@ -1304,7 +1440,8 @@
                                     "selector"
                                   ],
                                   "description": "Specifies the filter type to use. If type is not specified, data field type will be use. String filter can be string or selector. Other filter must be the same type. If not, apply on map will fails.",
-                                  "title": ""
+                                  "title": "",
+                                  "default": ""
                                 },
                                 "value": {
                                   "type": "string",
@@ -1330,10 +1467,12 @@
                           ],
                           "additionalProperties": false,
                           "description": "Specifies option for each column. OID field must be present, if not data will not appear. The order they appears inside the table is the same as the order of this array.",
-                          "title": ""
+                          "title": "",
+                          "default": ""
                         },
                         "description": "Specifies the array of columns for the table. When there is an item in this array, it will be use to define wich and how column will be set for the table. If a column is not in the array it will be assume as disabled.",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       }
                     },
                     "additionalProperties": false
@@ -1345,7 +1484,8 @@
                   "url"
                 ],
                 "additionalProperties": false,
-                "title": ""
+                "title": "",
+                "default": ""
               },
               {
                 "type": "object",
@@ -1353,27 +1493,30 @@
                   "id": {
                     "type": "string",
                     "description": "The id of the layer for referencing within the viewer (does not relate directly to any external service)",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "name": {
                     "type": "string",
                     "description": "The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "url": {
                     "type": "string",
                     "description": "The service endpoint of the layer.  It should match the type provided in layerType.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "metadataUrl": {
                     "type": "string",
-                    "default": null,
+                    "default": "null",
                     "description": "The metadata url of the layer service",
                     "title": ""
                   },
                   "catalogueUrl": {
                     "type": "string",
-                    "default": null,
+                    "default": "null",
                     "description": "The catalogue url of the layer service",
                     "title": ""
                   },
@@ -1385,12 +1528,14 @@
                         "id": {
                           "type": "string",
                           "description": "The id of the layer entry in the WMS",
-                          "title": ""
+                          "title": "",
+                          "default": ""
                         },
                         "name": {
                           "type": "string",
                           "description": "A descriptive name for the layer.  To be used in the legend.",
-                          "title": ""
+                          "title": "",
+                          "default": ""
                         },
                         "allStyles": {
                           "type": "array",
@@ -1398,15 +1543,18 @@
                             "type": "string"
                           },
                           "description": "All the styles for the layer entry in the WMS",
-                          "title": ""
+                          "title": "",
+                          "default": ""
                         },
                         "currentStyle": {
                           "type": "string",
                           "description": "The current style for the layer entry in the WMS",
-                          "title": ""
+                          "title": "",
+                          "default": ""
                         },
                         "controls": {
                           "title": "",
+                          "default": "",
                           "type": "array",
                           "items": {
                             "type": "string",
@@ -1431,11 +1579,12 @@
                         },
                         "state": {
                           "title": "",
+                          "default": "",
                           "type": "object",
                           "properties": {
                             "opacity": {
                               "type": "number",
-                              "default": 1,
+                              "default": "1",
                               "description": "Initial opacity",
                               "title": ""
                             },
@@ -1477,17 +1626,20 @@
                         "id"
                       ],
                       "additionalProperties": false,
-                      "title": ""
+                      "title": "",
+                      "default": ""
                     },
                     "minItems": 1,
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "layerType": {
                     "type": "string",
                     "enum": [
                       "ogcWms"
                     ],
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "featureInfoMimeType": {
                     "type": "string",
@@ -1498,7 +1650,8 @@
                       "application/json"
                     ],
                     "description": "If specified indicates that GetFeatureInfo should be enabled for this WMS and indicates the format that should be requested.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "legendMimeType": {
                     "type": "string",
@@ -1510,51 +1663,63 @@
                       "image/svg"xml"
                     ],
                     "description": "If specified indicates that GetLegendGraphic should be enabled for this WMS and indicates the format that should be requested.  FIXME check legendUrl for additional requirements",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "extent": {
                     "title": "",
+                    "default": "",
                     "type": "object",
                     "properties": {
                       "xmin": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "ymin": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "xmax": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "ymax": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "spatialReference": {
                         "title": "",
+                        "default": "",
                         "type": "object",
                         "properties": {
                           "wkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.wkid.default"
                           },
                           "vcsWkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.vcsWkid.default"
                           },
                           "latestWkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.latestWkid.default"
                           },
                           "latestVcsWkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.latestVcsWkid.default"
                           },
                           "wkt": {
                             "type": "string",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.wkt.default"
                           }
                         },
                         "anyOf": [
@@ -1597,6 +1762,7 @@
                   },
                   "controls": {
                     "title": "",
+                    "default": "",
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -1622,6 +1788,7 @@
                   "disabledControls": {
                     "description": "A list of controls which are visible, but disabled for user modification",
                     "title": "",
+                    "default": "",
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -1645,11 +1812,12 @@
                   },
                   "state": {
                     "title": "",
+                    "default": "",
                     "type": "object",
                     "properties": {
                       "opacity": {
                         "type": "number",
-                        "default": 1,
+                        "default": "1",
                         "description": "Initial opacity",
                         "title": ""
                       },
@@ -1694,7 +1862,8 @@
                   "url"
                 ],
                 "additionalProperties": false,
-                "title": ""
+                "title": "",
+                "default": ""
               },
               {
                 "type": "object",
@@ -1702,27 +1871,30 @@
                   "id": {
                     "type": "string",
                     "description": "The id of the layer for referencing within the viewer (does not relate directly to any external service)",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "name": {
                     "type": "string",
                     "description": "The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "url": {
                     "type": "string",
                     "description": "The service endpoint of the layer.  It should match the type provided in layerType.",
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "metadataUrl": {
                     "type": "string",
-                    "default": null,
+                    "default": "null",
                     "description": "The metadata url of the layer service",
                     "title": ""
                   },
                   "catalogueUrl": {
                     "type": "string",
-                    "default": null,
+                    "default": "null",
                     "description": "The catalogue url of the layer service",
                     "title": ""
                   },
@@ -1731,7 +1903,8 @@
                     "enum": [
                       "esriDynamic"
                     ],
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "toggleSymbology": {
                     "type": "boolean",
@@ -1753,12 +1926,14 @@
                         "index": {
                           "type": "number",
                           "description": "The index of the layer in the map service.",
-                          "title": ""
+                          "title": "",
+                          "default": ""
                         },
                         "name": {
                           "type": "string",
                           "description": "A descriptive name for the layer, can override the name coming from the service.",
-                          "title": ""
+                          "title": "",
+                          "default": ""
                         },
                         "outfields": {
                           "type": "string",
@@ -1769,47 +1944,58 @@
                         "extent": {
                           "description": "Allows for overriding the bounding box supplied by the service.",
                           "title": "",
+                          "default": "",
                           "type": "object",
                           "properties": {
                             "xmin": {
                               "type": "number",
-                              "title": ""
+                              "title": "",
+                              "default": ""
                             },
                             "ymin": {
                               "type": "number",
-                              "title": ""
+                              "title": "",
+                              "default": ""
                             },
                             "xmax": {
                               "type": "number",
-                              "title": ""
+                              "title": "",
+                              "default": ""
                             },
                             "ymax": {
                               "type": "number",
-                              "title": ""
+                              "title": "",
+                              "default": ""
                             },
                             "spatialReference": {
                               "title": "",
+                              "default": "",
                               "type": "object",
                               "properties": {
                                 "wkid": {
                                   "type": "number",
-                                  "title": ""
+                                  "title": "",
+                                  "default": "def.spatialReferenceNode.wkid.default"
                                 },
                                 "vcsWkid": {
                                   "type": "number",
-                                  "title": ""
+                                  "title": "",
+                                  "default": "def.spatialReferenceNode.vcsWkid.default"
                                 },
                                 "latestWkid": {
                                   "type": "number",
-                                  "title": ""
+                                  "title": "",
+                                  "default": "def.spatialReferenceNode.latestWkid.default"
                                 },
                                 "latestVcsWkid": {
                                   "type": "number",
-                                  "title": ""
+                                  "title": "",
+                                  "default": "def.spatialReferenceNode.latestVcsWkid.default"
                                 },
                                 "wkt": {
                                   "type": "string",
-                                  "title": ""
+                                  "title": "",
+                                  "default": "def.spatialReferenceNode.wkt.default"
                                 }
                               },
                               "anyOf": [
@@ -1852,6 +2038,7 @@
                         },
                         "controls": {
                           "title": "",
+                          "default": "",
                           "type": "array",
                           "items": {
                             "type": "string",
@@ -1876,11 +2063,12 @@
                         },
                         "state": {
                           "title": "",
+                          "default": "",
                           "type": "object",
                           "properties": {
                             "opacity": {
                               "type": "number",
-                              "default": 1,
+                              "default": "1",
                               "description": "Initial opacity",
                               "title": ""
                             },
@@ -1926,6 +2114,7 @@
                         "table": {
                           "description": "Settings for table panel",
                           "title": "",
+                          "default": "",
                           "type": "object",
                           "properties": {
                             "title": {
@@ -1937,7 +2126,8 @@
                             "description": {
                               "type": "string",
                               "description": "Specifies the additional information to display in the setting panel to give more information about a table.",
-                              "title": ""
+                              "title": "",
+                              "default": ""
                             },
                             "maximize": {
                               "type": "boolean",
@@ -1955,7 +2145,8 @@
                                 "default": null,
                                 "description": "Specifies the default filter to apply to a table (for global search)."
                               },
-                              "title": ""
+                              "title": "",
+                              "default": ""
                             },
                             "applyMap": {
                               "type": "boolean",
@@ -1971,17 +2162,20 @@
                                   "data": {
                                     "type": "string",
                                     "description": "Specifies the field name (data) to use to link to the layer column. Must exist in the layer.",
-                                    "title": ""
+                                    "title": "",
+                                    "default": ""
                                   },
                                   "title": {
                                     "type": "string",
                                     "description": "Specifies the column title, uses the layer column name or alias if missing.",
-                                    "title": ""
+                                    "title": "",
+                                    "default": ""
                                   },
                                   "description": {
                                     "type": "string",
                                     "description": "Specifies the additional information to display in the setting panel to give more information about a column. Do not add description if missing.",
-                                    "title": ""
+                                    "title": "",
+                                    "default": ""
                                   },
                                   "visible": {
                                     "type": "boolean",
@@ -1992,7 +2186,8 @@
                                   "width": {
                                     "type": "number",
                                     "description": "Specifies the column width. If missing, calculated column width will be use.",
-                                    "title": ""
+                                    "title": "",
+                                    "default": ""
                                   },
                                   "sort": {
                                     "type": "string",
@@ -2001,7 +2196,8 @@
                                       "desc"
                                     ],
                                     "description": "Specifies if column is sort. If missing, no sort is applied.",
-                                    "title": ""
+                                    "title": "",
+                                    "default": ""
                                   },
                                   "searchable": {
                                     "type": "boolean",
@@ -2011,6 +2207,7 @@
                                   },
                                   "filter": {
                                     "title": "",
+                                    "default": "",
                                     "type": "object",
                                     "description": "Specifies the filter information for a column.",
                                     "properties": {
@@ -2023,7 +2220,8 @@
                                           "selector"
                                         ],
                                         "description": "Specifies the filter type to use. If type is not specified, data field type will be use. String filter can be string or selector. Other filter must be the same type. If not, apply on map will fails.",
-                                        "title": ""
+                                        "title": "",
+                                        "default": ""
                                       },
                                       "value": {
                                         "type": "string",
@@ -2049,10 +2247,12 @@
                                 ],
                                 "additionalProperties": false,
                                 "description": "Specifies option for each column. OID field must be present, if not data will not appear. The order they appears inside the table is the same as the order of this array.",
-                                "title": ""
+                                "title": "",
+                                "default": ""
                               },
                               "description": "Specifies the array of columns for the table. When there is an item in this array, it will be use to define wich and how column will be set for the table. If a column is not in the array it will be assume as disabled.",
-                              "title": ""
+                              "title": "",
+                              "default": ""
                             }
                           },
                           "additionalProperties": false
@@ -2062,60 +2262,73 @@
                         "index"
                       ],
                       "additionalProperties": false,
-                      "title": ""
+                      "title": "",
+                      "default": ""
                     },
                     "minItems": 1,
-                    "title": ""
+                    "title": "",
+                    "default": ""
                   },
                   "tolerance": {
                     "type": "number",
-                    "default": 5,
+                    "default": "5",
                     "description": "Specifies the tolerance in pixels when determining if a feature was clicked. Should be non-negative integer",
                     "title": ""
                   },
                   "extent": {
                     "title": "",
+                    "default": "",
                     "type": "object",
                     "properties": {
                       "xmin": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "ymin": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "xmax": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "ymax": {
                         "type": "number",
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       "spatialReference": {
                         "title": "",
+                        "default": "",
                         "type": "object",
                         "properties": {
                           "wkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.wkid.default"
                           },
                           "vcsWkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.vcsWkid.default"
                           },
                           "latestWkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.latestWkid.default"
                           },
                           "latestVcsWkid": {
                             "type": "number",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.latestVcsWkid.default"
                           },
                           "wkt": {
                             "type": "string",
-                            "title": ""
+                            "title": "",
+                            "default": "def.spatialReferenceNode.wkt.default"
                           }
                         },
                         "anyOf": [
@@ -2158,6 +2371,7 @@
                   },
                   "controls": {
                     "title": "",
+                    "default": "",
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -2183,6 +2397,7 @@
                   "disabledControls": {
                     "description": "A list of controls which are visible, but disabled for user modification",
                     "title": "",
+                    "default": "",
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -2206,11 +2421,12 @@
                   },
                   "state": {
                     "title": "",
+                    "default": "",
                     "type": "object",
                     "properties": {
                       "opacity": {
                         "type": "number",
-                        "default": 1,
+                        "default": "1",
                         "description": "Initial opacity",
                         "title": ""
                       },
@@ -2255,15 +2471,18 @@
                   "url"
                 ],
                 "additionalProperties": false,
-                "title": ""
+                "title": "",
+                "default": ""
               }
             ],
-            "title": ""
+            "title": "",
+            "default": ""
           }
         ]
       },
       "minItems": 0,
-      "title": ""
+      "title": "",
+      "default": "def.layerList.default"
     },
     "legend": {
       "oneOf": [
@@ -2275,14 +2494,16 @@
               "enum": [
                 "autopopulate"
               ],
-              "title": ""
+              "title": "",
+              "default": ""
             }
           },
           "required": [
             "type"
           ],
           "additionalProperties": false,
-          "title": ""
+          "title": "",
+          "default": ""
         },
         {
           "type": "object",
@@ -2292,16 +2513,19 @@
               "enum": [
                 "structured"
               ],
-              "title": ""
+              "title": "",
+              "default": ""
             },
             "root": {
               "title": "",
+              "default": "",
               "type": "object",
               "properties": {
                 "name": {
                   "type": "string",
                   "description": "Title of the group",
-                  "title": ""
+                  "title": "",
+                  "default": ""
                 },
                 "expanded": {
                   "type": "boolean",
@@ -2316,10 +2540,12 @@
                         "type": "object",
                         "properties": {
                           "circRef": {
-                            "title": ""
+                            "title": "",
+                            "default": ""
                           }
                         },
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       {
                         "type": "object",
@@ -2332,10 +2558,12 @@
                                   "type": "object",
                                   "properties": {
                                     "circRef": {
-                                      "title": ""
+                                      "title": "",
+                                      "default": ""
                                     }
                                   },
-                                  "title": ""
+                                  "title": "",
+                                  "default": ""
                                 },
                                 {
                                   "type": "object",
@@ -2344,7 +2572,8 @@
                                     "layerId": {
                                       "type": "string",
                                       "description": "Link to a layer defined in the layers section",
-                                      "title": ""
+                                      "title": "",
+                                      "default": ""
                                     },
                                     "hidden": {
                                       "type": "boolean",
@@ -2358,23 +2587,26 @@
                                         "type": "string",
                                         "description": "Additional layer ids which are controlled by this layer"
                                       },
-                                      "default": [],
+                                      "default": "[]",
                                       "title": ""
                                     },
                                     "entryIndex": {
                                       "type": "integer",
                                       "description": "Index of the 'sublayer' in the case of an ESRI dynamic layer.  This cannot point to an entry with stateOnly:true .",
-                                      "title": ""
+                                      "title": "",
+                                      "default": ""
                                     },
                                     "entryId": {
                                       "type": "string",
                                       "description": "Id of the 'sublayer' in the case of an OGC WMS layer",
-                                      "title": ""
+                                      "title": "",
+                                      "default": ""
                                     },
                                     "coverIcon": {
                                       "type": "string",
                                       "description": "An optional icon, if present it will be used to primarily represent the layer",
-                                      "title": ""
+                                      "title": "",
+                                      "default": ""
                                     },
                                     "description": {
                                       "type": "string",
@@ -2384,6 +2616,7 @@
                                     },
                                     "symbologyStack": {
                                       "title": "",
+                                      "default": "",
                                       "type": "array",
                                       "items": {
                                         "type": "object",
@@ -2410,26 +2643,30 @@
                                         "images"
                                       ],
                                       "description": "An optional style, describes how the symbology stack should be rendered",
-                                      "title": ""
+                                      "title": "",
+                                      "default": ""
                                     }
                                   },
                                   "required": [
                                     "layerId"
                                   ],
                                   "additionalProperties": false,
-                                  "title": ""
+                                  "title": "",
+                                  "default": ""
                                 }
                               ]
                             },
                             "minItems": 1,
-                            "title": ""
+                            "title": "",
+                            "default": ""
                           }
                         },
                         "required": [
                           "exclusiveVisibility"
                         ],
                         "additionalProperties": false,
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       {
                         "type": "object",
@@ -2438,7 +2675,8 @@
                           "layerId": {
                             "type": "string",
                             "description": "Link to a layer defined in the layers section",
-                            "title": ""
+                            "title": "",
+                            "default": ""
                           },
                           "hidden": {
                             "type": "boolean",
@@ -2452,23 +2690,26 @@
                               "type": "string",
                               "description": "Additional layer ids which are controlled by this layer"
                             },
-                            "default": [],
+                            "default": "[]",
                             "title": ""
                           },
                           "entryIndex": {
                             "type": "integer",
                             "description": "Index of the 'sublayer' in the case of an ESRI dynamic layer.  This cannot point to an entry with stateOnly:true .",
-                            "title": ""
+                            "title": "",
+                            "default": ""
                           },
                           "entryId": {
                             "type": "string",
                             "description": "Id of the 'sublayer' in the case of an OGC WMS layer",
-                            "title": ""
+                            "title": "",
+                            "default": ""
                           },
                           "coverIcon": {
                             "type": "string",
                             "description": "An optional icon, if present it will be used to primarily represent the layer",
-                            "title": ""
+                            "title": "",
+                            "default": ""
                           },
                           "description": {
                             "type": "string",
@@ -2478,6 +2719,7 @@
                           },
                           "symbologyStack": {
                             "title": "",
+                            "default": "",
                             "type": "array",
                             "items": {
                               "type": "object",
@@ -2504,14 +2746,16 @@
                               "images"
                             ],
                             "description": "An optional style, describes how the symbology stack should be rendered",
-                            "title": ""
+                            "title": "",
+                            "default": ""
                           }
                         },
                         "required": [
                           "layerId"
                         ],
                         "additionalProperties": false,
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       },
                       {
                         "oneOf": [
@@ -2582,7 +2826,8 @@
                                   "additionalProperties": false
                                 },
                                 "minItems": 1,
-                                "title": ""
+                                "title": "",
+                                "default": ""
                               },
                               "symbologyRenderStyle": {
                                 "type": "string",
@@ -2615,15 +2860,18 @@
                           "infoType",
                           "content"
                         ],
-                        "title": ""
+                        "title": "",
+                        "default": ""
                       }
                     ]
                   },
                   "minItems": 1,
-                  "title": ""
+                  "title": "",
+                  "default": ""
                 },
                 "controls": {
                   "title": "",
+                  "default": "",
                   "type": "array",
                   "items": {
                     "type": "string",
@@ -2642,6 +2890,7 @@
                 },
                 "disabledControls": {
                   "title": "",
+                  "default": "",
                   "type": "array",
                   "items": {
                     "type": "string",
@@ -2671,11 +2920,13 @@
             "root"
           ],
           "additionalProperties": false,
-          "title": ""
+          "title": "",
+          "default": ""
         }
       ],
       "description": "A structured or automatically generated legend",
-      "title": ""
+      "title": "",
+      "default": ""
     }
   },
   "required": [
@@ -2683,5 +2934,6 @@
     "baseMaps"
   ],
   "schema": "map",
-  "title": ""
+  "title": "",
+  "default": ""
 }

@@ -5,40 +5,47 @@
     "proxyUrl": {
       "type": "string",
       "description": "",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "exportMapUrl": {
       "type": "string",
       "description": "",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "geometryUrl": {
       "type": "string",
       "description": "",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "googleAPIKey": {
       "type": "string",
       "description": "",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "geolocation": {
       "type": "object",
       "additionalProperties": true,
       "description": "",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "coordInfo": {
       "type": "object",
       "additionalProperties": true,
       "description": "",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "print": {
       "type": "object",
       "additionalProperties": true,
       "description": "",
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "search": {
       "type": "object",
@@ -57,7 +64,8 @@
           "minItems": 1,
           "uniqueItems": true,
           "description": "",
-          "title": ""
+          "title": "",
+          "default": ""
         },
         "serviceUrls": {
           "type": "object",
@@ -66,27 +74,32 @@
             "geoNames": {
               "type": "string",
               "description": "",
-              "title": ""
+              "title": "",
+              "default": ""
             },
             "geoLocation": {
               "type": "string",
               "description": "",
-              "title": ""
+              "title": "",
+              "default": ""
             },
             "geoSuggest": {
               "type": "string",
               "description": "",
-              "title": ""
+              "title": "",
+              "default": ""
             },
             "provinces": {
               "type": "string",
               "description": "",
-              "title": ""
+              "title": "",
+              "default": ""
             },
             "types": {
               "type": "string",
               "description": "",
-              "title": ""
+              "title": "",
+              "default": ""
             }
           },
           "additionalProperties": false,
@@ -97,14 +110,16 @@
             "provinces",
             "types"
           ],
-          "title": ""
+          "title": "",
+          "default": ""
         }
       },
       "additionalProperties": false,
       "required": [
         "serviceUrls"
       ],
-      "title": ""
+      "title": "",
+      "default": ""
     },
     "export": {
       "type": "object",
@@ -116,24 +131,26 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": true,
+              "default": "",
               "description": "",
               "title": ""
             },
             "isSelectable": {
               "type": "boolean",
-              "default": true,
+              "default": "",
               "description": "",
               "title": ""
             },
             "value": {
               "type": "string",
               "description": "",
-              "title": ""
+              "title": "",
+              "default": ""
             }
           },
           "additionalProperties": false,
-          "title": ""
+          "title": "",
+          "default": ""
         },
         "map": {
           "description": "",
@@ -141,24 +158,26 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": true,
+              "default": "",
               "description": "",
               "title": ""
             },
             "isSelectable": {
               "type": "boolean",
-              "default": true,
+              "default": "",
               "description": "",
               "title": ""
             },
             "value": {
               "type": "string",
               "description": "",
-              "title": ""
+              "title": "",
+              "default": ""
             }
           },
           "additionalProperties": false,
-          "title": ""
+          "title": "",
+          "default": ""
         },
         "mapElements": {
           "description": "",
@@ -166,24 +185,26 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": true,
+              "default": "",
               "description": "",
               "title": ""
             },
             "isSelectable": {
               "type": "boolean",
-              "default": true,
+              "default": "",
               "description": "",
               "title": ""
             },
             "value": {
               "type": "string",
               "description": "",
-              "title": ""
+              "title": "",
+              "default": ""
             }
           },
           "additionalProperties": false,
-          "title": ""
+          "title": "",
+          "default": ""
         },
         "legend": {
           "description": "",
@@ -191,36 +212,38 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": true,
+              "default": "",
               "description": "",
               "title": ""
             },
             "isSelectable": {
               "type": "boolean",
-              "default": true,
+              "default": "",
               "description": "",
               "title": ""
             },
             "value": {
               "type": "string",
               "description": "",
-              "title": ""
+              "title": "",
+              "default": ""
             },
             "showInfoSymbology": {
               "type": "boolean",
-              "default": false,
+              "default": "",
               "description": "",
               "title": ""
             },
             "showControlledSymbology": {
               "type": "boolean",
-              "default": false,
+              "default": "",
               "description": "",
               "title": ""
             }
           },
           "additionalProperties": false,
-          "title": ""
+          "title": "",
+          "default": ""
         },
         "footnote": {
           "description": "",
@@ -228,24 +251,26 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": true,
+              "default": "",
               "description": "",
               "title": ""
             },
             "isSelectable": {
               "type": "boolean",
-              "default": true,
+              "default": "",
               "description": "",
               "title": ""
             },
             "value": {
               "type": "string",
               "description": "",
-              "title": ""
+              "title": "",
+              "default": ""
             }
           },
           "additionalProperties": false,
-          "title": ""
+          "title": "",
+          "default": ""
         },
         "timestamp": {
           "description": "",
@@ -253,31 +278,35 @@
           "properties": {
             "isSelected": {
               "type": "boolean",
-              "default": true,
+              "default": "",
               "description": "",
               "title": ""
             },
             "isSelectable": {
               "type": "boolean",
-              "default": true,
+              "default": "",
               "description": "",
               "title": ""
             },
             "value": {
               "type": "string",
               "description": "",
-              "title": ""
+              "title": "",
+              "default": ""
             }
           },
           "additionalProperties": false,
-          "title": ""
+          "title": "",
+          "default": ""
         }
       },
       "additionalProperties": false,
-      "title": ""
+      "title": "",
+      "default": ""
     }
   },
   "additionalProperties": false,
   "schema": "services",
-  "title": ""
+  "title": "",
+  "default": ""
 }

@@ -146,8 +146,8 @@ function replaceCircularRef(schema) {
 function addLabels(schema, start = '', customPrefix = '') {
   addTitleLabel(schema[start], '', customPrefix);
   // addHelpLabel(schema[start]);
-  // addDefaultLabel(schema[start]);
   addDescriptionLabel(schema[start], '', customPrefix);
+  addDefaultLabel(schema[start], '', customPrefix);
   addEnumLabel(schema[start], '', customPrefix);
   return true;
 }
@@ -223,16 +223,17 @@ function addHelpLabel(schema, parent = '') {
  * @param {Object} schema
  * @param {String} parent [optional] use as a prefix to generate labels
  */
-function addDefaultLabel(schema, parent = '') {
+function addDefaultLabel(schema, parent = '', customPrefix = '') {
 
   const propNames = Object.getOwnPropertyNames(schema);
-  let prefix = parent;
+  let prefix = `${customPrefix}${parent}`;
   let deflt = '';
 
   propNames.forEach(prop => {
     const label = `${prefix}${prop}.default`;
     if ($DotProp.has(schema, `${prop}.default`)) {
-      // Is this an object
+
+      // Is this an array
       if (Array.isArray(schema[prop]['default'])){ // ARRAY
 
         // Finally,won't labelled array's elements
@@ -242,6 +243,12 @@ function addDefaultLabel(schema, parent = '') {
         deflt = JSON.stringify(schema[prop]['default']).replace(/['"]+/g, '');
         csvString = `${csvString},${label},"${deflt}",1,"",0\n`;
         $DotProp.set(schema, `${prop}.default`, label);
+
+      } else if (schema[prop]['default'] === null){ // NULL
+        deflt = $DotProp.get(schema, `${prop}.default`);
+        csvString = `${csvString},${label},${deflt},1,"",0\n`;
+        $DotProp.set(schema, `${prop}.default`, label);
+
       } else if (typeof schema[prop]['default'] === 'object'){ // OBJECT
         // We keep it as an object in the csv file.
         // Keys of the object are references to existing properties
@@ -250,10 +257,11 @@ function addDefaultLabel(schema, parent = '') {
         objPropNames.forEach(objProp => {
           const labelItem = `${label}.${objProp}`;
           const defltItem = schema[prop]['default'][objProp];
+
           csvString = `${csvString},${labelItem},${defltItem},1,"",0\n`;
           $DotProp.set(schema, `${prop}.default.${objProp}`, labelItem);
-        });
 
+        });
       } else { // OTHERS*/
         deflt = $DotProp.get(schema, `${prop}.default`);
         csvString = `${csvString},${label},${deflt},1,"",0\n`;
