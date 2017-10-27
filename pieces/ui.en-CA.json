@@ -52,25 +52,25 @@
       "properties": {
         "sideMenu": {
           "type": "boolean",
-          "default": "def.appBarNode.sideMenu.default",
+          "default": true,
           "description": "Shows the side menu button in the main app toolbar.",
           "title": ""
         },
         "geoSearch": {
           "type": "boolean",
-          "default": "def.appBarNode.geoSearch.default",
+          "default": true,
           "description": "Shows the geosearch button in the main app toolbar. The button will be hidden if geosearch component is disabled or no search service URLs are provided.",
           "title": ""
         },
         "basemap": {
           "type": "boolean",
-          "default": "def.appBarNode.basemap.default",
+          "default": true,
           "description": "Shows the basemap selector button in the main app toolbar.",
           "title": ""
         },
         "layers": {
           "type": "boolean",
-          "default": "def.appBarNode.layers.default",
+          "default": true,
           "description": "Shows the layers button in the main app toolbar.",
           "title": ""
         }
@@ -88,11 +88,11 @@
             "buttons",
             "slider"
           ],
-          "default": "def.navBarNode.zoom.default",
+          "default": "buttons",
           "title": ""
         },
         "extra": {
-          "default": "def.navBarNode.extra.default",
+          "default": "[fullscreen,geoLocator,home,help]",
           "title": "",
           "type": "array",
           "uniqueItems": true,
@@ -118,14 +118,14 @@
       ],
       "additionalProperties": false,
       "title": "",
-      "default": "def.navBarNode.default"
+      "default": ""
     },
     "sideMenu": {
       "type": "object",
       "properties": {
         "logo": {
           "type": "boolean",
-          "default": "def.sideMenuNode.logo.default",
+          "default": true,
           "description": "Indicates if the logo should be shown in the left side menu.",
           "title": ""
         },
@@ -153,14 +153,14 @@
             "title": "",
             "default": ""
           },
-          "default": "def.sideMenuNode.items.default",
+          "default": "[[layers,basemap],[fullscreen,export,share,touch,help,about],[language],[plugins]]",
           "title": ""
         }
       },
       "additionalProperties": false,
       "description": "Specifies which options are available in the left side menu.",
       "title": "",
-      "default": "def.sideMenuNode.default"
+      "default": ""
     },
     "restrictNavigation": {
       "type": "boolean",

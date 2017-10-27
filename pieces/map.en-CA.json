@@ -21,27 +21,27 @@
               "wkid": {
                 "type": "number",
                 "title": "",
-                "default": "def.spatialReferenceNode.wkid.default"
+                "default": ""
               },
               "vcsWkid": {
                 "type": "number",
                 "title": "",
-                "default": "def.spatialReferenceNode.vcsWkid.default"
+                "default": ""
               },
               "latestWkid": {
                 "type": "number",
                 "title": "",
-                "default": "def.spatialReferenceNode.latestWkid.default"
+                "default": ""
               },
               "latestVcsWkid": {
                 "type": "number",
                 "title": "",
-                "default": "def.spatialReferenceNode.latestVcsWkid.default"
+                "default": ""
               },
               "wkt": {
                 "type": "string",
                 "title": "",
-                "default": "def.spatialReferenceNode.wkt.default"
+                "default": ""
               }
             },
             "anyOf": [
@@ -348,27 +348,27 @@
                       "wkid": {
                         "type": "number",
                         "title": "",
-                        "default": "def.spatialReferenceNode.wkid.default"
+                        "default": ""
                       },
                       "vcsWkid": {
                         "type": "number",
                         "title": "",
-                        "default": "def.spatialReferenceNode.vcsWkid.default"
+                        "default": ""
                       },
                       "latestWkid": {
                         "type": "number",
                         "title": "",
-                        "default": "def.spatialReferenceNode.latestWkid.default"
+                        "default": ""
                       },
                       "latestVcsWkid": {
                         "type": "number",
                         "title": "",
-                        "default": "def.spatialReferenceNode.latestVcsWkid.default"
+                        "default": ""
                       },
                       "wkt": {
                         "type": "string",
                         "title": "",
-                        "default": "def.spatialReferenceNode.wkt.default"
+                        "default": ""
                       }
                     },
                     "anyOf": [
@@ -536,54 +536,54 @@
             "enabled": {
               "type": "boolean",
               "title": "",
-              "default": "def.mapComponentsNode.geoSearch.enabled.default"
+              "default": ""
             },
             "showGraphic": {
               "type": "boolean",
               "title": "",
-              "default": "def.mapComponentsNode.geoSearch.showGraphic.default"
+              "default": ""
             },
             "showInfo": {
               "type": "boolean",
               "title": "",
-              "default": "def.mapComponentsNode.geoSearch.showInfo.default"
+              "default": ""
             }
           },
           "title": "",
-          "default": "def.mapComponentsNode.geoSearch.default"
+          "default": ""
         },
         "mouseInfo": {
           "type": "object",
           "properties": {
             "spatialReference": {
               "title": "",
-              "default": "def.mapComponentsNode.mouseInfo.spatialReference.default",
+              "default": "",
               "type": "object",
               "properties": {
                 "wkid": {
                   "type": "number",
                   "title": "",
-                  "default": "def.spatialReferenceNode.wkid.default"
+                  "default": ""
                 },
                 "vcsWkid": {
                   "type": "number",
                   "title": "",
-                  "default": "def.spatialReferenceNode.vcsWkid.default"
+                  "default": ""
                 },
                 "latestWkid": {
                   "type": "number",
                   "title": "",
-                  "default": "def.spatialReferenceNode.latestWkid.default"
+                  "default": ""
                 },
                 "latestVcsWkid": {
                   "type": "number",
                   "title": "",
-                  "default": "def.spatialReferenceNode.latestVcsWkid.default"
+                  "default": ""
                 },
                 "wkt": {
                   "type": "string",
                   "title": "",
-                  "default": "def.spatialReferenceNode.wkt.default"
+                  "default": ""
                 }
               },
               "anyOf": [
@@ -617,12 +617,12 @@
             }
           },
           "title": "",
-          "default": "def.mapComponentsNode.mouseInfo.default"
+          "default": ""
         },
         "northArrow": {
           "type": "object",
           "title": "",
-          "default": "def.mapComponentsNode.northArrow.default"
+          "default": ""
         },
         "overviewMap": {
           "type": "object",
@@ -630,31 +630,31 @@
             "enabled": {
               "type": "boolean",
               "title": "",
-              "default": "def.mapComponentsNode.overviewMap.enabled.default"
+              "default": ""
             },
             "expandFactor": {
               "type": "number",
-              "default": "def.mapComponentsNode.overviewMap.expandFactor.default",
+              "default": "2",
               "title": ""
             }
           },
           "title": "",
-          "default": "def.mapComponentsNode.overviewMap.default"
+          "default": ""
         },
         "scaleBar": {
           "type": "object",
           "title": "",
-          "default": "def.mapComponentsNode.scaleBar.default"
+          "default": ""
         },
         "basemap": {
           "type": "object",
           "title": "",
-          "default": "def.mapComponentsNode.basemap.default"
+          "default": ""
         }
       },
       "additionalProperties": false,
       "title": "",
-      "default": "def.mapComponentsNode.default"
+      "default": ""
     },
     "initialBasemapId": {
       "type": "string",
@@ -919,27 +919,27 @@
                           "wkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.wkid.default"
+                            "default": ""
                           },
                           "vcsWkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.vcsWkid.default"
+                            "default": ""
                           },
                           "latestWkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.latestWkid.default"
+                            "default": ""
                           },
                           "latestVcsWkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.latestVcsWkid.default"
+                            "default": ""
                           },
                           "wkt": {
                             "type": "string",
                             "title": "",
-                            "default": "def.spatialReferenceNode.wkt.default"
+                            "default": ""
                           }
                         },
                         "anyOf": [
@@ -1176,27 +1176,27 @@
                           "wkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.wkid.default"
+                            "default": ""
                           },
                           "vcsWkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.vcsWkid.default"
+                            "default": ""
                           },
                           "latestWkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.latestWkid.default"
+                            "default": ""
                           },
                           "latestVcsWkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.latestVcsWkid.default"
+                            "default": ""
                           },
                           "wkt": {
                             "type": "string",
                             "title": "",
-                            "default": "def.spatialReferenceNode.wkt.default"
+                            "default": ""
                           }
                         },
                         "anyOf": [
@@ -1699,27 +1699,27 @@
                           "wkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.wkid.default"
+                            "default": ""
                           },
                           "vcsWkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.vcsWkid.default"
+                            "default": ""
                           },
                           "latestWkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.latestWkid.default"
+                            "default": ""
                           },
                           "latestVcsWkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.latestVcsWkid.default"
+                            "default": ""
                           },
                           "wkt": {
                             "type": "string",
                             "title": "",
-                            "default": "def.spatialReferenceNode.wkt.default"
+                            "default": ""
                           }
                         },
                         "anyOf": [
@@ -1975,27 +1975,27 @@
                                 "wkid": {
                                   "type": "number",
                                   "title": "",
-                                  "default": "def.spatialReferenceNode.wkid.default"
+                                  "default": ""
                                 },
                                 "vcsWkid": {
                                   "type": "number",
                                   "title": "",
-                                  "default": "def.spatialReferenceNode.vcsWkid.default"
+                                  "default": ""
                                 },
                                 "latestWkid": {
                                   "type": "number",
                                   "title": "",
-                                  "default": "def.spatialReferenceNode.latestWkid.default"
+                                  "default": ""
                                 },
                                 "latestVcsWkid": {
                                   "type": "number",
                                   "title": "",
-                                  "default": "def.spatialReferenceNode.latestVcsWkid.default"
+                                  "default": ""
                                 },
                                 "wkt": {
                                   "type": "string",
                                   "title": "",
-                                  "default": "def.spatialReferenceNode.wkt.default"
+                                  "default": ""
                                 }
                               },
                               "anyOf": [
@@ -2308,27 +2308,27 @@
                           "wkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.wkid.default"
+                            "default": ""
                           },
                           "vcsWkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.vcsWkid.default"
+                            "default": ""
                           },
                           "latestWkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.latestWkid.default"
+                            "default": ""
                           },
                           "latestVcsWkid": {
                             "type": "number",
                             "title": "",
-                            "default": "def.spatialReferenceNode.latestVcsWkid.default"
+                            "default": ""
                           },
                           "wkt": {
                             "type": "string",
                             "title": "",
-                            "default": "def.spatialReferenceNode.wkt.default"
+                            "default": ""
                           }
                         },
                         "anyOf": [
@@ -2482,7 +2482,7 @@
       },
       "minItems": 0,
       "title": "",
-      "default": "def.layerList.default"
+      "default": ""
     },
     "legend": {
       "oneOf": [

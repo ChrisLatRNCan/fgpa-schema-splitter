@@ -264,8 +264,13 @@ function addDefaultLabel(schema, parent = '', customPrefix = '') {
         });
       } else { // OTHERS*/
         deflt = $DotProp.get(schema, `${prop}.default`);
-        csvString = `${csvString},${label},${deflt},1,"",0\n`;
-        $DotProp.set(schema, `${prop}.default`, label);
+        if (typeof deflt !== 'string') {
+          csvString = `${csvString},${label},${deflt},1,"",0\n`;
+          $DotProp.set(schema, `${prop}.default`, label);
+        } else if (!deflt.startsWith('def.')) {
+          csvString = `${csvString},${label},${deflt},1,"",0\n`;
+          $DotProp.set(schema, `${prop}.default`, label);
+        }
       }
     } else {
       csvString = `${csvString},${label},"",0,"",0\n`;
