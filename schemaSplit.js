@@ -1,5 +1,5 @@
 // schema to be splitted
-let viewerSchema = require('./schemas/schema.json');
+let viewerSchema = require('./schemas/schema.map.json');
 
 // External libraries
 const $RefParser = require('json-schema-ref-parser');
@@ -87,6 +87,7 @@ const LabelMyDef = function () {
           const splitMe = function () {
             labellingSchemaProp
                 .then(() => {
+                  insideQuotesCSV(csvString);
                   saveCSV(csvString);
                   saveSchema(vSchema, './schemas/schemaAuthor.json');
                   saveParseConfigSchema(vSchema);
@@ -410,6 +411,33 @@ function saveCSV(csv) {
 }
 
 /**
+ * Deal with double quotes insode double quotes
+ * https://stackoverflow.com/questions/16568011/regular-expression-to-escape-double-quotes-within-double-quotes
+ * @function insideQuotesCSV
+ * @private
+ * @param {Object} csv contains commas-separeted blob
+ */
+function insideQuotesCSV(csv) {
+  const myRegexp = /\s*\"([\w\"]+)\"\s*[,}:]/g;
+  let match;
+  let matches = [];
+
+  // Save all the matches
+  while((match = myRegexp.exec(csv)) !== null)
+  {
+      matches.push(match[1]);
+      console.log(match[1]);
+  }
+
+  // Process them
+  for (var i=0; i<matches.length; i++)
+  {
+      var newVal = matches[i].replace(/\"/g, '\\\"'); 
+      csv = csv.replace(matches[i], newVal);
+  }
+}
+
+/**
  * Save schema in local file
  * @function saveSchema
  * @private
@@ -514,17 +542,22 @@ function resolveLabels(schemaString, csvJSON, langIdx) {
   csvJSON.data.forEach(record => {
     if(record[1] !== undefined) {
       const label = record[1];
-      if (label === 'navBarButtons.items.enum.geoLocator') {
-        console.log();
-      }
       const value = record[idx];
-      const regex = new RegExp('[^\.a-z]' + label + '[^\.a-z]', 'g');
 
-      // put string between double quotes
-      if (value === 'true' || value === 'false') {
-        newString = newString.replace(regex, value);
-      } else {
-        newString = newString.replace(regex, '"' + value + '"');
+      // Special case. 
+      // This label needs not to be substring of others labels
+      // FIXME: find a more generalist method to deal with special case
+      if (label === 'def.wmsLayerNode.legendMimeType.enum.image/svg+xml') {
+          newString = newString.split(label).join(value);
+        } else { // Other cases
+        const regex = new RegExp('[^\.a-z\+]' + label + '[^\.a-z\+]', 'g');
+        
+        // put string between double quotes
+        if (value === 'true' || value === 'false') {
+          newString = newString.replace(regex, value);
+        } else {
+          newString = newString.replace(regex, '"' + value + '"');
+        }
       }
     }
   });
