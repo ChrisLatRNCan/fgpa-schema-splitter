@@ -572,7 +572,7 @@
 ,def.baseMapNode.zoomLevels.max.default,"",0,"",0
 ,def.sideMenuNode.default,"",0,"",0
 ,def.sideMenuNode.logo.default,true,1,"",0
-,def.sideMenuNode.items.default,"[[layers,basemap],[fullscreen,export,share,touch,help,about],[language],[plugins]]",1,"",0
+,def.sideMenuNode.items.default,"[[""layers"",""basemap""],[""fullscreen"",""export"",""share"",""touch"",""help"",""about""],[""language""],[""plugins""]]",1,"",0
 ,def.sideMenuButtons.default,"",0,"",0
 ,def.appBarNode.default,"",0,"",0
 ,def.appBarNode.sideMenu.default,true,1,"",0
@@ -581,7 +581,7 @@
 ,def.appBarNode.layers.default,true,1,"",0
 ,def.navBarNode.default,"",0,"",0
 ,def.navBarNode.zoom.default,buttons,1,"",0
-,def.navBarNode.extra.default,"[fullscreen,geoLocator,home,help]",1,"",0
+,def.navBarNode.extra.default,"[""fullscreen"",""geoLocator"",""home"",""help""]",1,"",0
 ,def.navBarButtons.default,"",0,"",0
 ,def.mapComponentsNode.default,"",0,"",0
 ,def.mapComponentsNode.geoSearch.default,"",0,"",0

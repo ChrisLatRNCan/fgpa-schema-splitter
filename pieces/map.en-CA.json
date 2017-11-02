@@ -2587,7 +2587,7 @@
                                         "type": "string",
                                         "description": "Additional layer ids which are controlled by this layer"
                                       },
-                                      "default": "[]",
+                                      "default": [],
                                       "title": ""
                                     },
                                     "entryIndex": {
@@ -2690,7 +2690,7 @@
                               "type": "string",
                               "description": "Additional layer ids which are controlled by this layer"
                             },
-                            "default": "[]",
+                            "default": [],
                             "title": ""
                           },
                           "entryIndex": {

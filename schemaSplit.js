@@ -247,7 +247,7 @@ function addDefaultLabel(schema, parent = '', customPrefix = '') {
         // const labelArr = `${prefix}${prop}`;
         // labelNestedtArrays(schema[prop]['default'],labelArr);
 
-        deflt = JSON.stringify(schema[prop]['default']).replace(/['"]+/g, '');
+        deflt = JSON.stringify(schema[prop]['default']).replace(/['"]+/g, '""');
         csvString = `${csvString},${label},"${deflt}",1,"",0\n`;
         $DotProp.set(schema, `${prop}.default`, label);
 
@@ -545,7 +545,8 @@ function resolveLabels(schemaString, csvJSON, langIdx) {
           newString = newString.split(label).join(value);
         } else if (label === 'def.filterNode.value.description') {
           newString = newString.split(label).join(value);
-          // directement dans le csv
+        } else if (value.charAt(0) ===  '[') {
+          newString = newString.split(`"${label}"`).join(value);
         } else { // Other cases
         const regex = new RegExp('[^\.a-z\+]' + label + '[^\.a-z\+]', 'g');
         
