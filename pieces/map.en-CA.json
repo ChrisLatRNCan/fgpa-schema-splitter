@@ -1446,7 +1446,7 @@
                                 "value": {
                                   "type": "string",
                                   "default": "",
-                                  "description": "Specifies the filter value. For date and number values are split by ',' (e.g. 0,100). For selector it needs an array like ["Fire",
+                                  "description": "Specifies the filter value. For date and number values are split by ',' (e.g. 0,100). For selector it needs an array like [\"Fire\", \"Fatality\"]",
                                   "title": ""
                                 },
                                 "static": {
@@ -1660,7 +1660,7 @@
                       "image/gif",
                       "image/jpeg",
                       "image/svg",
-                      "image/svg"xml"
+                      "image/svg+xml"
                     ],
                     "description": "If specified indicates that GetLegendGraphic should be enabled for this WMS and indicates the format that should be requested.  FIXME check legendUrl for additional requirements",
                     "title": "",
@@ -2226,7 +2226,7 @@
                                       "value": {
                                         "type": "string",
                                         "default": "",
-                                        "description": "Specifies the filter value. For date and number values are split by ',' (e.g. 0,100). For selector it needs an array like ["Fire",
+                                        "description": "Specifies the filter value. For date and number values are split by ',' (e.g. 0,100). For selector it needs an array like [\"Fire\", \"Fatality\"]",
                                         "title": ""
                                       },
                                       "static": {

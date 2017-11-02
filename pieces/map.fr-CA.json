@@ -1446,7 +1446,7 @@
                                 "value": {
                                   "type": "string",
                                   "default": "",
-                                  "description": "1",
+                                  "description": "",
                                   "title": ""
                                 },
                                 "static": {
@@ -1660,7 +1660,7 @@
                       "",
                       "",
                       "",
-                      ""xml"
+                      ""
                     ],
                     "description": "",
                     "title": "",
@@ -2226,7 +2226,7 @@
                                       "value": {
                                         "type": "string",
                                         "default": "",
-                                        "description": "1",
+                                        "description": "",
                                         "title": ""
                                       },
                                       "static": {

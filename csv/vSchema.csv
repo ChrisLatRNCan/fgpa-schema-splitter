@@ -307,7 +307,7 @@
 ,def.columnNode.searchable.description,"Specifies if column can be filter. True: column can be filter; False: no filter can be applied from global search or filter. If this is false, do not set a filter because it will not be use.",1,"",0
 ,def.filterNode.description,"Specifies the filter information for a column.",1,"",0
 ,def.filterNode.type.description,"Specifies the filter type to use. If type is not specified, data field type will be use. String filter can be string or selector. Other filter must be the same type. If not, apply on map will fails.",1,"",0
-,def.filterNode.value.description,"Specifies the filter value. For date and number values are split by ',' (e.g. 0,100). For selector it needs an array like ["Fire", "Fatality"]",1,"",0
+,def.filterNode.value.description,"Specifies the filter value. For date and number values are split by ',' (e.g. 0,100). For selector it needs an array like [\""Fire\"", \""Fatality\""]",1,"",0
 ,def.filterNode.static.description,"Specifies if filter is modifiable. True: filter value can't be modified; False: filter value can be modified.",1,"",0
 ,def.basicLayer.id.description,"The id of the layer for referencing within the viewer (does not relate directly to any external service)",1,"",0
 ,def.basicLayer.name.description,"The display name of the layer.  If it is not present the viewer will make an attempt to scrape this information.",1,"",0

@@ -1,5 +1,5 @@
 // schema to be splitted
-let viewerSchema = require('./schemas/schema.map.json');
+let viewerSchema = require('./schemas/schema.json');
 
 // External libraries
 const $RefParser = require('json-schema-ref-parser');
@@ -36,6 +36,7 @@ let csvString = '';
  *                          and replace them with labels.
  *  - addEnumLabel: save existing enum aray values in a csv like blob
  *                  and replace them with labels.
+ *  - insideQuotesCSV: Deal with double quotes inside double quotes.
  *  - saveCSV: save csv like blob in a csv (comma-separated values) file
  *  - saveSchema: save schema in local file.
  *  - saveParseConfigSchema: save $ref resolved main properties of the schema
@@ -87,7 +88,7 @@ const LabelMyDef = function () {
           const splitMe = function () {
             labellingSchemaProp
                 .then(() => {
-                  insideQuotesCSV(csvString);
+                  insideQuotesCSV();
                   saveCSV(csvString);
                   saveSchema(vSchema, './schemas/schemaAuthor.json');
                   saveParseConfigSchema(vSchema);
@@ -143,6 +144,8 @@ function replaceCircularRef(schema) {
  * @function addLabels
  * @private
  * @param {Object} schema
+ * @param {String} start [optional] starting point in hierarchy
+ * @param {String} customPrefix [optional] to be added to label
  */
 function addLabels(schema, start = '', customPrefix = '') {
   addTitleLabel(schema[start], '', customPrefix);
@@ -174,6 +177,7 @@ function addSchemaLabel(schema) {
  * @private
  * @param {Object} schema
  * @param {String} parent [optional] use as a prefix to generate labels
+ * @param {String} customPrefix [optional] to be added to label
  */
 function addTitleLabel(schema, parent = '', customPrefix = '') {
 
@@ -198,6 +202,7 @@ function addTitleLabel(schema, parent = '', customPrefix = '') {
  * @private
  * @param {Object} schema
  * @param {String} parent [optional] use as a prefix to generate labels
+ * @param {String} customPrefix [optional] to be added to label
  */
 function addHelpLabel(schema, parent = '') {
 
@@ -223,6 +228,7 @@ function addHelpLabel(schema, parent = '') {
  * @private
  * @param {Object} schema
  * @param {String} parent [optional] use as a prefix to generate labels
+ * @param {String} customPrefix [optional] to be added to label
  */
 function addDefaultLabel(schema, parent = '', customPrefix = '') {
 
@@ -310,6 +316,7 @@ function labelNestedtArrays(arr, label) {
  * @private
  * @param {Object} schema
  * @param {String} parent [optional] use as a prefix to generate labels
+ * @param {String} customPrefix [optional] to be added to label
  */
 function addDescriptionLabel(schema, parent = '', customPrefix = '') {
   const propNames = Object.getOwnPropertyNames(schema);
@@ -354,6 +361,7 @@ function addDescriptionLabel(schema, parent = '', customPrefix = '') {
  * @private
  * @param {Object} schema
  * @param {String} parent [optional] use as a prefix to generate labels
+ * @param {String} customPrefix [optional] to be added to label
  */
 function addEnumLabel(schema, parent = '', customPrefix = '') {
   const propNames = Object.getOwnPropertyNames(schema);
@@ -401,6 +409,18 @@ function addEnumLabel(schema, parent = '', customPrefix = '') {
 }
 
 /**
+ * Deal with double quotes inside double quotes
+ * FIXME: this function should be replaced by a more generalist one
+ * @function insideQuotesCSV
+ * @private
+ */
+function insideQuotesCSV() {
+  const target = '"Fire", "Fatality"';
+  const newDesc = '\\""Fire\\"", \\""Fatality\\""'
+  csvString = csvString.split(target).join(newDesc);
+}
+
+/**
  * Save csv info in a local file
  * @function saveCSV
  * @private
@@ -411,37 +431,11 @@ function saveCSV(csv) {
 }
 
 /**
- * Deal with double quotes insode double quotes
- * https://stackoverflow.com/questions/16568011/regular-expression-to-escape-double-quotes-within-double-quotes
- * @function insideQuotesCSV
- * @private
- * @param {Object} csv contains commas-separeted blob
- */
-function insideQuotesCSV(csv) {
-  const myRegexp = /\s*\"([\w\"]+)\"\s*[,}:]/g;
-  let match;
-  let matches = [];
-
-  // Save all the matches
-  while((match = myRegexp.exec(csv)) !== null)
-  {
-      matches.push(match[1]);
-      console.log(match[1]);
-  }
-
-  // Process them
-  for (var i=0; i<matches.length; i++)
-  {
-      var newVal = matches[i].replace(/\"/g, '\\\"'); 
-      csv = csv.replace(matches[i], newVal);
-  }
-}
-
-/**
  * Save schema in local file
  * @function saveSchema
  * @private
  * @param {Object} schema
+ * @param {String} filename
  */
 function saveSchema(schema, filename) {
   schemaString = JSON.stringify(schema, null, 2);
@@ -545,10 +539,13 @@ function resolveLabels(schemaString, csvJSON, langIdx) {
       const value = record[idx];
 
       // Special case. 
-      // This label needs not to be substring of others labels
-      // FIXME: find a more generalist method to deal with special case
+      // These labels need not to be substring of others labels
+      // FIXME: find a more generalist method to deal with special cases
       if (label === 'def.wmsLayerNode.legendMimeType.enum.image/svg+xml') {
           newString = newString.split(label).join(value);
+        } else if (label === 'def.filterNode.value.description') {
+          newString = newString.split(label).join(value);
+          // directement dans le csv
         } else { // Other cases
         const regex = new RegExp('[^\.a-z\+]' + label + '[^\.a-z\+]', 'g');
         
